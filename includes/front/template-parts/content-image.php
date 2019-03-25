@@ -1,6 +1,6 @@
 <?php
 /**
- * @package cssecoST
+ * @package fxoroVone
  * includes/front/template-parts/content-image.php
  *
  * Image Post Format

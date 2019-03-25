@@ -1,6 +1,6 @@
 <?php
 /**
- * @package cssecoST
+ * @package fxoroVone
  * includes/front/template-parts/content.php
  *
  * Standard Post Format
@@ -32,7 +32,7 @@
 		</div><!-- /.entry-excerpt -->
 		<div class="button-container text-right">
 			<a href="<?php the_permalink(); ?>" class="btn btn-default">
-				<?php _e( 'Read More', 'cssecoST' ); ?>
+				<?php _e( 'Read More', 'fxoroVone' ); ?>
 			</a>
 		</div><!-- /.button-container -->
 	</div><!-- /.entry-content -->

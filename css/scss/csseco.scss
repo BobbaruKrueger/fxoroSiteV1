@@ -1,5 +1,5 @@
 /**
-  * @package cssecoST
+  * @package fxoroVone
   * css/scss/csseco.scss
   * Styles for frontend pages
   */
@@ -9,9 +9,14 @@
 ----------------------------------------------------------------
     # CSSeco Imports
     # Generic
+	# Site Wrapper
     # Navigation
+    # Logo
     # Header
     # Footer
+    # Site
+	## Main
+	## Sidebar
     # Globals and Posts Formats
 --------------------------------------------------------------*/
 
@@ -28,7 +33,7 @@
 # Generic
 --------------------------------------------------------------*/
 body {
-	font-family: $csseco_body_font_fira;
+	font-family: $csseco_body_font_roboto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: greyscale;
 }
@@ -49,11 +54,11 @@ a {
 	background-repeat: no-repeat;
 }
 
-.table {
+.dtable {
 	display: table;
 	width: 100%;
 	height: 100%;
-	.table-cell {
+	.dtable-cell {
 		display: table-cell;
 		width: 100%;
 		height: 100%;
@@ -62,36 +67,339 @@ a {
 }
 
 /*--------------------------------------------------------------
+# Site Wrapper
+--------------------------------------------------------------*/
+div#site-wrapper {
+	overflow: hidden;
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+	#cssecoMenu {
+		ul {
+			list-style: none;
+			margin: 10px 0;
+			padding: 0;
+			li {
+				a {
+					display: block;
+					color: #162856;
+					padding: 5px 0;
+					text-transform: uppercase;
+					@media screen and (min-width: $csseco_bp_992) {
+						margin: 0 10px;
+					}
+				}
+				&.current-menu-item,
+				&.current_page_item {
+					a {
+						background-color: #f9a602;
+						font-weight: bold;
+						padding-left: 10px;
+						padding-right: 10px;
+						@media screen and (min-width: $csseco_bp_992) {
+							margin: 0;
+						}
+					}
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					display: inline-block;
+				}
+			}
+			@media screen and (min-width: $csseco_bp_992) {
+				margin-bottom: 0;
+			}
+		}
+		@media screen and (min-width: $csseco_bp_992) {
+			float: right;
+			margin: 10px 0 0 0;
+		}
+	}
+	#bmenu {
+		background: rgba(255, 255, 255, 1);
+		height: 100%;
+		left: 0;
+		overflow: auto;
+		position: absolute;
+		top: 0;
+		transform: translate(-100%, -100%);
+		transition: transform 250ms ease-in;
+		width: 100%;
+		z-index: 10;
+		&.open {
+			transform: translate(0, 0);
+			transition: transform 250ms ease-in-out;
+		}
+		.container {
+			padding-bottom: 15px;
+			padding-top: 15px;
+			.om {
+				&.top {
+					border-bottom: 1px solid #A2A2A2;
+				}
+				&.bottom {
+					border-top: 1px solid #A2A2A2;
+					padding-top: 10px;
+					text-align: center;
+				}
+				> div:not(.w-100) {
+					height: 50px;
+				}
+				.phoneH {
+					font-size: 93%;
+					i, svg {
+						transform: rotate(-50deg);
+					}
+					@media screen and (min-width: 375px) {
+						font-size: 100%;
+					}
+				}
+				.lngH {}
+				.openaccH {}
+				.loginH {}
+				a.mhlink {
+					background: #f9a602;
+					border-radius: 30px;
+					display: block;
+					padding: 5px 0;
+					text-align: center;
+					text-decoration: none;
+					width: 100%;
+					@include animate( background, 320ms );
+					&:hover {
+						background: #162856;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.burger {
+		color: #000;
+		float: right;
+		font-size: 22px;
+		opacity: 1;
+		padding: 10px;
+		cursor: pointer;
+		i, svg {
+			display: block;
+		}
+		&.open_menu {
+			opacity: 0;
+		}
+	}
 
+/*--------------------------------------------------------------
+# Logo
+--------------------------------------------------------------*/
+	img.logo {
+		max-height: 35px;
+		@media screen and (min-width: $csseco_bp_992) {
+			max-height: 40px;
+		}
+	}
+	img.header_logo {
+		@media screen and (min-width: $csseco_bp_992) {
+			margin-top: 15px;
+		}
+	}
+	
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-
+	header#header {
+		padding-bottom: 15px;
+		> div:first-child {
+			background-color: #FFF;
+			padding-bottom: 15px;
+			padding-top: 15px;
+		}
+		.topHeaderD {
+			background-color: #1B2854;
+			padding-bottom: 15px;
+			padding-top: 15px;
+			&::before,
+			&::after {
+				background-color: #1B2854;
+				bottom: 0;
+				content: '';
+				height: 100%;
+				position: absolute;
+				top: 0;
+				width: 10000px;
+			}
+			&::before {
+				left: -10000px;
+			}
+			&::after {
+				right: -10000px;
+			}
+			.h_i_W {
+				color: #fff;
+				float: right;
+				> div {
+					border-left: 1px solid #FFF;
+					float: left;
+					margin: 0;
+					min-height: 34px;
+					padding: 0 20px;
+					text-align: center;
+					&:first-child {
+						border: medium none;
+					}
+					$csseco_pt_h_lang_phone	: 6px;
+					&.langW {
+						padding-top: $csseco_pt_h_lang_phone;
+					}
+					&.phoneW {
+						padding-top: $csseco_pt_h_lang_phone;
+						i, svg {
+							font-size: 20px;
+							transform: rotate(-50deg);
+						}
+					}
+					a.mhlink {
+						background: #f9a602;
+						border-radius: 30px;
+						display: block;
+						padding: 5px 10px;
+						text-align: center;
+						text-decoration: none;
+						width: 100%;
+						@include animate( background, 320ms );
+						&:hover {
+							background: #AB7200;
+							color: #fff;
+						}
+					}
+					&.openaccW {
+						a.mhlink {
+							background: #f9a602;
+							color: #FFF;
+							font-weight: bold;
+							&:hover {
+								background: #fff;
+								color: #1B2854;
+							}
+						}
+					}
+					&.loginW {
+						a.mhlink {
+							background: #FFF;
+							color: #1B2854;
+							font-weight: bold;
+							&:hover {
+								background: #f9a602;
+								color: #fff;
+							}
+						}
+					}
+					
+				}
+			}
+		}
+	}
+	
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+	footer#footer {
+		background-color: #3A3A3A;
+		padding: 15px 0 0 0;
+		color: #fff;
+		.container {
+			> div {
+				padding-bottom: 15px;
+				&.tabel {
+					p { margin: 0; }
+				}
+			}
+			.smIL {
+				a {
+					text-decoration: none;
+					.fb,
+					.in {
+						color: #FFF;
+						@media screen and (min-width: $csseco_bp_768) {
+							font-size: 25px;	
+						}
+					}
+					&:hover {
+						.fb { color: #3b5998; }
+						.in { color: #0077b5; }			
+					}
+				}
+			}
+			h3 {
+				font-size: 12px;
+				margin: 0;
+				@media screen and (min-width: $csseco_bp_576) {
+					font-size: 14px; 
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					font-size: 16px; 
+				}
+			}
+			p { 
+				font-weight: 300;
+				span {
+					font-weight: bold;
+				}
+				font-size: 10px; 
+				@media screen and (min-width: $csseco_bp_576) {
+					font-size: 12px; 
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					font-size: 14px; 
+				}
+			}	
+		}
+	}
 
+/*--------------------------------------------------------------
+# Site
+--------------------------------------------------------------*/
+	// ##Main
+	main#main.site-main {}
+	// ##Sidebar
+	aside#secondary.widget-area {
+		section.csseco-widget {
+			margin-bottom: 40px;
+			h3 {
+				font-size: 20px;
+				text-decoration: underline;
+			}
+			&.widget_archive,
+			&.widget_categories,
+			&.widget_pages,
+			&.widget_meta,
+			&.widget_recent_comments,
+			&.widget_recent_entries {
+				ul {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+	
 /*--------------------------------------------------------------
 # Globals and Posts Formats
 --------------------------------------------------------------*/
-@import 'base/globals';                  // Global Elements
-@import 'posts-formats/single';          // Single Post Template
-@import 'posts-formats/standard-pf';     // Post Format: Standard
-@import 'posts-formats/image-pf';        // Post Format: Image
-@import 'posts-formats/audio-pf';        // Post Format: Audio
-@import 'posts-formats/video-pf';        // Post Format: Video
-@import 'posts-formats/gallery-pf';      // Post Format: Gallery
-@import 'posts-formats/quote-pf';        // Post Format: Quote
-@import 'posts-formats/link-pf';         // Post Format: Link
-@import 'posts-formats/aside-pf';        // Post Format: Aside
-@import 'posts-formats/status-pf';       // Post Format: Status
-@import 'posts-formats/chat-pf';         // Post Format: Chat
-
-
-
-
+	@import 'base/globals';                  // Global Elements
+	@import 'posts-formats/single';          // Single Post Template
+	@import 'posts-formats/standard-pf';     // Post Format: Standard
+	@import 'posts-formats/image-pf';        // Post Format: Image
+	@import 'posts-formats/audio-pf';        // Post Format: Audio
+	@import 'posts-formats/video-pf';        // Post Format: Video
+	@import 'posts-formats/gallery-pf';      // Post Format: Gallery
+	@import 'posts-formats/quote-pf';        // Post Format: Quote
+	@import 'posts-formats/link-pf';         // Post Format: Link
+	@import 'posts-formats/aside-pf';        // Post Format: Aside
+	@import 'posts-formats/status-pf';       // Post Format: Status
+	@import 'posts-formats/chat-pf';         // Post Format: Chat
+	
+}
 
 
 

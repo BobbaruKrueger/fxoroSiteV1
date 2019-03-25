@@ -1,7 +1,7 @@
 <?php
 /**
   * @package fxoroVone
-  * single.php
+  * page.php
   */
 ?>
 <?php get_header(); ?>
@@ -15,13 +15,7 @@
 					
 					fxoroVone_save_post_views( get_the_ID() );
 					
-					get_template_part( 'includes/front/template-parts/single', get_post_format() );
-					
-					echo csseco_post_navigation();
-					
-					if ( comments_open() ) {
-						comments_template();	
-					}
+					get_template_part( 'includes/front/template-parts/content', 'page' );
 					
 				}
 			}

@@ -1,12 +1,13 @@
 <?php
 /**
   * @package fxoroVone
-  * index.php
+  * front-page.php
   */
 ?>
 <?php get_header(); ?>
 
 	<main id="main" class="site-main col-12 col-lg-8" role="main">
+		AICI VA FI HOMEPAGE sau FRONTPAGE sau WHATEVER, CHILL!!
 		<?php
 			if( have_posts() ) {
 				while( have_posts() ) {

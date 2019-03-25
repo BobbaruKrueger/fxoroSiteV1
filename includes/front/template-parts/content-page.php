@@ -1,6 +1,6 @@
 <?php
 /**
- * @package cssecoST
+ * @package fxoroVone
  * includes/front/template-parts/content-page.php
  *
  * Page Tempalte
@@ -14,7 +14,4 @@
 	<div class="entry-content clearfix">
 		<?php the_content(); ?>
 	</div><!-- /.entry-content -->
-	<?php
-		echo csseco_sharethis();
-	?>
 </article>

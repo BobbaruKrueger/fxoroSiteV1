@@ -1,6 +1,6 @@
 <?php
 /**
-  * @package cssecoST
+  * @package fxoroVone
   * functions.php
   *
   */

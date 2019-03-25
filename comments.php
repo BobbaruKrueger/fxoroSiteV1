@@ -1,6 +1,6 @@
 <?php
 /**
- * @package cssecoST
+ * @package fxoroVone
  * comments.php
  *
  */
@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 	    <h2 class="comments-title">
 			<?php
 			    printf(
-			    	esc_html( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments-title', 'cssecoST' ) ),
+			    	esc_html( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments-title', 'fxoroVone' ) ),
 			    	number_format_i18n( get_comments_number() ),
 			    	'<span>'. get_the_title() . '</span>'
 			    );
@@ -56,7 +56,7 @@ if ( post_password_required() ) {
 
 	    <?php
 	        if( !comments_open() && get_comments_number() ) {
-	        	echo '<p class="no-comments">' . esc_html_e( 'Comments are closed.', 'cssecoST' ) . '</p>';
+	        	echo '<p class="no-comments">' . esc_html_e( 'Comments are closed.', 'fxoroVone' ) . '</p>';
 	        }
 	    ?>
 
@@ -67,26 +67,26 @@ if ( post_password_required() ) {
 	<?php
 		$fields = array(
 			'author' =>
-				'<div class="form-group"><label for="author">' . __( 'Name', 'cssecoST' ) .
+				'<div class="form-group"><label for="author">' . __( 'Name', 'fxoroVone' ) .
 				'<span class="required">*</span></label>' .
 				'<input id="author" name="author" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author'] ) .
 				'" required="required" /></div>',
 
 			'email' =>
-				'<div class="form-group"><label for="email">' . __( 'Email', 'cssecoST' ) .
+				'<div class="form-group"><label for="email">' . __( 'Email', 'fxoroVone' ) .
 				'<span class="required">*</span></label>' .
 				'<input id="email" name="email" type="text" class="form-control" value="' . esc_attr(  $commenter['comment_author_email'] ) .
 				'" required="required" /></div>',
 
 			'url' =>
-				'<div class="form-group"><label for="url">' . __( 'Website', 'cssecoST' ) . '</label>' .
+				'<div class="form-group"><label for="url">' . __( 'Website', 'fxoroVone' ) . '</label>' .
 				'<input id="url" name="url" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author_url'] ) .
 				'" /></div>',
 		);
 
 		$args = array(
 			'class_submit'      => 'btn btn-primary',
-			'label_submit'      => __( 'Submit Comment', 'cssecoST' ),
+			'label_submit'      => __( 'Submit Comment', 'fxoroVone' ),
 			'comment_field'     => '<div class="form-group"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label>
 									<textarea id="comment" class="form-control" name="comment" rows="5" required="required" 
 									aria-required="true"></textarea></div>',

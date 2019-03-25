@@ -1,5 +1,5 @@
 /**
-  * @package cssecoST
+  * @package fxoroVone
   * js/csseco.js
   */
 jQuery(document).ready(function($){
@@ -31,5 +31,22 @@ jQuery(document).ready(function($){
 	$('img').addClass('img-fluid'); // add img-responsive(bootstrap) to all images
 	$('select').addClass('form-control'); // add form-control(bootstrap) class on all select elements on the site
 	$('table').addClass('table'); // add table(bootstrap) class on all table elements on the site
+	
+	
+	// ==================
+	// Mobile menu
+	// ==================
+	var menuBtnOpenClass = '.burger.open';
+	var menuBtnCloseClass = '.burger.close';
+	$(document).on('click', menuBtnOpenClass, function(){
+		$('#bmenu').addClass('open');
+		$('body').css('overflow', 'hidden');
+		$(this).addClass('open_menu');
+	});
+	$(document).on('click', menuBtnCloseClass, function(){
+		$('#bmenu').removeClass('open');
+		$('body').css('overflow', 'auto');
+		$(menuBtnOpenClass).removeClass('open_menu');
+	});
 	
 });
