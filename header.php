@@ -15,7 +15,6 @@
 	<?php if( is_singular() && pings_open( get_queried_object() ) ) { ?>
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php } ?>
-	<?php wp_head(); ?>
 	<style>
 		<?php 
 			if ( is_admin_bar_showing() ) {
@@ -32,6 +31,7 @@
 			};
 		?>
 	</style>
+	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 	<div id="site-wrapper">
@@ -106,7 +106,7 @@
 			</div>
 		</div>
 		<header id="header" class="site_header">
-			<div class="container d-block d-lg-none">
+			<div class="container d-block d-lg-none pt-3 pt-lg-0">
 				<div class="row">
 					<div class="col-6 align-middle">
 						<div class="dtable">

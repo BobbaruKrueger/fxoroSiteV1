@@ -49,4 +49,26 @@ jQuery(document).ready(function($){
 		$(menuBtnOpenClass).removeClass('open_menu');
 	});
 	
+	
+	// ==================
+	// Owl Carousel
+	// ==================
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		margin:10,
+		nav:true,
+		dots:false,
+		responsive:{
+			0:{
+				items:1
+			},
+			576:{
+				items:2
+			},
+			768:{
+				items:3
+			}
+		}
+	});
+
 });

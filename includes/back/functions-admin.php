@@ -37,7 +37,7 @@ function csseco_add_admin_page() {
 	
 	add_submenu_page( // page #2
 		'csseco_theme_options_page',
-		__('Sidebar Settings', 'fxoroVone'),
+		__('Theme Settings', 'fxoroVone'),
 		__('Theme Settings', 'fxoroVone'),
 		'manage_options',
 		'csseco_theme_options_page_2',

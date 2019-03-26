@@ -8,6 +8,12 @@ function csseco_load_scripts() {
 	
 	// Bootstrap style
 	wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', array(), '4.3.1', 'all' );
+	// Flags styles
+	wp_enqueue_style( 'csseco_flags_styles', get_template_directory_uri().'/css/flags/flag-icon.css', array(), '1.0.0', 'all' );
+	// Owl Carousel styles
+	wp_enqueue_style( 'owl_carousel', get_template_directory_uri().'/vendor/owl_carousel/owl.carousel.min.css', array(), '1.0.0', 'all' );
+	// Owl Carousel default styles
+	wp_enqueue_style( 'owl_carousel_default', get_template_directory_uri().'/vendor/owl_carousel/owl.theme.default.min.css', array(), '1.0.0', 'all' );
 	// Main styles
 	wp_enqueue_style( 'csseco_styles', get_template_directory_uri().'/css/csseco.css', array(), '1.0.0', 'all' );
 	
@@ -16,10 +22,17 @@ function csseco_load_scripts() {
 	// Jquery in footer(down)
 	wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.3.1.min.js', false, '3.3.1', true );
 	wp_enqueue_script( 'jquery' );
+	// Owl Carousel scripts
+	wp_enqueue_script( 'owl_carousel', get_template_directory_uri().'/vendor/owl_carousel/owl.carousel.min.js', array('jquery'), '1.14.7', true );
 	// Popper.js
 	wp_enqueue_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'), '1.14.7', true );
 	// Bootstrap scripts
 	wp_enqueue_script( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), '4.3.1', true );
+	
+	// Particles.js 
+	wp_enqueue_script( 'particles-js', get_template_directory_uri() . '/vendor/particles/particles.min.js', array('jquery'), '1.0.0', true );
+	// Particles.js json
+	wp_enqueue_script( 'particles-json', get_template_directory_uri() . '/vendor/particles/particles.json', array('jquery'), '1.0.0', true );
 	
 	// FontAwesome scripts
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/js/all.js', array('jquery'), '5.8.1', true );

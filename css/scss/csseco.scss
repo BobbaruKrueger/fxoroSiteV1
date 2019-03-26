@@ -13,11 +13,13 @@
     # Navigation
     # Logo
     # Header
+	## Front Page Header
     # Footer
     # Site
 	## Main
 	## Sidebar
     # Globals and Posts Formats
+    # Front Page Style
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -121,13 +123,13 @@ div#site-wrapper {
 		overflow: auto;
 		position: absolute;
 		top: 0;
-		transform: translate(-100%, -100%);
-		transition: transform 250ms ease-in;
+		transform: translate(-200%, -200%) skew(50deg, 50deg);
+		transition: transform 500ms ease-in;
 		width: 100%;
 		z-index: 10;
 		&.open {
-			transform: translate(0, 0);
-			transition: transform 250ms ease-in-out;
+			transform: translate(0, 0) skew(0, 0);
+			transition: transform 500ms ease-in-out;
 		}
 		.container {
 			padding-bottom: 15px;
@@ -215,8 +217,9 @@ div#site-wrapper {
 		}
 		.topHeaderD {
 			background-color: #1B2854;
-			padding-bottom: 15px;
-			padding-top: 15px;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			font-size: 14px;
 			&::before,
 			&::after {
 				background-color: #1B2854;
@@ -246,9 +249,12 @@ div#site-wrapper {
 					&:first-child {
 						border: medium none;
 					}
+					&:last-child {
+						padding-right: 0;
+					}
 					$csseco_pt_h_lang_phone	: 6px;
 					&.langW {
-						padding-top: $csseco_pt_h_lang_phone;
+						padding-top: $csseco_pt_h_lang_phone + 1;
 					}
 					&.phoneW {
 						padding-top: $csseco_pt_h_lang_phone;
@@ -295,6 +301,199 @@ div#site-wrapper {
 					}
 					
 				}
+			}
+		}
+		// Front Page Header
+		&.fp_header {
+			border-bottom: 1px solid #000;
+			padding-bottom: 5px;
+			position: relative;
+			overflow: hidden;
+			z-index: 0;
+			video#bgVid {
+				bottom: -280px;
+				min-height: 100%;
+				min-width: 100%;
+				position: absolute;
+				right: 0;
+			}
+			.fp {
+				margin-top: 20px;
+				h1 {
+					background-color: rgba(0, 0, 0, .5);
+					color: #FFF;
+					font-size: 26px;
+					font-weight: 400;
+					line-height: 1.1;
+					padding: 15px 0;
+					position: relative;
+					text-align: center;
+					text-transform: uppercase;
+					&::before,
+					&::after {
+						background-color: rgba(0, 0, 0, .5);
+						bottom: 0;
+						content: '';
+						height: 100%;
+						position: absolute;
+						top: 0;
+						width: 10000px;
+						@media screen and (min-width: $csseco_bp_992) {
+							display: none;
+						}
+					}
+					&::before {
+						left: -10000px;
+					}
+					&::after {
+						right: -10000px;
+					}
+					span {
+						color: #FFF;
+						font-weight: bold;
+						@media screen and (min-width: $csseco_bp_992) {
+							color: #162856;
+						}
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						font-size: 28px;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						font-size: 30px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						background: transparent;
+						color: #000000;
+						font-size: 26px;
+						padding: 0;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 38px;
+					}
+				}
+				a.cssecoBtn {
+					background-color: rgb(249, 182, 55);
+					border: 1px solid #D8992A;
+					border-radius: 30px;
+					color: #000000;
+					display: block;
+					font-size: 12px;
+  					font-weight: bold;
+					margin: 20px auto 0;
+					max-width: 210px;
+					padding-bottom: 10px;
+					padding-top: 10px;
+					text-align: center;
+					text-decoration: none;
+					span {
+						display: block;
+						font-size: 16px;
+						line-height: normal;
+						& + span {
+							display: none;
+							font-size: 10px;
+							@media screen and (min-width: $csseco_bp_992) {
+								display: block;
+							}
+						}
+					}	
+					&:hover {
+						background-color: rgba(249, 182, 55, .8);
+					}
+					& + div.row {
+						@media screen and (max-width: 991.98px) {
+							display: none;
+						}
+						& + div.row {
+							@media screen and (max-width: 991.98px) {
+								font-size: 10px;
+//								display: none;
+							}	
+						}
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 16px;
+						margin: 50px auto 20px;
+						max-width: 280px;
+						text-transform: uppercase;
+					}
+				}
+				.ub {
+					.flag-wrapper {
+						display: inline-block;
+						height: 100%;
+						.flag {
+							background-size: cover;
+							background-position: center center;
+							border-radius: 50%;
+							height: 30px;
+							width: 30px;
+							@media screen and (min-width: $csseco_bp_576) {
+								height: 35px;
+								width: 35px;
+							}
+							@media screen and (min-width: $csseco_bp_768) {
+								height: 37px;
+								width: 37px;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+								height: 43px;
+								width: 43px;
+							}
+							@media screen and (min-width: $csseco_bp_1200) {
+								height: 45px;
+								width: 45px;
+							}
+						}
+					}
+					.flag-wrapper + div {
+						display: inline-block;
+						height: 100%;
+						span {
+							font-size: 8px;
+							display: block;
+							@media screen and (min-width: $csseco_bp_576) {
+								font-size: 8px;
+							}
+							@media screen and (min-width: $csseco_bp_768) {
+								font-size: 9px;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+								font-size: 10px;
+							}
+						}
+					}
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					margin-top: 50px;
+				}
+			}
+			.svgshape {
+				bottom: 0;
+				display: none;
+				position: absolute;
+				&.white {
+					bottom: -1px;
+					left: 1px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					display: block;
+					height: 120px;
+				}
+				@media screen and (min-width: 1400px) {
+					height: 160px;
+				}
+				
+			}
+			@media screen and (min-width: $csseco_bp_576) {
+				padding-bottom: 10px;
+			}
+			@media screen and (min-width: $csseco_bp_992) {
+				border: medium none;
+				padding-bottom: 130px;	
+			}
+			@media screen and (min-width: 1400px) {
+				padding-bottom: 140px;	
 			}
 		}
 	}
@@ -399,32 +598,269 @@ div#site-wrapper {
 	@import 'posts-formats/status-pf';       // Post Format: Status
 	@import 'posts-formats/chat-pf';         // Post Format: Chat
 	
+/*--------------------------------------------------------------
+# Front Page Styles
+--------------------------------------------------------------*/
+	&.csseco-front-page {
+		// FP Primary a.k.a. content-area
+		#primary {
+			section#section1fp.subVid {
+				padding-top: 30px;
+				h3 {
+					color: #162856;
+					font-size: 16px;
+					font-weight: bold;
+					margin: 0 0 30px;
+					padding: 0 0 5px;
+					position: relative;
+					text-align: center;
+					&::after {
+						background-color: #F9B132;
+						bottom: 0;
+						content: '';
+						height: 1px;
+						left: 50%;
+						position: absolute;
+						transform: translate(-50%, 0);
+						width: 155px;
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						font-size: 18px;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						font-size: 20px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 26px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 30px;
+					}
+				}
+				.clogoW {
+					margin: 0 0 10px;
+					.clogo {
+						max-height: 41px;
+						max-width: 40px;
+					}
+				}
+				p {
+					font-size: 12px;
+					font-weight: 300;
+					text-align: center;
+					& + p {
+						text-transform: uppercase;
+						position: relative;
+						&::before {
+							background-image: url(../imgs/cyprus_logo.png);
+							background-size: cover;
+							bottom: 3px;
+							height: 141px;
+							left: 0;
+							position: absolute;
+							width: 140px;
+							@media screen and (min-width: $csseco_bp_992) {
+								left: 52px;
+							}
+							@media screen and (min-width: $csseco_bp_1200) {
+								height: 171px;
+								left: 67px;
+								width: 170px;
+							}
+						}
+						span {
+							border-bottom: 1px solid #cadc36;
+							position: relative;
+							&::before {
+								background: #cadc36;
+								bottom: -1px;
+								height: 1px;
+								left: -82px;
+								position: absolute;
+								width: 100px;
+								@media screen and (min-width: $csseco_bp_768) {
+									content: '';
+								}
+								@media screen and (min-width: $csseco_bp_992) {
+									left: -100px;
+								}
+								@media screen and (min-width: $csseco_bp_1200) {
+									width: 140px;
+									left: -131px;
+								}
+							}
+						}
+						@media screen and (min-width: $csseco_bp_768) {
+							&::before {
+								content: '';
+							}
+						}
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						font-size: 14px;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						font-size: 16px;
+						padding-left: 150px;
+						text-align: left;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 20px;
+						padding-left: 220px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 22px;
+						padding-left: 280px;
+					}
+				}
+			}
+			section#section2fp.part {
+				background: #162856;
+				color: #FFF;
+				padding: 25px 0;
+				position: relative;
+				#particles-js {
+					bottom: 0;
+					left: 0;
+					position: absolute; 
+					right: 0;
+					top: 0;
+				}
+				.top {
+					h3 {
+						font-size: 16px;
+						font-weight: bold;
+						margin: 0 0 30px;
+						padding: 0 0 5px;
+						position: relative;
+						text-align: center;
+						&::after {
+							background-color: #F9B132;
+							bottom: 0;
+							content: '';
+							height: 1px;
+							left: 50%;
+							position: absolute;
+							transform: translate(-50%, 0);
+							width: 155px;
+						}
+						@media screen and (min-width: $csseco_bp_576) {
+							font-size: 18px;
+						}
+						@media screen and (min-width: $csseco_bp_768) {
+							font-size: 20px;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							font-size: 26px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							font-size: 30px;
+						}
+					}
+					p {
+						font-size: 14px;
+						font-weight: 300;
+						@media screen and (min-width: $csseco_bp_576) {
+//							font-size: 14px;
+						}
+						@media screen and (min-width: $csseco_bp_768) {
+							font-size: 16px;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							font-size: 20px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							font-size: 22px;
+						}
+					}	
+				}	
+				.bottom {
+					ul.nav {
+						font-size: 14px;
+						font-weight: 300;
+						margin: 0 0 20px 0;
+						padding: 0 15px;
+						li {
+							overflow: hidden;
+							text-align: center;
+							text-overflow: ellipsis;
+							width: 25%;
+							white-space: nowrap; 
+							a {
+								color: #FFF;
+								text-decoration: none;
+								&.active,
+								&:hover,
+								&:active {
+									color: #ffa402;
+									font-weight: bold;
+								}
+							}
+							@media screen and (min-width: $csseco_bp_768) {
+								height: auto;
+								text-align: left;
+								width: 100%;
+							}
+						}
+						@media screen and (min-width: $csseco_bp_768) {
+							display: block;
+							font-size: 16px;
+							padding-top: 25px;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							font-size: 20px;
+							padding-top: 45px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							font-size: 22px;
+							padding-top: 65px;
+						}
+					}
+					.tab-content {
+						img {
+							margin: 0 auto;
+							max-width: 270px;
+						}
+						.owl-nav {
+							height: 0;
+							margin: 0;
+							position: relative;
+							.owl-prev,
+							.owl-next {
+								font-size: 30px;
+								position: absolute;
+								top: -160px;
+								@media screen and (min-width: $csseco_bp_576) {
+									top: -150px;
+								}
+								@media screen and (min-width: $csseco_bp_768) {
+									top: -110px;
+								}
+								@media screen and (min-width: $csseco_bp_992) {
+									top: -155px;
+								}
+							}
+							.owl-prev {
+								left: -10px;
+								
+								@media screen and (min-width: $csseco_bp_576) {
+									left: -20px;
+								}
+								@media screen and (min-width: $csseco_bp_768) {}
+							}
+							.owl-next {
+								right: -10px;
+								@media screen and (min-width: $csseco_bp_576) {
+									right: -20px;
+								}
+							}
+						}
+					}
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					padding-bottom: 40px;
+				}
+			}
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
