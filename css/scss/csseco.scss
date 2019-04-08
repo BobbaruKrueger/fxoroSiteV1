@@ -9,6 +9,7 @@
 ----------------------------------------------------------------
     # CSSeco Imports
     # Generic
+    ## Overwrite
 	# Site Wrapper
     # Navigation
     # Logo
@@ -38,6 +39,7 @@ body {
 	font-family: $csseco_body_font_roboto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: greyscale;
+	overflow-x: hidden;
 }
 
 a {
@@ -69,13 +71,49 @@ a {
 }
 
 /*--------------------------------------------------------------
+# Overwrite
+--------------------------------------------------------------*/
+.flag-icon {
+	width: 1.53333333333em;
+	line-height: 2em;
+	@media screen and (min-width: $csseco_bp_992) {
+		margin-right: 7px;
+		width: 2.33333em;
+	}
+}
+
+/*--------------------------------------------------------------
 # Site Wrapper
 --------------------------------------------------------------*/
 div#site-wrapper {
 	overflow: hidden;
+	
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+	.menu-col {
+		@media screen and (min-width: $csseco_bp_992) {
+			background: rgba(255,255,255,.9);	
+			&::before,
+			&::after {
+				background: rgba(255,255,255,.9);
+				bottom: 0;
+				content: '';
+				height: 100%;
+				position: absolute;
+				top: 0;
+				width: 10000px;
+			}
+			&::before {
+				left: -10000px;
+				right: auto;
+			}
+			&::after {
+				left: auto;
+				right: -10000px;				
+			}
+		}
+	}
 	#cssecoMenu {
 		ul {
 			list-style: none;
@@ -96,10 +134,18 @@ div#site-wrapper {
 					a {
 						background-color: #f9a602;
 						font-weight: bold;
-						padding-left: 10px;
+						padding-left: 10px!important;
 						padding-right: 10px;
 						@media screen and (min-width: $csseco_bp_992) {
 							margin: 0;
+						}
+					}
+				}
+				&:first-child {
+					a {
+						@media screen and (min-width: $csseco_bp_992) {
+							margin-left: 0;
+							padding-left: 0;
 						}
 					}
 				}
@@ -108,26 +154,27 @@ div#site-wrapper {
 				}
 			}
 			@media screen and (min-width: $csseco_bp_992) {
-				margin-bottom: 0;
+//				margin-bottom: 0;
 			}
 		}
 		@media screen and (min-width: $csseco_bp_992) {
-			float: right;
 			margin: 10px 0 0 0;
 		}
 	}
 	#bmenu {
 		background: rgba(255, 255, 255, 1);
+		display: none;
 		height: 100%;
 		left: 0;
 		overflow: auto;
 		position: absolute;
 		top: 0;
-		transform: translate(-200%, -200%) skew(50deg, 50deg);
-		transition: transform 500ms ease-in;
+		transform: translate(-30%, -222%) skew(-50deg, -50deg);
+//		transition: transform 500ms ease-in;
 		width: 100%;
-		z-index: 10;
+		z-index: 20;
 		&.open {
+			display: block;
 			transform: translate(0, 0) skew(0, 0);
 			transition: transform 500ms ease-in-out;
 		}
@@ -158,19 +205,10 @@ div#site-wrapper {
 				.lngH {}
 				.openaccH {}
 				.loginH {}
-				a.mhlink {
-					background: #f9a602;
-					border-radius: 30px;
-					display: block;
-					padding: 5px 0;
-					text-align: center;
-					text-decoration: none;
+				a.cssecoBtn {
+					font-size: 16px;
+					padding: 5px 10px;
 					width: 100%;
-					@include animate( background, 320ms );
-					&:hover {
-						background: #162856;
-						color: #fff;
-					}
 				}
 			}
 		}
@@ -239,12 +277,13 @@ div#site-wrapper {
 			.h_i_W {
 				color: #fff;
 				float: right;
+				padding-top: 5px;
 				> div {
 					border-left: 1px solid #FFF;
 					float: left;
 					margin: 0;
 					min-height: 34px;
-					padding: 0 20px;
+					padding: 0 30px;
 					text-align: center;
 					&:first-child {
 						border: medium none;
@@ -252,55 +291,47 @@ div#site-wrapper {
 					&:last-child {
 						padding-right: 0;
 					}
-					$csseco_pt_h_lang_phone	: 6px;
 					&.langW {
-						padding-top: $csseco_pt_h_lang_phone + 1;
+						font-size: 16px;
+						i,svg {
+							margin-left: 7px;
+						}
 					}
 					&.phoneW {
-						padding-top: $csseco_pt_h_lang_phone;
+						padding-top: 1px;
+						font-size: 16px;
 						i, svg {
-							font-size: 20px;
-							transform: rotate(-50deg);
+							bottom: -2px;
+							font-size: 24px;
+							position: relative;
+							transform: rotate(-30deg);
 						}
 					}
-					a.mhlink {
-						background: #f9a602;
-						border-radius: 30px;
-						display: block;
-						padding: 5px 10px;
-						text-align: center;
-						text-decoration: none;
-						width: 100%;
-						@include animate( background, 320ms );
-						&:hover {
-							background: #AB7200;
-							color: #fff;
-						}
-					}
-					&.openaccW {
-						a.mhlink {
-							background: #f9a602;
-							color: #FFF;
-							font-weight: bold;
-							&:hover {
-								background: #fff;
-								color: #1B2854;
-							}
-						}
-					}
-					&.loginW {
-						a.mhlink {
+					a.cssecoBtn {
+						border: 1px solid #FFF;
+						color: #162856;
+						font-size: 16px;
+						margin: 0;
+						min-width: 70px;
+						padding: 1px 10px;
+						position: relative;
+						top: 3px;
+						width: auto;
+						&::after {
 							background: #FFF;
-							color: #1B2854;
-							font-weight: bold;
-							&:hover {
-								background: #f9a602;
-								color: #fff;
-							}
+						}
+						&:hover {
+							border: 1px solid #D8992A;
+							color: #FFF;
 						}
 					}
-					
+					&.openaccW {}
+					&.loginW {}
 				}
+			}
+			@media screen and (min-width: $csseco_bp_992) {
+				padding-bottom: 17px;
+				padding-top: 17px;
 			}
 		}
 		// Front Page Header
@@ -311,16 +342,17 @@ div#site-wrapper {
 			overflow: hidden;
 			z-index: 0;
 			video#bgVid {
-				bottom: -280px;
+//				bottom: -280px;
 				min-height: 100%;
 				min-width: 100%;
 				position: absolute;
 				right: 0;
+				
 			}
 			.fp {
 				margin-top: 20px;
 				h1 {
-					background-color: rgba(0, 0, 0, .5);
+					background-color: rgba(0, 0, 0, .6);
 					color: #FFF;
 					font-size: 26px;
 					font-weight: 400;
@@ -331,7 +363,7 @@ div#site-wrapper {
 					text-transform: uppercase;
 					&::before,
 					&::after {
-						background-color: rgba(0, 0, 0, .5);
+						background-color: rgba(0, 0, 0, .6);
 						bottom: 0;
 						content: '';
 						height: 100%;
@@ -371,20 +403,8 @@ div#site-wrapper {
 						font-size: 38px;
 					}
 				}
-				a.cssecoBtn {
-					background-color: rgb(249, 182, 55);
-					border: 1px solid #D8992A;
-					border-radius: 30px;
-					color: #000000;
-					display: block;
-					font-size: 12px;
-  					font-weight: bold;
-					margin: 20px auto 0;
-					max-width: 210px;
-					padding-bottom: 10px;
-					padding-top: 10px;
-					text-align: center;
-					text-decoration: none;
+				.cssecoBtn {
+					border: 1px solid transparent;
 					span {
 						display: block;
 						font-size: 16px;
@@ -397,9 +417,6 @@ div#site-wrapper {
 							}
 						}
 					}	
-					&:hover {
-						background-color: rgba(249, 182, 55, .8);
-					}
 					& + div.row {
 						@media screen and (max-width: 991.98px) {
 							display: none;
@@ -415,7 +432,6 @@ div#site-wrapper {
 						font-size: 16px;
 						margin: 50px auto 20px;
 						max-width: 280px;
-						text-transform: uppercase;
 					}
 				}
 				.ub {
@@ -464,8 +480,15 @@ div#site-wrapper {
 						}
 					}
 				}
+				.capRsk {
+					font-size: 9px;
+				}
 				@media screen and (min-width: $csseco_bp_992) {
-					margin-top: 50px;
+					margin-top: 60px;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					margin-bottom: 30px;
+					margin-top: 70px;
 				}
 			}
 			.svgshape {
@@ -503,8 +526,9 @@ div#site-wrapper {
 --------------------------------------------------------------*/
 	footer#footer {
 		background-color: #3A3A3A;
-		padding: 15px 0 0 0;
 		color: #fff;
+		padding: 25px 0 0 0;
+		position: relative;
 		.container {
 			> div {
 				padding-bottom: 15px;
@@ -550,13 +574,75 @@ div#site-wrapper {
 				@media screen and (min-width: $csseco_bp_768) {
 					font-size: 14px; 
 				}
-			}	
+			}
+			.chatBtnW {
+				bottom: 10px;
+				padding: 0;
+				position: fixed;
+				right: 10px;
+				z-index: 10;
+				.chat {
+					background: #ffb401;
+					color: #fff;
+					position: relative;
+					z-index: 2;
+					-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+					-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+					box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+				}	
+				&:hover {
+					i.arrow,
+					svg.arrow {
+						color: #162856;
+					}
+					.chat {
+						background: #162856;
+					}
+				}
+			}
 		}
 	}
 
 /*--------------------------------------------------------------
 # Site
 --------------------------------------------------------------*/
+	// Animation button
+	.animationbtn {
+		background-color: #162856;
+		border: 1px solid transparent;
+		border-radius: 30px;
+		color: #000000;
+		display: inline-block;
+		font-size: 12px;
+		font-weight: bold;
+		margin: auto;
+		min-width: 210px;
+		overflow: hidden;
+		padding: 10px;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		z-index: 1;
+		@include animate( color, 320ms );
+		&::after {
+			background: #ffb401;
+			bottom: -5px;
+			content: "";
+			left: -10%;
+			position: absolute;
+			top: -5px;
+			transform: skewX(-30deg);
+			transition: left 0.5s ease-in-out;
+			width: 120%;
+			z-index: -1;
+		}
+		&:hover {
+			color: #FFF;
+			&::after {
+				left: 127%;
+			}
+		}
+	}
 	// ##Main
 	main#main.site-main {}
 	// ##Sidebar
@@ -606,6 +692,7 @@ div#site-wrapper {
 		#primary {
 			section#section1fp.subVid {
 				padding-top: 30px;
+				padding-bottom: 20px;
 				h3 {
 					color: #162856;
 					font-size: 16px;
@@ -626,15 +713,19 @@ div#site-wrapper {
 					}
 					@media screen and (min-width: $csseco_bp_576) {
 						font-size: 18px;
+						margin: 0 0 40px;
 					}
 					@media screen and (min-width: $csseco_bp_768) {
 						font-size: 20px;
+						margin: 0 0 50px;
 					}
 					@media screen and (min-width: $csseco_bp_992) {
 						font-size: 26px;
+						margin: 0 0 60px;
 					}
 					@media screen and (min-width: $csseco_bp_1200) {
 						font-size: 30px;
+						margin: 0 0 70px;
 					}
 				}
 				.clogoW {
@@ -645,6 +736,7 @@ div#site-wrapper {
 					}
 				}
 				p {
+					color: #b7b7b8;
 					font-size: 12px;
 					font-weight: 300;
 					text-align: center;
@@ -652,7 +744,7 @@ div#site-wrapper {
 						text-transform: uppercase;
 						position: relative;
 						&::before {
-							background-image: url(../imgs/cyprus_logo.png);
+							background-image: url(../imgs/fp/cyprus_logo.png);
 							background-size: cover;
 							bottom: 3px;
 							height: 141px;
@@ -713,11 +805,17 @@ div#site-wrapper {
 						padding-left: 280px;
 					}
 				}
+				@media screen and (min-width: $csseco_bp_992) {
+					padding-bottom: 35px;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					padding-bottom: 50px;
+				}
 			}
 			section#section2fp.part {
 				background: #162856;
 				color: #FFF;
-				padding: 25px 0;
+				padding: 30px 0 20px;
 				position: relative;
 				#particles-js {
 					bottom: 0;
@@ -746,31 +844,45 @@ div#site-wrapper {
 						}
 						@media screen and (min-width: $csseco_bp_576) {
 							font-size: 18px;
+							margin: 0 0 40px;
 						}
 						@media screen and (min-width: $csseco_bp_768) {
 							font-size: 20px;
+							margin: 0 0 50px;
 						}
 						@media screen and (min-width: $csseco_bp_992) {
 							font-size: 26px;
+							margin: 0 0 60px;
 						}
 						@media screen and (min-width: $csseco_bp_1200) {
 							font-size: 30px;
+							margin: 0 0 70px;
 						}
 					}
 					p {
 						font-size: 14px;
 						font-weight: 300;
+						span {
+							font-weight: bold;
+							span {
+								color: #ffa402;
+							}
+						}
 						@media screen and (min-width: $csseco_bp_576) {
 //							font-size: 14px;
+							margin: 0 0 40px;
 						}
 						@media screen and (min-width: $csseco_bp_768) {
 							font-size: 16px;
+							margin: 0 0 50px;
 						}
 						@media screen and (min-width: $csseco_bp_992) {
 							font-size: 20px;
+							margin: 0 0 60px;
 						}
 						@media screen and (min-width: $csseco_bp_1200) {
 							font-size: 22px;
+							margin: 0 0 70px;
 						}
 					}	
 				}	
@@ -817,9 +929,55 @@ div#site-wrapper {
 						}
 					}
 					.tab-content {
-						img {
-							margin: 0 auto;
-							max-width: 270px;
+						.owl-stage {
+							.item {
+								
+								img {
+									display: inline-block;
+									width: auto;
+								}
+								.itemInner {
+									background: #FFF;
+									color: #000;
+									line-height: 1;
+									padding: 15px;
+									.cssecoFlagsW {
+										text-align: center;
+										img {}
+									}
+									.currencyW {
+										font-size: 22px;
+										padding-top: 10px;
+										text-align: center;
+									}
+									.changeW {
+										font-size: 20px;
+										padding-top: 10px;
+										text-align: center;
+									}
+									.canvasW {
+										padding: 5px 0;
+										text-align: center;
+										
+									}
+									.sellprice {
+										text-align: center;
+										font-size: 18px;
+										h3 {
+											color: #30AB2F;
+											font-size: 20px;
+										}
+									}
+									.buyprice {
+										text-align: center;
+										font-size: 18px;
+										h3 {
+											color: #BE0011;
+											font-size: 20px;
+										}
+									}	
+								}
+							}
 						}
 						.owl-nav {
 							height: 0;
@@ -830,6 +988,19 @@ div#site-wrapper {
 								font-size: 30px;
 								position: absolute;
 								top: -160px;
+								width: 25px;
+								@include animate( color, 320ms );
+								&:hover {
+									background: #ffb401;
+									color: #000;
+								}
+								span {
+									position: relative;
+									top: -3px;
+								}
+								@media screen and (min-width: 375px) {
+									width: 30px;
+								}
 								@media screen and (min-width: $csseco_bp_576) {
 									top: -150px;
 								}
@@ -837,6 +1008,9 @@ div#site-wrapper {
 									top: -110px;
 								}
 								@media screen and (min-width: $csseco_bp_992) {
+									top: -135px;
+								}
+								@media screen and (min-width: $csseco_bp_1200) {
 									top: -155px;
 								}
 							}
@@ -844,21 +1018,1308 @@ div#site-wrapper {
 								left: -10px;
 								
 								@media screen and (min-width: $csseco_bp_576) {
-									left: -20px;
+									left: -40px;
 								}
 								@media screen and (min-width: $csseco_bp_768) {}
 							}
 							.owl-next {
 								right: -10px;
 								@media screen and (min-width: $csseco_bp_576) {
-									right: -20px;
+									right: -40px;
 								}
 							}
 						}
 					}
 				}
+				@media screen and (min-width: $csseco_bp_576) {
+					padding: 25px 0 20px 0;
+					font-size: 14px;
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					font-size: 16px;
+					padding-bottom: 40px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					font-size: 20px;
+					padding-bottom: 35px;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					font-size: 22px;
+					padding: 70px 0 50px;
+				}
+			}
+			section#section3fp.map {
+				padding-bottom: 20px;
+				padding-top: 30px;
+				overflow: hidden;
+				position: relative;
+//				#gmap {
+//					width: 100%;
+//					height: 400px;
+//					background-color: grey;
+//				}
+				#cursorAlpha {
+//					https://www.cssmatic.com/gradient-generator#'\-moz\-radial\-	gradient\%28center\%2C\%20ellipse\%20cover\%2C\%20rgba\%28255\%2C255\%2C255\%2C1\%29\%200\%25\%2C\%20rgba\%28255\%2C255\%2C255\%2C0\.5\%29\%2044\%25\%2C\%20rgba\%28255\%2C255\%2C255\%2C0\%29\%2070\%25\%2C\%20rgba\%28255\%2C255\%2C255\%2C0\%29\%20100\%25\%29\%3B'
+					background: rgba(255,255,255,1);
+					background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 44%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+					background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(44%, rgba(255,255,255,0.5)), color-stop(70%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0)));
+					background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 44%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+					background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 44%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+					background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 44%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+					background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 44%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+					
+//					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0.5+38,0+67,0+100 */
+//					background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 38%, rgba(255,255,255,0) 67%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+//					background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 38%,rgba(255,255,255,0) 67%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+//					background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 38%,rgba(255,255,255,0) 67%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+					
+					border-radius: 50%;
+					border: 1px solid transparent;
+					height: 150px;
+					opacity: .3;
+					position: absolute;
+					transform: translate(-50%, -50%);
+					transition: all 100ms linear;
+					width: 150px;
+					z-index: 4;
+					@media screen and (max-width: 991px) {
+						display: none;
+					}
+				}
+				.imgMapWrapper {
+					position: relative;
+					img.imgmap {
+						display: none;
+						width: 100%;
+						@media screen and (min-width: $csseco_bp_992) {
+							display: block;
+						}
+					}
+					.rev {
+						height: 50px;
+						left: 0;
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						z-index: -999;
+					}
+					.pin {
+						animation-duration: 1200ms; 
+						background: #FFF;
+						margin: 0 0 15px 0;
+						padding: 0 0 0 45px;
+						position: relative;
+						height: 42px;
+						z-index: 5;
+						span {
+							display: block;
+							a {
+								text-decoration: none;
+								transition: all 250ms ease-in;
+								@media screen and (min-width: $csseco_bp_992) {
+									display: block;
+									font-size: 12px;
+								}
+								@media screen and (min-width: $csseco_bp_1200) {
+									font-size: 13px;
+								}
+							}
+						}
+						&:hover {
+							@media screen and (min-width: $csseco_bp_992) {
+								border: 1px solid #ffb401;
+								a {
+									font-size: 14px;
+								}
+							}
+						}
+						&::before {
+							background-image: url(../imgs/fp/map_pin.png);
+							background-repeat: no-repeat;
+							background-position: center center;
+							background-size: contain;
+							content: '';
+							height: 42px;
+							left: 0;
+							position: absolute;
+							width: 32px;
+							@media screen and (min-width: $csseco_bp_992) {
+								left: -10px;
+								top: -43px;
+							}
+						}
+						@media screen and (min-width: $csseco_bp_768) {
+							float: left;
+							max-width: 50%;
+							width: 100%;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							background: #FFF;
+							border: 1px solid #000;
+							height: auto;
+							margin: 0;
+							max-width: none;
+							padding: 0 4px;
+							position: absolute;
+							visibility: hidden; // for js visible()
+							width: auto;
+						}
+					}
+					.pin.uk {
+						animation-delay: 150ms;
+						@media screen and (min-width: $csseco_bp_992) {
+							left: 200px;
+							top: 155px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							left: 240px;
+							top: 190px;
+						}
+					}
+					.pin.de {
+						animation-delay: 300ms;
+						@media screen and (min-width: $csseco_bp_992) {
+							left: 355px;
+							top: 215px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							left: 420px;
+							top: 250px;
+						}
+					}
+					.pin.fr {
+						animation-delay: 450ms;
+						@media screen and (min-width: $csseco_bp_992) {
+							left: 220px;
+							top: 260px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							left: 255px;
+							top: 320px;
+						}
+					}
+					.pin.hu {
+						animation-delay: 600ms;
+						@media screen and (min-width: $csseco_bp_992) {
+							left: 500px;
+							top: 295px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							left: 595px;
+							top: 360px;
+						}
+					}
+					.pin.ro {
+						animation-delay: 750ms;
+						&::before {
+							@media screen and (min-width: $csseco_bp_992) {
+								left: auto;
+								right: -10px;	
+							}
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							right: 350px;
+							top: 360px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							right: 420px;
+							top: 430px;
+						}
+					}
+					.pin.es {
+						animation-delay: 900ms;
+						@media screen and (min-width: $csseco_bp_992) {
+							left: 70px;
+							top: 380px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							left: 85px;
+							top: 455px;
+						}
+					}
+					.pin.it {
+						animation-delay: 1050ms;
+						&::before {
+							@media screen and (min-width: $csseco_bp_992) {
+								left: auto;
+								right: -10px;	
+							}
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							right: 420px;
+							top: 435px;						
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							right: 590px;
+							top: 520px;
+						}
+					}
+					.pin.cy {
+						animation-delay: 1300ms;
+						&::before {
+							@media screen and (min-width: $csseco_bp_992) {
+								left: auto;
+								right: -10px;	
+							}
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							right: 180px;
+							top: 548px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							right: 220px;
+							top: 660px;
+						}
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						margin: 0 auto;
+						max-width: 360px;
+						width: 100%;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						max-width: 100%;
+					}
+				}
+				.imgsW {
+					
+					position: relative;
+//					.imgmap {
+//						
+//						&.pins { 
+////							background-repeat: no-repeat!important; // !importantmaphighligh
+////							display: none;
+////							position: absolute!important;  // !importantmaphighligh
+////							transition: all 500ms ease-in;
+////							opacity: 0;
+////							width: 100%!important; // !importantmaphighligh
+////							z-index: 0;
+//							margin: auto;
+//							opacity: 0;
+//							transition: all 500ms ease-in;							
+//							z-index: 0;
+//							
+//							&.top {
+//								display: block;
+//								z-index: 2; 
+//							}
+//							&.show {
+//								opacity: 1;
+//							}
+//						}
+//						&.no-pins { 
+//							height: auto;
+//							left: 50%;
+//							max-width: 935px;
+//							position: absolute;
+//							top: 0;
+//							transform: translateX(-50%);
+//							width: 100%; 
+//							z-index: 1; 
+//						}
+//					}	
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					padding-bottom: 10px;
+					padding-top: 30px;
+				}
+				@media screen and (min-width: $csseco_bp_576) {
+					padding-bottom: 20px;
+					padding-top: 25px;
+				}
 				@media screen and (min-width: $csseco_bp_768) {
 					padding-bottom: 40px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					padding-bottom: 35px;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					padding: 70px 0 50px;
+				}
+			}
+			section#section4fp.intr {
+				padding-top: 30px;
+				overflow: hidden;
+				.row {
+					@media screen and (max-width: 767px) {
+						overflow: hidden;
+					}
+				}
+				a.cssecoBtn + p {
+					font-size: 9px;
+					margin: 0;
+				}
+				h3 {
+					font-size: 16px;
+					font-weight: bold;
+					margin: 0 0 30px;
+					padding: 0 0 5px;
+					position: relative;
+					text-align: center;
+					br {
+						@media screen and (min-width: $csseco_bp_576) {
+							display: none;
+						}
+					}
+					&::after {
+						background-color: #F9B132;
+						bottom: 0;
+						content: '';
+						height: 1px;
+						left: 50%;
+						position: absolute;
+						transform: translate(-50%, 0);
+						width: 155px;
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						font-size: 18px;
+						margin: 0 0 40px;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						font-size: 20px;
+						margin: 0 0 50px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 26px;
+						margin: 0 0 60px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 30px;
+						margin: 0 0 70px;
+					}
+				}
+				p {
+					font-weight: 300;
+				}
+				.lpb {
+					ul {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+						li {
+							font-weight: 300;
+							margin: 0 0 10px;
+							img {
+								margin-right: 10px;
+								width: 45px;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+						  		font-weight: bold;
+								margin: 0 0 15px;
+							}
+						}
+						@media screen and (max-width: $csseco_bp_576) {
+							margin: 0 auto;
+							max-width: 240px;
+							width: 100%;
+						}
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						padding-top: 30px;
+					}
+				}
+				.bsh {
+					@media screen and (max-width: 575px) {
+						-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+						-moz-box-shadow:    0px 3px 5px 0px rgba(0,0,0,0.2);
+						box-shadow:         0px 3px 5px 0px rgba(0,0,0,0.2);
+					}
+				}
+				img.mphone {
+					animation-duration: 1500ms;
+		  			max-width: 180px;
+					@media screen and (min-width: $csseco_bp_576) {
+						min-width: 260px;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						min-width: auto;
+						max-width: 100%;
+					}
+					@media screen and (min-width: $csseco_bp_768) and (max-width: $csseco_bp_992) {
+						bottom: -30px;
+						left: 0;
+						position: absolute;
+						right: 0;
+						width: 100%;
+					}
+				}
+				@media screen and (min-width: $csseco_bp_576) {
+//					font-size: 14px;
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					font-size: 16px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					font-size: 20px;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					font-size: 22px;
+				}
+			}
+			section#section5fp.training {
+				> .container {
+					padding-bottom: 20px;
+					padding-top: 30px;
+					position: relative;
+					&::before {
+						background-image: url(../imgs/fp/faceOpac.png);
+						background-repeat: no-repeat;
+						background-position-x: -140px;
+						background-size: cover;
+						bottom: 0;
+						content: '';
+						height: 100%;
+						left: 0;
+						position: absolute;
+						top: 0;
+						width: 380px;
+						@media screen and (min-width: $csseco_bp_576) {
+							background-position: top left;
+							left: -110px;
+							width: 480px;
+						}
+						@media screen and (min-width: $csseco_bp_768) {
+							background-image: url(../imgs/fp/face.png);
+							left: -160px;
+							width: 540px;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							left: -140px;
+							width: 630px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							left: -130px;
+  							width: 680px;
+						}
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 20px;
+						padding: 40px 0 30px 0;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 22px;
+						padding: 70px 0 50px 0;
+					}
+				}
+				a.cssecoBtn + p {
+					font-size: 9px;
+					margin: 0;
+				}
+				h3 {
+					font-size: 16px;
+					font-weight: bold;
+					margin: 0 0 30px;
+					padding: 0 0 5px;
+					position: relative;
+					text-align: center;
+					br {
+						@media screen and (min-width: $csseco_bp_576) {
+							display: none;
+						}
+					}
+					&::after {
+						background-color: #F9B132;
+						bottom: 0;
+						content: '';
+						height: 1px;
+						left: 50%;
+						position: absolute;
+						transform: translate(-50%, 0);
+						width: 155px;
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						font-size: 18px;
+						margin: 0 0 40px;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						font-size: 20px;
+						margin: 0 0 50px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 26px;
+						margin: 0 0 60px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 30px;
+						margin: 0 0 70px;
+					}
+				}
+				p {
+					font-weight: 300;
+					span {
+						font-weight: bold;
+						span {
+							color: #ffb401;
+						}
+					}
+				}
+				ul {
+					animation-duration: 1200ms;
+					font-size: 14px;
+					font-weight: bold;
+					list-style: none;
+					margin: 0 0 30px 0;
+					padding: 0;
+					li {
+						margin: 0 0 20px 0;
+						position: relative;
+						&::before {
+							content: "\2022";
+							color: #ffb401;
+							display: inline-block; 
+							font-weight: bold;
+							width: 1em;
+						}
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						font-size: 16px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 20px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 22px;
+					}
+				}
+				@media screen and (min-width: $csseco_bp_576) {
+					-webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
+					-moz-box-shadow:    0px -3px 5px 0px rgba(0, 0, 0, 0.2);
+					box-shadow:         0px -3px 5px 0px rgba(0, 0, 0, 0.2);
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					font-size: 16px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					font-size: 20px;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					font-size: 22px;
+				}
+			}
+			section#section6fp.tech {
+				background-image: url(../imgs/fp/meeting.png);
+				background-position: top center;
+				background-repeat: no-repeat;
+				background-size: cover;		
+				color: #FFF;
+				padding: 30px 0 0 0; 
+				h3 {
+					font-size: 16px;
+					font-weight: bold;
+					margin: 0 0 30px;
+					padding: 0 0 5px;
+					position: relative;
+					text-align: center;
+					br {
+						@media screen and (min-width: $csseco_bp_576) {
+							display: none;
+						}
+					}
+					&::after {
+						background-color: #F9B132;
+						bottom: 0;
+						content: '';
+						height: 1px;
+						left: 50%;
+						position: absolute;
+						transform: translate(-50%, 0);
+						width: 155px;
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						font-size: 18px;
+						margin: 0 0 40px;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						font-size: 20px;
+						margin: 0 0 50px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 26px;
+						margin: 0 0 60px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 30px;
+						margin: 0 0 70px;
+					}
+				}
+				p {
+					font-weight: 300;
+					span {
+						font-weight: bold;
+						span {
+							color: #ffb401;
+						}
+					}
+				}
+				ul {
+					animation-duration: 1200ms; 
+					list-style: none;
+					margin: 0 0 15px 0;
+					padding: 0;
+					li {
+						display: inline-block;
+						margin: 0 10px 15px 0;
+						position: relative;
+						&::before {
+							content: "\2022";
+							color: #ffb401;
+							display: inline-block; 
+							font-weight: bold;
+							width: 1em;
+						}
+						@media screen and (min-width: $csseco_bp_576) {
+							display: block;
+						}
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						margin: 0;
+					}
+				}
+				a.cssecoBtn {
+					border: 1px solid #D8992A;
+				}
+				a.cssecoBtn + p {
+					font-size: 9px;
+				}
+				@media screen and (min-width: $csseco_bp_576) {
+					padding: 25px 0 20px 0;
+					font-size: 14px;
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					font-size: 16px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					font-size: 20px;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					font-size: 22px;
+					padding: 70px 0 50px 0;
+				}
+			}
+			section#section7fp.autoch {
+				background-image: url(../imgs/fp/chart_background.png);
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				padding: 30px 0 20px 0; 
+				a.cssecoBtn + p {
+					font-size: 9px;
+					margin: 0;
+				}
+				h3 {
+					font-size: 16px;
+					font-weight: bold;
+					margin: 0 0 30px;
+					padding: 0 0 5px;
+					position: relative;
+					text-align: center;
+					br {
+						@media screen and (min-width: $csseco_bp_576) {
+							display: none;
+						}
+					}
+					&::after {
+						background-color: #F9B132;
+						bottom: 0;
+						content: '';
+						height: 1px;
+						left: 50%;
+						position: absolute;
+						transform: translate(-50%, 0);
+						width: 155px;
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						font-size: 18px;
+						margin: 0 0 40px;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						font-size: 20px;
+						margin: 0 0 50px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 26px;
+						margin: 0 0 60px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 30px;
+						margin: 0 0 70px;
+					}
+				}
+				p {
+					font-weight: 300;
+					span {
+						font-weight: bold;
+						span {
+							color: #f8a602;	
+						}
+					}
+				}
+				.lpb {
+					ul {
+						list-style: none;
+						padding: 0;
+						li {
+							margin: 0 0 10px;
+							img {
+								margin-right: 10px; 
+								width: 45px;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+						  		margin: 0 0 15px;
+							}
+						}
+						@media screen and (max-width: $csseco_bp_576) {
+							margin: 0 auto 30px;
+							max-width: 240px;
+							width: 100%;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							margin: 0;
+						}
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						padding-top: 30px;
+					}
+				}
+				.whole { // de backup
+					display: none; // Test 
+					position: relative;
+					img.gdgts {
+						@media screen and (min-width: $csseco_bp_1200) {
+							margin-left: 20px;
+							max-width: 550px;
+							width: 550px;
+						}
+					}
+					.laptop {
+						position: relative;
+						z-index: 1;
+					}
+					.tablet,
+					.phone {
+						position: absolute;
+					}
+					.tablet {
+						animation-delay: 200ms;
+						bottom: 0;
+						left: 4%;
+						width: 28%;
+						z-index: 2;
+						@media screen and (min-width: $csseco_bp_768) and (max-width: 991px) {
+							left: 15%;
+							width: 21%;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							left: 6%;
+						}
+					}
+					.phone {
+						animation-delay: 400ms;
+						bottom: 0;
+						left: 26%;
+						width: 11%;
+						z-index: 3;
+						@media screen and (min-width: $csseco_bp_768) and (max-width: 991px) {
+						  left: 31%;
+						  width: 11%;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							left: 29%;
+						}
+					}
+				}
+				.lapscreens {
+					margin-top: 20px;
+					position: relative;
+					.laptop {
+						animation-duration: 1200ms;
+						position: relative;
+						z-index: 1;
+						@media screen and (min-width: $csseco_bp_1200) {
+							max-width: 550px;
+							width: 550px;
+						}
+					}
+					.screen {
+						position: absolute;
+						&.screen1 {
+							animation-delay: 1300ms;
+							left: 20%;
+							top: -10%;
+							width: 57%;
+							z-index: 2;
+							@media screen and (min-width: $csseco_bp_768) and (max-width: 991px) {
+								left: 24%;
+								top: -17%;
+								width: 47%;
+							}
+						}
+						&.screen2 {
+							animation-delay: 1500ms;
+							left: 10%;
+							top: -15%;
+							width: 60%;
+							z-index: 3;
+							@media screen and (min-width: $csseco_bp_768) and (max-width: 991px) {
+								left: 14%;
+								top: -22%;
+								width: 50%;
+							}
+						}
+						&.screen3 {
+							animation-delay: 1700ms;
+							left: 3%;
+							top: -27%;
+							width: 64%;
+							z-index: 4;
+							@media screen and (min-width: $csseco_bp_768) and (max-width: 991px) {
+								left: 7%;
+								top: -34%;
+								width: 54%;
+							}
+						}
+					}
+					@media screen and (min-width: 375px) {
+						margin-top: 50px;
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						margin-top: 60px;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						margin-top: 80px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						margin-top: 0;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						left: 40px;
+						position: relative;
+					}
+				}
+				img.gdgts {
+					@media screen and (min-width: $csseco_bp_1200) {
+						margin-left: 20px;
+						max-width: 550px;
+						width: 550px;
+					}
+				}
+				@media screen and (min-width: $csseco_bp_576) {
+//					font-size: 14px;
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					font-size: 16px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					font-size: 20px;
+					padding: 40px 0 30px 0;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					font-size: 22px;
+					padding: 60px 0 50px 0;
+				}
+			}
+			section#section8fp.vid {				
+				color: #FFF;
+				overflow: hidden;
+				position: relative;
+				transition: all 500ms ease-in;
+				
+				video#vidVid {
+					background-color: #000;
+					bottom: 0;
+//					left: 50%;
+					left: 0;
+					max-height: 100vh;
+//					min-height: 100%;
+					min-width: 100%;
+					position: absolute;
+					right: 0;
+//					top: 50%;
+					top: 0;
+//					transform: translate(-50%, -50%);
+					width: 100vw;
+					z-index: 1;
+				}
+				.videofirstframe {
+					
+//					display: none;
+					
+					background-image: url(../imgs/fp/videofirstframe.jpg);
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					bottom: 0;
+					height: 100%;
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 100%;
+					z-index: 2;
+					&.hide {
+						opacity: 0;
+						visibility: hidden;
+					}
+					img {
+						display: none;
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						transition: all 500ms ease-in;
+					}
+				}
+				.overlay {
+					background: #162856;
+					bottom: 0;
+					opacity: .7;
+					height: 100%;
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 100%;
+					z-index: 3;
+					&.hide {
+						display: none;
+					}
+				}
+				.container#cntnt {
+					position: relative;
+					z-index: 4;
+					&.hide {
+						opacity: 0;
+						visibility: hidden;
+					}
+					.logo_W {
+						margin: 30px 0;
+						text-align: center;
+						img {
+							max-height: 50px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							margin: 70px 0 30px;
+						}
+					}
+					h3 {
+						font-size: 16px;
+						margin: 0 0 30px 0;
+						text-align: center; 
+						br {
+							@media screen and (min-width: $csseco_bp_576) {
+								display: none;
+							}
+						}
+						@media screen and (min-width: $csseco_bp_576) {
+							font-size: 18px;
+						}
+						@media screen and (min-width: $csseco_bp_768) {
+							font-size: 20px;
+							margin: 34px 0;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							font-size: 26px;
+							margin: 37px 0;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							font-size: 30px;
+							margin: 40px 0;
+						}
+					}
+					.control {
+						margin: 0 0 70px 0;
+						text-align: center;
+						i.play,
+						svg.play { 
+							color: #f8a602;
+							cursor: pointer;
+							font-size: 50px;
+							@include animate( color, 320ms );
+							&:hover {
+								color: #fff;
+							}
+							@media screen and (min-width: $csseco_bp_768) {
+								font-size: 80px;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+								font-size: 90px;
+							}
+							@media screen and (min-width: $csseco_bp_1200) {
+								font-size: 100px;
+							}
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							margin: 0 0 180px 0;
+						}
+					}	
+					@media screen and (min-width: $csseco_bp_576) {
+						transition: all 500ms ease-in;
+					}
+				}
+				.ctrlW {
+					bottom: 0;
+					height: auto;
+					left: 0;
+					opacity: 0;
+					position: absolute;
+					right: 0;
+					transition: all 500ms ease-in;
+					visibility: hidden;
+					width: 100%;
+					&.show {
+						opacity: 1;
+						visibility: visible;
+						z-index: 11;
+					}
+					.container {
+						position: relative;
+						i.pause,
+						svg.pause {
+							bottom: 10px;
+							color: #f8a602;
+							cursor: pointer;
+							font-size: 40px;
+							left: 10px;
+							position: absolute;
+							z-index: 9;
+							@include animate( color, 320ms );
+							&:hover {
+								color: #fff;
+							}
+							@media screen and (min-width: $csseco_bp_768) {
+								font-size: 50px;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+								font-size: 60px;
+							}
+						}
+						i.mute,
+						svg.mute {
+							bottom: 10px;
+							color: #f8a602;
+							cursor: pointer;
+							font-size: 40px;
+							position: absolute;
+							right: 10px;
+							z-index: 9;
+							@include animate( color, 320ms );
+							&:hover {
+								color: #fff;
+							}
+							&#mute {
+								margin-right: 5px;
+								@media screen and (min-width: $csseco_bp_768) {
+									margin-right: 6px;
+								}
+								@media screen and (min-width: $csseco_bp_992) {
+									margin-right: 7px;
+								}
+							}
+							@media screen and (min-width: $csseco_bp_768) {
+								font-size: 50px;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+								font-size: 60px;
+							}
+						}
+					}
+				}
+			}
+			section#section9fp.join {
+				padding: 30px 0 20px; 
+				h3.ttl {
+					font-size: 16px;
+					font-weight: bold;
+					margin: 0 0 30px;
+					padding: 0 0 5px;
+					position: relative;
+					text-align: center;
+					span {
+						color: #f8a602;
+					}
+					br {
+						@media screen and (min-width: $csseco_bp_576) {
+							display: none;
+						}
+					}
+					&::after {
+						background-color: #F9B132;
+						bottom: 0;
+						content: '';
+						height: 1px;
+						left: 50%;
+						position: absolute;
+						transform: translate(-50%, 0);
+						width: 155px;
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						font-size: 18px;
+						margin: 0 0 40px;
+					}
+					@media screen and (min-width: $csseco_bp_768) {
+						font-size: 20px;
+						margin: 0 0 50px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 26px;
+						margin: 0 0 60px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 30px;
+						margin: 0 0 70px;
+					}
+				}
+				p {
+					font-weight: 300;
+					span {
+						font-weight: bold;
+						span {
+							color: #f8a602;	
+						}
+					}
+					&.ttxt {
+						margin-bottom: 30px;
+						@media screen and (min-width: $csseco_bp_992) {
+							margin-bottom: 70px;
+						}
+					}
+				}
+				.pct,
+				.txt {
+					float: left;
+					height: 100%;
+				}
+				.pct {
+					img {
+						height: 45px;
+						margin-right: 10px;
+						width: 45px;
+						@media screen and (min-width: $csseco_bp_1200) {
+							height: 55px;
+							width: 55px;
+						}
+					}
+				}
+				.txt {
+					max-width: calc(100% - 55px);
+					@media screen and (min-width: $csseco_bp_992) {
+						font-size: 18px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						font-size: 20px;
+						max-width: calc(100% - 65px);
+					}
+				}
+				form {
+					-webkit-box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
+					-moz-box-shadow:    0px 2px 10px 0px rgba(50, 50, 50, 0.5);
+					box-shadow:         0px 2px 10px 0px rgba(50, 50, 50, 0.5);
+					margin: 20px -15px 0;
+					padding: 15px;
+					h3 {
+						font-size: 16px;
+						font-weight: 300;
+						margin: 0 0 20px;
+						text-align: center;
+						@media screen and (min-width: $csseco_bp_576) {
+							font-size: 18px;
+						}
+						@media screen and (min-width: $csseco_bp_768) {
+							font-size: 20px;
+						}
+					}
+					label { display: none; }
+					input[type=text],
+					input[type=email],
+					input[type=tel],
+					select {
+						background: #FFF;
+						border: 1px solid #ACACAC;
+//						border: medium none;
+						&:hover,
+						&:focus {
+							-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+							-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+							box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+						}
+					}
+					.phoneFP {
+						border-radius: .25rem;
+						&.hovered,
+						&.focused {
+							-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+							-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+							box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+						}
+						.phone-prefix,	
+						.phone-number {
+							
+							box-shadow: none!important;
+							float: left;
+							width: 100%;
+						}
+						.phone-prefix {
+							border-top-right-radius: 0;
+							border-bottom-right-radius: 0;
+							border-width: 1px 0 1px 1px;
+							max-width: 75px;
+						}	
+						.phone-number {
+							border-top-left-radius: 0;
+							border-bottom-left-radius: 0;
+							max-width: calc(100% - 75px);
+							
+						}
+					}
+					small {
+						font-size: 10px;
+						text-align: center;
+					}
+					button[type=submit] {
+//						background-color: #ffb401;
+						border: 1px solid transparent;
+						border-radius: 30px;
+						color: #000000;
+						display: block;
+						font-size: 14px;
+						font-weight: bold;
+						margin: 10px auto 0;
+						max-width: 210px;
+						padding: 10px 20px;
+						text-align: center;
+						text-decoration: none;
+						@include animate( color, 320ms );
+						&:hover {
+							background-color: #162856;
+							border: 1px solid #161B56;
+							color: #FFF;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							font-size: 16px;
+							margin: 10px auto 0;
+							max-width: 280px;
+						}
+					}
+					@media screen and (min-width: $csseco_bp_576) {
+						border-radius: 5px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						margin-top: 0;
+					}
+				}
+				@media screen and (min-width: $csseco_bp_576) {
+//					font-size: 14px;
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					font-size: 16px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					font-size: 20px;
+					padding: 40px 0 30px 0;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					font-size: 22px;
+					padding: 60px 0 50px 0;
 				}
 			}
 		}

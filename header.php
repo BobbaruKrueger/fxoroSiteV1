@@ -42,7 +42,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<a href="<?php echo get_option("siteurl"); ?>">
-									<img src="<?php echo get_template_directory_uri(); ?>/imgs/new_fxoro_logo.png" alt="Logo" class="logo header_logo">
+									<img src="<?php echo get_template_directory_uri(); ?>/imgs/fxoro_logo.png" alt="Logo" class="logo header_logo">
 								</a>
 							</div>
 						</div>
@@ -84,7 +84,7 @@
 					</div>
 				</div>
 				<div class="row om bottom">
-					<div class="col-6 openaccH">
+					<div class="col-12 col-sm-6 openaccH">
 						<div class="dtable">
 							<div class="dtable-cell">
 								<a href="#" class="mhlink">
@@ -93,7 +93,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-6 loginH">
+					<div class="col-12 col-sm-6 loginH">
 						<div class="dtable">
 							<div class="dtable-cell">
 								<a href="#" class="mhlink">
@@ -112,7 +112,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<a href="<?php echo get_option("siteurl"); ?>">
-									<img src="<?php echo get_template_directory_uri(); ?>/imgs/new_fxoro_logo.png" alt="Logo" class="logo header_logo">
+									<img src="<?php echo get_template_directory_uri(); ?>/imgs/fxoro_logo.png" alt="Logo" class="logo header_logo">
 								</a>
 							</div>
 						</div>
@@ -127,6 +127,9 @@
 			<div class="container d-none d-lg-block">
 				<div class="row">
 					<div class="col-12 topHeaderD">
+						<a href="<?php echo get_option("siteurl"); ?>">
+							<img src="<?php echo get_template_directory_uri(); ?>/imgs/fxoro_logo_white.png" alt="Logo" class="logo header_logo m-0 ">
+						</a>
 						<div class="h_i_W clearfix">
 							<div class="langW">
 								<span class="flag-icon flag-icon-gb"></span>
@@ -152,9 +155,6 @@
 				</div>
 				<div class="row">
 					<div class="col-12">
-						<a href="<?php echo get_option("siteurl"); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/imgs/new_fxoro_logo.png" alt="Logo" class="logo header_logo">
-						</a>
 						<?php
                             wp_nav_menu( array( 
                                 'theme_location'        =>      'primary',

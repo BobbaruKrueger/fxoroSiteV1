@@ -12,7 +12,7 @@
 					<div class="col-4 col-sm-3 col-md-2">
 						<div class="dtable">
 							<div class="dtable-cell">
-								<p class="m-0">Follow us on </p>
+								<p class="m-0 font-weight-bold">Follow us on </p>
 							</div>
 						</div>
 					</div>
@@ -169,9 +169,14 @@
 						</p>
 					</div>
 				</div>
+				<div class="chatBtnW">
+					<button type="button" class="btn chat animated infinite pulse d-none d-sm-block">Chat with us now</button>
+					<button type="button" class="btn chat animated infinite pulse d-block d-sm-none">Chat</button>
+				</div>
 			</div>
 		</footer>
 	</div><!-- /#site-wrapper -->
+	
 	<?php wp_footer(); ?>
 </body>
 </html>

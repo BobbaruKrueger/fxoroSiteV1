@@ -42,7 +42,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<a href="<?php echo get_option("siteurl"); ?>">
-									<img src="<?php echo get_template_directory_uri(); ?>/imgs/new_fxoro_logo.png" alt="Logo" class="logo header_logo">
+									<img src="<?php echo get_template_directory_uri(); ?>/imgs/fxoro_logo.png" alt="Logo" class="logo header_logo">
 								</a>
 							</div>
 						</div>
@@ -85,19 +85,19 @@
 					</div>
 				</div>
 				<div class="row om bottom">
-					<div class="col-6 openaccH">
+					<div class="col-12 col-sm-6 openaccH">
 						<div class="dtable">
 							<div class="dtable-cell">
-								<a href="#" class="mhlink">
+								<a href="#" class="cssecoBtn animationbtn">				
 									Open an account
 								</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-6 loginH">
+					<div class="col-12 col-sm-6 loginH">
 						<div class="dtable">
 							<div class="dtable-cell">
-								<a href="#" class="mhlink">
+								<a href="#" class="cssecoBtn animationbtn">				
 									Login
 								</a>
 							</div>
@@ -108,7 +108,7 @@
 		</div>
 		<header id="header" class="site_header fp_header">
 			<video autoplay muted loop id="bgVid">
-				<source src="<?php echo get_template_directory_uri(); ?>/videos/video.mov" type="video/mp4">
+				<source src="<?php echo get_template_directory_uri(); ?>/videos/video.webm" type="video/webm">
 			</video>
 			<div class="container d-block d-lg-none pt-3 pt-lg-0">
 				<div class="row">
@@ -116,7 +116,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<a href="<?php echo get_option("siteurl"); ?>">
-									<img src="<?php echo get_template_directory_uri(); ?>/imgs/new_fxoro_logo.png" alt="Logo" class="logo header_logo">
+									<img src="<?php echo get_template_directory_uri(); ?>/imgs/fxoro_logo.png" alt="Logo" class="logo header_logo">
 								</a>
 							</div>
 						</div>
@@ -131,6 +131,9 @@
 			<div class="container d-none d-lg-block">
 				<div class="row">
 					<div class="col-12 topHeaderD">
+						<a href="<?php echo get_option("siteurl"); ?>">
+							<img src="<?php echo get_template_directory_uri(); ?>/imgs/fxoro_logo_white.png" alt="Logo" class="logo header_logo m-0 ">
+						</a>
 						<div class="h_i_W clearfix">
 							<div class="langW">
 								<span class="flag-icon flag-icon-gb"></span>
@@ -142,12 +145,12 @@
 								+357.25.20.5555 
 							</div>
 							<div class="openaccW">
-								<a href="#" class="mhlink">
+								<a href="#" class="cssecoBtn animationbtn">				
 									Open an account
 								</a>
 							</div>
 							<div class="loginW">
-								<a href="#" class="mhlink">
+								<a href="#" class="cssecoBtn animationbtn">				
 									Login
 								</a>
 							</div>
@@ -155,10 +158,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-12">
-						<a href="<?php echo get_option("siteurl"); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/imgs/new_fxoro_logo.png" alt="Logo" class="logo header_logo">
-						</a>
+					<div class="col-12 menu-col">
 						<?php
                             wp_nav_menu( array( 
                                 'theme_location'        =>      'primary',
@@ -172,17 +172,17 @@
 			</div>
 			<div class="container fp">
 				<div class="row">
-					<div class="col-12 col-lg-7 col-xl-8 d-none d-lg-block">
-						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fppct.png" alt="Platform" class="img-fluid">
+					<div class="col-12 col-lg-7 col-xl-7 d-none d-lg-block">
+						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/hpct.png" alt="Platform" class="img-fluid" style="opacity: .8; display: none;">
 					</div>
-					<div class="col-12 col-lg-5 col-xl-4">
+					<div class="col-12 col-lg-5 col-xl-4 text-center">
 						<h1>
 							<span>FX<span style="color: #ffb401;">ORO</span></span><br>
 							when the broker<br>
 							becomes your<br>
 							best partner
 						</h1>
-						<a href="#" class="cssecoBtn">
+						<a href="#" class="cssecoBtn animationbtn">
 							<span>
 								I’m Ready to Trade!
 							</span>

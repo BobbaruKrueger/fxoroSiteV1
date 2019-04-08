@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
 	$(document).on('click', carouselClass, function(){
 		var id = $("#"+$(this).attr("id"));
 		$(id).on('slid.bs.carousel', function(){
-			csseco_get_bs_thumbs(id);
+			 (id);
 		});
 	});
 	$(document).on('mouseenter', carouselClass, function(){
@@ -44,7 +44,7 @@ jQuery(document).ready(function($){
 		$(this).addClass('open_menu');
 	});
 	$(document).on('click', menuBtnCloseClass, function(){
-		$('#bmenu').removeClass('open');
+		$('#bmenu').css('transition', 'transform 500ms ease-in').removeClass('open');
 		$('body').css('overflow', 'auto');
 		$(menuBtnOpenClass).removeClass('open_menu');
 	});
@@ -53,22 +53,318 @@ jQuery(document).ready(function($){
 	// ==================
 	// Owl Carousel
 	// ==================
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) { // owl carousel in bootstrap tabs
+    	$($(e.target).attr('href')).find('.owl-carousel').owlCarousel('invalidate', 'width').owlCarousel('update');
+	});
 	$('.owl-carousel').owlCarousel({
 		loop:true,
 		margin:10,
 		nav:true,
 		dots:false,
 		responsive:{
-			0:{
-				items:1
-			},
-			576:{
-				items:2
-			},
-			768:{
-				items:3
-			}
+			0:{ items:1 },
+			576:{ items:2 },
+			992:{ items:3 }
 		}
 	});
-
+	
+	// ==================
+	// Map (front page)
+	// ==================
+	if($('.imgmap').visible(true)) {
+		$('.imgmap.pins').addClass('top');
+		setTimeout(function(){
+			$('.imgmap.pins').addClass('show');
+		}, 800);
+	}
+	$(window).scroll(function() {
+		if($('.imgmap').visible(true)) {
+			$('.imgmap.pins').addClass('top');
+			setTimeout(function(){
+				$('.imgmap.pins').addClass('show');
+			}, 800);
+		}
+	});
+	
+	// Resize and highlight
+	$("map").imageMapResize();
+	var resizeEvt;
+	$('.map').maphilight({
+		fill: true,
+		fillColor: '000000',
+		fillOpacity: 0.4,
+		stroke: false,
+		strokeColor: 'ff0000',
+		strokeOpacity: 1,
+		strokeWidth: 1,
+		fade: true,
+		alwaysOn: false,
+		neverOn: false,
+		groupBy: false,
+		wrapClass: true,
+		shadow: false,
+		shadowX: 0,
+		shadowY: 0,
+		shadowRadius: 6,
+		shadowColor: '000000',
+		shadowOpacity: 0.8,
+		shadowPosition: 'outside',
+		shadowFrom: false
+	});
+	$('.map').rwdImageMaps();
+	 $(window).on('resize.usemaps', function(){
+        clearTimeout(resizeEvt);
+        resizeEvt = setTimeout(function(){
+            $('.map').maphilight();
+        }, 200);
+    });
+	
+	// ==================
+	// Map cursor
+	// ==================
+	$('.map').on('mousemove', function(e){
+		var x = e.pageX - $('.map').offset().left;
+		var y = e.pageY - $('.map').offset().top;
+//		var objLeft = $(".map").offset().left;
+//		var objTop = $(".map").offset().top;
+		$('#cursorAlpha').css({
+		
+//			left:  e.pageX,
+//			top:   e.pageY
+			display: 'block',
+			left:  x,
+			top:   y
+		});
+	});
+	$('.map').on('mouseleave', function(e){
+		$('#cursorAlpha').css({
+			display: 'none'
+		});
+	});
+	
+	// ==================
+	// Animations
+	// ==================
+	
+	// pins on map
+	if($('.imgMapWrapper>.rev').visible()) {
+		$('.imgMapWrapper>.pin').addClass('animated fadeInLeft').css('visibility', 'visible');
+	}
+	$(window).scroll(function() {
+		if($('.imgMapWrapper>.rev').visible()) {
+			$('.imgMapWrapper>.pin').addClass('animated fadeInLeft').css('visibility', 'visible');
+		}
+	});
+	
+	// mobile on instruments section
+	if($('.mphone').visible()) {
+		$('.mphone').addClass('animated bounceInUp').css('visibility', 'visible');
+	}
+	$(window).scroll(function() {
+		if($('.mphone').visible()) {
+			$('.mphone').addClass('animated bounceInUp').css('visibility', 'visible');
+		}
+	});
+	
+	// list on trainging section
+	if($('.training ul').visible()) {
+		$('.training ul').addClass('animated fadeInRight').css('visibility', 'visible');;
+	}
+	$(window).scroll(function() {
+		if($('.training ul').visible()) {
+			$('.training ul').addClass('animated fadeInRight').css('visibility', 'visible');;
+		}
+	});
+	
+	// list on tech section
+	if($('.tech ul').visible()) {
+		$('.tech ul').addClass('animated fadeInLeft').css('visibility', 'visible');;
+	}
+	$(window).scroll(function() {
+		if($('.tech ul').visible()) {
+			$('.tech ul').addClass('animated fadeInLeft').css('visibility', 'visible');;
+		}
+	});
+	
+	// Autochartist image
+//	if($('.whole').visible()) {
+//		$('.whole .laptop').addClass('animated slow fadeIn').css('visibility', 'visible');;
+//	}
+//	$(window).scroll(function() {
+//		if($('.whole').visible()) {
+//			$('.whole .laptop').addClass('animated slow fadeIn').css('visibility', 'visible');;
+//		}
+//	});
+//	if($('.whole').visible()) {
+//		$('.whole .tablet').addClass('animated slow bounceInRight').css('visibility', 'visible');;
+//	}
+//	$(window).scroll(function() {
+//		if($('.whole').visible()) {
+//			$('.whole .tablet').addClass('animated slow bounceInRight').css('visibility', 'visible');;
+//		}
+//	});
+//	if($('.whole').visible()) {
+//		$('.whole .phone').addClass('animated slow bounceInUp').css('visibility', 'visible');;
+//	}
+//	$(window).scroll(function() {
+//		if($('.whole').visible()) {
+//			$('.whole .phone').addClass('animated slow bounceInUp').css('visibility', 'visible');;
+//		}
+//	});
+	if($('.lapscreens').visible()) {
+		$('.lapscreens .laptop').addClass('animated fadeInRight').css('visibility', 'visible');;
+	}
+	$(window).scroll(function() {
+		if($('.lapscreens').visible()) {
+			$('.lapscreens .laptop').addClass('animated fadeInRight').css('visibility', 'visible');;
+		}
+	});
+	if($('.lapscreens').visible()) {
+		$('.lapscreens .screen1').addClass('animated bounceIn').css('visibility', 'visible');;
+	}
+	$(window).scroll(function() {
+		if($('.lapscreens').visible()) {
+			$('.lapscreens .screen1').addClass('animated bounceIn').css('visibility', 'visible');;
+		}
+	});
+	if($('.lapscreens').visible()) {
+		$('.lapscreens .screen2').addClass('animated bounceIn').css('visibility', 'visible');;
+	}
+	$(window).scroll(function() {
+		if($('.lapscreens').visible()) {
+			$('.lapscreens .screen2').addClass('animated bounceIn').css('visibility', 'visible');;
+		}
+	});
+	if($('.lapscreens').visible()) {
+		$('.lapscreens .screen3').addClass('animated bounceIn').css('visibility', 'visible');;
+	}
+	$(window).scroll(function() {
+		if($('.lapscreens').visible()) {
+			$('.lapscreens .screen3').addClass('animated bounceIn').css('visibility', 'visible');;
+		}
+	});
+	
+	
+	// ==================
+	// Video (front page):not(header)
+	// ==================
+	$('.play').on('click', function(){
+		var target = $('.vid');
+		if( target.length ) {
+			event.preventDefault();
+			$('html, body').stop().animate({
+				scrollTop: target.offset().top
+			}, 1000);
+		}
+		target.css('z-index', 20);
+		var vidH = $('#vidVid').height();
+//		target.css('height', vidH);
+//		target.animate({height: vidH}, 50);	
+		
+		if(screen.width < 576) {
+			target.css('height', vidH);
+		} else {
+			target.animate({height: vidH}, 50);	
+		}
+	});
+	$('.pause').on('click', function(){
+		var target = $('.vid');
+		if( target.length ) {
+			event.preventDefault();
+			$('html, body').stop().animate({
+				scrollTop: target.offset().top
+			}, 1000);
+		}
+		target.removeClass('vidPlay');
+		target.removeAttr("style");
+	});
+	
+	
+	// ==================
+	// Form (join section)
+	// ==================
+	$( ".phone-number, .phone-prefix" ).hover(
+		function() {
+			$( '.phoneFP' ).addClass( "hovered" );
+		}, 
+		function() {
+			$( '.phoneFP' ).removeClass( "hovered" );
+		}
+	);	
+	$( ".phone-number" ).on('focusin', function(){
+		$( '.phoneFP' ).addClass( "focused" );
+	});
+	$( ".phone-number" ).on('focusout', function(){
+		$( '.phoneFP' ).removeClass( "focused" );
+	});
+	
+		
 });
+
+// ==================
+// Video (front page):not(header) vanilla js
+// ==================
+function playPause(btn, vid) {
+	
+	var vid = document.getElementById(vid);
+	var overlay = document.getElementById('videofirstframe');
+	var cntnt = document.getElementById('cntnt');
+	var ctrlW = document.getElementById('ctrlW');
+	var overBlue = document.getElementById('overlay');
+	
+	if(vid.paused) {
+		
+		overlay.classList.add('hide');
+		cntnt.classList.add('hide');
+		ctrlW.classList.add('show');
+		overBlue.classList.add('hide');
+		vid.play();
+		
+	} else {
+		
+		vid.pause();
+		overlay.classList.remove('hide');
+		cntnt.classList.remove('hide');
+		ctrlW.classList.remove('show');
+		overBlue.classList.remove('hide');
+		
+	}
+	
+}
+function muteUn(btn, vid) {
+	
+	var vid = document.getElementById(vid);
+	var mute = document.getElementById('mute');
+	var unmute = document.getElementById('unmute');
+	
+	if(vid.muted) {
+		
+		vid.muted = false;
+		unmute.classList.add('d-none');
+		unmute.classList.remove('d-inline');
+		mute.classList.add('d-inline');
+		mute.classList.remove('d-none');
+		
+	} else {
+		
+		vid.muted = true;
+		mute.classList.add('d-none');
+		mute.classList.remove('d-inline');
+		unmute.classList.add('d-inline');
+		unmute.classList.remove('d-none');
+		
+	}
+}
+
+// ==================
+// Google map
+// ==================
+//function initMap() {
+//  // The location of Uluru
+//  var uluru = {lat: -25.344, lng: 131.036};
+//  // The map, centered at Uluru
+//  var map = new google.maps.Map(
+//      document.getElementById('gmap'), {zoom: 4, center: uluru});
+//  // The marker, positioned at Uluru
+//  var marker = new google.maps.Marker({position: uluru, map: map});
+//}
