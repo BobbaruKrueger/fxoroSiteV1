@@ -1,10 +1,7 @@
 
 <?php
-// only allow acces to the page via POST REQUEST to prevent security issues
-if ($_SERVER['REQUEST_METHOD'] != 'GET') {
-    echo 'ERROR: THIS PAGE CANNOT BE ACCESSED DIRECTLY!';
-    exit;
-}
+
+
 require('Api.php');
 $api = new API();
 $api->updateData();

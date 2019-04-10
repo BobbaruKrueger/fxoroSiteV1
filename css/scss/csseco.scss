@@ -12,6 +12,7 @@
     ## Overwrite
 	# Site Wrapper
     # Navigation
+    # Forms
     # Logo
     # Header
 	## Front Page Header
@@ -115,11 +116,12 @@ div#site-wrapper {
 		}
 	}
 	#cssecoMenu {
-		ul {
+		ul.menu {
 			list-style: none;
 			margin: 15px 0;
 			padding: 0;
 			li {
+				position: relative;
 				a {
 					display: inline-block;
 					color: #162856;
@@ -129,11 +131,14 @@ div#site-wrapper {
 					width: 100%;
 					@media screen and (min-width: $csseco_bp_992) {
 						margin: 0 10px;
-						max-width: 100%;
+						max-width: none;
+						width: auto;
 					}
 				}
 				&.current-menu-item,
-				&.current_page_item {
+				&.current_page_item,
+				&.current-menu-parent,
+				&.current_page_ancestor {
 					background-color: #f9a602;
 					> a {
 						font-weight: bold;
@@ -145,52 +150,90 @@ div#site-wrapper {
 					}
 				}
 				&:first-child {
-					> a {
+					> a {}
+				}
+				&.menu-item-has-children {
+					a {
 						@media screen and (min-width: $csseco_bp_992) {
-							margin-left: 0;
-							padding-left: 0;
+							margin-right: 0;
 						}
 					}
-				}
-				.menu_caret {
-					float: right;
-					height: 34px;
-					margin-left: 3px;
-					padding: 5px 0 0 0;
-					text-align: center;
-					width: 35px;
-					i, svg {
-						transition: all 250ms ease-in;
-					}
-				}
-				ul.sub-menu {
-					background: #FFF;
-					display: none;
-					height: 0;
-					margin: 0;
-					opacity: 0;
-					padding: 0 0 0 20px;
-					transition: all 250ms ease-in;
-					visibility: hidden;
-				}
-				&.menu_open {
-					> .menu_caret {
+					.menu_caret {
+						cursor: pointer;
+						float: right;
+						height: 34px;
+						margin-left: 3px;
+						padding: 5px 0 0 0;
+						text-align: center;
+						width: 35px;
+						&:hover {
+							i, svg {
+								color: #162856;
+							}	
+						}
 						i, svg {
-							transform: rotate(180deg);
+							transition: all 250ms ease-in;
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							display: inline-block;
+							float: none;
+							margin-left: 5px;
+							padding: 5px 0 0 0;
+							width: 20px;
 						}
 					}
-					> ul.sub-menu {
-						display: block;
-						height: auto;
-						opacity: 1;
-						visibility: visible;	
+					ul.sub-menu { // copii
+						background: #FFF;
+						display: none;
+						margin: 0;
+						padding: 0 0 0 20px;
+						li {
+							display: block;
+							width: 100%;
+							a {}
+							ul.sub-menu { // nepoti
+								left: 0;
+								padding: 3px 0 0 15px;
+								position: relative;
+								top: 0;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+//								margin: 3px 0 0 0;
+							}
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							left: -6px;
+							position: absolute;
+							top: 35px;
+							min-width: 250px;
+							padding: 15px 5px 5px 5px;
+							z-index: 999999;
+						}
 					}
-				}
-			
-				@media screen and (min-width: $csseco_bp_992) {
+					&.menu_open {
+						> .menu_caret {
+							i, svg {
+								transform: rotate(180deg);
+							}
+						}
+						> ul.sub-menu {}
+					}	
+				}				
+				@media screen and (min-width: $csseco_bp_992) { 
 					display: inline-block;
+					&:hover {
+						> ul.submenu {
+							display: block;
+						}
+					}
 				}
 			}
+			ul {
+				list-style: none;
+				margin: 15px 0;
+				padding: 0;
+			}
+			
 			@media screen and (min-width: $csseco_bp_992) {
 //				margin-bottom: 0;
 			}
@@ -266,6 +309,99 @@ div#site-wrapper {
 		}
 	}
 
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+	form {
+		label { display: block; }
+		input[type=text],
+		input[type=email],
+		input[type=tel],
+		select,
+		textarea{
+			background: #FFF;
+			border: 1px solid #ACACAC;
+	//						border: medium none;
+			&:hover,
+			&:focus {
+				-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+				-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+				box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+			}
+		}
+		.phoneFP {
+			border-radius: .25rem;
+			&.hovered,
+			&.focused {
+				-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+				-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+				box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+			}
+			.phone-prefix,	
+			.phone-number {
+
+				box-shadow: none!important;
+				float: left;
+				width: 100%;
+			}
+			.phone-prefix {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				border-width: 1px 0 1px 1px;
+				max-width: 75px;
+			}	
+			.phone-number {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				max-width: calc(100% - 75px);
+
+			}
+		}
+		small {
+			font-size: 10px;
+			text-align: center;
+		}
+		button[type=submit] {
+			border: 1px solid transparent;
+			border-radius: 30px;
+			color: #000000;
+			display: block;
+			font-size: 14px;
+			font-weight: bold;
+			margin: 10px auto 0;
+			max-width: 210px;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			@include animate( color, 320ms );
+			&:hover {
+				background-color: #162856;
+				border: 1px solid #161B56;
+				color: #FFF;
+			}
+			@media screen and (min-width: $csseco_bp_992) {
+				font-size: 16px;
+				margin: 10px auto 0;
+				max-width: 280px;
+			}
+		}
+		@media screen and (min-width: $csseco_bp_576) {
+			border-radius: 5px;
+		}
+		@media screen and (min-width: $csseco_bp_992) {
+			margin-top: 0;
+		}
+	}
+	form#cssecoReferralForm {
+		max-width: 600px;
+		width: 100%;
+		h3 {
+			color: #1B2854;
+		}
+		button[type=submit] {
+			margin: 10px 0;
+		}
+	}
 /*--------------------------------------------------------------
 # Logo
 --------------------------------------------------------------*/
@@ -2322,77 +2458,6 @@ div#site-wrapper {
 						}
 					}
 					label { display: none; }
-					input[type=text],
-					input[type=email],
-					input[type=tel],
-					select {
-						background: #FFF;
-						border: 1px solid #ACACAC;
-//						border: medium none;
-						&:hover,
-						&:focus {
-							-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
-							-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
-							box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
-						}
-					}
-					.phoneFP {
-						border-radius: .25rem;
-						&.hovered,
-						&.focused {
-							-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
-							-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
-							box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
-						}
-						.phone-prefix,	
-						.phone-number {
-							
-							box-shadow: none!important;
-							float: left;
-							width: 100%;
-						}
-						.phone-prefix {
-							border-top-right-radius: 0;
-							border-bottom-right-radius: 0;
-							border-width: 1px 0 1px 1px;
-							max-width: 75px;
-						}	
-						.phone-number {
-							border-top-left-radius: 0;
-							border-bottom-left-radius: 0;
-							max-width: calc(100% - 75px);
-							
-						}
-					}
-					small {
-						font-size: 10px;
-						text-align: center;
-					}
-					button[type=submit] {
-//						background-color: #ffb401;
-						border: 1px solid transparent;
-						border-radius: 30px;
-						color: #000000;
-						display: block;
-						font-size: 14px;
-						font-weight: bold;
-						margin: 10px auto 0;
-						max-width: 210px;
-						padding: 10px 20px;
-						text-align: center;
-						text-decoration: none;
-						@include animate( color, 320ms );
-						&:hover {
-							background-color: #162856;
-							border: 1px solid #161B56;
-							color: #FFF;
-						}
-						@media screen and (min-width: $csseco_bp_992) {
-							font-size: 16px;
-							margin: 10px auto 0;
-							max-width: 280px;
-						}
-					}
 					@media screen and (min-width: $csseco_bp_576) {
 						border-radius: 5px;
 					}

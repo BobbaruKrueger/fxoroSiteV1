@@ -1,20 +1,9 @@
-<?php
-/**
- * @package fxoroVone
- * includes/front/template-parts/fp/fp-tickers.php
- */
-?>
 <?php 
-//echo 'Curl: ', function_exists('curl_version') ? 'Enabled' : 'Disabled';
-try {
-	//code...
-	include_once('process/Api.php'); 
-	$api = new Api();
-	
-	$api->getData();
-} catch (Exception $e) {
-    echo 'Caught exception: ',  $e->getMessage(), "\n";
-}
+require_once('process/Api.php'); 
+
+$api = new Api();
+
+$api->getData();
 
 
 ?>
@@ -56,73 +45,83 @@ try {
 						
 							<?php foreach ($api->data_result['Forex'] as $symbol => $value) { ?>
 								<div class="item <?php echo $symbol;?>">
-									<div class="col-10 offset-1 col-sm-12 offset-sm-0 itemInner">
-										<div class="row">
-											<div class="col-12 cssecoFlagsW">
-												<img  src="wp-content/themes/CSSecoStarterThemeV2-master/imgs/tickers/<?php echo substr($symbol,0,3) ?>.png" alt="Forex <?php echo substr($symbol, 0,3);?> Flag" width="30px">
-												<img  src="wp-content/themes/CSSecoStarterThemeV2-master/imgs/tickers/<?php echo substr($symbol, -3) ?>.png" alt="Forex <?php echo substr($symbol, -3) ?>  Flag" width="30px">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-12 currencyW">
-												<?php echo$value['Name'][0]; ?>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-12 changeW">
-												-0.09%
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-12 canvasW">
-												<canvas id="<?php echo $symbol;?>"></canvas>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-6 sellprice">
-												<div class="row">
-													<div class="col-12">
-														<h3>Sell:</h3>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-12 price">
-														<span class="value"><?php echo $value['SellPrice'][0]?></span><span class="caret"></span>
-													</div>
+									<a href="instrument?instrument=<?php echo 'Forex';?>&symbol=<?php echo $symbol;?>">
+										<div class="col-10 offset-1 itemInner">
+											<div class="row">
+												<div class="col-12 cssecoFlagsW">
+													<img  src="wp-content/themes/CSSecoStarterThemeV2-master/imgs/tickers/<?php echo substr($symbol,0,3) ?>.png" alt="Forex <?php echo substr($symbol, 0,3);?> Flag" width="30px">
+													<img  src="wp-content/themes/CSSecoStarterThemeV2-master/imgs/tickers/<?php echo substr($symbol, -3) ?>.png" alt="Forex <?php echo substr($symbol, -3) ?>  Flag" width="30px">
 												</div>
 											</div>
-											<div class="col-6 buyprice">
-												<div class="row">
-													<div class="col-12 ">
-														<h3>Buy:</h3>
+											<div class="row">
+												<div class="col-12 currencyW">
+													<?php echo$value['Name'][0]; ?>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-12 changeW">
+													-0.09%
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-12 canvasW">
+													<canvas id="<?php echo $symbol;?>"></canvas>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-6 sellprice">
+													<div class="row">
+														<div class="col-12">
+															<h3>Sell:</h3>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-12 price">
+															<span class="value"><?php echo $value['SellPrice'][0]?></span><span class="caret"></span>
+														</div>
 													</div>
 												</div>
-												<div class="row">
-													<div class="col-12 price">
-														<span class="value"><?php echo $value['BuyPrice'][0]?></span><span class="caret"></span>
+												<div class="col-6 buyprice">
+													<div class="row">
+														<div class="col-12 ">
+															<h3>Buy:</h3>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-12 price">
+															<span class="value"><?php echo $value['BuyPrice'][0]?></span><span class="caret"></span>
+														</div>
 													</div>
 												</div>
 											</div>
-										</div>
+										</a>
 									</div>
 									<?php 
-										$dates_labels = $value['Graph'][0]['Dates'];
-										$dates_values = $value['Graph'][0]['Values'];
+										$dates_labels = array_reverse($value['Graph'][0]['Dates']);
+										$dates_values = array_reverse($value['Graph'][0]['Values']);
 										$first_fifteen_values = array_slice($dates_values, 0,  (count($dates_values)/2 ) );
 										$last_fifteen_values = array_slice($dates_values,  (count($dates_values)/2) -1, count($dates_values) );
 
 										$average_first = array_sum($first_fifteen_values) / count($first_fifteen_values);
 										$average_last = array_sum($last_fifteen_values) / count($last_fifteen_values);
 										$tendency_colour = ( $average_first > $average_last ) ? 'rgb(190, 0, 17)' : 'rgb(48, 171, 47)';
+
+										$average_all = array_sum($dates_values) / count($dates_values);
 										
 									?>
 							<script>
 								let lastfifteen<?php echo $symbol; ?> = <?php echo json_encode($last_fifteen_values);?>;
 								let selector<?php echo $symbol; ?> = document.getElementById("<?php echo $symbol; ?>").getContext('2d');
+								for (let x = 0; x < <?php echo count($first_fifteen_values) -1 ; ?>; x++) {
 
-								lastfifteen<?php echo $symbol; ?>.unshift( NaN, NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN);
-								
-								
+									lastfifteen<?php echo $symbol; ?>.unshift( NaN);
+								}
+								let averageData<?php echo $symbol; ?> = []; 
+								for (let x = 0; x < <?php echo count($dates_values); ?>; x++) {
+									averageData<?php echo $symbol; ?>.push(<?php echo $average_all; ?>);
+									
+								}
+								console.log(averageData<?php echo $symbol; ?>);
 								let chart<?php echo $symbol; ?> = new Chart(selector<?php echo $symbol; ?>, {
 									// The type of chart we want to create
 									
@@ -143,7 +142,7 @@ try {
 											backgroundColor: 'rgba(218, 223, 225, 1)',
 											borderColor: 'rgba(218, 223, 225, 1)',
 											fill: false,
-											data: [NaN,2.5,NaN,2.5,NaN,2.5,NaN,2.5,NaN,2.5,NaN,2.5,NaN,2.5,NaN,2.5,NaN,2.5,NaN,2.5, NaN, 2.5, NaN, 2.5, NaN, 2.5, NaN, 2.5, NaN, 2.5], 
+											data: averageData<?php echo $symbol; ?>, 
 											type: 'line',
 											showLine: false
 										},
@@ -204,7 +203,7 @@ try {
 						<?php foreach ($api->data_result['Shares'] as $symbol => $value) { ?>
 							<div class="item <?php echo $symbol;?>">
 								
-								<div class="col-10 offset-1 col-sm-12 offset-sm-0 itemInner">
+								<div class="col-10 offset-1 itemInner">
 									<div class="row">
 										<div class="col-12 cssecoFlagsW">
 											
@@ -355,7 +354,7 @@ try {
 							
 							<div class="item <?php echo  str_replace( ' ',  '', $value['Name'][0] ); ?>">
 								
-								<div class="col-10 offset-1 col-sm-12 offset-sm-0 itemInner">
+								<div class="col-10 offset-1 itemInner">
 									<div class="row">
 										<div class="col-12 cssecoFlagsW">
 											
@@ -506,7 +505,7 @@ try {
 							
 							<div class="item <?php echo  str_replace( ' ',  '', $value['Name'][0] ); ?>">
 								
-								<div class="col-10 offset-1 col-sm-12 offset-sm-0 itemInner">
+								<div class="col-10 offset-1 itemInner">
 									<div class="row">
 										<div class="col-12 cssecoFlagsW">
 											

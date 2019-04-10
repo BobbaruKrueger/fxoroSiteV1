@@ -132,9 +132,11 @@
 						</div>
 						<div class="row">
 							<div class="col-12">
-								<div class="form-group phoneFP clearfix">
-									<input id="phoneprefix" class="form-control phoneprefixclass phone-prefix" type="text" name="phone-country-code" value="" readonly>
-									<input id="phonenumber" class="form-control phonenumberclass phone-number" name="phone" type="tel" placeholder="Telefono">
+								<div class="form-group">
+									<div class="phoneFP clearfix">
+										<input id="phoneprefix" class="form-control phoneprefixclass phone-prefix" type="text" name="phone-country-code" value="" readonly>
+										<input id="phonenumber" class="form-control phonenumberclass phone-number" name="phone" type="tel" placeholder="Telefono">
+									</div>
 								</div>
 							</div>
 						</div>

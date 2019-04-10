@@ -48,13 +48,23 @@ jQuery(document).ready(function($){
 		$('body').css('overflow', 'auto');
 		$(menuBtnOpenClass).removeClass('open_menu');
 	});
-	
-	if (screen.width < 992 ) {
-		$('.menu-item-has-children>a').after('<div class="menu_caret"><i class="fas fa-caret-down"></i></div>');
-		$('.menu_caret').on('click', function(){
-			$(this).parent().toggleClass('menu_open');
-		});	
-	}
+
+	$('.menu-item-has-children>a').after('<div class="menu_caret"><i class="fas fa-caret-down"></i></div>');
+	$('.menu_caret').on('click', function(){ // inchis
+		if ($(this).parent().hasClass('menu_open')) {
+			$(this).parent().removeClass('menu_open');
+			$(this).siblings('.sub-menu').slideUp(400, 'linear').find('.sub-menu').slideUp(400, 'linear');
+			$(this).parent('.menu-item-has-children').siblings().removeClass('menu_open');
+			$(this).parent('.menu-item-has-children').find('.menu-item-has-children').removeClass('menu_open');
+			$(this).parent('.menu-item-has-children').siblings().find('.sub-menu').slideUp(400, 'linear');
+		} else { // deschis
+			$(this).parent().addClass('menu_open');
+			$(this).siblings('.sub-menu').slideDown(400, 'linear');
+			$(this).parent('.menu-item-has-children').siblings().removeClass('menu_open');
+			$(this).parent('.menu-item-has-children').siblings().find('.menu-item-has-children').removeClass('menu_open');
+			$(this).parent('.menu-item-has-children').siblings().find('.sub-menu').slideUp(400, 'linear');
+		}
+	});	
 	
 	
 	// ==================
@@ -125,29 +135,6 @@ jQuery(document).ready(function($){
             $('.map').maphilight();
         }, 200);
     });
-	
-	// ==================
-	// Map cursor
-	// ==================
-	$('.map').on('mousemove', function(e){
-		var x = e.pageX - $('.map').offset().left;
-		var y = e.pageY - $('.map').offset().top;
-//		var objLeft = $(".map").offset().left;
-//		var objTop = $(".map").offset().top;
-		$('#cursorAlpha').css({
-		
-//			left:  e.pageX,
-//			top:   e.pageY
-			display: 'block',
-			left:  x,
-			top:   y
-		});
-	});
-	$('.map').on('mouseleave', function(e){
-		$('#cursorAlpha').css({
-			display: 'none'
-		});
-	});
 	
 	// ==================
 	// Animations
@@ -292,17 +279,17 @@ jQuery(document).ready(function($){
 	// ==================
 	$( ".phone-number, .phone-prefix" ).hover(
 		function() {
-			$( '.phoneFP' ).addClass( "hovered" );
+			$(this).parent().addClass( "hovered" );
 		}, 
 		function() {
-			$( '.phoneFP' ).removeClass( "hovered" );
+			$(this).parent().removeClass( "hovered" );
 		}
 	);	
 	$( ".phone-number" ).on('focusin', function(){
-		$( '.phoneFP' ).addClass( "focused" );
+		$(this).parent().addClass( "focused" );
 	});
 	$( ".phone-number" ).on('focusout', function(){
-		$( '.phoneFP' ).removeClass( "focused" );
+		$(this).parent().removeClass( "focused" );
 	});
 	
 		

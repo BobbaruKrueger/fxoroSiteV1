@@ -10,7 +10,7 @@ class API
 
     //protected $base_url = 'https://services.fxoro.com/api/marketdata/';
 
-    public $buyPrice, $sellPrice, $changePercent, $graph_data = array(), $img_output, $tickerName;
+    public $buyPrice, $sellPrice, $changePercent,  $img_output, $tickerName;
 
     public  $data_result =  array(
         'Forex' => array(),
@@ -19,9 +19,22 @@ class API
         'Indices' =>  array()
     );
 
+    public function getSymbolData( $symbol ){
+        $this->generateTickerName($symbol);
+        $this->getPrices($symbol);
+        if ( in_array( $symbol, $this->forex_symbols_array ) ) {          
+            $this->getForexGraphData($symbol);
+        }else{
+            $this->getGraphData($symbol);
+
+        }
+    }
+
     public function getData(){
         foreach ( $this->forex_symbols_array as $forex ) {
-            $this->CreateData($forex);
+            $this->generateTickerName($forex);
+            $this->getPrices($forex);
+            $this->getForexGraphData($forex);
         }
         foreach ( $this->indices_symbols_array as $index ) {
             $this->CreateData($index);
@@ -45,13 +58,56 @@ class API
         $this->generateTickerName($symbol);
         $this->getPrices($symbol);
         $this->getGraphData($symbol);
-
-        
-
-
     }
     
-    public  function getGraphData($symbol){
+
+    protected function getForexGraphData($symbol){
+        $from = substr($symbol, 0, 3);
+        $to = substr($symbol, -3);
+        
+        $base_api_url = 'https://api.exchangeratesapi.io/';
+        
+        $today = date('Y-m-d');
+        
+        $start_day = date( 'Y-m-d', strtotime( '-30 days', strtotime($today) ) );
+        
+        $call_url = $base_api_url . 'history?start_at=' . $start_day . '&end_at=' . $today.'&base=' .$from. '&symbols='.$to;
+
+        //initiate curl
+        $ch = curl_init();
+        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+        curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
+        curl_setopt( $ch, CURLOPT_URL, $call_url );
+        
+        //execute curl
+        $data = curl_exec($ch);
+        //close curl
+        curl_close($ch);       
+        
+        // decode the result from JSoN to Array
+        $data_array= json_decode($data, true);
+
+        $graph_data= array();
+
+        foreach($data_array['rates'] as $key =>$rate){
+            $graph_data['Values'][] = $rate[$to];
+            $graph_data['Dates'][] = $key;
+        }
+        //sort array by date
+        array_multisort($graph_data['Dates'], SORT_DESC, $graph_data['Values']);
+
+        
+        //store the data
+        $this->data_result['Forex'][$symbol]['Graph'][] = $graph_data;
+    }
+
+    function sortArray($a, $b){
+        if ($a == $b) {
+            return 0;
+        }
+        return ($a < $b) ? -1 : 1;
+    }
+    protected  function getGraphData($symbol){
         $data = array();
         $today = date('Y/m/d');
 
@@ -157,17 +213,12 @@ class API
           
         //initiate curl
         $ch = curl_init();
-//        curl_setopt( $ch, CURLOPT_HEADER, 1 );
         curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-//        curl_setopt( $ch, CURLOPT_DNS_USE_GLOBAL_CACHE, false );
         curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
-//        curl_setopt( $ch, CURLOPT_DNS_CACHE_TIMEOUT, 2 );
-//        curl_setopt( $ch, CURLOPT_HTTPGET, 1 );
-        
         curl_setopt( $ch, CURLOPT_URL, $url );
         
         //execute curl
-//        $data = curl_exec($ch);
+        //$data = curl_exec($ch);
         //close curl
         curl_close($ch);       
         
@@ -175,13 +226,13 @@ class API
         $data_array= json_decode($data, true);
         
         // store the result
-        // $companyName = $data_array['Symbol'];
-        //$this->$changePercent = $data_array['changePercent'] . '%';
+
+
         $this->buyPrice = $data_array['Bid'];
         $this->sellPrice = $data_array['Ask'];
 
         if ( in_array( $symbol, $this->forex_symbols_array ) ) {
-           
+            
             $this->data_result['Forex'][$symbol]['BuyPrice'][] = $this->buyPrice;
             $this->data_result['Forex'][$symbol]['SellPrice'][] = $this->sellPrice;
         }

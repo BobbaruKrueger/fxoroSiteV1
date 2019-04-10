@@ -2,7 +2,7 @@
 /**
   * Template Name: No sidebar
   * @package fxoroVone
-  * page.php
+  * no-sidebar.php
   */
 ?>
 <?php get_header(); ?>

@@ -1,20 +1,20 @@
 $(document).ready( () => {
     
-    let url = 'http://localhost/fxoro_site_mf/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/process.php';
+    let url = 'http://localhost/fx_oro/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/home/process/process.php';
 
    
 
-   //  $('.owl-carousel').owlCarousel({
-   //      loop:true,
-   //      margin:10,
-   //      nav:true,
-   //      dots:false,
-   //      responsive:{
-   //          0:{ items:1 },
-   //          576:{ items:2 },
-   //          1200:{ items:3 }
-   //      }
-   // });
+    $('.owl-carousel').owlCarousel({
+        loop:false,
+        margin:10,
+        nav:true,
+        dots:false,
+        responsive:{
+            0:{ items:1 },
+            576:{ items:2 },
+            768:{ items:3 }
+        }
+   });
 
    setInterval(()=>{
     $.ajax({
@@ -468,99 +468,6 @@ $(document).ready( () => {
     //         });
     //     });
     // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // var shares  = ['TOSHIBA', 'IBM', 'BMW', 'BAYER'];
