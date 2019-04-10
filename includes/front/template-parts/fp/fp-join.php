@@ -147,7 +147,7 @@
 						</div>
 						<div class="row">
 							<div class="col-12">
-								<button type="submit" class="cssecoBtn animationbtn">Start Trading</button>
+								<button type="submit" class="cssecoBtn animationbtn">Start trading</button>
 							</div>
 						</div>
 					</form>

@@ -27,7 +27,7 @@
 					</ul>
 					<div class="text-center d-md-inline-block">
 						<a href="#" class="cssecoBtn animationbtn">				
-							Join our Webinars
+							Join our webinars
 						</a>
 						<p class="text-center">
 							Your capital is at risk.

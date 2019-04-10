@@ -49,22 +49,34 @@ jQuery(document).ready(function($){
 		$(menuBtnOpenClass).removeClass('open_menu');
 	});
 
+	
+	
 	$('.menu-item-has-children>a').after('<div class="menu_caret"><i class="fas fa-caret-down"></i></div>');
 	$('.menu_caret').on('click', function(){ // inchis
 		if ($(this).parent().hasClass('menu_open')) {
+			
 			$(this).parent().removeClass('menu_open');
 			$(this).siblings('.sub-menu').slideUp(400, 'linear').find('.sub-menu').slideUp(400, 'linear');
 			$(this).parent('.menu-item-has-children').siblings().removeClass('menu_open');
 			$(this).parent('.menu-item-has-children').find('.menu-item-has-children').removeClass('menu_open');
 			$(this).parent('.menu-item-has-children').siblings().find('.sub-menu').slideUp(400, 'linear');
+			
+			
+			
 		} else { // deschis
+			
 			$(this).parent().addClass('menu_open');
 			$(this).siblings('.sub-menu').slideDown(400, 'linear');
 			$(this).parent('.menu-item-has-children').siblings().removeClass('menu_open');
 			$(this).parent('.menu-item-has-children').siblings().find('.menu-item-has-children').removeClass('menu_open');
 			$(this).parent('.menu-item-has-children').siblings().find('.sub-menu').slideUp(400, 'linear');
+			
 		}
+		
 	});	
+	
+	
+	
 	
 	
 	// ==================
