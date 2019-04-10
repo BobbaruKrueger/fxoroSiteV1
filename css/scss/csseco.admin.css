@@ -3,11 +3,7 @@
   * css/scss/csseco.admin.scss
   * Styles for admin page/pages
   */
-/* line 9, csseco.admin.scss */
 #previewLogo {
   display: block;
   margin: 5px 0 0;
-  max-height: 90px;
-}
-
-/*# sourceMappingURL=csseco.admin.css.map */
+  max-height: 90px; }

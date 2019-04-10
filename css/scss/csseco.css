@@ -324,28 +324,57 @@ div#site-wrapper {
         right: -10000px; } }
   div#site-wrapper #cssecoMenu ul {
     list-style: none;
-    margin: 10px 0;
+    margin: 15px 0;
     padding: 0; }
     div#site-wrapper #cssecoMenu ul li a {
-      display: block;
+      display: inline-block;
       color: #162856;
+      max-width: calc(100% - 40px);
       padding: 5px 0;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      width: 100%; }
       @media screen and (min-width: 992px) {
         div#site-wrapper #cssecoMenu ul li a {
-          margin: 0 10px; } }
-    div#site-wrapper #cssecoMenu ul li.current-menu-item a, div#site-wrapper #cssecoMenu ul li.current_page_item a {
-      background-color: #f9a602;
-      font-weight: bold;
-      padding-left: 10px !important;
-      padding-right: 10px; }
-      @media screen and (min-width: 992px) {
-        div#site-wrapper #cssecoMenu ul li.current-menu-item a, div#site-wrapper #cssecoMenu ul li.current_page_item a {
-          margin: 0; } }
+          margin: 0 10px;
+          max-width: 100%; } }
+    div#site-wrapper #cssecoMenu ul li.current-menu-item, div#site-wrapper #cssecoMenu ul li.current_page_item {
+      background-color: #f9a602; }
+      div#site-wrapper #cssecoMenu ul li.current-menu-item > a, div#site-wrapper #cssecoMenu ul li.current_page_item > a {
+        font-weight: bold;
+        padding-left: 10px !important;
+        padding-right: 10px; }
+        @media screen and (min-width: 992px) {
+          div#site-wrapper #cssecoMenu ul li.current-menu-item > a, div#site-wrapper #cssecoMenu ul li.current_page_item > a {
+            margin: 0; } }
     @media screen and (min-width: 992px) {
-      div#site-wrapper #cssecoMenu ul li:first-child a {
+      div#site-wrapper #cssecoMenu ul li:first-child > a {
         margin-left: 0;
         padding-left: 0; } }
+    div#site-wrapper #cssecoMenu ul li .menu_caret {
+      float: right;
+      height: 34px;
+      margin-left: 3px;
+      padding: 5px 0 0 0;
+      text-align: center;
+      width: 35px; }
+      div#site-wrapper #cssecoMenu ul li .menu_caret i, div#site-wrapper #cssecoMenu ul li .menu_caret svg {
+        transition: all 250ms ease-in; }
+    div#site-wrapper #cssecoMenu ul li ul.sub-menu {
+      background: #FFF;
+      display: none;
+      height: 0;
+      margin: 0;
+      opacity: 0;
+      padding: 0 0 0 20px;
+      transition: all 250ms ease-in;
+      visibility: hidden; }
+    div#site-wrapper #cssecoMenu ul li.menu_open > .menu_caret i, div#site-wrapper #cssecoMenu ul li.menu_open > .menu_caret svg {
+      transform: rotate(180deg); }
+    div#site-wrapper #cssecoMenu ul li.menu_open > ul.sub-menu {
+      display: block;
+      height: auto;
+      opacity: 1;
+      visibility: visible; }
     @media screen and (min-width: 992px) {
       div#site-wrapper #cssecoMenu ul li {
         display: inline-block; } }
@@ -477,6 +506,28 @@ div#site-wrapper {
         div#site-wrapper header#header .topHeaderD {
           padding-bottom: 17px;
           padding-top: 17px; } }
+    div#site-wrapper header#header .hstrip {
+      background-color: #1B2854;
+      color: #FFF;
+      font-size: 12px;
+      padding: 15px 0; }
+      div#site-wrapper header#header .hstrip p {
+        margin: 0;
+        padding: 0 10px; }
+        div#site-wrapper header#header .hstrip p a {
+          color: #ffb401;
+          text-decoration: none; }
+          div#site-wrapper header#header .hstrip p a:hover {
+            text-decoration: underline; }
+      @media screen and (min-width: 768px) {
+        div#site-wrapper header#header .hstrip {
+          font-size: 14px; } }
+      @media screen and (min-width: 992px) {
+        div#site-wrapper header#header .hstrip {
+          font-size: 15px; } }
+      @media screen and (min-width: 1200px) {
+        div#site-wrapper header#header .hstrip {
+          font-size: 16px; } }
     div#site-wrapper header#header.fp_header {
       border-bottom: 1px solid #000;
       padding-bottom: 5px;
@@ -1118,7 +1169,8 @@ div#site-wrapper {
           padding-top: 65px; } }
     div#site-wrapper.csseco-front-page #primary section#section2fp.part .bottom .tab-content .owl-stage .item img {
       display: inline-block;
-      width: auto; }
+      max-width: 30px;
+      width: 100%; }
     div#site-wrapper.csseco-front-page #primary section#section2fp.part .bottom .tab-content .owl-stage .item .itemInner {
       background: #FFF;
       color: #000;
@@ -1252,6 +1304,29 @@ div#site-wrapper {
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper img.imgmap {
             display: block; } }
+      div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .map-svg {
+        display: none;
+        height: 100%;
+        left: -141px;
+        position: absolute;
+        top: -188px;
+        width: 1200px; }
+        div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .map-svg svg path,
+        div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .map-svg svg polygon {
+          fill: rgba(255, 180, 1, 0); }
+          div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .map-svg svg path:hover,
+          div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .map-svg svg polygon:hover {
+            fill: #ffb401; }
+        @media screen and (min-width: 992px) {
+          div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .map-svg {
+            display: block; } }
+        @media screen and (min-width: 1200px) {
+          div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .map-svg {
+            height: 100%;
+            left: -167px;
+            position: absolute;
+            top: -223px;
+            width: 1430px; } }
       div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .rev {
         height: 50px;
         left: 0;
@@ -2304,3 +2379,9 @@ div#site-wrapper {
       div#site-wrapper.csseco-front-page #primary section#section9fp.join {
         font-size: 22px;
         padding: 60px 0 50px 0; } }
+
+body.page #primary {
+  padding: 15px 0 30px; }
+  body.page #primary header.entry-header h1.entry-title {
+    color: #1B2854;
+    font-size: 24px; }

@@ -30,7 +30,7 @@ jQuery(document).ready(function($){
 	// ==================
 	$('img').addClass('img-fluid'); // add img-responsive(bootstrap) to all images
 	$('select').addClass('form-control'); // add form-control(bootstrap) class on all select elements on the site
-	$('table').addClass('table'); // add table(bootstrap) class on all table elements on the site
+	$('table').addClass('table table-bordered').wrap('<div class="table-responsive"></div>'); // add table(bootstrap) class on all table elements on the site
 	
 	
 	// ==================
@@ -49,6 +49,13 @@ jQuery(document).ready(function($){
 		$(menuBtnOpenClass).removeClass('open_menu');
 	});
 	
+	if (screen.width < 992 ) {
+		$('.menu-item-has-children>a').after('<div class="menu_caret"><i class="fas fa-caret-down"></i></div>');
+		$('.menu_caret').on('click', function(){
+			$(this).parent().toggleClass('menu_open');
+		});	
+	}
+	
 	
 	// ==================
 	// Owl Carousel
@@ -57,7 +64,7 @@ jQuery(document).ready(function($){
     	$($(e.target).attr('href')).find('.owl-carousel').owlCarousel('invalidate', 'width').owlCarousel('update');
 	});
 	$('.owl-carousel').owlCarousel({
-		loop:true,
+		loop:false,
 		margin:10,
 		nav:true,
 		dots:false,

@@ -87,7 +87,7 @@
 					<div class="col-12 col-sm-6 openaccH">
 						<div class="dtable">
 							<div class="dtable-cell">
-								<a href="#" class="mhlink">
+								<a href="#" class="cssecoBtn animationbtn">				
 									Open an account
 								</a>
 							</div>
@@ -96,7 +96,7 @@
 					<div class="col-12 col-sm-6 loginH">
 						<div class="dtable">
 							<div class="dtable-cell">
-								<a href="#" class="mhlink">
+								<a href="#" class="cssecoBtn animationbtn">				
 									Login
 								</a>
 							</div>
@@ -141,12 +141,12 @@
 								+357.25.20.5555 
 							</div>
 							<div class="openaccW">
-								<a href="#" class="mhlink">
+								<a href="#" class="cssecoBtn animationbtn">				
 									Open an account
 								</a>
 							</div>
 							<div class="loginW">
-								<a href="#" class="mhlink">
+								<a href="#" class="cssecoBtn animationbtn">				
 									Login
 								</a>
 							</div>
@@ -163,6 +163,17 @@
                                 'container_id'          =>      'cssecoMenu' //
                             ) );
                         ?>
+					</div>
+				</div>
+			</div>
+			<div class="hstrip">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<p>
+								Trading FOREX/ CFDs involves considerable risk of loss of the entire investment. <a href="#">Read more</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
