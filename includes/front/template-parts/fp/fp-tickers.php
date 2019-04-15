@@ -121,7 +121,7 @@ $api->getData();
 									averageData<?php echo $symbol; ?>.push(<?php echo $average_all; ?>);
 									
 								}
-								console.log(averageData<?php echo $symbol; ?>);
+							
 								let chart<?php echo $symbol; ?> = new Chart(selector<?php echo $symbol; ?>, {
 									// The type of chart we want to create
 									
