@@ -96,17 +96,19 @@ class API
         //sort array by date
         array_multisort($graph_data['Dates'], SORT_DESC, $graph_data['Values']);
 
-        
-        //store the data
+        // calculate  change percentage
+        $last_day_price = $graph_data['Values'][ count( $graph_data['Values'] ) - 1 ];
+        $previous_day_price = $graph_data['Values'][ count( $graph_data['Values'] ) - 2 ];
+        $change_percentage = round( ( ( $last_day_price - $previous_day_price ) / $last_day_price) * 100, 4);
+        $change_percentage = ( $change_percentage > 0 ) ? '+'.$change_percentage : $change_percentage ;
+       
+      
+
         $this->data_result['Forex'][$symbol]['Graph'][] = $graph_data;
+        $this->data_result['Forex'][$symbol]['ChangePercentage'] = $change_percentage;
     }
 
-    function sortArray($a, $b){
-        if ($a == $b) {
-            return 0;
-        }
-        return ($a < $b) ? -1 : 1;
-    }
+   
     protected  function getGraphData($symbol){
         $data = array();
         $today = date('Y/m/d');
@@ -218,7 +220,7 @@ class API
         curl_setopt( $ch, CURLOPT_URL, $url );
         
         //execute curl
-        //$data = curl_exec($ch);
+//        $data = curl_exec($ch);
         //close curl
         curl_close($ch);       
         

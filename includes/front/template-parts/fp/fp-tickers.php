@@ -23,7 +23,7 @@ $api->getData();
 				</div>
 			</div>
 			<div class="row bottom">
-				<ul class="nav col-12 col-md-3" id="myTab" role="tablist">
+				<ul class="nav col-12 col-md-3 align-middle" id="myTab" role="tablist">
 					<li class="nav-item">
 						<a class="active" id="forex-tab" data-toggle="tab" href="#forex" role="tab" aria-controls="forex" aria-selected="true">Forex</a>
 					</li>
@@ -46,7 +46,7 @@ $api->getData();
 							<?php foreach ($api->data_result['Forex'] as $symbol => $value) { ?>
 								<div class="item <?php echo $symbol;?>">
 									<a href="instrument?instrument=<?php echo 'Forex';?>&symbol=<?php echo $symbol;?>">
-										<div class="col-10 offset-1 itemInner">
+										<div class="col-10 offset-1 col-sm-12 offset-sm-0 itemInner">
 											<div class="row">
 												<div class="col-12 cssecoFlagsW">
 													<img  src="wp-content/themes/CSSecoStarterThemeV2-master/imgs/tickers/<?php echo substr($symbol,0,3) ?>.png" alt="Forex <?php echo substr($symbol, 0,3);?> Flag" width="30px">
@@ -203,7 +203,7 @@ $api->getData();
 						<?php foreach ($api->data_result['Shares'] as $symbol => $value) { ?>
 							<div class="item <?php echo $symbol;?>">
 								
-								<div class="col-10 offset-1 itemInner">
+								<div class="col-10 offset-1 col-sm-12 offset-sm-0 itemInner">
 									<div class="row">
 										<div class="col-12 cssecoFlagsW">
 											
@@ -354,7 +354,7 @@ $api->getData();
 							
 							<div class="item <?php echo  str_replace( ' ',  '', $value['Name'][0] ); ?>">
 								
-								<div class="col-10 offset-1 itemInner">
+								<div class="col-10 offset-1 col-sm-12 offset-sm-0 itemInner">
 									<div class="row">
 										<div class="col-12 cssecoFlagsW">
 											
@@ -505,7 +505,7 @@ $api->getData();
 							
 							<div class="item <?php echo  str_replace( ' ',  '', $value['Name'][0] ); ?>">
 								
-								<div class="col-10 offset-1 itemInner">
+								<div class="col-10 offset-1 col-sm-12 offset-sm-0 itemInner">
 									<div class="row">
 										<div class="col-12 cssecoFlagsW">
 											

@@ -88,7 +88,7 @@
 					</div>
 				</div>
 				<div class="col-12 col-lg-4">
-					<form action="">
+					<form action="" class="create_account">
 						<div class="row">
 							<div class="col-12">
 								<h3>Create Your Account</h3>
@@ -146,7 +146,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-12">
+							<div class="col-12 text-center">
 								<button type="submit" class="cssecoBtn animationbtn">Start trading</button>
 							</div>
 						</div>

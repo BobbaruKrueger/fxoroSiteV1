@@ -166,6 +166,7 @@
 					</div>
 				</div>
 			</div>
+<!--
 			<div class="hstrip">
 				<div class="container">
 					<div class="row">
@@ -177,6 +178,7 @@
 					</div>
 				</div>
 			</div>
+-->
 		</header><!-- /#header -->
 		<div id="primary" class="content-area">
 			<div class="container">

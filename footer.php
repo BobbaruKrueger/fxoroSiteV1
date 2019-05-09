@@ -6,6 +6,17 @@
 ?>
 				</div><!-- /.row -->
 			</div><!-- /.container -->
+			<div class="hstripProds">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<p>
+								Trading FOREX/ CFDs involves considerable risk of loss of the entire investment. <a href="#">Read more</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div><!-- /#primary -->
 		<footer id="footer">
 			<div class="container">
