@@ -2983,77 +2983,79 @@ form#cssecoContactForm {
           font-size: 24px; } }
     #prodsect2.prodsect2 section:last-child {
       margin: 0; }
-  #prodsect2.prodsect2 .tabletickers ul.nav {
-    border: 1px solid #1B2854;
-    border-color: #1B2854;
-    border-style: solid;
-    border-width: 1px; }
-    #prodsect2.prodsect2 .tabletickers ul.nav li {
-      width: 50%; }
-      @media screen and (max-width: 575px) {
-        #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(even) a {
-          border-width: 1px 0 1px 1px; }
-        #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(5) a, #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(6) a {
-          border-bottom: 0px; } }
-      @media screen and (min-width: 576px) and (max-width: 991px) {
-        #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(3) a, #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(6) a {
-          border-right: 0px; } }
-      @media screen and (min-width: 992px) and (max-width: 1199px) {
-        #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(even) a {
-          border-width: 1px 0 1px 1px; }
-        #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(5) a, #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(6) a {
-          border-bottom: 0px; } }
-      @media screen and (min-width: 1200px) {
-        #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(3) a, #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(6) a {
-          border-right: 0px; }
-        #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(4) a, #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(5) a, #prodsect2.prodsect2 .tabletickers ul.nav li:nth-child(6) a {
-          border-bottom: 0px; } }
-      #prodsect2.prodsect2 .tabletickers ul.nav li a {
-        border-color: transparent #1B2854 #1B2854 transparent;
-        border-style: solid;
-        border-width: 1px;
-        color: #000;
-        font-weight: bold;
-        overflow: hidden;
-        text-align: center;
-        text-overflow: ellipsis;
-        white-space: nowrap; }
-        #prodsect2.prodsect2 .tabletickers ul.nav li a.active {
-          background-color: #1B2854;
-          color: #FFF; }
-      @media screen and (min-width: 576px) {
-        #prodsect2.prodsect2 .tabletickers ul.nav li {
-          width: 33.333%; } }
-      @media screen and (min-width: 992px) {
-        #prodsect2.prodsect2 .tabletickers ul.nav li {
-          width: 50%; } }
-      @media screen and (min-width: 1200px) {
-        #prodsect2.prodsect2 .tabletickers ul.nav li {
-          width: 33.333%; } }
-  #prodsect2.prodsect2 .tabletickers table, #prodsect2.prodsect2 .tabletickers tr, #prodsect2.prodsect2 .tabletickers th, #prodsect2.prodsect2 .tabletickers td {
-    border-color: #1B2854; }
-  #prodsect2.prodsect2 .tabletickers thead {
-    background-color: #A4B3DF; }
-    #prodsect2.prodsect2 .tabletickers thead th {
-      font-style: italic;
-      font-weight: 400; }
-      #prodsect2.prodsect2 .tabletickers thead th.cssecol1 {
-        width: 33.33%; }
-      #prodsect2.prodsect2 .tabletickers thead th.cssecol2 {
-        width: 33.33%; }
+  #prodsect2.prodsect2 .tableTickersWrapper .tabletickers {
+    background: rgba(255, 255, 255, 0.4); }
+    #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav {
+      border: 1px solid #1B2854;
+      border-color: #1B2854;
+      border-style: solid;
+      border-width: 1px; }
+      #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li {
+        width: 50%; }
+        @media screen and (max-width: 575px) {
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(even) a {
+            border-width: 1px 0 1px 1px; }
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(5) a, #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(6) a {
+            border-bottom: 0px; } }
+        @media screen and (min-width: 576px) and (max-width: 991px) {
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(3) a, #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(6) a {
+            border-right: 0px; } }
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(even) a {
+            border-width: 1px 0 1px 1px; }
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(5) a, #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(6) a {
+            border-bottom: 0px; } }
         @media screen and (min-width: 1200px) {
-          #prodsect2.prodsect2 .tabletickers thead th.cssecol2 {
-            width: 33%; } }
-      #prodsect2.prodsect2 .tabletickers thead th.cssecol3 {
-        width: 33.33%; }
-  #prodsect2.prodsect2 .tabletickers table {
-    margin: 0;
-    text-align: center; }
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(3) a, #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(6) a {
+            border-right: 0px; }
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(4) a, #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(5) a, #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li:nth-child(6) a {
+            border-bottom: 0px; } }
+        #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li a {
+          border-color: transparent #1B2854 #1B2854 transparent;
+          border-style: solid;
+          border-width: 1px;
+          color: #000;
+          font-weight: bold;
+          overflow: hidden;
+          text-align: center;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li a.active {
+            background-color: #1B2854;
+            color: #FFF; }
+        @media screen and (min-width: 576px) {
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li {
+            width: 33.333%; } }
+        @media screen and (min-width: 992px) {
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li {
+            width: 50%; } }
+        @media screen and (min-width: 1200px) {
+          #prodsect2.prodsect2 .tableTickersWrapper .tabletickers ul.nav li {
+            width: 33.333%; } }
+    #prodsect2.prodsect2 .tableTickersWrapper .tabletickers table, #prodsect2.prodsect2 .tableTickersWrapper .tabletickers tr, #prodsect2.prodsect2 .tableTickersWrapper .tabletickers th, #prodsect2.prodsect2 .tableTickersWrapper .tabletickers td {
+      border-color: #1B2854; }
+    #prodsect2.prodsect2 .tableTickersWrapper .tabletickers thead {
+      background-color: #A4B3DF; }
+      #prodsect2.prodsect2 .tableTickersWrapper .tabletickers thead th {
+        font-style: italic;
+        font-weight: 400; }
+        #prodsect2.prodsect2 .tableTickersWrapper .tabletickers thead th.cssecol1 {
+          width: 33.33%; }
+        #prodsect2.prodsect2 .tableTickersWrapper .tabletickers thead th.cssecol2 {
+          width: 33.33%; }
+          @media screen and (min-width: 1200px) {
+            #prodsect2.prodsect2 .tableTickersWrapper .tabletickers thead th.cssecol2 {
+              width: 33%; } }
+        #prodsect2.prodsect2 .tableTickersWrapper .tabletickers thead th.cssecol3 {
+          width: 33.33%; }
+    #prodsect2.prodsect2 .tableTickersWrapper .tabletickers table {
+      margin: 0;
+      text-align: center; }
   @media screen and (min-width: 992px) {
-    #prodsect2.prodsect2 .tabletickers {
+    #prodsect2.prodsect2 .tableTickersWrapper {
       padding-bottom: 180px; } }
   @media screen and (min-width: 1200px) {
-    #prodsect2.prodsect2 .tabletickers {
+    #prodsect2.prodsect2 .tableTickersWrapper {
       padding-bottom: 230px; } }
   #prodsect2.prodsect2 img.aboutUsPhones {
     display: block;
@@ -3765,28 +3767,44 @@ section#mt4InnerFeatures.mt4InnerFeatures {
     background: #0077b5;
     cursor: pointer; }
 
-.tabletickers {
-  background: rgba(255, 255, 255, 0.4); }
-  .tabletickers .table-bordered tbody .symbol-name span {
-    color: #1B2854; }
-  .tabletickers .table-bordered tbody .change-percentage {
-    font-size: .8rem; }
-    .tabletickers .table-bordered tbody .change-percentage .positive {
-      color: #30AB2F; }
-    .tabletickers .table-bordered tbody .change-percentage .negative {
-      color: #BE0011; }
-  .tabletickers .table-bordered tbody .sell-value, .tabletickers .table-bordered tbody .buy-value {
-    margin-bottom: .2rem; }
-    .tabletickers .table-bordered tbody .sell-value span, .tabletickers .table-bordered tbody .buy-value span {
-      color: #1B2854;
-      font-weight: bold; }
-  .tabletickers .table-bordered tbody .sell-btn a, .tabletickers .table-bordered tbody .buy-btn a {
-    padding: .25rem 2.7rem;
-    border-radius: 20px;
-    margin-bottom: .5rem; }
-  .tabletickers .table-bordered tbody .sell-btn a {
-    background-color: #BE0011;
-    text-decoration: none; }
-  .tabletickers .table-bordered tbody .buy-btn a {
-    background-color: #30AB2F;
-    text-decoration: none; }
+.searchbar ul.list {
+  position: absolute;
+  left: 15px;
+  background: #fff;
+  width: calc(100% - 30px);
+  z-index: 999;
+  list-style-type: none;
+  color: #1B2854;
+  max-height: 217px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0; }
+  .searchbar ul.list .list-item {
+    text-decoration: none;
+    margin: 10px; }
+    .searchbar ul.list .list-item .link {
+      color: #1B2854; }
+
+.tabletickers .table-bordered tbody .symbol-name span {
+  color: #1B2854; }
+.tabletickers .table-bordered tbody .change-percentage {
+  font-size: .8rem; }
+  .tabletickers .table-bordered tbody .change-percentage .positive {
+    color: #30AB2F; }
+  .tabletickers .table-bordered tbody .change-percentage .negative {
+    color: #BE0011; }
+.tabletickers .table-bordered tbody .sell-value, .tabletickers .table-bordered tbody .buy-value {
+  margin-bottom: .2rem; }
+  .tabletickers .table-bordered tbody .sell-value span, .tabletickers .table-bordered tbody .buy-value span {
+    color: #1B2854;
+    font-weight: bold; }
+.tabletickers .table-bordered tbody .sell-btn a, .tabletickers .table-bordered tbody .buy-btn a {
+  padding: .25rem 2.7rem;
+  border-radius: 20px;
+  margin-bottom: .5rem; }
+.tabletickers .table-bordered tbody .sell-btn a {
+  background-color: #BE0011;
+  text-decoration: none; }
+.tabletickers .table-bordered tbody .buy-btn a {
+  background-color: #30AB2F;
+  text-decoration: none; }

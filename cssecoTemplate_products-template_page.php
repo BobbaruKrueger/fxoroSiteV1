@@ -337,7 +337,7 @@
 			<div class="col-12 col-lg-7">
 				<?php echo $c2; ?>
 			</div>
-			<div class="col-12 col-lg-5">
+			<div class="col-12 col-lg-5 tableTickersWrapper">
 				<!-- template part-->
 				<?php 
 					include( locate_template( 'includes/front/template-parts/products/tabel.php', false, false ) );
