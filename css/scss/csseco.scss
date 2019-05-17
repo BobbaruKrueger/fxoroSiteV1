@@ -4291,12 +4291,22 @@ section#mt4InnerFeatures.mt4InnerFeatures {
 		overflow-y: auto;
 		margin: 0;
 		padding: 0;
-		.list-item{
-			text-decoration: none;
-			margin: 10px;
-			.link{
-				color: #1B2854;
+		.link{
+			color: #1B2854;
+			&:focus, &:hover{
+				.list-item{
+					background: #A4B3DF;
+				}
+				
 			}
+			.list-item{
+				text-decoration: none;
+				margin: 10px;
+				.text-right{
+					float: right;
+				}	
+			}
+			
 		}
 	}
 }

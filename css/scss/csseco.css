@@ -3779,11 +3779,15 @@ section#mt4InnerFeatures.mt4InnerFeatures {
   overflow-y: auto;
   margin: 0;
   padding: 0; }
-  .searchbar ul.list .list-item {
-    text-decoration: none;
-    margin: 10px; }
-    .searchbar ul.list .list-item .link {
-      color: #1B2854; }
+  .searchbar ul.list .link {
+    color: #1B2854; }
+    .searchbar ul.list .link:focus .list-item, .searchbar ul.list .link:hover .list-item {
+      background: #A4B3DF; }
+    .searchbar ul.list .link .list-item {
+      text-decoration: none;
+      margin: 10px; }
+      .searchbar ul.list .link .list-item .text-right {
+        float: right; }
 
 .tabletickers .table-bordered tbody .symbol-name span {
   color: #1B2854; }
