@@ -6,8 +6,8 @@
  * Retail - Crypto Table - Floating
  */
 ?>
-<table class="table-bordered">
-	<tbody>
+<table class="table-bordered table-striped">
+	<thead>
 		<tr>
 			<th>Instrument</th>
 			<th>Spread</th>
@@ -20,6 +20,8 @@
 			<th>Overnight Interest <br>(daily) Long</th>
 			<th>Trading hours (GMT+3)</th>
 		</tr>
+	</thead>
+	<tbody>
 		<tr>
 			<td>BTCUSD</td>
 			<td>$100 over market price</td>

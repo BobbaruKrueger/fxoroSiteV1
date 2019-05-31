@@ -13,16 +13,21 @@ global $wpdb;
 if ( isset( $_GET['search_keyword'] )  && !empty( $_GET['search_keyword'] ) ){
     $search_keyword = $_GET['search_keyword'];
 
-    $query = "SELECT * FROM tickers3 WHERE symbol LIKE '%$search_keyword%' OR currency LIKE '%$search_keyword%' OR name LIKE '%$search_keyword%' OR category LIKE '%$search_keyword%' ";
+    $query = "SELECT * FROM tickers3 WHERE symbol LIKE '%$search_keyword%'  OR name LIKE '%$search_keyword%' ";
 
     $results = $wpdb->get_results($query);
-    $response= array();
-    foreach ($results as $key => $value) {
-        $response[$value->symbol]['instrument'] = $value->category;
-        $response[$value->symbol]['name'] = $value->name;
-        $response[$value->symbol]['symbol'] = $value->symbol;
-    }
-    echo json_encode($response);
+
+    if( count($results) > 0 ){
+        $response= array();
+        foreach ($results as $key => $value) {
+            $response[$value->symbol]['instrument'] = $value->category;
+            $response[$value->symbol]['name'] = $value->name;
+            $response[$value->symbol]['symbol'] = $value->symbol;
+        }
+        echo json_encode($response);
+    } else echo json_encode('noresults');
+
+    
 
     // foreach ($symbols_array as $symbol) {
         

@@ -6,8 +6,7 @@
  * Professional - CFDs Table - ECN
  */
 ?>
-<table class="table-bordered">
-<!--
+<table class="table-bordered table-striped">
 	<thead>
 		<tr>
 			<th>Instrument</th>
@@ -25,8 +24,8 @@
 			<th>Trading hours (GMT+3)</th>
 		</tr>
 	</thead>
--->
 	<tbody>
+<!--
 		<tr>
 			<th>Instrument</th>
 			<th>Minimum<br> spread</th>
@@ -42,6 +41,7 @@
 			<th>Maximum<br> Exposure</th>
 			<th>Trading hours (GMT+3)</th>
 		</tr>
+-->
 		<tr>
 			<td>GOLD</td>
 			<td>20</td>
@@ -149,8 +149,8 @@
 		</tr>
 	</tbody>
 </table>
-<table class="table-bordered mt-5" style="border-top: 1px solid rgb(222, 226, 230);">
-	<tbody>
+<table class="table-bordered table-striped mt-5" style="border-top: 1px solid rgb(222, 226, 230);">
+	<thead>
 		<tr>
 			<th>Instrument</th>
 			<th>Minimum<br> spread</th>
@@ -166,6 +166,8 @@
 			<th>Maximum<br> Exposure</th>
 			<th>Trading hours (GMT+3)</th>
 		</tr>
+	</thead>
+	<tbody>
 		<tr>
 			<td>AUS200</td>
 			<td>0.5</td>

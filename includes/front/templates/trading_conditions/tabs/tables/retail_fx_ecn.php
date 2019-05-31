@@ -6,8 +6,8 @@
  * Retail - FX Table - ECN
  */
 ?>
-<table class="table-bordered">
-	<tbody>
+<table class="table-bordered table-striped">
+	<thead>
 		<tr>
 			<th>Instrument</th>
 			<th>Average Spread (pips)</th>
@@ -22,6 +22,8 @@
 			<th>Maximum<br>Exposure</th>
 			<th>Trading hours (GMT +3)</th>
 		</tr>
+	</thead>
+	<tbody>
 		<tr>
 			<td>EURUSD</td>
 			<td>0.6</td>

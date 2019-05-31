@@ -75,6 +75,7 @@ a {
 /*--------------------------------------------------------------
 # Overwrite
 --------------------------------------------------------------*/
+// flags
 .flag-icon {
 	width: 1.53333333333em;
 	line-height: 2em;
@@ -83,6 +84,15 @@ a {
 		width: 2.33333em;
 	}
 }
+
+// mte stuff
+.ui-tabs .ui-tabs-nav {
+	background-color: #1B2854!important;
+}
+.vid_container .lsn_tit {
+	border-bottom-color: #1B2854!important;
+}
+
 
 /*--------------------------------------------------------------
 # Site Wrapper
@@ -185,6 +195,13 @@ div#site-wrapper {
 							width: 20px;
 						}
 					}
+					> ul.sub-menu {
+						@media screen and (min-width: $csseco_bp_992) {
+							-webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+							-moz-box-shadow:    0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+							box-shadow:         0px 2px 5px 1px rgba(0, 0, 0, 0.3);	
+						}
+					}
 					ul.sub-menu { // copii
 						background: #FFF;
 						display: none;
@@ -193,7 +210,7 @@ div#site-wrapper {
 						
 						li {
 							display: block;
-							width: 100%;
+//							width: 100%;
 							a {
 								display: block;
 								text-transform: none;
@@ -265,6 +282,23 @@ div#site-wrapper {
 						> ul.submenu {
 							display: block;
 						}
+					}
+				}
+				&.subsection_ttl {
+					border-top: 1px solid gray; 
+					margin-left: -20px;
+					text-indent: 20px;
+					width: calc(100% + 20px);
+					a {
+						color: gray;
+						cursor: auto;
+						font-size: .75rem;
+						text-decoration: none;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						margin-left: -5px;
+						text-indent: 5px;
+						width: calc(100% + 10px);
 					}
 				}
 			}
@@ -2550,7 +2584,7 @@ div#site-wrapper {
 body.page {
 	#primary {
 		padding: 15px 0 30px;
-			header.entry-header {
+		header.entry-header {
 			h1.entry-title {
 				color: #1B2854;
 				font-size: 24px;
@@ -2673,10 +2707,19 @@ body.page {
 				text-decoration: underline;
 			}
 			span {
+				i, svg {
+					font-style: normal;
+					margin-right: 7px;
+					transition: all 250ms ease-in;
+				}
 				display: block;
 				font-weight: normal;	
 				&[aria-expanded=true] {
 					font-weight: bold;
+					i, svg {
+						font-style: normal;
+						transform: rotate(90deg);
+					}
 				}
 			}
 			@media screen and (min-width: $csseco_bp_576) {
@@ -2949,6 +2992,18 @@ section#subAbUs {
 		margin: 40px 0 0 0;
 	}
 }
+section#subAbout_page.subAbout_page {
+	header.entry-header {
+		h1.entry-title {
+			font-size: 1.25rem;
+			span {
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+}
 
 // Who we are -> Trading Condition (table)
 .trading_condition_table {
@@ -2983,7 +3038,7 @@ section#subAbUs {
 			border: 1px solid transparent;
 			color: #fff;
 			display: block;
-			margin: 0 0 5px 0;
+			margin: 0 0 0;
 			text-decoration: none;
 			text-align: center;
 			@include animate( color, 320ms );
@@ -3002,6 +3057,7 @@ section#subAbUs {
 			padding: 0;
 			li {
 				a {
+					border-color: #1B2854;
 					color: #000;
 					font-size: 10px;
 					&:hover,
@@ -3066,6 +3122,11 @@ section#subAbUs {
 			}	
 		}
 	}
+	table {
+		thead {
+			background: #ffb401;
+		}
+	}
 }
 
 // Who we are -> Affiliation
@@ -3084,10 +3145,10 @@ section#subAbUs {
 		}
 	}
 	@media screen and (min-width: $csseco_bp_768) {
-		background-image: url(../imgs/affiliates/candles.png);
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
+//		background-image: url(../imgs/affiliates/candles.png);
+//		background-position: center center;
+//		background-repeat: no-repeat;
+//		background-size: cover;
 	}
 }
 section#affth {
@@ -3722,6 +3783,9 @@ form#cssecoContactForm {
 	box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.5);
 	table {
 		text-align: center;
+		thead {
+			background: #ffb401;
+		}
 		tr {
 			td,
 			th {
@@ -3786,10 +3850,9 @@ section#meta4.meta4 {
 		max-width: 510px;
 		a.cssecoBtn {}
 		img {
-			display: inline-block;
-			margin: -40px 0 0 0;
+			display: block;
+			margin: 0 auto 5px;
 			@media screen and (min-width: $csseco_bp_576) {
-				display: block;
 				margin: 0 auto;
 			}
 		}
@@ -3825,11 +3888,40 @@ section#features.features {
 			border-color: #FFF;
 		}
 	}
+	.lbW {
+		position: relative;
+		z-index: 1;
+		img.lb {
+			@media screen and (min-width: $csseco_bp_1200) {
+				height: 240px;
+			}
+		}
+		&::after {
+			background-image: url(../imgs/platforms_and_apps/bulbpx.png);
+			background-position: left center;
+			background-repeat: repeat-x;
+			background-size: auto 100%;
+			bottom: 0;
+			content: '';
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: -10000px;
+			width: 10000px;
+			z-index: 0;
+			@media screen and (min-width: $csseco_bp_1200) {
+				right: -9990px;
+			}
+		}
+		@media screen and (min-width: $csseco_bp_1200) {
+			margin-left: 150px;
+		}
+	}
 	@media screen and (min-width: $csseco_bp_992) {
 		padding: 1.5rem 0;
 	}
 	@media screen and (min-width: $csseco_bp_1200) {
-		background-position: center -130px;
+//		background-position: center -130px;
 	}
 }
 section#mt4ondevices.mt4ondevices {
@@ -3850,7 +3942,7 @@ section#mt4ondevices.mt4ondevices {
 			height: 61px; // .pct>img height
 			padding: 0 0 0 10px;
 			h3 {
-				font-size: 16px;
+				font-size: 15px;
 				margin: 0;
 			}
 		}
@@ -3977,25 +4069,27 @@ section#mt4InnerWeb.mt4InnerWeb {
 			right: 0;
 			top: 0;
 			width: 430px;
+			z-index: 2;
 		}
 		&::after {
-			background-color: #1B2854;
+			background-color: #1A2853;
 			bottom: 0;
 			content: '';
 			display: block;
 			height: 100%;
 			position: absolute;
-			right: 425px;
+			right: 410px;
 			top: 0;
 			width: 10000px;
+			z-index: 1;
 			@media screen and (min-width: $csseco_bp_1200) {
-				right: 402px;
+				right: 380px;
 			}
 		}
 	}
 	.cntnt {
-		padding-bottom: 20px;
-		padding-top: 20px;
+//		padding-bottom: 20px;
+//		padding-top: 20px;
 		ul {
 			-webkit-column-count: 2;
 			-moz-column-count: 2;
@@ -4108,10 +4202,19 @@ section#mt4InnerFeatures.mt4InnerFeatures {
 				text-decoration: underline;
 			}
 			span {
+				i, svg {
+					font-style: normal;
+					margin-right: 7px;
+					transition: all 250ms ease-in;
+				}
 				display: block;
 				font-weight: normal;	
 				&[aria-expanded=true] {
 					font-weight: bold;
+					i, svg {
+						font-style: normal;
+						transform: rotate(90deg);
+					}
 				}
 			}
 			@media screen and (min-width: $csseco_bp_576) {

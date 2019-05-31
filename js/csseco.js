@@ -100,6 +100,9 @@ jQuery(document).ready(function($){
 //		});
 		
 	}
+	$('.subsection_ttl > a').on('click', function(e){
+		e.preventDefault();
+	});
 		
 //		var func = function() {
 //			console.log('functie func')
@@ -299,6 +302,16 @@ jQuery(document).ready(function($){
 		}
 	});
 	
+	// friend referrals
+	if($('.revealer_ff').visible() && screen.width >= 992) {
+		$('.prodsect3_ff').addClass('animated slideInRight').css('visibility', 'visible');	
+	}
+	$(window).scroll(function() {
+		if($('.revealer_ff').visible() && screen.width >= 992) {
+			$('.prodsect3_ff').addClass('animated slideInRight').css('visibility', 'visible');	
+		}
+	});
+	
 	// accounts page
 	if($('.cardInner').visible()) {
 		if ( screen.width < 768 ) {
@@ -320,18 +333,6 @@ jQuery(document).ready(function($){
 	});
 	
 	// products page
-	if($('.prodsect3 .revealer').visible()) {
-		if(screen.width >= 992) {
-			$('.prodsect3').addClass('animated slideInRight').css('visibility', 'visible');	
-		}
-	}
-	$(window).scroll(function() {
-		if($('.prodsect3 .revealer').visible()) {
-			if(screen.width >= 992) {
-				$('.prodsect3').addClass('animated slideInRight').css('visibility', 'visible');	
-			}
-		}
-	});
 	if($('.aboutUsPhones').visible()) {
 		$('.aboutUsPhones').addClass('animated slideInRight').css('visibility', 'visible');
 	}
@@ -340,6 +341,15 @@ jQuery(document).ready(function($){
 			$('.aboutUsPhones').addClass('animated slideInRight').css('visibility', 'visible');
 		}
 	});
+	if($('.aboutUsPhones').visible() && screen.width >= 992) {
+		$('.prodsect3').addClass('animated slideInRight').css('visibility', 'visible');	
+	}
+	$(window).scroll(function() {
+		if($('.aboutUsPhones').visible() && screen.width >= 992) {
+			$('.prodsect3').addClass('animated slideInRight').css('visibility', 'visible');	
+		}
+	});
+	
 	
 	// friend referrals
 	if($('.frndrefHiw').visible()) {
@@ -362,6 +372,17 @@ jQuery(document).ready(function($){
 			$('.mt4tblt').addClass('animated bounceInUp').css('visibility', 'visible');
 		}
 	});
+	
+	// MT4 page
+	if($('.lbW').visible()) {
+		$('.lbW').addClass('animated fadeIn').css('visibility', 'visible');
+	}
+	$(window).scroll(function() {
+		if($('.lbW').visible()) {
+			$('.lbW').addClass('animated fadeIn').css('visibility', 'visible');
+		}
+	});
+	
 	
 	// Trading conditions - professional/retail switcher
 //	$('.switcher ul').on('click', function(){

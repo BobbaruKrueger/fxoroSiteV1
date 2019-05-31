@@ -6,7 +6,7 @@
  * Professional - Crypto Table - FIX
  */
 ?>
-<table class="table-bordered">
+<table class="table-bordered table-striped">
 	<thead>
 		<tr>
 			<th>Instrument</th>

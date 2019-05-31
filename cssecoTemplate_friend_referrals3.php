@@ -153,8 +153,8 @@
 		</div>
 	</div>
 </section>
-<section id="prodsect3" class="prodsect3">
-	<div class="revealer" style=""></div>
+<section id="prodsect3" class="prodsect3 prodsect3_ff">
+	<div class="revealer_ff" style=""></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">

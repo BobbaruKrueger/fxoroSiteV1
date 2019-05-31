@@ -6,8 +6,8 @@
  * Retail - FX Table - FIX
  */
 ?>
-<table class="table-bordered">
-	<tbody>
+<table class="table-bordered table-striped">
+	<thead>
 		<tr>
 			<th>Instrument</th>
 			<th>Minimum <br>Spread</th>
@@ -21,6 +21,8 @@
 			<th>Maximum<br>Exposure</th>
 			<th>Trading hours (GMT +3)</th>
 		</tr>
+	</thead>
+	<tbody>
 		<tr>
 			<td>EURUSD</td>
 			<td>1.2</td>

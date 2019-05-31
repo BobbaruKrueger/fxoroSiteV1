@@ -6,8 +6,8 @@
  * Retail - Stocks Table
  */
 ?>
-<table class="table-bordered">
-	<tbody>
+<table class="table-bordered table-striped">
+	<thead>
 		<tr>
 			<th>Instrument</th>
 			<th>Market</th>
@@ -22,6 +22,8 @@
 			<th>Maximum Exposure <br>(number of shares)</th>
 			<th>Trading hours (GMT+3)</th>
 		</tr>
+	</thead>
+	<tbody>
 		<tr>
 			<td>Adidas</td>
 			<td>Shares - Germany</td>

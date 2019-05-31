@@ -23,13 +23,21 @@
 				</p>
 				<div class="mt4btns">
 					<div class="row">
-						<div class="col-12 col-sm-6 text-center">
-							<a class="cssecoBtn animationbtn" href="#">Download now</a>
-							<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_we.png" alt="We">
-						</div>
-						<div class="col-12 col-sm-6 text-center">
+						<?php 
+							if (is_user_logged_in()) {
+						?>
+							<div class="col-12 col-sm-6 text-center mb-3 mb-sm-0">
+								<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_we.png" alt="We" class="d-block d-sm-none">
+								<a class="cssecoBtn animationbtn" href="#">Download now</a>
+								<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_we.png" alt="We" class="d-none d-sm-block">
+							</div>
+						<?php 
+							}
+						?>
+						<div class="col-12 col-sm-<?php echo (is_user_logged_in()) ? '6' : '12' ?> text-center">
+							<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_win.png" alt="Windows" class="d-block d-sm-none">
 							<a class="cssecoBtn animationbtn" href="<?php echo esc_url( home_url( '/' ) ); ?>metatrader-4/">Learn more about MT4</a>
-							<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_win.png" alt="Windows">
+							<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_win.png" alt="Windows" class="d-none d-sm-block">
 						</div>
 					</div>
 				</div>
@@ -68,7 +76,13 @@
 				</div>
 			</div>
 			<div class="col-12 col-md-6">
-<!--				<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mob_circle.png" alt="Mobile Circle">-->
+				<div class="dtable">
+					<div class="dtable-cell">
+						<div class="lbW d-none d-md-block" style="visibility: hidden;">
+							<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/bulb.png" alt="Light Bulb" class="lb">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

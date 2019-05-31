@@ -205,6 +205,12 @@ a {
       margin-right: 7px;
       width: 2.33333em; } }
 
+.ui-tabs .ui-tabs-nav {
+  background-color: #1B2854 !important; }
+
+.vid_container .lsn_tit {
+  border-bottom-color: #1B2854 !important; }
+
 /*--------------------------------------------------------------
 # Site Wrapper
 --------------------------------------------------------------*/
@@ -378,14 +384,18 @@ div#site-wrapper {
             margin-left: 5px;
             padding: 5px 0 0 0;
             width: 20px; } }
+      @media screen and (min-width: 992px) {
+        div#site-wrapper #cssecoMenu ul.menu li.menu-item-has-children > ul.sub-menu {
+          -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3); } }
       div#site-wrapper #cssecoMenu ul.menu li.menu-item-has-children ul.sub-menu {
         background: #FFF;
         display: none;
         margin: 0;
         padding: 0 0 0 20px; }
         div#site-wrapper #cssecoMenu ul.menu li.menu-item-has-children ul.sub-menu li {
-          display: block;
-          width: 100%; }
+          display: block; }
           div#site-wrapper #cssecoMenu ul.menu li.menu-item-has-children ul.sub-menu li a {
             display: block;
             text-transform: none; }
@@ -429,6 +439,21 @@ div#site-wrapper {
           display: inline-block; }
           div#site-wrapper #cssecoMenu ul.menu li:hover > ul.submenu {
             display: block; } }
+      div#site-wrapper #cssecoMenu ul.menu li.subsection_ttl {
+        border-top: 1px solid gray;
+        margin-left: -20px;
+        text-indent: 20px;
+        width: calc(100% + 20px); }
+        div#site-wrapper #cssecoMenu ul.menu li.subsection_ttl a {
+          color: gray;
+          cursor: auto;
+          font-size: .75rem;
+          text-decoration: none; }
+        @media screen and (min-width: 992px) {
+          div#site-wrapper #cssecoMenu ul.menu li.subsection_ttl {
+            margin-left: -5px;
+            text-indent: 5px;
+            width: calc(100% + 10px); } }
     div#site-wrapper #cssecoMenu ul.menu ul {
       list-style: none;
       margin: 15px 0;
@@ -2555,8 +2580,15 @@ body.page #primary {
       .trdnginfo .cardW h5.accttl span {
         display: block;
         font-weight: normal; }
+        .trdnginfo .cardW h5.accttl span i, .trdnginfo .cardW h5.accttl span svg {
+          font-style: normal;
+          margin-right: 7px;
+          transition: all 250ms ease-in; }
         .trdnginfo .cardW h5.accttl span[aria-expanded=true] {
           font-weight: bold; }
+          .trdnginfo .cardW h5.accttl span[aria-expanded=true] i, .trdnginfo .cardW h5.accttl span[aria-expanded=true] svg {
+            font-style: normal;
+            transform: rotate(90deg); }
       @media screen and (min-width: 576px) {
         .trdnginfo .cardW h5.accttl {
           font-size: 15px; } }
@@ -2768,6 +2800,11 @@ section#subAbUs {
     section#subAbUs {
       margin: 40px 0 0 0; } }
 
+section#subAbout_page.subAbout_page header.entry-header h1.entry-title {
+  font-size: 1.25rem; }
+  section#subAbout_page.subAbout_page header.entry-header h1.entry-title span::after {
+    display: none; }
+
 .trading_condition_table .switcher ul {
   border: 1px solid #000;
   border-radius: 88px;
@@ -2792,7 +2829,7 @@ section#subAbUs {
   border: 1px solid transparent;
   color: #fff;
   display: block;
-  margin: 0 0 5px 0;
+  margin: 0 0 0;
   text-decoration: none;
   text-align: center;
   -webkit-transition: color 320ms ease;
@@ -2811,6 +2848,7 @@ section#subAbUs {
   margin: 0 0 -1px 0;
   padding: 0; }
   .trading_condition_table .tct ul.nav-tabs li a {
+    border-color: #1B2854;
     color: #000;
     font-size: 10px; }
     .trading_condition_table .tct ul.nav-tabs li a:hover, .trading_condition_table .tct ul.nav-tabs li a.active {
@@ -2853,6 +2891,8 @@ section#subAbUs {
   list-style-type: lower-alpha; }
   .trading_condition_table .tct #cryptocurrenciesp ol li {
     margin-bottom: 20px; }
+.trading_condition_table table thead {
+  background: #ffb401; }
 
 .affiliationIW img.afftablet {
   display: block;
@@ -2863,12 +2903,6 @@ section#subAbUs {
       max-width: none; } }
 .affiliationIW #cssecoContactForm .cssecoBtnW {
   text-align: left; }
-@media screen and (min-width: 768px) {
-  .affiliationIW {
-    background-image: url(../imgs/affiliates/candles.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; } }
 
 section#affth {
   background: #1B2854;
@@ -3339,6 +3373,8 @@ form#cssecoContactForm {
   box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.5); }
   #subIsAcc table {
     text-align: center; }
+    #subIsAcc table thead {
+      background: #ffb401; }
     #subIsAcc table tr td,
     #subIsAcc table tr th {
       border-color: #7f8284; }
@@ -3390,11 +3426,10 @@ section#meta4.meta4 {
     margin: 20px auto;
     max-width: 510px; }
     section#meta4.meta4 .mt4btns img {
-      display: inline-block;
-      margin: -40px 0 0 0; }
+      display: block;
+      margin: 0 auto 5px; }
       @media screen and (min-width: 576px) {
         section#meta4.meta4 .mt4btns img {
-          display: block;
           margin: 0 auto; } }
     @media screen and (min-width: 768px) {
       section#meta4.meta4 .mt4btns {
@@ -3421,12 +3456,34 @@ section#features.features {
     padding: 0 0 0 15px; }
   section#features.features a.cssecoBtn:hover {
     border-color: #FFF; }
+  section#features.features .lbW {
+    position: relative;
+    z-index: 1; }
+    @media screen and (min-width: 1200px) {
+      section#features.features .lbW img.lb {
+        height: 240px; } }
+    section#features.features .lbW::after {
+      background-image: url(../imgs/platforms_and_apps/bulbpx.png);
+      background-position: left center;
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: -10000px;
+      width: 10000px;
+      z-index: 0; }
+      @media screen and (min-width: 1200px) {
+        section#features.features .lbW::after {
+          right: -9990px; } }
+    @media screen and (min-width: 1200px) {
+      section#features.features .lbW {
+        margin-left: 150px; } }
   @media screen and (min-width: 992px) {
     section#features.features {
       padding: 1.5rem 0; } }
-  @media screen and (min-width: 1200px) {
-    section#features.features {
-      background-position: center -130px; } }
 
 section#mt4ondevices.mt4ondevices {
   padding: 20px 0; }
@@ -3442,7 +3499,7 @@ section#mt4ondevices.mt4ondevices {
       height: 61px;
       padding: 0 0 0 10px; }
       section#mt4ondevices.mt4ondevices .ttl .rttl h3 {
-        font-size: 16px;
+        font-size: 15px;
         margin: 0; }
     @media screen and (min-width: 992px) {
       section#mt4ondevices.mt4ondevices .ttl {
@@ -3539,37 +3596,36 @@ section#mt4InnerWeb.mt4InnerWeb {
       position: absolute;
       right: 0;
       top: 0;
-      width: 430px; }
+      width: 430px;
+      z-index: 2; }
     section#mt4InnerWeb.mt4InnerWeb .pct::after {
-      background-color: #1B2854;
+      background-color: #1A2853;
       bottom: 0;
       content: '';
       display: block;
       height: 100%;
       position: absolute;
-      right: 425px;
+      right: 410px;
       top: 0;
-      width: 10000px; }
+      width: 10000px;
+      z-index: 1; }
       @media screen and (min-width: 1200px) {
         section#mt4InnerWeb.mt4InnerWeb .pct::after {
-          right: 402px; } }
-  section#mt4InnerWeb.mt4InnerWeb .cntnt {
-    padding-bottom: 20px;
-    padding-top: 20px; }
-    section#mt4InnerWeb.mt4InnerWeb .cntnt ul {
-      -webkit-column-count: 2;
-      -moz-column-count: 2;
-      column-count: 2;
-      -webkit-column-width: 290px;
-      -moz-column-width: 290px;
-      column-width: 290px;
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-    @media screen and (min-width: 992px) {
-      section#mt4InnerWeb.mt4InnerWeb .cntnt {
-        padding-bottom: 1.5rem;
-        padding-top: 1.5rem; } }
+          right: 380px; } }
+  section#mt4InnerWeb.mt4InnerWeb .cntnt ul {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-width: 290px;
+    -moz-column-width: 290px;
+    column-width: 290px;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  @media screen and (min-width: 992px) {
+    section#mt4InnerWeb.mt4InnerWeb .cntnt {
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem; } }
   @media screen and (min-width: 992px) {
     section#mt4InnerWeb.mt4InnerWeb {
       margin: 40px 0 0 0; } }
@@ -3655,8 +3711,15 @@ section#mt4InnerFeatures.mt4InnerFeatures {
       .accFaq .cardW h5.accttl span {
         display: block;
         font-weight: normal; }
+        .accFaq .cardW h5.accttl span i, .accFaq .cardW h5.accttl span svg {
+          font-style: normal;
+          margin-right: 7px;
+          transition: all 250ms ease-in; }
         .accFaq .cardW h5.accttl span[aria-expanded=true] {
           font-weight: bold; }
+          .accFaq .cardW h5.accttl span[aria-expanded=true] i, .accFaq .cardW h5.accttl span[aria-expanded=true] svg {
+            font-style: normal;
+            transform: rotate(90deg); }
       @media screen and (min-width: 576px) {
         .accFaq .cardW h5.accttl {
           font-size: 15px; } }

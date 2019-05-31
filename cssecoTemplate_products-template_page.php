@@ -348,7 +348,7 @@
 	</div>
 </section>
 <section id="prodsect3" class="prodsect3">
-	<div class="revealer" style=""></div>
+<!--	<div class="revealer" style=""></div>-->
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
