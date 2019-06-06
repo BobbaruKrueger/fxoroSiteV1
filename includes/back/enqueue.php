@@ -29,5 +29,9 @@ function csseco_load_admin_scripts( $hook ) {
 	$translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
 	wp_localize_script( 'csseco_admin_script', 'object_name', $translation_array );
 	
+//	$translation_array_mobile = array( 'templateUrlMobile' => get_stylesheet_directory_uri() );
+//	wp_localize_script( 'csseco_admin_script', 'object_name_mobile', $translation_array_mobile );
+	
+	
 }
 add_action( 'admin_enqueue_scripts', 'csseco_load_admin_scripts' ); 

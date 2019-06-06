@@ -14,43 +14,14 @@ $(document).ready( ()=> {
         $(event.currentTarget).css('background-color', '#0077b5').siblings().css('background-color', '#1B2854');
 
         let interval = $(event.currentTarget).find('.interval').text();
-        switch (interval) {
-            case '1M':
-                row = 'interval_1m';
-                break;
-            case '5M':
-                row = 'interval_5m';
-                break;
-            case '15M':
-                row = 'interval_15m';
-                break;
-            case '30M':
-                row = 'interval_30m';
-                break;
-            case '1H':
-                row = 'interval_1h';
-                break;
-            case '4H':
-                row = 'interval_4h';
-                break;
-            case '1D':
-                row = 'interval_1d';
-                break;
-            case '1W':
-                row = 'interval_1w';
-                break;
+       
+        let data = intervals[interval];
         
-            default:
-                break;
-        }
-        let data = JSON.parse(intervals[row]);
-        console.log(data);
-        
-        
-        // //controlGraph( qSymbol, interval);
+        //controlGraph( qSymbol, interval);
         let labels = createLabels(interval);
         updateData(chart, labels, data);
        // console.log(labels);
+        // console.log(data);
         
         
     });
@@ -149,7 +120,7 @@ $(document).ready( ()=> {
                     break;
             } 
             
-            for (let index = 0; index < JSON.parse(intervals[row]).length; index++) {
+            for (let index = 0; index < intervals[interval].length; index++) {
                 
                 
                 if (minute < intervalValue ){                
@@ -202,7 +173,7 @@ $(document).ready( ()=> {
         }
 
         if ( interval == "4H" || interval == "1D" || interval == "1W"){
-            for (let index = 0; index < JSON.parse(intervals[row]).length ; index++) {     
+            for (let index = 0; index < intervals[interval].length ; index++) {     
                 
                 if( interval == "4H" ){
                     let label = hour+':00';

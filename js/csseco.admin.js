@@ -4,6 +4,7 @@
   */
 jQuery(document).ready(function($){
 	
+	// Logo media uploader Desktop
 	var mediaUploader;
 	var templateUrl = object_name.templateUrl; // see includes/back/enqueue.php $translation_array and wp_localize_script()
 	
@@ -42,7 +43,7 @@ jQuery(document).ready(function($){
             $('#previewLogo').attr('src', templateUrl+'/imgs/No_Image_Available.gif');
             // $('.csseco_about_page_form').submit();
         }
-        // return; // remove comment if write something after this if
+        return; // remove comment if write something after this if
     });
 	
 });

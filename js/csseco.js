@@ -228,6 +228,16 @@ jQuery(document).ready(function($){
 	// Animations
 	// ==================
 	
+	// registration logo
+//	$('.clogoHW').hover(
+//		function() {
+//			$(this).find('img:first-child').removeClass('flash');
+//		},
+//		function () {
+//			$(this).find('img:first-child').addClass('flash');
+//		}
+//	);
+	
 	// pins on map - frontpage
 	if($('.imgMapWrapper>.rev').visible()) {
 		$('.imgMapWrapper>.pin').addClass('animated fadeInLeft').css('visibility', 'visible');
@@ -350,7 +360,6 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	
 	// friend referrals
 	if($('.frndrefHiw').visible()) {
 		$('.frndrefHiw').addClass('animated slideInLeft').css('visibility', 'visible');
@@ -380,6 +389,52 @@ jQuery(document).ready(function($){
 	$(window).scroll(function() {
 		if($('.lbW').visible()) {
 			$('.lbW').addClass('animated fadeIn').css('visibility', 'visible');
+		}
+	});
+	
+	// Partner with Us
+	if($('.imgAnim').visible()) {
+		$('.imgAnim').addClass('animated fadeIn').css('visibility', 'visible');
+	}
+	$(window).scroll(function() {
+		if($('.imgAnim').visible()) {
+			$('.imgAnim').addClass('animated fadeIn').css('visibility', 'visible');
+		}
+	});
+	
+//	if($('.gadgAnim').visible()) {
+//		$('.gadgAnim').addClass('animated fadeInUp').css('visibility', 'visible');
+//	}
+//	$(window).scroll(function() {
+//		if($('.gadgAnim').visible()) {
+//			$('.gadgAnim').addClass('animated fadeInUp').css('visibility', 'visible');
+//		}
+//	});
+	
+	if($('.logoAnim1').visible()) {
+		$('.logoAnim1').addClass('animated fadeInLeft').css('visibility', 'visible');
+	}
+	$(window).scroll(function() {
+		if($('.logoAnim1').visible()) {
+			$('.logoAnim1').addClass('animated fadeInLeft').css('visibility', 'visible');
+		}
+	});
+	
+	if($('.logoAnim2').visible()) {
+		$('.logoAnim2').addClass('animated fadeIn').css('visibility', 'visible');
+	}
+	$(window).scroll(function() {
+		if($('.logoAnim2').visible()) {
+			$('.logoAnim2').addClass('animated fadeIn').css('visibility', 'visible');
+		}
+	});
+	
+	if($('.logoAnim3').visible()) {
+		$('.logoAnim3').addClass('animated fadeInRight').css('visibility', 'visible');
+	}
+	$(window).scroll(function() {
+		if($('.logoAnim3').visible()) {
+			$('.logoAnim3').addClass('animated fadeInRight').css('visibility', 'visible');
 		}
 	});
 	

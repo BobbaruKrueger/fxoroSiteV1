@@ -9,7 +9,9 @@ require_once('process/Api.php');
 
 $api = new Api();
 
-$api->getData();
+//$api->getData();
+//$api->getDataAsync();
+echo 'aaaaaaaaaaaaaaaaaaaaa';
 
 ?>
 

@@ -1,18 +1,18 @@
 $(document).ready( ()=>{
     //get data
-    let url = 'http://thewallstreetfan.com//wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/api-table-process.php';
+    let url = 'http://localhost/fx_oro/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/api-table-process.php';
 
-    // setInterval(()=>{
-    //     $.ajax({
-    //         url: url,
-    //         dataType: 'json'
-    //         })
-    //         .done( ( response ) => {
-    //             //updateData
-    //              updateData(response);
+    setInterval(()=>{
+        $.ajax({
+            url: url,
+            dataType: 'json'
+            })
+            .done( ( response ) => {
+                //updateData
+                 updateData(response);
                  
-    //         });
-    // }, 4000);
+            });
+    }, 4000);
 
 
     let searchRequest = null;
@@ -28,7 +28,7 @@ $(document).ready( ()=>{
                     searchRequest.abort();
                 searchRequest = $.ajax({
                                     type: "GET",
-                                    url: "http://thewallstreetfan.com//wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/search.php",
+                                    url: "http://localhost/fx_oro/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/search.php",
                                     data: {
                                         'search_keyword' : searchParam
                                     },

@@ -11,22 +11,27 @@ $symbol = $_GET['symbol'];
 $instrument = $_GET['instrument'];
 require_once( 'includes/front/template-parts/fp/process/Api.php');
 
-$api = new API();
 
-$api->getSymbolData( $symbol );
+global $wpdb;
+$result = $wpdb->get_results("SELECT * FROM tickers3  WHERE symbol='$symbol'");
+$data = $result[0];
 
-$data = $api->data_result['Forex'][$symbol];
-
+$arrays = array();
 $days_formatted= array();
+$preloaded_dates=array();
 
-foreach( $data['Graph'][0]['Dates'] as $day){
-    $days_formatted[] = date( 'd M', strtotime($day));
-}
-$days_formatted = array_reverse($days_formatted);
 
 //calculate daily change  = (current price - min) / (max - min) *100
-$daily_change = ( ( $data['BuyPrice'][0] - min( $data['Graph'][0]['Values'] ) ) / ( max( $data['Graph'][0]['Values'] ) - min( $data['Graph'][0]['Values'] ) ) ) * 100;
+$daily_change = ( ( $data->sell - $data->lowest ) / ( $data->highest - $data->lowest ) ) * 100;
+for ($i=0; $i < 60; $i++) { 
+    $arrays[]= mt_rand( $data->lowest*1000, $data->highest*1000 ) / 1000;
+}
+$today = date('d M');
+for ($z=0; $z <60 ; $z++) { 
+        $preloaded_dates[] = date( 'd M', strtotime( '-'.$z.'days', strtotime($today) ) );
+}
 
+$preloaded_dates =  json_encode($preloaded_dates);
 if ($daily_change > 97){
     $floating_pointer_left = 97;
 }elseif($daily_change < 0){
@@ -35,23 +40,32 @@ if ($daily_change > 97){
     $floating_pointer_left = $daily_change;
 }
 
-$arrays = array();
+$days_formatted = array_reverse($days_formatted);
+// $arrays = array();
 
-for ($i=0; $i < 59; $i++) { 
-   $arrays[]= mt_rand( min( $data['Graph'][0]['Values'] )*1000, max( $data['Graph'][0]['Values'] )*1000 ) / 1000;
-}
+// for ($i=0; $i < 59; $i++) { 
+//    $arrays[]= mt_rand( min( $data['Graph'][0]['Values'] )*1000, max( $data['Graph'][0]['Values'] )*1000 ) / 1000;
+// }
 // var_dump( json_encode($arrays));
-global $wpdb;
-$intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
-// echo($intervals[0]->$symbol);
+
+
+$preloaded_values = $data->interval_1d;
+
+$changepercentage = round( ( ( $data->sell - $data->closed ) / $data->sell) * 100, 2);
+$changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changepercentage ;
 
 ?>
 <div class="container symbolpage">
     <div class="row">
         
         <div class="title col-12">
-                    <h2><?php echo $instrument;?> - <?php echo( $data['Name'][0]);?> </h2>
-                </div>
+			
+            
+			<header class="entry-header">
+				<h1 class="entry-title"><span><?php echo $instrument;?> - <?php echo( $data->name);?></span></h1>
+			</header><!--/.entry-header-->
+            
+        </div>
         <div class="col-lg-8  col-12 order-2 graph">  
             <div  style="min-height: 450px;">
                 <canvas id="<?php echo $symbol?>"></canvas>
@@ -89,19 +103,27 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
             <div class=" wrapper">        
                 <div class="col-12 prices">
                     <div class="row">
+						<div class="col-6 pl-0">
+							<a href="#" class="sellprice-p cssecoBtn animationbtn">Sell</a>
+						</div>
+						<div class="col-6 pr-0">
+							<a href="#" class="buyprice-p cssecoBtn animationbtn">Buy</a>
+						</div>
+<!--
                         <a href="#" class="col sellprice-p   text-center">
                             <span class="font-weight-bold text-white">Sell</span>
                         </a>
                         <a href="#" class="col offset-2  buyprice-p   text-center">
                             <span class="font-weight-bold text-white">Buy</span>
                         </a>
+-->
                     </div>
                     <div class="row">
-                        <div class="col  sellprice  text-center">
-                            <span class="value font-weight-bold "><?php echo $data['SellPrice'][0]; ?> </span>
+                        <div class="col-6  sellprice  text-center">
+                            <span class="value"><?php echo $data->sell; ?> </span>
                         </div>
-                        <div class="col  offset-2 buyprice text-center">
-                            <span class="value font-weight-bold "><?php echo $data['BuyPrice'][0]; ?></span> 
+                        <div class="col-6 buyprice text-center">
+                            <span class="value"><?php echo $data->buy; ?></span> 
                         </div>
                     </div>
                 </div>
@@ -109,35 +131,32 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
                 <div class="col-12 changepercent">
                     <div class="row">
                         <div class="col-12 percentage text-center">
-                            <span class="text-white font-weight-bold"><?php echo $data['ChangePercentage']; ?> %</span>
+                            <span class="font-weight-bold"><?php echo $changepercentage; ?> %</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-12 trader-sentiment">
-                <?php   
-                    $random_buyers = rand(25, 83); 
-                    $random_sellers = 100 - $random_buyers;
-                ?>
+
                     <div class="row">
                         <div class="col-12">
                             <h5>Traders Sentiment</h5>
                         </div>
                         <div class="progress col-12">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo $random_buyers;?>%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                            <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo $random_sellers;?>%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bgRed" role="progressbar" style="width: <?php echo $data->traders_buyers;?>%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bgSucc" role="progressbar" style="width: <?php echo $data->traders_sellers;?>%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
                     </div>
                     <div class="row">
                         <div class="col-6">
                             <div class="low  text-left">
-                                <span> <?php echo $random_buyers;?>% Sellers</span>
+                                <span> <?php echo $data->traders_buyers;?>% Sellers</span>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="high  text-right">
-                                <span><?php echo $random_sellers;?>% Buyers</span>
+                                <span><?php echo $data->traders_sellers;?>% Buyers</span>
                             </div>
                         </div>
                     </div>
@@ -148,8 +167,8 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
                             <h5>Daily Change</h5>
                         </div>
                         <div class="col-12 floating-pointer">
-                            <div class=" pointer-container <?php echo ( $data['ChangePercentage'] < 0 ) ? 'low' : 'high'; ?>" style="margin-left: <?php echo $floating_pointer_left;?>%;">
-                                <span class="pointer-value"><?php echo round( ( $data['SellPrice'][0] + $data['BuyPrice'][0] ) / 2, 3) ?></span><br>
+                            <div class=" pointer-container <?php echo ( $changepercentage < 0 ) ? 'low' : 'high'; ?>" style="margin-left: <?php echo $floating_pointer_left;?>%;">
+                                <span class="pointer-value"><?php echo round( ( $data->sell + $data->buy ) / 2, 3) ?></span><br>
                                 <i class="fa fa-caret-down fa-lg pointer-arrow" ></i>
                             </div>
                         </div> 
@@ -160,12 +179,12 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
                             <div class="row">
                                 <div class="col-6">
                                     <div class="low  text-left">
-                                        <span>Low: <?php echo round( min ( $data['Graph'][0]['Values'] ), 3 ); ?></span>
+                                        <span>Low: <?php echo   $data->lowest; ?></span>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="high  text-right">
-                                        <span>High: <?php echo round( max ( $data['Graph'][0]['Values'] ), 3 ); ?></span>
+                                        <span>High: <?php echo   $data->highest; ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +202,7 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-5 text-left">Spread</div>
-                                        <div class="col-7 text-right"><?php echo round( ($data['SellPrice'][0] - $data['BuyPrice'][0]), 4); ?></div>
+                                        <div class="col-7 text-right"><?php echo round( ($data->sell - $data->buy), 4); ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +210,7 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-5 text-left">Margin</div>
-                                        <div class="col-7 text-right"><?php echo round( ( ($data['SellPrice'][0] - $data['BuyPrice'][0]) / $data['SellPrice'][0] ) *100, 2) ?>%</div>
+                                        <div class="col-7 text-right"><?php echo round( ( ($data->sell - $data->buy) / $data->sell ) *100, 2) ?>%</div>
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +218,7 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-5 text-left">Full Name</div>
-                                        <div class="col-7 text-right"><?php echo $data['FullName']; ?></div>
+                                        <div class="col-7 text-right"><?php echo $data->name; ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -212,6 +231,27 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
         </div>
         
     </div>
+	<div class="row cssecoAdd">
+		<div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-lg-0">
+			<h5>Get <span>#Cutare</span> trading ideas</h5>
+			<div class="boxsh">
+				<h6>Get daily trading signals on:</h6>
+				<ul>
+					<li><i class="fas fa-check"></i> Shares/Indices</li>
+					<li><i class="fas fa-check"></i> Forex</li>
+					<li><i class="fas fa-check"></i> Gold/Oil</li>
+				</ul>
+				<a href="#" class="reg">Register now <i class="fas fa-angle-right"></i></a>
+			</div>
+		</div>
+		<div class="col-12 col-sm-6 col-lg-8 col-xl-9 pl-lg-0 cbg text-center text-lg-right">
+			<div class="dtable">
+				<div class="dtable-cell">
+					<a href="#" class="cssecoBtn animationbtn">Open an account</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <script>
@@ -233,10 +273,18 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
             let dataset = chart.config.data.datasets[0];
                
 
+           // console.log(this.chart.scales['y-axis-0'].width);
+            
             
             let lastValueX = dataset._meta[0].data[dataset.data.length-1]._model.x;
             let lastValueY = dataset._meta[0].data[dataset.data.length-1]._model.y;
-           // let lastValue = this._data[this._data.length - 1].toFixed(4);
+            let lastValue = this._data[this._data.length - 1];           
+            if( lastValue > 1 ){
+                lastValue = lastValue.toFixed(3);
+            }
+            else{     
+                lastValue = lastValue.toFixed(4);
+            }
             
               // draw line
             ctx.beginPath();
@@ -246,7 +294,7 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
              // stylize the current value line
             ctx.lineWidth = 1;
             ctx.strokeStyle = 'rgba(0, 0, 0, .9)';
-            ctx.setLineDash([1, 1]);
+            // ctx.setLineDash([1, 1]);
             ctx.stroke();
             ctx.closePath();
 
@@ -255,20 +303,20 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
             ctx.beginPath();
             ctx.moveTo(this.chart.chartArea.right , lastValueY );
             ctx.lineTo(this.chart.chartArea.right + 15, lastValueY + 15);
-            ctx.lineTo(this.chart.chartArea.right + 60, lastValueY + 15);
-            ctx.lineTo(this.chart.chartArea.right + 60, lastValueY -15);
+            ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, lastValueY + 15);
+            ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, lastValueY -15);
             ctx.lineTo(this.chart.chartArea.right + 15, lastValueY -15);
            
             ctx.closePath();
             ctx.stroke();
-            ctx.fillStyle = '#1b2854';
+            ctx.fillStyle = '#ffb401';
             ctx.fill();
 
             // write current Value
             ctx.font = '16px';
-            ctx.fillStyle = '#fff';
+            ctx.fillStyle = '#162856';
             ctx.textAlign = 'center';
-           // ctx.fillText(lastValue, this.chart.chartArea.right +30, lastValueY+5, 45);
+            ctx.fillText(lastValue, this.chart.chartArea.right + (this.chart.scales['y-axis-0'].width / 2), lastValueY+5, 45);
 
             if ( x > this.chart.chartArea.left && x < this.chart.chartArea.right && y > this.chart.chartArea.top && y < this.chart.chartArea.bottom ){                      
                 ctx.save();
@@ -306,8 +354,8 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
                     ctx.beginPath();
                     ctx.moveTo(this.chart.chartArea.right , y );
                     ctx.lineTo(this.chart.chartArea.right+ 15, y + 15);
-                    ctx.lineTo(this.chart.chartArea.right + 55, y + 15);
-                    ctx.lineTo(this.chart.chartArea.right + 55, y - 15);
+                    ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, y + 15);
+                    ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, y - 15);
                     ctx.lineTo(this.chart.chartArea.right + 15, y - 15);
                     ctx.closePath();
                     ctx.stroke();
@@ -315,11 +363,11 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
                     ctx.fill();
 
                     //add data to the xAxis Label
-                    let activePointValue = dataset.data[activePoint._index].toFixed(4);
+                    let activePointValue = dataset.data[activePoint._index].toFixed(3);
                     ctx.beginPath();    
                     ctx.textAlign = 'center';
                     ctx.fillStyle = '#fff';
-                    ctx.fillText(activePointValue, this.chart.chartArea.right+30, y+5, 45);
+                    ctx.fillText(activePointValue, this.chart.chartArea.right + (this.chart.scales['y-axis-0'].width / 2) , y+5, 45);
 
                     // create the shape for label douw (YAxis)
                     ctx.fillStyle = '#0077b5';
@@ -345,15 +393,17 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
         // The data for our dataset
         data: {
         
-       labels: <?php echo json_encode($days_formatted); ?>,
+       labels: <?php echo  $preloaded_dates; ?>,
         
         datasets: [{
-            label: <?php echo json_encode( $data['Name'][0] );?>,
-            backgroundColor: 'rgba(27, 40, 84,  0.2)',
-            borderColor: 'rgb(27, 40, 84)',
+            label: <?php echo json_encode( $data->name);?>,
+            // backgroundColor: 'rgba(27, 40, 84,  0.0)',
+            backgroundColor: '#fbfcfe',
+            // borderColor: 'rgba(27, 40, 84, 0.7)',
+            borderColor: '#a1b9f5',
             borderWidth: 0,
             fill: true,
-            data: <?php echo json_encode($data['Graph'][0]['Values']); ?>,   
+            data: <?php echo  $preloaded_values; ?>,   
             radius:0,    
             pointStyle: 'circle',
             pointHitRadius: 0,
@@ -426,6 +476,7 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
             yAxes: [{
                 ticks: {
                 autoSkip:true,
+                padding:20,
                 fontSize: 14,
                 fontStyle: 'bold',  
                 fontColor: '#000',  
@@ -438,8 +489,7 @@ $intervals = $wpdb->get_results("SELECT ".$symbol." FROM tickers ");
     
 });
 
-
-let intervals = <?php  echo($intervals[0]->$symbol); ?>;
+let intervals = <?php echo json_encode($data);?>;
 
 </script>
 <script src="<?php echo get_template_directory_uri().'/vendor/api-service/single-symbol.js'?>"></script>

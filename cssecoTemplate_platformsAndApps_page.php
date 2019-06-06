@@ -17,7 +17,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h5>MetaTrader 4</h5>
 				<p>
 					<strong>MetaTrader 4</strong> is a Forex and CFD trading platform used for trading and analysing the financial markets. <strong>MetaTrader 4</strong> offers traders access to advanced trading operations in a fast, secure and reliable environment. Simply download, install and begin trading! 
 				</p>
