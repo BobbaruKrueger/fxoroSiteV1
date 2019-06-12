@@ -26,6 +26,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 	<div class="col-12">
 		<form>
 			<div class="form-group">
+				<i class="fas fa-search"></i>
 				<input type="text" class="form-control" id="searchInstrument" aria-describedby="searchHelp" placeholder="Search Instrument">
 				<ul class="list">
 
@@ -76,7 +77,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 							<tr class="<?php echo $result->symbol;?>">
 								<td>
 									<div class="row m-0">
-										<div class="col-12 p-0 symbol-name font-weight-bold">
+										<div class="col-12 p-0 symbol-name">
 											<a href="instrument?instrument=<?php echo $result->category;?>&symbol=<?php echo $result->symbol;?>"> <span><?php echo $result->name ?></span> </a>		
 										</div>
 										<div class="col-12 p-0 change-percentage font-weight-bold">
@@ -91,7 +92,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->sell; ?></span>
 										</div>
 										<div class="col-12 p-0 sell-btn text-center">
-											<a href="#" class="font-weight-bold text-white" >Sell</a>
+											<a href="#" class="cssecoBtn animationbtn">Sell</a>
 										</div>
 									</div>
 								</td>
@@ -101,7 +102,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->buy;?></span>
 										</div>
 										<div class="col-12 p-0 buy-btn">
-											<a href="#" class="font-weight-bold text-white">Buy</a>
+											<a href="#" class="cssecoBtn animationbtn">Buy</a>
 										</div>
 									</div>
 								</td>
@@ -131,7 +132,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 							<tr class="<?php echo $result->symbol;?>">
 								<td>
 									<div class="row m-0">
-										<div class="col-12 p-0 symbol-name font-weight-bold">
+										<div class="col-12 p-0 symbol-name">
 											<a href="instrument?instrument=FOREX&symbol=<?php echo $result->symbol;?>"> <span><?php echo $result->name ?></span> </a>		
 										</div>
 										<div class="col-12 p-0 change-percentage font-weight-bold">
@@ -146,7 +147,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->sell; ?></span>
 										</div>
 										<div class="col-12 p-0 sell-btn text-center">
-											<a href="#" class="font-weight-bold text-white" >Sell</a>
+											<a href="#" class="cssecoBtn animationbtn">Sell</a>
 										</div>
 									</div>
 								</td>
@@ -156,7 +157,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->buy;?></span>
 										</div>
 										<div class="col-12 p-0 buy-btn">
-											<a href="#" class="font-weight-bold text-white">Buy</a>
+											<a href="#" class="cssecoBtn animationbtn">Buy</a>
 										</div>
 									</div>
 								</td>
@@ -187,7 +188,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 							<tr class="<?php echo $result->symbol;?>">
 								<td>
 									<div class="row m-0">
-										<div class="col-12 p-0 symbol-name font-weight-bold">
+										<div class="col-12 p-0 symbol-name">
 											<a href="instrument?instrument=FOREX&symbol=<?php echo $result->symbol;?>"> <span><?php echo $result->name ?></span> </a>		
 										</div>
 										<div class="col-12 p-0 change-percentage font-weight-bold">
@@ -202,7 +203,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->sell; ?></span>
 										</div>
 										<div class="col-12 p-0 sell-btn text-center">
-											<a href="#" class="font-weight-bold text-white" >Sell</a>
+											<a href="#" class="cssecoBtn animationbtn">Sell</a>
 										</div>
 									</div>
 								</td>
@@ -212,7 +213,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->buy;?></span>
 										</div>
 										<div class="col-12 p-0 buy-btn">
-											<a href="#" class="font-weight-bold text-white">Buy</a>
+											<a href="#" class="cssecoBtn animationbtn">Buy</a>
 										</div>
 									</div>
 								</td>
@@ -241,7 +242,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 							<tr class="<?php echo $result->symbol;?>">
 								<td>
 									<div class="row m-0">
-										<div class="col-12 p-0 symbol-name font-weight-bold">
+										<div class="col-12 p-0 symbol-name">
 											<a href="instrument?instrument=FOREX&symbol=<?php echo $result->symbol;?>"> <span><?php echo $result->name ?></span> </a>		
 										</div>
 										<div class="col-12 p-0 change-percentage font-weight-bold">
@@ -256,7 +257,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->sell; ?></span>
 										</div>
 										<div class="col-12 p-0 sell-btn text-center">
-											<a href="#" class="font-weight-bold text-white" >Sell</a>
+											<a href="#" class="cssecoBtn animationbtn">Sell</a>
 										</div>
 									</div>
 								</td>
@@ -266,7 +267,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->buy;?></span>
 										</div>
 										<div class="col-12 p-0 buy-btn">
-											<a href="#" class="font-weight-bold text-white">Buy</a>
+											<a href="#" class="cssecoBtn animationbtn">Buy</a>
 										</div>
 									</div>
 								</td>
@@ -295,7 +296,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 							<tr class="<?php echo $result->symbol;?>">
 								<td>
 									<div class="row m-0">
-										<div class="col-12 p-0 symbol-name font-weight-bold">
+										<div class="col-12 p-0 symbol-name">
 											<a href="instrument?instrument=FOREX&symbol=<?php echo $result->symbol;?>"> <span><?php echo $result->name ?></span> </a>		
 										</div>
 										<div class="col-12 p-0 change-percentage font-weight-bold">
@@ -310,7 +311,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->sell; ?></span>
 										</div>
 										<div class="col-12 p-0 sell-btn text-center">
-											<a href="#" class="font-weight-bold text-white" >Sell</a>
+											<a href="#" class="cssecoBtn animationbtn">Sell</a>
 										</div>
 									</div>
 								</td>
@@ -320,7 +321,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->buy;?></span>
 										</div>
 										<div class="col-12 p-0 buy-btn">
-											<a href="#" class="font-weight-bold text-white">Buy</a>
+											<a href="#" class="cssecoBtn animationbtn">Buy</a>
 										</div>
 									</div>
 								</td>
@@ -349,7 +350,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 							<tr class="<?php echo $result->symbol;?>">
 								<td>
 									<div class="row m-0">
-										<div class="col-12 p-0 symbol-name font-weight-bold">
+										<div class="col-12 p-0 symbol-name">
 											<a href="instrument?instrument=FOREX&symbol=<?php echo $result->symbol;?>"> <span><?php echo $result->name ?></span> </a>		
 										</div>
 										<div class="col-12 p-0 change-percentage font-weight-bold">
@@ -364,7 +365,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->sell; ?></span>
 										</div>
 										<div class="col-12 p-0 sell-btn text-center">
-											<a href="#" class="font-weight-bold text-white" >Sell</a>
+											<a href="#" class="cssecoBtn animationbtn">Sell</a>
 										</div>
 									</div>
 								</td>
@@ -374,7 +375,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 											<span><?php echo $result->buy;?></span>
 										</div>
 										<div class="col-12 p-0 buy-btn">
-											<a href="#" class="font-weight-bold text-white">Buy</a>
+											<a href="#" class="cssecoBtn animationbtn">Buy</a>
 										</div>
 									</div>
 								</td>

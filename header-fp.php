@@ -175,9 +175,9 @@
 					<div class="col-12 col-lg-7 col-xl-7 d-none d-lg-block">
 						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/hpct.png" alt="Platform" class="img-fluid" style="opacity: .8; display: none;">
 					</div>
-					<div class="col-12 col-lg-5 col-xl-4 text-center">
+					<div class="col-12 col-lg-5 col-xl-4 text-center fpltr fast" style="visibility: hidden;">
 						<h1>
-							<span>FX<span style="color: #ffb401;">ORO</span></span><br>
+							<span>FX<span style="color: #ffb401;-webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: #162856;">ORO</span></span><br>
 							when the broker<br>
 							becomes your<br>
 							best partner

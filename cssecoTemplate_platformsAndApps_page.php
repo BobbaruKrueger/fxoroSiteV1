@@ -20,12 +20,15 @@
 				<p>
 					<strong>MetaTrader 4</strong> is a Forex and CFD trading platform used for trading and analysing the financial markets. <strong>MetaTrader 4</strong> offers traders access to advanced trading operations in a fast, secure and reliable environment. Simply download, install and begin trading! 
 				</p>
+				<p>
+					<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>'s technology allows any trader to use the <strogn>MT4</strogn> WebTrader to login to their <strong>MT4</strong> accounts with their credentials, wherever they may be. <strong>MT4</strong> WebTrader has been optimised to run within the traders' browser and features improvements such as a redesigned layout and real time risk statistics. The complete trading functionality of <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>'s WebTrader is based on its compatibility with <strong>MetaTrader4</strong>. <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> also enables its traders to no longer be stuck in front of their terminals and gives them the opportunity to trade directly from their mobile devices whether it's a smart phone or a tablet. This means you that with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>, you will have full mobility, no matter from which device you want to use the trading platform!
+				</p>
 				<div class="mt4btns">
 					<div class="row">
 						<?php 
 							if (is_user_logged_in()) {
 						?>
-							<div class="col-12 col-sm-6 text-center mb-3 mb-sm-0">
+							<div class="col-12 col-sm-6 col-md-4 text-center mb-3 mb-md-0">
 								<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_we.png" alt="We" class="d-block d-sm-none">
 								<a class="cssecoBtn animationbtn" href="#">Download now</a>
 								<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_we.png" alt="We" class="d-none d-sm-block">
@@ -33,14 +36,19 @@
 						<?php 
 							}
 						?>
-						<div class="col-12 col-sm-<?php echo (is_user_logged_in()) ? '6' : '12' ?> text-center">
+						<div class="col-12 col-sm-<?php echo (is_user_logged_in()) ? '6' : '6' ?> <?php echo (is_user_logged_in()) ? 'col-md-4' : 'col-md-6' ?> text-center mb-3 mb-md-0">
 							<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_win.png" alt="Windows" class="d-block d-sm-none">
 							<a class="cssecoBtn animationbtn" href="<?php echo esc_url( home_url( '/' ) ); ?>metatrader-4/">Learn more about MT4</a>
 							<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_win.png" alt="Windows" class="d-none d-sm-block">
 						</div>
+						<div class="col-12 col-sm-<?php echo (is_user_logged_in()) ? '12' : '6' ?> <?php echo (is_user_logged_in()) ? 'col-md-4' : 'col-md-6' ?> text-center">
+							<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/iosicon.png" alt="MT4 Mac" class="d-block d-sm-none">
+							<a class="cssecoBtn animationbtn" href="<?php echo esc_url( home_url( '/' ) ); ?>mt4-for-mac/">Learn about MT4 for Mac</a>
+							<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/iosicon.png" alt="MT4 Mac" class="d-none d-sm-block">
+						</div>
 					</div>
 				</div>
-				<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_tablet.png" alt="Tablet" class="mt4tblt" style="visibility: hidden;">
+<!--				<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_tablet.png" alt="Tablet" class="mt4tblt" style="visibility: hidden;">-->
 			</div>
 		</div>
 	</div>
@@ -48,6 +56,28 @@
 <section id="features" class="features">
 	<div class="container">
 		<div class="row">
+			<div class="col-12 col-lg-7">
+				<h5>Benefits and features</h5>
+				<ul>
+					<li>User-friendly</li>
+					<li>Flexible</li>
+					<li>Secure</li>
+					<li>Fast and responsive</li>
+					<li>Multi-language support</li>
+					<li>Advanced charting capabilities</li>
+					<li>Automated trading</li>
+					<li>Totally customisable</li>
+				</ul>
+				<p>
+					<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> is proud to offer to its loyal traders the <strong>MetaTrader 4</strong> trading platform defined as the market standard and used by hundreds of brokers worldwide.  The <strong>MT4</strong> is recognized as the most advanced platform technologically as well as the most reliable in terms of stability and security. What to find out more? Open an account with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> right now! 
+				</p>
+				<div class="text-center text-xl-left pl-xl-5">
+					<a class="cssecoBtn animationbtn" href="http://localhost/fxoro_site_mf/metatrader-4/">Learn more about MT4</a>
+				</div>
+			</div>
+			<div class="col-12 d-none d-lg-block col-lg-5 featImg"></div>
+			
+<!--
 			<div class="col-12 col-md-6">
 				<h5>Benefits and features</h5>
 				<ul>
@@ -83,6 +113,7 @@
 					</div>
 				</div>
 			</div>
+-->
 		</div>
 	</div>
 </section>

@@ -16,7 +16,7 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="logo_W">
-						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fxoro_logo_white.png" alt="Logo" class="logo">
+						<img src="<?php echo get_template_directory_uri(); ?>/imgs/logo_old.png" alt="Logo" class="logo">
 					</div>
 					<h3>
 						Professional. Modern.<br> Customer-oriented.

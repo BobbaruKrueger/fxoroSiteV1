@@ -72,30 +72,36 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
             </div>
             <div class="col-12 graph-controller">
                 <div class="row">
-                    <div class="col option">
-                        <div class="interval text-white">1M</div> 
+                <div class="col-12">
+
+                    <div class="row">
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">1M</div> 
+                        </div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">5M</div> 
+                        </div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">15M</div> 
+                        </div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">30M</div> 
+                        </div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">1H</div> 
+                        </div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">4H</div> 
+                        </div>
+                        <div class="col option cssecoBtn instrument-animationbtn active" >
+                            <div class="interval " >1D</div> 
+                        </div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">1W</div> 
+                        </div>
                     </div>
-                    <div class="col option">
-                        <div class="interval text-white">5M</div> 
-                    </div>
-                    <div class="col option">
-                        <div class="interval text-white">15M</div> 
-                    </div>
-                    <div class="col option">
-                        <div class="interval text-white">30M</div> 
-                    </div>
-                    <div class="col option">
-                        <div class="interval text-white">1H</div> 
-                    </div>
-                    <div class="col option">
-                        <div class="interval text-white">4H</div> 
-                    </div>
-                    <div class="col option" style="background-color: #0077b5;">
-                        <div class="interval text-white" >1D</div> 
-                    </div>
-                    <div class="col option">
-                        <div class="interval text-white">1W</div> 
-                    </div>
+                </div>
+                    
                 </div>
             </div>
         </div>
@@ -128,7 +134,7 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
                     </div>
                 </div>
                        
-                <div class="col-12 changepercent">
+                <div class="col-12 changepercent-<?php echo  ($changepercentage > 0) ? 'green': 'red' ;?>">
                     <div class="row">
                         <div class="col-12 percentage text-center">
                             <span class="font-weight-bold"><?php echo $changepercentage; ?> %</span>
@@ -233,7 +239,7 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
     </div>
 	<div class="row cssecoAdd">
 		<div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-lg-0">
-			<h5>Get <span>#Cutare</span> trading ideas</h5>
+			<h5>Get <span>#<?php echo $data->name;?></span> trading ideas</h5>
 			<div class="boxsh">
 				<h6>Get daily trading signals on:</h6>
 				<ul>
@@ -280,10 +286,10 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
             let lastValueY = dataset._meta[0].data[dataset.data.length-1]._model.y;
             let lastValue = this._data[this._data.length - 1];           
             if( lastValue > 1 ){
-                lastValue = lastValue.toFixed(3);
+                lastValue = lastValue.toFixed(2);
             }
             else{     
-                lastValue = lastValue.toFixed(4);
+                lastValue = lastValue.toFixed(2);
             }
             
               // draw line
@@ -308,28 +314,38 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
             ctx.lineTo(this.chart.chartArea.right + 15, lastValueY -15);
            
             ctx.closePath();
+            ctx.strokeStyle = 'rgba(0, 0, 0, 0)';
             ctx.stroke();
             ctx.fillStyle = '#ffb401';
             ctx.fill();
 
             // write current Value
-            ctx.font = '16px';
+            ctx.font = '12px';
             ctx.fillStyle = '#162856';
             ctx.textAlign = 'center';
             ctx.fillText(lastValue, this.chart.chartArea.right + (this.chart.scales['y-axis-0'].width / 2), lastValueY+5, 45);
-
+            ctx.closePath();
             if ( x > this.chart.chartArea.left && x < this.chart.chartArea.right && y > this.chart.chartArea.top && y < this.chart.chartArea.bottom ){                      
                 ctx.save();
                 // this is the actual crosshair
                 ctx.beginPath();
                 ctx.moveTo(x, this.chart.chartArea.top);
                 ctx.lineTo(x,  this.chart.chartArea.bottom);
+                // stylize the crosshair
+                ctx.lineWidth = .51;
+                ctx.strokeStyle = '#0077b5';
+                ctx.setLineDash([1, 1]);
+                ctx.stroke();
+                ctx.closePath(chart);
+                ctx.restore();
+
+                ctx.beginPath();
                 ctx.moveTo(this.chart.chartArea.left, y);
                 ctx.lineTo(this.chart.chartArea.right, y);
 
                 // stylize the crosshair
-                ctx.lineWidth = 1;
-                ctx.strokeStyle = 'rgba(0, 0, 0, .9)';
+                ctx.lineWidth = .51;
+                ctx.strokeStyle = '#ffb401';
                 ctx.setLineDash([1, 1]);
                 ctx.stroke();
                 ctx.closePath(chart);
@@ -398,7 +414,7 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
         datasets: [{
             label: <?php echo json_encode( $data->name);?>,
             // backgroundColor: 'rgba(27, 40, 84,  0.0)',
-            backgroundColor: '#fbfcfe',
+            backgroundColor: 'rgba(0,0,0,0)',
             // borderColor: 'rgba(27, 40, 84, 0.7)',
             borderColor: '#a1b9f5',
             borderWidth: 0,
@@ -440,7 +456,7 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
             padding: {
                 left: 0,
                 right: 0,
-                top: 30,
+                top: 0,
                 bottom: 0
             }
         },
@@ -466,8 +482,14 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
                     maxRotation: 0,
                     minRotation: 0,
                     fontSize: 14,
-                    fontStyle: 'bold',  
+                    // fontFamily: "Segoe UI",
+                    // fontStyle: 'regular',  
                     fontColor: '#000'          
+                },
+                gridLines:{
+                    color: "rgba(0, 0, 0, 0)",
+                    display: false,
+                    tickMarkLength: 10
                 },
                 offset:true,
                 display: true 
@@ -476,15 +498,22 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
             yAxes: [{
                 ticks: {
                 autoSkip:true,
-                padding:20,
+                padding:30,
                 fontSize: 14,
-                fontStyle: 'bold',  
+                // fontStyle: 'regular',  
+                // fontFamily: "Segoe UI",
                 fontColor: '#000',  
                 },  
+                gridLines:{
+                    color: "rgba(0, 0, 0, 0.1)",
+                    // display: false,
+                    tickMarkLength: 0
+                },
                 position:'right',           
                 display: true     
             }]
         }
+        
     }
     
 });

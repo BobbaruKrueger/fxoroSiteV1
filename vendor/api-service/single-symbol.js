@@ -11,8 +11,11 @@ $(document).ready( ()=> {
         let graphData = chart.data.datasets[0].data;
         let lastValue = graphData[ graphData.length -1 ];
         
-        $(event.currentTarget).css('background-color', '#0077b5').siblings().css('background-color', '#1B2854');
-
+        // $(event.currentTarget).css('background-color', '#0077b5').siblings().css('background-color', '#1B2854');
+        // $(event.currentTarget).addClass('active').siblings().removeClass('active');
+        $('.option').removeClass('active');
+        $(event.currentTarget).addClass('active');
+        
         let interval = $(event.currentTarget).find('.interval').text();
         switch (interval) {
             case '1M':

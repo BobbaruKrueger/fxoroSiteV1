@@ -16,6 +16,7 @@
 							<div class="clogoW text-center text-md-right">
 								<a href="<?php echo get_site_url(); ?>/regulations/" class="clogoHW">
 									<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/cyprus_logo.png" alt="Cyprus Logo" class="img-fluid clogo">
+									<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/cyprus_logo_gri.png" alt="Cyprus Logo" class="img-fluid clogo gri">
 								</a>
 							</div>
 						</div>

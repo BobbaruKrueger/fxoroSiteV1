@@ -15,7 +15,7 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="bannerW">
-						<img src="<?php echo get_template_directory_uri(); ?>/imgs/autochartist/bn.png" alt="Banner" class="d-none d-md-inline">
+<!--						<img src="<?php echo get_template_directory_uri(); ?>/imgs/autochartist/bn.png" alt="Banner" class="d-none d-md-inline">-->
 					</div>
 				</div>
 			</div><!-- /.row -->
@@ -113,9 +113,6 @@
 							</p>
 							<p>
 								Automatically identify <strong style="color: #1b2854;">Fibonacci patterns</strong> from extensions, retracements and ABCD patterns to more sophisticated setups like Gartley and Butterfly formations.
-							</p>
-							<p>
-								You can choose the number of trading opportunities you'd like to see, filtered by highest probability of success. Trading opportunities are evaluated against past performance with respect to the pattern type, the instrument and the time of day it was identified.
 							</p>
 						</div>
 					</div>

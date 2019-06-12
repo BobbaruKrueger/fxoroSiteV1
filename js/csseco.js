@@ -238,6 +238,16 @@ jQuery(document).ready(function($){
 //		}
 //	);
 	
+	// left tot right vid
+	if($('.fpltr').visible()) {
+		$('.fpltr').addClass('animated bounceInLeft').css('visibility', 'visible');
+	}
+	$(window).scroll(function() {
+		if($('.fpltr').visible()) {
+			$('.fpltr').addClass('animated bounceInLeft').css('visibility', 'visible');
+		}
+	});
+	
 	// pins on map - frontpage
 	if($('.imgMapWrapper>.rev').visible()) {
 		$('.imgMapWrapper>.pin').addClass('animated fadeInLeft').css('visibility', 'visible');
@@ -313,14 +323,14 @@ jQuery(document).ready(function($){
 	});
 	
 	// friend referrals
-	if($('.revealer_ff').visible() && screen.width >= 992) {
-		$('.prodsect3_ff').addClass('animated slideInRight').css('visibility', 'visible');	
-	}
-	$(window).scroll(function() {
-		if($('.revealer_ff').visible() && screen.width >= 992) {
-			$('.prodsect3_ff').addClass('animated slideInRight').css('visibility', 'visible');	
-		}
-	});
+//	if($('.revealer_ff').visible() && screen.width >= 992) {
+//		$('.prodsect3_ff').addClass('animated slideInRight').css('visibility', 'visible');	
+//	}
+//	$(window).scroll(function() {
+//		if($('.revealer_ff').visible() && screen.width >= 992) {
+//			$('.prodsect3_ff').addClass('animated slideInRight').css('visibility', 'visible');	
+//		}
+//	});
 	
 	// accounts page
 	if($('.cardInner').visible()) {
@@ -351,14 +361,14 @@ jQuery(document).ready(function($){
 			$('.aboutUsPhones').addClass('animated slideInRight').css('visibility', 'visible');
 		}
 	});
-	if($('.aboutUsPhones').visible() && screen.width >= 992) {
-		$('.prodsect3').addClass('animated slideInRight').css('visibility', 'visible');	
-	}
-	$(window).scroll(function() {
-		if($('.aboutUsPhones').visible() && screen.width >= 992) {
-			$('.prodsect3').addClass('animated slideInRight').css('visibility', 'visible');	
-		}
-	});
+//	if($('.aboutUsPhones').visible() && screen.width >= 992) {
+//		$('.prodsect3').addClass('animated slideInRight').css('visibility', 'visible');	
+//	}
+//	$(window).scroll(function() {
+//		if($('.aboutUsPhones').visible() && screen.width >= 992) {
+//			$('.prodsect3').addClass('animated slideInRight').css('visibility', 'visible');	
+//		}
+//	});
 	
 	// friend referrals
 	if($('.frndrefHiw').visible()) {
