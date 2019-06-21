@@ -26,7 +26,7 @@
 						<li>1-on-1 trading sessions</li>
 					</ul>
 					<div class="text-center d-md-inline-block">
-						<a href="#" class="cssecoBtn animationbtn">				
+						<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 							Join our webinars
 						</a>
 						<p class="text-center">

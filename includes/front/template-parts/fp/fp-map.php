@@ -9310,7 +9310,7 @@
 							<div class="dtable">
 								<div class="dtable-cell">
 									<span>
-										<a href="#" target="_blank" title="Italy: CONSOB, reg. no: 3318">
+										<a href="<?php echo get_site_url(); ?>/regulations/" title="Italy: CONSOB, reg. no: 3318">
 											Cyprus: CYSEC reg. no: 126/10
 										</a>
 									</span>

@@ -33,7 +33,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-white">
-					<p>What makes <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> unique</p>
+					<h5 class="text-white">What makes <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> unique?</h5>
 					<p><span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> prides itself in offering a range of products in the FX and CFD markets while using leading technology and skilled experienced staff to provide the ultimate trading experience. Additionally, our company is committed to providing the highest standard of account security and supreme customer service.</p>
 					<p>Clients of <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> can enjoy our advanced trading tools and technology ,insuring that each trader has the opportunity to reach their maximum trading potential. <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> differs from other brokerage companies due to its real time margin protection, ensuring limits and automatically executing risk management precautions to prevent negative balance while still allowing full margin usage. It is important to note that <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> does not manage clients’ portfolios nor does it engage in any form of trading consulting. If you would like further information about <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> or the services provided, please do not hesitate to contact us at <a href="mailto:cs@fxoro.com">cs@fxoro.com</a>.</p>
 				</div>

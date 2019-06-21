@@ -25,7 +25,7 @@
 					Refer your friends to <span style="font-weight: bold; color:#1B2854;">FX<span style="color: #fbb000;">ORO</span></span> and be rewarded for each one that becomes a trader. By entering your details and those of your friends, we will send them an invitation to join us. There is no limit to the amount of friends you can refer.
 				</p>
 				<div class="text-center">
-					<a href="#" class="cssecoBtn animationbtn">				
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 						Start trading now
 					</a>
 					<p class="text-center">
@@ -58,7 +58,7 @@
 					<li><span>Gain for every deposit he does.</span></li>
 				</ol>
 				<p class="text-center mb-0">
-					<a href="#" class="cssecoBtn animationbtn">				
+					<a href="http://thewallstreetfan.com/wp-content/uploads/2019/06/award-and-trading-benefits-09012018.pdf" class="cssecoBtn animationbtn">				
 						Check campaign conditions
 					</a>
 				</p>
@@ -75,17 +75,17 @@
 				<div class="downlfrom">
 					<div class="row">
 						<div class="col-12 col-sm-4 text-center appstore">
-							<a href="#">
+							<a href="#" data-toggle="modal" data-target="#modalLogin">
 								<img src="<?php echo get_template_directory_uri(); ?>/imgs/friend_referrals/appstorebtn.png" alt="App Store">
 							</a>
 						</div>
 						<div class="col-12 col-sm-4 text-center googleplay">
-							<a href="#">
+							<a href="#" data-toggle="modal" data-target="#modalLogin">
 								<img src="<?php echo get_template_directory_uri(); ?>/imgs/friend_referrals/googlestorebtn.png" alt="Google Play Store">
 							</a>
 						</div>
 						<div class="col-12 col-sm-4 text-center winten">
-							<a href="#">
+							<a href="#" data-toggle="modal" data-target="#modalLogin">
 								<img src="<?php echo get_template_directory_uri(); ?>/imgs/friend_referrals/windows10btn.png" alt="Windows Store" class="mb-0">
 							</a>
 						</div>
@@ -109,35 +109,39 @@
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<table class="table-bordered text-center">
-					<tr>
-						<th colspan="3">Refer a Friend Award</th>
-					</tr>
-					<tr>
-						<td>Referral's Initial Deposit</td>
-						<td>Your Reward</td>
-						<td>Required Lots by new client</td>
-					</tr>
-					<tr>
-						<td>$300 &lt; Deposit &lt; $1,000</td>
-						<td>$100</td>
-						<td>10</td>
-					</tr>
-					<tr>
-						<td>$1,001 &lt; Deposit &lt; $2,500</td>
-						<td>$200</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td>$2,501 &lt; Deposit &lt; $10,000</td>
-						<td>$350</td>
-						<td>35</td>
-					</tr>
-					<tr>
-						<td>Deposit &gt; $10,000</td>
-						<td>$500</td>
-						<td>50</td>
-					</tr>
+				<table class="table-bordered table-striped text-center">
+					<thead class="yellow">
+						<tr>
+							<th colspan="3">Refer a Friend Award</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Referral's Initial Deposit</td>
+							<td>Your Reward</td>
+							<td>Required Lots by new client</td>
+						</tr>
+						<tr>
+							<td>$300 &lt; Deposit &lt; $1,000</td>
+							<td>$100</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>$1,001 &lt; Deposit &lt; $2,500</td>
+							<td>$200</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>$2,501 &lt; Deposit &lt; $10,000</td>
+							<td>$350</td>
+							<td>35</td>
+						</tr>
+						<tr>
+							<td>Deposit &gt; $10,000</td>
+							<td>$500</td>
+							<td>50</td>
+						</tr>
+					</tbody>
 				</table>
 				<p>The above mentioned terms and conditions of this campaign shall be read and applied in conjunction with the awards and trading benefits policy available <a href="#">here</a>. </p>
 			</div>

@@ -27,7 +27,7 @@
 			</div>
 			<div class="row">
 				<div class="col-12 text-center">
-					<a href="#" class="cssecoBtn animationbtn">Discover more</a>
+					<a href="#pwu3rdsect" class="cssecoBtn animationbtn">Discover more</a>
 				</div>
 			</div>
 		</div>
@@ -74,7 +74,7 @@
 						<li>Your friend’s determination can bring you new lots</li>
 					</ul>
 					<div class="text-center text-md-left">
-						<a href="#" class="cssecoBtn animationbtn">Refer a friend details</a>
+						<a href="http://thewallstreetfan.com/friend-referrals/" class="cssecoBtn animationbtn">Refer a friend details</a>
 					</div>
 				</div>
 				<div class="col-12 col-xl-2 d-none d-xl-block pwuCangle">2</div>
@@ -92,7 +92,7 @@
 						<li>Cookie and pixel tracking, API integration</li>
 					</ul>
 					<div class="text-center text-md-left">
-						<a href="#" class="cssecoBtn animationbtn">Become an affiliate</a>
+						<a href="http://thewallstreetfan.com/affiliates/" class="cssecoBtn animationbtn">Become an affiliate</a>
 					</div>
 				</div>
 			</div>

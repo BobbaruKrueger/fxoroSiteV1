@@ -31,10 +31,10 @@
 					<div class="col-8 col-sm-9 col-md-10 smIL">
 						<div class="dtable">
 							<div class="dtable-cell">
-								<a href="#">
+								<a href="https://www.facebook.com/fxoro.official/" target="_blank">
 									<i class="fb fab fa-facebook"></i>
 								</a>
-								<a href="#">
+								<a href="https://www.linkedin.com/company/fxoro" target="_blank">
 									<i class="in fab fa-linkedin"></i>
 								</a>
 							</div>
@@ -46,7 +46,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<h3>
-									Who we are
+									Products
 								</h3>
 							</div>
 						</div>
@@ -55,7 +55,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<p>
-									- The company - Why FXORO - Regulation - Our offer - Trading info - Safe trading - Trading conditions - Events - Contact
+									- Forex - Shares - Commodities - Indices - Cryptocurrency
 								</p>
 							</div>
 						</div>
@@ -66,7 +66,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<h3>
-									Markets
+									Trading center
 								</h3>
 							</div>
 						</div>
@@ -75,7 +75,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<p>
-									- Forex - CFDs - Commodities - Indices - Crypto currencies
+									- Trading info - Trading conditions - Accounts - Islamic account - FAQ - Basic course - In-depth course - E-book - 1 on 1 personal trading - Youtube
 								</p>
 							</div>
 						</div>
@@ -86,7 +86,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<h3>
-									Accounts
+									Tools
 								</h3>
 							</div>
 						</div>
@@ -95,7 +95,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<p>
-									- Accounts - Flexible spread account - Fixed spread account - ECN account - Islamic account
+									- MT4 - MetaTrader 4 - MT4 for Mac - Autochartist - Market analysis - Economic calendar - Live rates - News - Signals
 								</p>
 							</div>
 						</div>
@@ -106,7 +106,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<h3>
-									Platfroms and apps
+									Company
 								</h3>
 							</div>
 						</div>
@@ -115,47 +115,7 @@
 						<div class="dtable">
 							<div class="dtable-cell">
 								<p>
-									- MT4 - MQL suite - Web platform - Mobile platform - Autochartist
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row tabel">
-					<div class="col-12 col-md-2">
-						<div class="dtable">
-							<div class="dtable-cell">
-								<h3>
-									Education
-								</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-10">
-						<div class="dtable">
-							<div class="dtable-cell">
-								<p>
-									- Basic training - Advanced training - eBook - Trading sessions - Webinars - YouTube - FAQ
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row tabel">
-					<div class="col-12 col-md-2">
-						<div class="dtable">
-							<div class="dtable-cell">
-								<h3>
-									Market analysis
-								</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-10">
-						<div class="dtable">
-							<div class="dtable-cell">
-								<p>
-									- Updated signals - Economic calendar - Real time quotations - YouTube webinars - News - Signals
+									- About us - Partner with us - Friend referrals - Affiliation - Contact us
 								</p>
 							</div>
 						</div>
@@ -187,6 +147,28 @@
 			</div>
 		</footer>
 	</div><!-- /#site-wrapper -->
+	<!-- Modal -->
+	<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true" style="top: 15%">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="width: 10px; height: 10px; position: absolute; top: -0; right: 8px; z-index: 99999">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+
+				<div class="modal-body mt-3 text-center">
+					<h6 class="mb-4">To download the MT4 platform app you have to login into the FXORO account.</h6>
+					<div class="row">
+						<div class="col-12 col-sm-6">
+							<a class="cssecoBtn animationbtn" href="http://qa.fxoro.com/login/">Login</a>
+						</div>
+						<div class="col-12 col-sm-6">
+							<a class="cssecoBtn animationbtn" href="http://qa.fxoro.com/register/">Create account</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<?php wp_footer(); ?>
 </body>
 </html>

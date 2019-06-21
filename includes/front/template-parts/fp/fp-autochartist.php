@@ -50,7 +50,7 @@
 						<div class="col-12 col-sm-6 col-xl-5">
 							<div class="dtable">
 								<div class="dtable-cell text-center">
-									<a href="#" class="cssecoBtn animationbtn">				
+									<a href="<?php echo get_site_url(); ?>/autochartist/" class="cssecoBtn animationbtn">				
 										Get our tools
 									</a>
 									<p class="text-center mb-4 mb-sm-0">

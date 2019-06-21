@@ -88,7 +88,7 @@
 					<div class="col-12 col-sm-6 openaccH">
 						<div class="dtable">
 							<div class="dtable-cell">
-								<a href="#" class="cssecoBtn animationbtn">				
+								<a href="http://qa.fxoro.com/register/" class="cssecoBtn animationbtn">				
 									Open an account
 								</a>
 							</div>
@@ -97,7 +97,7 @@
 					<div class="col-12 col-sm-6 loginH">
 						<div class="dtable">
 							<div class="dtable-cell">
-								<a href="#" class="cssecoBtn animationbtn">				
+								<a href="http://qa.fxoro.com/login/" class="cssecoBtn animationbtn">				
 									Login
 								</a>
 							</div>
@@ -145,12 +145,12 @@
 								+357.25.20.5555 
 							</div>
 							<div class="openaccW">
-								<a href="#" class="cssecoBtn animationbtn">				
+								<a href="http://qa.fxoro.com/register/" class="cssecoBtn animationbtn">				
 									Open an account
 								</a>
 							</div>
 							<div class="loginW">
-								<a href="#" class="cssecoBtn animationbtn">				
+								<a href="http://qa.fxoro.com/login/" class="cssecoBtn animationbtn">				
 									Login
 								</a>
 							</div>
@@ -172,17 +172,18 @@
 			</div>
 			<div class="container fp">
 				<div class="row">
-					<div class="col-12 col-lg-7 col-xl-7 d-none d-lg-block">
+<!--					<div class="col-12 col-lg-7 col-xl-7 d-none d-lg-block">-->
+					<div class="col-12 col-lg-3 col-xl-4 d-none d-lg-block">
 						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/hpct.png" alt="Platform" class="img-fluid" style="opacity: .8; display: none;">
 					</div>
-					<div class="col-12 col-lg-5 col-xl-4 text-center fpltr fast" style="visibility: hidden;">
+					<div class="col-12 col-lg-6 col-xl-4 text-center fpltr fast" style="visibility: hidden;">
 						<h1>
 							<span>FX<span style="color: #ffb401;-webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: #162856;">ORO</span></span><br>
 							when the broker<br>
 							becomes your<br>
 							best partner
 						</h1>
-						<a href="#" class="cssecoBtn animationbtn">
+						<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">
 							<span>
 								I’m Ready to Trade!
 							</span>

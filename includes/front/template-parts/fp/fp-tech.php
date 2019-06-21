@@ -30,7 +30,7 @@
 						<div class="col-12 col-sm-6">
 							<div class="dtable">
 								<div class="dtable-cell text-center">
-									<a href="#" class="cssecoBtn animationbtn">				
+									<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 										Get our tools
 									</a>
 									<p class="text-center mb-1 mb-sm-0">

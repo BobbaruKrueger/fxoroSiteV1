@@ -13,7 +13,7 @@
 		$type = '';
 	}
 ?>
-<div class="trading_condition_table">
+<div class="trading_condition_table col-12">
 	<div class="row">
 		<div class="col-12 switcher text-center mb-3 mb-xl-4">
 			<ul class="nav clearfix" id="switcher" role="tablist">

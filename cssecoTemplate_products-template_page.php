@@ -13,7 +13,7 @@
 	$slug = $post->post_name;
 
 	if ( $slug == 'forex' ) {
-		$poza 	= 'forex.jpg';
+		$poza 	= 'forex.png';
 		$c1		= '
 			<p>
 				FOREX market is 10 times larger than any stock market. With its over £4 trillion of daily trades it presents endless opportunities for individual traders. 
@@ -23,10 +23,10 @@
 			</p>	
 			<div class="text-center">
 				<p class="font-weight-bold" style="color:#162856;">Trade the most popular <strong>FOREX</strong> pairs now!!</p>
-				<a href="#" class="cssecoBtn animationbtn">				
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 					Start trading now
 				</a>
-				<p class="text-center mb-3 mb-sm-0">
+				<p class="text-center mb-3 mb-lg-0">
 					Your capital is at risk.
 				</p>
 			</div>
@@ -47,9 +47,11 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Trade the most popular FOREX pairs like EUR/USD, GBP/USD and EUR/GBP.  Use our advanced trading tools to protect your proﬁts and limit losses.
 				</p>
-				<a href="#" class="cssecoBtn animationbtn">				
-					Start trading now
-				</a>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
 			</section>
 			<section>
 				<h5>
@@ -61,9 +63,11 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Discover <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> tools and start to trade on FOREX at your best
 				</p>
-				<a href="#" class="cssecoBtn animationbtn">				
-					Register now
-				</a>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
 			</section>
 			<section>
 				<h5>
@@ -75,9 +79,11 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Register in order to download your MT4 and start to trade 
 				</p>
-				<a href="#" class="cssecoBtn animationbtn">				
-					Download MT4
-				</a>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
 			</section>
 		';
 		$faq	= '
@@ -131,10 +137,10 @@
 			<p>Commodities are the raw materials that are being used to create a livable world such as energy (oil), metals (gold, silver) as well as agricultural products (corn).  These are the three classes of Commodities and they are the essential building blocks of the global economy. They generally meet the following criteria of having to be tradable, deliverable and be liquid</p>
 			<div class="text-center">
 				<p class="font-weight-bold" style="color:#162856;">Trade on <strong>commodities</strong> pairs now!!</p>
-				<a href="#" class="cssecoBtn animationbtn">				
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 					Start trading now
 				</a>
-				<p class="text-center mb-3 mb-sm-0">
+				<p class="text-center mb-3 mb-lg-0">
 					Your capital is at risk.
 				</p>
 			</div>
@@ -148,9 +154,11 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Start trading on commodities with the support of our tools.
 				</p>
-				<a href="#" class="cssecoBtn animationbtn">				
-					Start trading now
-				</a>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
 			</section>
 			<section>
 				<h5>
@@ -160,9 +168,11 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Discover our tools and start to trade  on commodities at your best.
 				</p>
-				<a href="#" class="cssecoBtn animationbtn">				
-					Register now
-				</a>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
 			</section>
 		';
 		$faq	= '';
@@ -172,10 +182,10 @@
 			<p>Equity index futures are based on the indices of common stocks, and are providing eﬀective hedging instruments for hedging equity to the investors. Equity indices are also one of the most popular investment products among retail investors. Equity index futures are one of the eﬀective tools in avoiding the risk of stock market ﬂuctuations and price volatility. In order to view the list of indices you can trade with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>, please click here.</p>
 			<div class="text-center">
 				<p class="font-weight-bold" style="color:#162856;">Trade the most popular <strong>incides</strong> pairs now!!</p>
-				<a href="#" class="cssecoBtn animationbtn">				
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 					Start trading now
 				</a>
-				<p class="text-center mb-3 mb-sm-0">
+				<p class="text-center mb-3 mb-lg-0">
 					Your capital is at risk.
 				</p>
 			</div>
@@ -195,9 +205,11 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Click here to discover the main european global indices.
 				</p>
-				<a href="#" class="cssecoBtn animationbtn">				
-					Start trading now
-				</a>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
 			</section>
 			<section>
 				<h5>
@@ -209,9 +221,11 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Discover tools and start to trade on FOREX at your best.
 				</p>
-				<a href="#" class="cssecoBtn animationbtn">				
-					Download MT4
-				</a>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
 			</section>
 		';
 		$faq	= '
@@ -270,10 +284,10 @@
 			<p>Cryptocurrencies are a form of money of the future. They have the potential to transform the entire global ﬁnancial system. More and more, companies, shops and people are using them increasing in the same time prices. Its volatility makes it an excellent alternative in any ﬁnancial trading portfolio.</p>
 			<div class="text-center">
 				<p class="font-weight-bold" style="color:#162856;">Trade the most popular <strong>cryptocurrencies</strong> now!!</p>
-				<a href="#" class="cssecoBtn animationbtn">				
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 					Start trading now
 				</a>
-				<p class="text-center mb-3 mb-sm-0">
+				<p class="text-center mb-3 mb-lg-0">
 					Your capital is at risk.
 				</p>
 			</div>
@@ -287,9 +301,11 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Trade the most popular cryptocurrencies now!!
 				</p>
-				<a href="#" class="cssecoBtn animationbtn">				
-					Start trading now
-				</a>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
 			</section>
 			<section>
 				<h5>
@@ -299,16 +315,18 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Trade on cryptocurrencies with dedicate tools!!
 				</p>
-				<a href="#" class="cssecoBtn animationbtn">				
-					Start trading now
-				</a>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
+				
 			</section>
 		';
 		$faq	= '';
 	} 
 
 ?>
-
 		<main id="prodsect1" class="col-12 site-main prodsect1" role="main">
 			<div class="row">
 				<div class="col-12">
@@ -322,7 +340,7 @@
 					<?php echo $c1; ?>
 				</div>
 				<div class="col-12 col-lg-6 text-center">
-					<img src="<?php echo get_template_directory_uri(); ?>/imgs/products/prodtemplate2/<?php echo $poza; ?>" alt="<?php echo $poza; ?>" class="">
+					<img src="<?php echo get_template_directory_uri(); ?>/imgs/products/prodtemplate2/<?php echo $poza; ?>" alt="<?php echo $poza; ?>" class="imgMain">
 					<p class="font-weight-bold mt-4" style="color: #162856;">
 						 MCA Intelifunds Ltd autorizzato e regolamentato  dalla Securities and Exchange Commission di Cipro.  
 					</p>
@@ -410,7 +428,7 @@
 				</h3>
 				<?php echo $faq; ?>
 				<div class="cssecoBtnWrapper">
-					<a href="#" class="cssecoBtn animationbtn">				
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 						Start trading now
 					</a>
 					<p class="mb-0">

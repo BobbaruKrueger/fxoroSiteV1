@@ -26,7 +26,7 @@
 </div><!-- /content -->
 <section id="affth">
 	<div class="btnncapW">
-		<a class="cssecoBtn animationbtn" href="#">Start trading now</a>
+		<a class="cssecoBtn animationbtn" href="#affForm">Contact us</a>
 		<p class="text-center mb-3 mb-sm-0">
 			Your capital is at risk.
 		</p>

@@ -10,7 +10,7 @@
 <?php get_header(); ?>
 		</div><!-- /.row -->
 	</div><!-- /.container-->
-	<section id="bannttl" class="bannttl">
+	<section id="bannttl" class="bannttl d-none d-lg-block">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -21,12 +21,12 @@
 			</div><!-- /.row -->
 		</div><!-- /.container-->
 	</section>
-<section id="auochttl" class="auochttl">
+<section id="auochttl" class="auochttl d-none d-lg-block">
 	<div class="row">
 		<div class="col-12">
 			<h3 class="text-center">Do you think <strong style="color: #1b2854;">trading opportunities</strong> are impossible to identify?</h3>
 			<div class="text-center">
-				<a href="#" class="cssecoBtn animationbtn">Open an account</a>
+				<a href="http://qa.fxoro.com/register/" class="cssecoBtn animationbtn">Open an account</a>
 			</div>
 		</div>
 	</div>
@@ -133,7 +133,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-center">
-					<a href="#" class="cssecoBtn animationbtn">Open an account</a>
+					<a href="http://qa.fxoro.com/register/" class="cssecoBtn animationbtn">Open an account</a>
 				</div>
 			</div>
 		</div>

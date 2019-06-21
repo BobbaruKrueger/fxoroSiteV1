@@ -74,7 +74,7 @@
 						</tbody>
 					</table>
 					<p class="m-0">
-						For more details on the Company’s Term and Conditions please click <a href="#">here</a>.
+						For more details on the Company’s Term and Conditions please click <a href="http://thewallstreetfan.com/wp-content/uploads/2019/06/terms-and-conditions.pdf">here</a>.
 					</p>
 				</div>
 			</div><!-- /.row -->

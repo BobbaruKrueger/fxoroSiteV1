@@ -76,44 +76,6 @@
 				</div>
 			</div>
 			<div class="col-12 d-none d-lg-block col-lg-5 featImg"></div>
-			
-<!--
-			<div class="col-12 col-md-6">
-				<h5>Benefits and features</h5>
-				<ul>
-					<li>User-friendly</li>
-					<li>Flexible</li>
-					<li>Secure</li>
-					<li>Fast and responsive</li>
-				</ul>
-				<div class="row">
-					<div class="col-12 col-xl-6">
-						<ul class="mb-xl-0">
-							<li>Multi-language support</li>
-							<li>Advanced charting capabilities</li>
-							<li>Automated trading</li>
-							<li>Totally customisable</li>
-						</ul>
-					</div>
-					<div class="col-12 col-xl-6">
-						<div class="dtable">
-							<div class="dtable-cell">
-								<a class="cssecoBtn animationbtn" href="#">See campaign conditions</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-md-6">
-				<div class="dtable">
-					<div class="dtable-cell">
-						<div class="lbW d-none d-md-block" style="visibility: hidden;">
-							<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/bulb.png" alt="Light Bulb" class="lb">
-						</div>
-					</div>
-				</div>
-			</div>
--->
 		</div>
 	</div>
 </section>
@@ -125,7 +87,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12 col-md-6 col-lg-4">
+			<div class="col-12 col-md-6 col-lg-4 zc">
 				<div class="ttl clearfix">
 					<div class="pct">
 						<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_androind.png" alt="Android">
@@ -139,8 +101,11 @@
 					</div>
 				</div>
 				<p class="text-center">Trade on-the-go with your Android smartphone or tablet. The MT4 Android app supports all types of execution models and lets you trade directly from the chart.</p>
+				<div class="text-center mb-4 mb-lg-0">
+					<a class="cssecoBtn animationbtn" href="#" data-toggle="modal" data-target="#modalLogin">Get MT4 for Android</a>
+				</div>
 			</div>
-			<div class="col-12 col-md-6 col-lg-4">
+			<div class="col-12 col-md-6 col-lg-4 zc">
 				<div class="ttl clearfix">
 					<div class="pct">
 						<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_apple.png" alt="Apple Logo">
@@ -154,8 +119,11 @@
 					</div>
 				</div>
 				<p class="text-center">Get MT4 for iOS and trade directly on your iPhone or iPad. This single app works on all iOS devices and features a full set of trading orders, including pending orders.</p>
+				<div class="text-center mb-4 mb-lg-0">
+					<a class="cssecoBtn animationbtn" href="#" data-toggle="modal" data-target="#modalLogin">Get MT4 for IOS</a>
+				</div>
 			</div>
-			<div class="col-12 col-md-12 col-lg-4">
+			<div class="col-12 col-md-12 col-lg-4 zc">
 				<div class="ttl clearfix">
 					<div class="pct">
 						<img src="<?php echo get_template_directory_uri(); ?>/imgs/platforms_and_apps/mt4_mac.png" alt="Mac">
@@ -169,6 +137,11 @@
 					</div>
 				</div>
 				<p class="text-center">Running on a Mac? No problem. You can get the MT4 trading software for OS X too!All you need to do is download our MT4 for Mac application, install and hit the trading floor today!</p>
+				<div class="text-center">
+					<div class="text-center">
+					<a class="cssecoBtn animationbtn" href="#" data-toggle="modal" data-target="#modalLogin">Get MT4 for Mac</a>
+				</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -176,7 +149,7 @@
 <section id="dwnldmt4" class="dwnldmt4">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-6">
+			<div class="col-12 col-md-6 colBg">
 				<h5>Download MetaTrader 4</h5>
 				<p>MT4 is the most popular FOREX & CFD trading platform for traders of all skill levels, across the globe. Start your trading journey and download MT4 today!</p>
 				<ul>
@@ -230,7 +203,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-12 offset-md-2 col-md-4 ">
+			<div class="col-12 offset-md-1 col-md-5 offset-lg-2 col-lg-4">
 				<form action="" class="create_account">
 					<div class="row">
 						<div class="col-12">
@@ -298,28 +271,6 @@
 		</div>
 	</div>
 </section>
-
-<!--
-	<main id="main" class="site-main col-12" role="main">
-		
-		<?php
-//			if( have_posts() ) {
-//				while( have_posts() ) {
-//					
-//					the_post();
-//					
-//					fxoroVone_save_post_views( get_the_ID() );
-//					
-//					get_template_part( 'includes/front/template-parts/content', 'page' );
-//					
-//				}
-//			}
-		?>
-		
-	</main>
--->
-
-
 <div class="container">
 	<div class="row">
 		

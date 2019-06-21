@@ -239,14 +239,19 @@ jQuery(document).ready(function($){
 //	);
 	
 	// left tot right vid
-	if($('.fpltr').visible()) {
-		$('.fpltr').addClass('animated bounceInLeft').css('visibility', 'visible');
-	}
-	$(window).scroll(function() {
+	if ( screen.width > 991 ) {
 		if($('.fpltr').visible()) {
 			$('.fpltr').addClass('animated bounceInLeft').css('visibility', 'visible');
 		}
-	});
+		$(window).scroll(function() {
+			if($('.fpltr').visible()) {
+				$('.fpltr').addClass('animated bounceInLeft').css('visibility', 'visible');
+			}
+		});
+	} else if ( screen.width < 992 ) {
+	    $('.fpltr').css('visibility', 'visible');
+    }
+	
 	
 	// pins on map - frontpage
 	if($('.imgMapWrapper>.rev').visible()) {
@@ -497,6 +502,16 @@ jQuery(document).ready(function($){
 		target.removeAttr("style");
 	});
 	
+	// ==================
+	// scroll to (New regulation-MIFID II and it’s impact on retail clients (page))
+	// ==================
+	$('.linktocriteriadetails').on('click', function(){
+		var target = $('.CriteriaDetailsWr');
+		event.preventDefault();
+		$('html, body').stop().animate({
+			scrollTop: target.offset().top
+		}, 1000);
+	});
 	
 	// ==================
 	// Form (join section)
@@ -516,6 +531,15 @@ jQuery(document).ready(function($){
 		$(this).parent().removeClass( "focused" );
 	});
 	
+	// ==================
+	// Back to top
+	// ==================
+//	$('a[href="#pwu3rdsect"]').on('click', function (e) {
+//        e.preventDefault();
+//        $('html,body').animate({
+//            scrollTop: 0
+//        }, 700);
+//    });
 		
 });
 

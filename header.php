@@ -88,7 +88,7 @@ $logoPctH = esc_attr( get_option( 'logo' ) );
 					<div class="col-12 col-sm-6 openaccH">
 						<div class="dtable">
 							<div class="dtable-cell">
-								<a href="#" class="cssecoBtn animationbtn">				
+								<a href="http://qa.fxoro.com/register/" class="cssecoBtn animationbtn">				
 									Open an account
 								</a>
 							</div>
@@ -97,7 +97,7 @@ $logoPctH = esc_attr( get_option( 'logo' ) );
 					<div class="col-12 col-sm-6 loginH">
 						<div class="dtable">
 							<div class="dtable-cell">
-								<a href="#" class="cssecoBtn animationbtn">				
+								<a href="http://qa.fxoro.com/login/" class="cssecoBtn animationbtn">				
 									Login
 								</a>
 							</div>
@@ -142,12 +142,12 @@ $logoPctH = esc_attr( get_option( 'logo' ) );
 								+357.25.20.5555 
 							</div>
 							<div class="openaccW">
-								<a href="#" class="cssecoBtn animationbtn">				
+								<a href="http://qa.fxoro.com/register/" class="cssecoBtn animationbtn">				
 									Open an account
 								</a>
 							</div>
 							<div class="loginW">
-								<a href="#" class="cssecoBtn animationbtn">				
+								<a href="http://qa.fxoro.com/login/" class="cssecoBtn animationbtn">				
 									Login
 								</a>
 							</div>

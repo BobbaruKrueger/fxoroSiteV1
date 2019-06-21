@@ -8,6 +8,9 @@ function csseco_load_scripts() {
 	
 	// Bootstrap style
 	wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', array(), '4.3.1', 'all' );
+	if ( is_page(739) ) {
+		 wp_enqueue_style( 'mte', 'https://s3-eu-west-1.amazonaws.com/data.mte-media.com/react/main.css', array(), 'all' );
+	}
 	// Flags styles
 	wp_enqueue_style( 'csseco_flags_styles', get_template_directory_uri().'/vendor/flags/flag-icon.css', array(), '1.0.0', 'all' );
 	// Owl Carousel styles
@@ -56,6 +59,11 @@ function csseco_load_scripts() {
 	
 	// FontAwesome scripts
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/js/all.js', array('jquery'), '5.8.1', true );
+	
+	if ( is_page(135) ){
+		// Validate js scripts
+		wp_enqueue_script( 'validate', 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js', array('jquery'), true );
+	}
 	
 	// Main scripts
 	wp_enqueue_script( 'csseco_scripts', get_template_directory_uri().'/js/csseco.js', array('jquery'), '1.0.0', true );

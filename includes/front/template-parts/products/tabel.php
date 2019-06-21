@@ -25,7 +25,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 <div class="row searchbar">
 	<div class="col-12">
 		<form>
-			<div class="form-group">
+			<div class="form-group mb-4">
 				<i class="fas fa-search"></i>
 				<input type="text" class="form-control" id="searchInstrument" aria-describedby="searchHelp" placeholder="Search Instrument">
 				<ul class="list">

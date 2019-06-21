@@ -53,6 +53,22 @@ function csseco_contact_form( $atts, $content = null ) {
 }
 add_shortcode( 'csseco_contact_form', 'csseco_contact_form' );
 
+// Criteria to qualify Form shortcode
+function criteria_to_qualify_form( $atts, $content = null ) {
+	// [criteria_to_qualify_form]
+	// get the attributes
+	$atts = shortcode_atts(
+		array(),
+		$atts,
+		'criteria_to_qualify_form'
+	);
+	// return HTML
+	ob_start(); // Turn on the output buffering; ob = output buffering
+	include 'templates/criteria_to_qualify.php'; // this will be "saved" in ob_start
+	return ob_get_clean(); // return the ob
+}
+add_shortcode( 'criteria_to_qualify_form', 'criteria_to_qualify_form' );
+
 // Button + disclaimer
 function csseco_btndiscf( $atts, $content = null ) {
 	// [csseco_btndisc href="#" name="test"]
@@ -66,7 +82,7 @@ function csseco_btndiscf( $atts, $content = null ) {
 	);
 	$name = ( $atts['name'] == '' ? $content : $atts['name'] );
 	return '
-		<div style="max-width: 210px; text-align: center;">
+		<div style="max-width: 210px; text-align: center; display: inline-block;">
 			<a class="cssecoBtn animationbtn" href="#">' . $atts['name'] . '</a>
 			<p class="m-0">Your capital is at risk</p>
 		</div>
