@@ -228,29 +228,98 @@ jQuery(document).ready(function($){
 	// Animations
 	// ==================
 	
-	// registration logo
-//	$('.clogoHW').hover(
-//		function() {
-//			$(this).find('img:first-child').removeClass('flash');
-//		},
-//		function () {
-//			$(this).find('img:first-child').addClass('flash');
-//		}
-//	);
+	function animateCSS(element, animationName, callback) {
+		const node = document.querySelector(element);
+		node.classList.add('animated', animationName);
+
+		function handleAnimationEnd() {
+			node.classList.remove('animated', animationName);
+			node.removeEventListener('animationend', handleAnimationEnd);
+
+			if (typeof callback === 'function') {callback();}
+		}
+
+		node.addEventListener('animationend', handleAnimationEnd);
+	}
 	
 	// left tot right vid
-	if ( screen.width > 991 ) {
-		if($('.fpltr').visible()) {
-			$('.fpltr').addClass('animated bounceInLeft').css('visibility', 'visible');
+//	if ( screen.width > 991 ) {
+//		if($('.fpltr').visible()) {
+//			$('.fpltr').addClass('animated bounceInLeft').css('visibility', 'visible');
+//		}
+//		$(window).scroll(function() {
+//			if($('.fpltr').visible()) {
+//				$('.fpltr').addClass('animated bounceInLeft').css('visibility', 'visible');
+//			}
+//		});
+//	} else if ( screen.width < 992 ) {
+//	    $('.fpltr').css('visibility', 'visible');
+//    }
+	
+	
+	
+	
+	// img sub header FP
+	var fppct = false;
+	if ( fppct == false ) {
+		
+		if($('.screens').visible()) {
+			$('.screens').css('visibility', 'visible');
+			animateCSS('.screens', 'flipInX', function(){
+				$('.screenIcons').css('visibility', 'visible');
+				animateCSS('.screenIcons', 'flipInX');
+			});
+			fppct = true;
 		}
 		$(window).scroll(function() {
-			if($('.fpltr').visible()) {
-				$('.fpltr').addClass('animated bounceInLeft').css('visibility', 'visible');
+			if($('.screens').visible() && fppct == false ) {
+				fppct = true;
+				$('.screens').css('visibility', 'visible');
+				animateCSS('.screens', 'flipInX', function(){
+					$('.screenIcons').css('visibility', 'visible');
+					animateCSS('.screenIcons', 'flipInX');
+				});
+				
 			}
 		});
-	} else if ( screen.width < 992 ) {
-	    $('.fpltr').css('visibility', 'visible');
-    }
+	}
+	
+	// mobile on instruments section - frontpage
+	var mobileFP = false;
+	if ( mobileFP == false ) {
+		
+		if($('.mphone').visible()) {
+			$('.mphone').css('visibility', 'visible');
+			animateCSS('.training ul', 'bounceInUp');
+			mobileFP = true;
+		}
+		$(window).scroll(function() {
+			if($('.mphone').visible() && mobileFP == false ) {
+				mobileFP = true;
+				$('.mphone').css('visibility', 'visible');
+				animateCSS('.mphone', 'bounceInUp');
+				
+			}
+		});
+	}
+	
+	// list on trainging section - frontpage
+	var listTrFP = false;
+	if ( listTrFP == false ) {
+		
+		if($('.training ul').visible()) {
+			$('.training ul').css('visibility', 'visible');
+			animateCSS('.training ul', 'fadeInRight');
+			listTrFP = true;
+		}
+		$(window).scroll(function() {
+			if($('.training ul').visible() && listTrFP == false ) {
+				$('.training ul').css('visibility', 'visible');
+				listTrFP = true;
+				animateCSS('.training ul', 'fadeInRight');
+			}
+		});
+	}
 	
 	
 	// pins on map - frontpage
@@ -273,15 +342,15 @@ jQuery(document).ready(function($){
 		}
 	});
 	
-	// list on trainging section - frontpage
-	if($('.training ul').visible()) {
-		$('.training ul').addClass('animated fadeInRight').css('visibility', 'visible');
-	}
-	$(window).scroll(function() {
-		if($('.training ul').visible()) {
-			$('.training ul').addClass('animated fadeInRight').css('visibility', 'visible');
-		}
-	});
+//	// list on trainging section - frontpage
+//	if($('.training ul').visible()) {
+//		$('.training ul').addClass('animated fadeInRight').css('visibility', 'visible');
+//	}
+//	$(window).scroll(function() {
+//		if($('.training ul').visible()) {
+//			$('.training ul').addClass('animated fadeInRight').css('visibility', 'visible');
+//		}
+//	});
 	
 	// list on tech section - frontpage
 	if($('.tech ul').visible()) {
@@ -610,3 +679,5 @@ function muteUn(btn, vid) {
 //  // The marker, positioned at Uluru
 //  var marker = new google.maps.Marker({position: uluru, map: map});
 //}
+
+// JS vanilla animate.css

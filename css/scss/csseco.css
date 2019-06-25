@@ -370,6 +370,9 @@ a {
     .animationbtn {
       font-size: 16px;
       padding: 10px; } }
+  .animationbtn.mteBtn {
+    padding: 2px;
+    min-width: 100px; }
 
 a.cssecoBtn + p {
   font-size: 9px; }
@@ -2655,6 +2658,75 @@ div#site-wrapper {
       div#site-wrapper.csseco-front-page #primary section#section9fp.join {
         font-size: 22px;
         padding: 60px 0 50px 0; } }
+  div#site-wrapper.csseco-front-page2 header#header {
+    background-image: url(../imgs/fp/fp2/header_bg.png);
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    div#site-wrapper.csseco-front-page2 header#header > div:first-child {
+      background: rgba(255, 255, 255, 0.7); }
+    div#site-wrapper.csseco-front-page2 header#header .fp {
+      margin-top: 0; }
+      div#site-wrapper.csseco-front-page2 header#header .fp h1 {
+        color: #FFF;
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: bold;
+        text-transform: none; }
+        div#site-wrapper.csseco-front-page2 header#header .fp h1 span {
+          color: #ffb401; }
+          @media screen and (min-width: 375px) {
+            div#site-wrapper.csseco-front-page2 header#header .fp h1 span {
+              display: block; } }
+        @media screen and (min-width: 992px) {
+          div#site-wrapper.csseco-front-page2 header#header .fp h1 {
+            color: #1B2854; } }
+      div#site-wrapper.csseco-front-page2 header#header .fp h1 + p {
+        color: #1B2854;
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: bold; }
+        @media screen and (min-width: 375px) {
+          div#site-wrapper.csseco-front-page2 header#header .fp h1 + p span {
+            display: block; } }
+        @media screen and (min-width: 768px) {
+          div#site-wrapper.csseco-front-page2 header#header .fp h1 + p {
+            font-size: 18px; } }
+        @media screen and (min-width: 992px) {
+          div#site-wrapper.csseco-front-page2 header#header .fp h1 + p {
+            margin-bottom: 3rem;
+            margin-top: 3rem; } }
+        @media screen and (min-width: 1200px) {
+          div#site-wrapper.csseco-front-page2 header#header .fp h1 + p {
+            font-size: 24px;
+            line-height: 1.1; } }
+      div#site-wrapper.csseco-front-page2 header#header .fp .cssecoBtn {
+        margin-top: 0; }
+      div#site-wrapper.csseco-front-page2 header#header .fp .hfp2ImgWrapper {
+        position: relative; }
+        div#site-wrapper.csseco-front-page2 header#header .fp .hfp2ImgWrapper img.screenIcons {
+          bottom: -10px;
+          left: -60px;
+          position: absolute;
+          width: 130px; }
+          @media screen and (min-width: 1200px) {
+            div#site-wrapper.csseco-front-page2 header#header .fp .hfp2ImgWrapper img.screenIcons {
+              bottom: -30px;
+              left: -50px;
+              width: 170px; } }
+      @media screen and (min-width: 992px) {
+        div#site-wrapper.csseco-front-page2 header#header .fp {
+          margin-bottom: 30px; } }
+      @media screen and (min-width: 1400px) {
+        div#site-wrapper.csseco-front-page2 header#header .fp {
+          margin-bottom: 60px; } }
+    div#site-wrapper.csseco-front-page2 header#header .svgshape {
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1); }
+  @media screen and (min-width: 992px) {
+    div#site-wrapper.csseco-front-page2 section#section1fp.subVid {
+      margin-top: -50px; } }
 
 body.page #primary {
   padding: 15px 0 30px; }
@@ -3831,9 +3903,12 @@ section#features.features {
       height: 500px;
       left: 0;
       position: absolute;
-      top: -80px;
+      top: -40px;
       width: 480px;
       z-index: 9; }
+      @media screen and (min-width: 1200px) {
+        section#features.features .featImg::before {
+          top: -50px; } }
   @media screen and (min-width: 992px) {
     section#features.features {
       margin-bottom: 1.5rem; } }
@@ -3939,6 +4014,12 @@ section#dwnldmt4.dwnldmt4 {
         section#dwnldmt4.dwnldmt4 .colBg ul li .txt {
           max-width: 260px;
           padding: 0 10px; } }
+      @media screen and (min-width: 992px) {
+        section#dwnldmt4.dwnldmt4 .colBg ul li .txt {
+          max-width: 370px; } }
+      @media screen and (min-width: 1200px) {
+        section#dwnldmt4.dwnldmt4 .colBg ul li .txt {
+          max-width: 440px; } }
       section#dwnldmt4.dwnldmt4 .colBg ul li p {
         margin: 0; }
   @media screen and (min-width: 992px) {

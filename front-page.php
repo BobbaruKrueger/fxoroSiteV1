@@ -4,7 +4,7 @@
   * front-page.php
   */
 ?>
-<?php get_header( 'fp' ); ?>
+<?php get_header( 'fp2' ); ?>
 
 	<?php get_template_part( 'includes/front/template-parts/fp/fp', 'subvid' ); ?>
 	<?php get_template_part( 'includes/front/template-parts/fp/fp', 'tickers' ); ?>

@@ -60,9 +60,17 @@ function csseco_load_scripts() {
 	// FontAwesome scripts
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/js/all.js', array('jquery'), '5.8.1', true );
 	
-	if ( is_page(135) ){
+	if ( is_page(135) || is_page(130) ){
 		// Validate js scripts
 		wp_enqueue_script( 'validate', 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js', array('jquery'), true );
+		wp_enqueue_script( 'libphone-number', 'https://cdn.jsdelivr.net/npm/libphonenumber-js@1.7.19/bundle/libphonenumber-max.js', array('jquery'), true );
+		wp_enqueue_script( 'contact-form', get_template_directory_uri().'/js/contact-form.js', array('jquery') , true );
+	}
+	if (  is_page(756) ){
+		// Validate js scripts
+		wp_enqueue_script( 'validate', 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js', array('jquery'), true );
+		wp_enqueue_script( 'libphone-number', 'https://cdn.jsdelivr.net/npm/libphonenumber-js@1.7.19/bundle/libphonenumber-max.js', array('jquery'), true );
+		wp_enqueue_script( 'contact-form', get_template_directory_uri().'/js/criteria-form.js', array('jquery') , true );
 	}
 	
 	// Main scripts

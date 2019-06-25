@@ -128,9 +128,96 @@
 		';
 	} elseif ( $slug == 'shares' ) {
 		$poza 	= 'CFDs.png';
-		$c1		= '';
-		$c2		= '';
-		$faq	= '';
+		$c1		= '
+			<p>
+				Traditionally Shares are of the most exciting investment opportunities for traders around the world, offering a wide variety of sectors, industries and countries to choose from. 
+			</p>	
+			<div class="text-center">
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+					Start trading now
+				</a>
+				<p class="text-center mb-3 mb-lg-0">
+					Your capital is at risk.
+				</p>
+			</div>
+		';
+		$c2		= '
+			<section>
+				<h5>
+					Trading shares with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>
+				</h5>
+				<p>With <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> CFD SHARE trading you can take advantage of falling or rising markets by opening Sell or Buy positions among global markets including the UK, USA, Europe and Asia with a variety of well-known stocks and share without having to physically purchase them.</p>
+				<p><span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> will offer you to choose between major corporations listed on the NYSE, NASDAQ and London Stock Trade, shares like Facebook, Apple and Alphabet  (link with list?)</p>
+				<p class="font-weight-bold" style="color:#162856;">
+					Trade the most popular FOREX pairs like EUR/USD, GBP/USD and EUR/GBP.  Use our advanced trading tools to protect your proﬁts and limit losses.
+				</p>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
+			</section>
+			<section>
+				<h5>
+					Advantages of trading on shares with CDF.
+				</h5>
+				<p>
+					It is rare that share gives results in a short time, generally it can take months before seeing the result of your investment. 
+				</p>
+				<p>
+					The CFD shares are instead designed for much shorter periods: they give you the chance to trade in a simpler and a faster way
+				</p>
+				<p class="font-weight-bold" style="color:#162856;">
+					Discover <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> tools and start to trade on FOREX at your best
+				</p>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Start trading now
+					</a>
+				</div>
+			</section>
+		';
+		$faq	= '
+			<div class="accordion" id="accProducts">
+				<div class="acW">
+					<div class="prodacc-header" id="headingOne">
+						<h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							<i class="fas fa-plus"></i><i class="fas fa-minus"></i>What exactly is a share?
+						</h5>
+					</div>
+					<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accProducts">
+						<div class="prodacc-body">
+							Stocks are an equity investment that represents part ownership in a corporation and entitles you to part of that corporation\'s earnings and assets. ... Today, share ownership is usually recorded electronically, and the shares are held in street name by your brokerage firm.
+						</div>
+					</div>
+				</div>
+				<div class="acW">
+					<div class="prodacc-header" id="headingTwo">
+						<h5 class="mb-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							<i class="fas fa-plus"></i><i class="fas fa-minus"></i>What is the different between share and stock? 
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accProducts">
+						<div class="prodacc-body">
+							Stocks and shares have minor differences. A Stock refers to the capital raised by the company whereas shares refer to a single unit of stock. When people say they own stock, they mean they are talking about their ownership of companies.
+						</div>
+					</div>
+				</div>
+				<div class="acW">
+					<div class="prodacc-header" id="headingThree">
+						<h5 class="mb-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							<i class="fas fa-plus"></i><i class="fas fa-minus"></i>What are exactly  CFD’s ?
+						</h5>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accProducts">
+						<div class="prodacc-body">
+							CFDs are derivatives products that are made accessible to anyone by trading on live market price movements without actually owning the instrument on which the contract is based. <br>
+							CFDs are used to speculate on movement of market prices regardless of whether the underlying markets are rising or falling. The actual underlying asset is never owned. Essentially, it is a contract between the client and the broker. Trading CFDs has several major advantages that increased the popularity over the last several years.
+						</div>
+					</div>
+				</div>
+			</div>
+		';
 	} elseif ( $slug == 'commodities' ) {
 		$poza 	= 'commodities.jpg';
 		$c1		= '
@@ -175,7 +262,46 @@
 				</div>
 			</section>
 		';
-		$faq	= '';
+		$faq	= '
+			<div class="accordion" id="accProducts">
+				<div class="acW">
+					<div class="prodacc-header" id="headingOne">
+						<h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							<i class="fas fa-plus"></i><i class="fas fa-minus"></i>What are the most commonly traded commodities?
+						</h5>
+					</div>
+					<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accProducts">
+						<div class="prodacc-body">
+							The list of the most common commodities and the exchanges they are normally dealt through are given below: Crude Oil and derivatives - The most commonly traded commodity is Crude Oil, and its various derivatives such as heating oil and gasoline. ... Coffee - The second most traded commodity is Coffee, value wise.
+						</div>
+					</div>
+				</div>
+				<div class="acW">
+					<div class="prodacc-header" id="headingTwo">
+						<h5 class="mb-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							<i class="fas fa-plus"></i><i class="fas fa-minus"></i>Do commodities go up when stocks go down?
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accProducts">
+						<div class="prodacc-body">
+							A better hedge is commodities. Research shows that investments in crops, metals, energy, currencies and other tangible things are negatively correlated with both stocks and bonds. When one group goes up, the other group tends to go down, and vice versa. This inverse relationship is not perfect.
+						</div>
+					</div>
+				</div>
+				<div class="acW">
+					<div class="prodacc-header" id="headingThree">
+						<h5 class="mb-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							<i class="fas fa-plus"></i><i class="fas fa-minus"></i>Which commodity is best for trading?
+						</h5>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accProducts">
+						<div class="prodacc-body">
+							The actual trading of commodities involves more than dabbling in the stock market, so be prepared to devote some time to educating yourself not just on the commodity itself, but how it moves within the market.
+						</div>
+					</div>
+				</div>
+			</div>
+		';
 	} elseif ( $slug == 'indices' ) {
 		$poza 	= 'indices.png';
 		$c1		= '
@@ -323,7 +449,46 @@
 				
 			</section>
 		';
-		$faq	= '';
+		$faq	= '
+			<div class="accordion" id="accProducts">
+				<div class="acW">
+					<div class="prodacc-header" id="headingOne">
+						<h5 class="mb-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							<i class="fas fa-plus"></i><i class="fas fa-minus"></i>How does Bitcoin make money?
+						</h5>
+					</div>
+					<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accProducts">
+						<div class="prodacc-body">
+							However, there are people who make money by "mining". From the bitcoin wikipedia page: Bitcoins are awarded to Bitcoin "miners" for the solution to a difficult proof-of-work problem which confirms transactions and prevents double-spending. Miners can also get extra bitcoins from voluntary transaction fees.
+						</div>
+					</div>
+				</div>
+				<div class="acW">
+					<div class="prodacc-header" id="headingTwo">
+						<h5 class="mb-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							<i class="fas fa-plus"></i><i class="fas fa-minus"></i>What affects the value of Bitcoin?
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accProducts">
+						<div class="prodacc-body">
+							As such, the monetary policy, inflation rates, and economic growth measurements that typically influence the value of a currency do not apply. This can make understanding why the price of bitcoin goes up or down confusing. Several factors can influence the price.
+						</div>
+					</div>
+				</div>
+				<div class="acW">
+					<div class="prodacc-header" id="headingThree">
+						<h5 class="mb-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							<i class="fas fa-plus"></i><i class="fas fa-minus"></i>What determines the value of Bitcoin?
+						</h5>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accProducts">
+						<div class="prodacc-body">
+							The price of Bitcoin is not the same as its value. Price is determined by the market in which it trades: by means of supply and demand. This is the same way the price of your secondhand car, a bag of apples in the supermarket, an ounce of gold and just about everything else is determined.
+						</div>
+					</div>
+				</div>
+			</div>
+		';
 	} 
 
 ?>

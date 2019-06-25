@@ -15,10 +15,14 @@ $lsn = $_GET['lsn'];
 
 
 ?>
-<a href="javascript:history.go(-1)">go back</a>
+<div class="col-12">
+	<a href="javascript:history.go(-1)" class="cssecoBtn animationbtn mteBtn">				
+		<i class="fas fa-arrow-alt-circle-left"></i> Back
+	</a>
+</div>
 
 <!-- The DIV for the implementation -->
-<div id="mte-education-root" class="mte-root" style="max-width: 950px; margin: 0 auto;"></div>
+<div id="mte-education-root" class="mte-root col-12"></div>
 <!-- Parameters -->
 <script>
 var userRef="7743aa8"; /* User reference code */
@@ -26,7 +30,7 @@ var mte_language="en"; /* Language */
 var trade_link="Your trading platform URL"; /* Trading platform URL */
 var open_account ="Your opening account URL"; /* Opening account URL */
 var logoIntro = true; /* Play logo video */
-var mte_demo=false; /* Locked mode */
+var mte_demo=2; /* Locked mode */
 
 var autoPlay =true;
 var single   = '<?php echo $product;?>';

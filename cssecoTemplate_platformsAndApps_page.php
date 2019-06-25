@@ -18,10 +18,10 @@
 		<div class="row">
 			<div class="col-12">
 				<p>
-					<strong>MetaTrader 4</strong> is a Forex and CFD trading platform used for trading and analysing the financial markets. <strong>MetaTrader 4</strong> offers traders access to advanced trading operations in a fast, secure and reliable environment. Simply download, install and begin trading! 
+					The MT4 platform is the most popular charting and analysis software used by traders of all levels, of all over the world. It comes with allof the most popular charting tools and offers immediate order execution and real-time results.
 				</p>
 				<p>
-					<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>'s technology allows any trader to use the <strogn>MT4</strogn> WebTrader to login to their <strong>MT4</strong> accounts with their credentials, wherever they may be. <strong>MT4</strong> WebTrader has been optimised to run within the traders' browser and features improvements such as a redesigned layout and real time risk statistics. The complete trading functionality of <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>'s WebTrader is based on its compatibility with <strong>MetaTrader4</strong>. <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> also enables its traders to no longer be stuck in front of their terminals and gives them the opportunity to trade directly from their mobile devices whether it's a smart phone or a tablet. This means you that with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>, you will have full mobility, no matter from which device you want to use the trading platform!
+					MT4 is a as the industry standard. Is Combining an intuitive user interface with a customizable feature-rich environment, the MT4 trading platform provides everything a trader needs to chart assets, place orders and manage positions.
 				</p>
 				<div class="mt4btns">
 					<div class="row">
@@ -59,6 +59,7 @@
 			<div class="col-12 col-lg-7">
 				<h5>Benefits and features</h5>
 				<ul>
+					<li>Benefits and features</li>
 					<li>User-friendly</li>
 					<li>Flexible</li>
 					<li>Secure</li>
@@ -68,8 +69,9 @@
 					<li>Automated trading</li>
 					<li>Totally customisable</li>
 				</ul>
+				<h5>Trade where ever you are</h5>
 				<p>
-					<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> is proud to offer to its loyal traders the <strong>MetaTrader 4</strong> trading platform defined as the market standard and used by hundreds of brokers worldwide.  The <strong>MT4</strong> is recognized as the most advanced platform technologically as well as the most reliable in terms of stability and security. What to find out more? Open an account with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> right now! 
+					The complete trading functionality of <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>'s WebTrader is based on its perfect compatibility with MetaTrader4 this enables you to trade directly from your mobile devices whether it's a smart phone or a tablet, an android or a MCOS This means full mobility, no matter from which device you want to use the trading platform!
 				</p>
 				<div class="text-center text-xl-left pl-xl-5">
 					<a class="cssecoBtn animationbtn" href="http://localhost/fxoro_site_mf/metatrader-4/">Learn more about MT4</a>
@@ -151,7 +153,7 @@
 		<div class="row">
 			<div class="col-12 col-md-6 colBg">
 				<h5>Download MetaTrader 4</h5>
-				<p>MT4 is the most popular FOREX & CFD trading platform for traders of all skill levels, across the globe. Start your trading journey and download MT4 today!</p>
+				<p>Download MetaTrader 4 to enjoy the broadest Forex trading opportunities</p>
 				<ul>
 					<li>
 						<div class="pct">
@@ -164,7 +166,7 @@
 						<div class="txt">
 							<div class="dtable">
 								<div class="dtable-cell">
-									<p>The "most wanted" FOREX and CFD trading platform</p>
+									<p>Register with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> – Fill out the registration form and open your account in minutes.</p>
 								</div>
 							</div>
 						</div>
@@ -180,7 +182,7 @@
 						<div class="txt">
 							<div class="dtable">
 								<div class="dtable-cell">
-									<p>Easy to use, in your language, available on all devices</p>
+									<p>Download MetaTrader - Compatible with popular mobile and desktop platforms.</p>
 								</div>
 							</div>
 						</div>
@@ -196,7 +198,7 @@
 						<div class="txt">
 							<div class="dtable">
 								<div class="dtable-cell">
-									<p>Free real-time charting, news & analyses, totally customisable</p>
+									<p>Start Trading! Maximise your potential in Trading Online with MetaTrader and <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> superior trading conditions.</p>
 								</div>
 							</div>
 						</div>
