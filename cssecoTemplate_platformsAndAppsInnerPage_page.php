@@ -6,23 +6,6 @@
   */
 ?>
 <?php get_header(); ?>
-<!--
-		<main id="main" class="site-main col-12 col-xl-12" role="main">
-			<?php
-//				if( have_posts() ) {
-//					while( have_posts() ) {
-//
-//						the_post();
-//
-//						fxoroVone_save_post_views( get_the_ID() );
-//
-//						get_template_part( 'includes/front/template-parts/content', 'page' );
-//
-//					}
-//				}
-			?>
-		</main>
--->
 		<div class="col-12">
 			<header class="entry-header">
 				<?php the_title('<h1 class="entry-title mb-md-3 mb-xl-4"><span>','</span></h1>' ); ?>
@@ -34,12 +17,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<p><span style="font-weight: bold; color: #1B2854;">FX<span style="color: #fbb000;">ORO</span></span> is proud to offer to its loyal traders the MT4 trading platform defined as the market standard and used by hundreds of brokers worldwide. The MT4 is recognized as the most advanced platform technologically as well as the most reliable in terms of stability and security. This was not a random decision, the MT4 platform offers advanced technology as well as enhanced security so the trader can open and close Forex positions without having to worry about the stability of their platform. It is the most advanced and trustworthy platform available on the market; the user interface is friendly and intuitive making it an attractive option for new and experienced traders alike.</p>
+				<p>The MT4 is recognized as the most advanced platform technologically as well as the most reliable in terms of stability and security. This was not a random decision, the MT4 platform offers advanced technology as well as enhanced security so the trader can open and close Forex positions without having to worry about the stability of their platform. It is the most advanced and trustworthy platform available on the market; the user interface is friendly and intuitive making it an attractive option for new and experienced traders alike.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<h5>Advantages</h5>
+				<h5>Main features</h5>
 			</div>
 		</div>
 		<div class="row">
@@ -85,23 +68,18 @@
 </section>
 <section id="mt4InnerMob" class="mt4InnerMob">
 	<div class="container">
-		<div class="row">
-			<div class="col-12 col-lg-8 cntnt">
-				<h5>Mobile </h5>
-				<p><span style="font-weight: bold; color: #1B2854;">FX<span style="color: #fbb000;">ORO</span></span> enables its traders to no longer be stuck in front of their terminals and gives them the opportunity to trade directly from their mobile devices whether it's a smart phone or a tablet.  Would you have an android supported device or an iOS traders can open, close transactions and  follow their positions anytime, anywhere.</p>
-				<p>Using mobile terminals in daily activities offers a convenient way to keep up with your accounts when you don't have access to a desktop computer. In this situation mobile platforms are really indispensable, as their possibilities are no different from the desktop version of MetaTrader 4 trading platform. Wherever you are, you can keep abreast with the market's latest developments, analyze them and perform trading operations at any time.</p>
-				<p class="m-0"><span style="font-weight: bold; color: #1B2854;">FX<span style="color: #fbb000;">ORO</span></span> MT4 mobile platform is your daily assistant and irreplaceable working tool. Stay mobile, trade in financial markets, get trade information and analyze it 24 hours a day with MT4.</p>
-			</div>
-			<div class="col-12 col-lg-4 d-none d-lg-block pct"></div>
-		</div>
-	</div>
-</section>
-<section id="mt4InnerFeatures" class="mt4InnerFeatures">
-	<div class="container">
-		<div class="row">
-			<div class="col-12 col-lg-3 d-none d-lg-block pct"></div>
+		<div class="row mb-4 mb-xl-5">
 			<div class="col-12 col-lg-9 cntnt">
-				<h5>Features</h5>
+				<h5>Mobile</h5>
+				<p><span style="font-weight: bold; color: #1B2854;">FX<span style="color: #fbb000;">ORO</span></span> MT4 mobile platform is your daily assistant and irreplaceable working tool. Stay mobile, trade in financial markets, get trade information and analyze it 24 hours a day with MT4.</p>
+				<p class="m-0">Using mobile terminals in daily activities offers a convenient way to keep up with your accounts when you don't have access to a desktop computer. In this situation mobile platforms are really indispensable, as their possibilities are no different from the desktop version of MetaTrader 4 trading platform. Wherever you are, you can keep abreast with the market's latest developments, analyze them and perform trading operations at any time.</p>
+			</div>
+			<div class="col-12 col-lg-3 d-none d-lg-block pct"></div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-lg-3 d-none d-lg-block pctM"></div>
+			<div class="col-12 col-lg-9 cntntM">
+				<h5>Main features</h5>
 				<ul>
 					<li>Trade from anywhere, at anytime</li>
 					<li>Android, iOS and web-based versions available</li>
@@ -122,6 +100,13 @@
 		</div>
 	</div>
 </section>
+<!--
+<section id="mt4InnerFeatures" class="mt4InnerFeatures">
+	<div class="container">
+		
+	</div>
+</section>
+-->
 <div class="content">
 	<div class="row">
 		

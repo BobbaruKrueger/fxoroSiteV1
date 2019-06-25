@@ -24,7 +24,7 @@
 <section id="auochttl" class="auochttl d-none d-lg-block">
 	<div class="row">
 		<div class="col-12">
-			<h3 class="text-center">Do you think <strong style="color: #1b2854;">trading opportunities</strong> are impossible to identify?</h3>
+			<h3 class="text-center">Are other brokers offering you tools like Autochartist?</h3>
 			<div class="text-center">
 				<a href="http://qa.fxoro.com/register/" class="cssecoBtn animationbtn">Open an account</a>
 			</div>
@@ -41,13 +41,11 @@
 								<?php the_title('<h1 class="entry-title"><span>','</span></h1>' ); ?>
 							</header><!--/.entry-header-->
 							<p>
-								Free to all active <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> clients, <strong  style="color: #1b2854;">Autochartist</strong> continuously scans markets and automatically recognises trade set-ups based on support and resistance levels. Once an opportunity has been identified, traders are informed.
+								Autochartist is one of the most powerful market-scanning tool for identifying and informing about  market opportunities. It continuously scans markets and automatically recognises trade set-ups based on support and resistance levels. Once an opportunity has been identified, you are informed. 
 							</p>
+							<h5>A free tool just for <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> traders</h5>
 							<p>
-								Open an account today for access, or trial a limited version (<strong style="color: #1b2854;">delay of 5 candlesticks</strong>) on our free demo account. <strong style="color: #1b2854;">Autochartist</strong> now brings the world’s first market scanner directly to the <strong style="color: #1b2854;">MT4 platform</strong>, saving valuable time by allowing traders to watch all symbols and all time periods from a single chart.
-							</p>
-							<p>
-								<strong style="color: #1b2854;">Autochartist</strong> is a trading name of <strong style="color: #1b2854;">Autochartist Limited</strong>, a company registered in Cyprus. The information provided here has been produced by <strong style="color: #1b2854;">Autochartist</strong>. 
+								Open an account today for access, or trial a limited version on our free demo account. Autochartist now brings the world’s first market scanner directly to the MT4 platform, saving valuable time by allowing traders to watch all symbols and all time periods from a single chart.
 							</p>
 						</div>
 					</div>
@@ -71,7 +69,7 @@
 					<div class="dtable">
 						<div class="dtable-cell">
 							<h5>
-								Autochartist Benefits
+								Autochartist main benefits
 							</h5>
 							<ul>
 								<li>Stay on top of market movements with continuous intraday market scanning.</li>
@@ -103,7 +101,7 @@
 					<div class="dtable">
 						<div class="dtable-cell">
 							<h5>
-								Automated Technical Analysis
+								Your automated technical analysis
 							</h5>
 							<p>
 								Receive automatic notifications when emerging and completed <strong style="color: #1b2854;">Chart Patterns</strong> such as Triangles, Wedges, Tops and Bottoms are identified. Take advantage of an automatically illustrated forecast range on completed patterns which indicates an expected price level.
@@ -113,6 +111,9 @@
 							</p>
 							<p>
 								Automatically identify <strong style="color: #1b2854;">Fibonacci patterns</strong> from extensions, retracements and ABCD patterns to more sophisticated setups like Gartley and Butterfly formations.
+							</p>
+							<p class="m-0">
+								Autochartist is a trading name of Autochartist Limited, a company registered in Cyprus. The information provided here has been produced by Autochartist.
 							</p>
 						</div>
 					</div>
