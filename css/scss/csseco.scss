@@ -311,7 +311,7 @@ a {
 	
 }
 a.cssecoBtn + p {
-	font-size: 9px;
+	font-size: 12px;
 }
 
 /*--------------------------------------------------------------
@@ -713,7 +713,7 @@ div#site-wrapper {
 			font-weight: bold;
 			margin: 10px auto 0;
 			max-width: 210px;
-			padding: 10px 20px;
+			padding: 2px 10px;
 			text-align: center;
 			text-decoration: none;
 			@include animate( color, 320ms );
@@ -726,6 +726,7 @@ div#site-wrapper {
 				font-size: 16px;
 				margin: 10px auto 0;
 				max-width: 280px;
+				padding: 10px 20px;
 			}
 		}
 		@media screen and (min-width: $csseco_bp_576) {
@@ -780,7 +781,7 @@ div#site-wrapper {
 	img.logo {
 		max-height: 35px;
 		@media screen and (min-width: $csseco_bp_992) {
-			max-height: 40px;
+			max-height: 50px;
 		}
 	}
 	img.header_logo {
@@ -823,7 +824,7 @@ div#site-wrapper {
 			.h_i_W {
 				color: #fff;
 				float: right;
-				padding-top: 5px;
+				padding-top: 8px;
 				> div {
 					border-left: 1px solid #FFF;
 					float: left;
@@ -931,7 +932,6 @@ div#site-wrapper {
 					line-height: 1.1;
 					padding: 15px 0;
 					position: relative;
-					text-align: center;
 					text-transform: uppercase;
 					&::before,
 					&::after {
@@ -1052,9 +1052,9 @@ div#site-wrapper {
 						}
 					}
 				}
-				.capRsk {
-					font-size: 9px;
-				}
+//				.capRsk {
+//					font-size: 9px;
+//				}
 				@media screen and (min-width: $csseco_bp_992) {
 					margin-top: 30px;
 				}
@@ -1228,6 +1228,7 @@ div#site-wrapper {
 		#primary {
 			h3 {
 				font-family: 'Didact Gothic', sans-serif;
+				font-weight: 300;
 			}
 			section#section1fp.subVid {
 				padding-top: 30px;
@@ -1235,7 +1236,7 @@ div#site-wrapper {
 				h3 {
 					color: #162856;
 					font-size: 16px;
-					font-weight: bold;
+//					font-weight: bold;
 					margin: 0 0 30px;
 					padding: 0 0 5px;
 					position: relative;
@@ -1408,7 +1409,7 @@ div#site-wrapper {
 				.top {
 					h3 {
 						font-size: 16px;
-						font-weight: bold;
+//						font-weight: bold;
 						margin: 0 0 30px;
 						padding: 0 0 5px;
 						position: relative;
@@ -1970,7 +1971,7 @@ div#site-wrapper {
 				}
 				h3 {
 					font-size: 16px;
-					font-weight: bold;
+//					font-weight: bold;
 					margin: 0 0 30px;
 					padding: 0 0 5px;
 					position: relative;
@@ -2126,7 +2127,7 @@ div#site-wrapper {
 				}
 				h3 {
 					font-size: 16px;
-					font-weight: bold;
+//					font-weight: bold;
 					margin: 0 0 30px;
 					padding: 0 0 5px;
 					position: relative;
@@ -2224,7 +2225,7 @@ div#site-wrapper {
 				padding: 30px 0 0 0; 
 				h3 {
 					font-size: 16px;
-					font-weight: bold;
+//					font-weight: bold;
 					margin: 0 0 30px;
 					padding: 0 0 5px;
 					position: relative;
@@ -2327,7 +2328,7 @@ div#site-wrapper {
 				}
 				h3 {
 					font-size: 16px;
-					font-weight: bold;
+//					font-weight: bold;
 					margin: 0 0 30px;
 					padding: 0 0 5px;
 					position: relative;
@@ -2746,7 +2747,7 @@ div#site-wrapper {
 				padding: 30px 0 20px; 
 				h3.ttl {
 					font-size: 16px;
-					font-weight: bold;
+//					font-weight: bold;
 					margin: 0 0 30px;
 					padding: 0 0 5px;
 					position: relative;
@@ -2858,7 +2859,9 @@ div#site-wrapper {
 				h1 {
 					color: #FFF;
 					font-family: 'Didact Gothic', sans-serif;
-					font-weight: bold;
+					font-size: 35px;
+					font-weight: 300;
+					text-align: center;
 					text-transform: none;
 					span {
 						color: #ffb401;
@@ -2868,12 +2871,14 @@ div#site-wrapper {
 					}
 					@media screen and (min-width: $csseco_bp_992) {
 						color: #1B2854;
+						margin-top: 30px;
+						text-align: left;
 					}
 				}
 				h1 + p {
 					color: #1B2854;
 					font-family: 'Didact Gothic', sans-serif;
-					font-weight: bold;
+					font-weight: 300;
 					span {
 						@media screen and (min-width: 375px) {
 							display: block;
@@ -2883,16 +2888,37 @@ div#site-wrapper {
 						font-size: 18px;
 					}
 					@media screen and (min-width: $csseco_bp_992) {
-						margin-bottom: 3rem;
-						margin-top: 3rem;
+						font-size: 25px;
+						margin-bottom: 1.5rem;
+						margin-top: 1.5rem;
 					}
 					@media screen and (min-width: $csseco_bp_1200) {
 						font-size: 24px;
 						line-height: 1.1;
+						margin-bottom: 3rem;
+						margin-top: 3rem;
 					}
 				}
 				.cssecoBtn {
-					margin-top: 0;
+					margin: 0;				
+					& + p {
+//						font-size: 9px;
+						margin: 0 auto;
+						max-width: 210px;
+						text-align: center;
+						@media screen and (min-width: $csseco_bp_992) {
+							margin: 0;
+						}
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						
+					}
+				}
+				.cssecoBtn,
+				.cssecoBtn + p {
+					@media screen and (min-width: $csseco_bp_992) {
+						margin: 0 0 0 80px;
+					}
 				}
 				.hfp2ImgWrapper {
 					position: relative;
@@ -2939,9 +2965,9 @@ body.page {
 		header.entry-header {
 			h1.entry-title {
 				color: #1B2854;
-				font-family: 'Didact Gothic', sans-serif;
-				font-size: 24px;
-				font-weight: bold;
+//				font-family: 'Didact Gothic', sans-serif;
+				font-size: 28px;
+				font-weight: 300;
 				margin-bottom: 15px;
 				span {
 					position: relative;	
@@ -2961,8 +2987,9 @@ body.page {
 			}
 		}
 		h1, h2, h3, h4, h5, h6 {
-			font-family: 'Didact Gothic', sans-serif;
-			font-weight: bold;
+//			font-family: 'Didact Gothic', sans-serif;
+//			font-weight: bold;
+			font-weight: 300;
 		}
 		h4, h5, h6 {
 			color: #1B2854;
@@ -2972,6 +2999,8 @@ body.page {
 		h3 {}
 		h4 {}
 		h5 {
+			font-size: 23px;
+//			font-weight: 400;
 			margin: 0 0 1.5rem 0;
 		}
 		h6 {}
@@ -3294,13 +3323,13 @@ section#frndrefTrdngfngr {
 		max-width: 330px;
 		width: 100%;
 		@media screen and (min-width: $csseco_bp_768) {
-			  margin: 87px auto 0;
+			  margin: 89px auto 0;
 		}
 		@media screen and (min-width: $csseco_bp_992) {
-			  margin: 55px auto 0;
+			  margin: 58px auto 0;
 		}
 	}
-}
+ }
 section#discover {
 //	background-color: #EFEFEF;
 	padding: 1.5rem 0;
@@ -3373,6 +3402,41 @@ section#subAbout_page.subAbout_page {
 				&::after {
 					display: none;
 				}
+			}
+		}
+	}
+	ul {
+		padding: 0;
+		list-style: none;
+		li {
+			margin: 0 0 20px 0;
+			padding: 0 0 0 45px;
+			position: relative;
+			&::before {
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				content: '';
+				height: 36px;
+				left: 2px;
+				position: absolute;
+				top: 4px;
+				width: 36px;
+			}
+			&.csseco_negative {
+				&::before { background-image: url(../imgs/aboutus/bullets/icon1.png); }
+			}
+			&.csseco_risk {
+				&::before { background-image: url(../imgs/aboutus/bullets/icon2.png); }
+			}
+			&.csseco_investor {
+				&::before { background-image: url(../imgs/aboutus/bullets/icon3.png); }
+			}
+			&.csseco_margin {
+				&::before { background-image: url(../imgs/aboutus/bullets/icon4.png); }
+			}
+			&.csseco_bank {
+				&::before { background-image: url(../imgs/aboutus/bullets/icon5.png); }
 			}
 		}
 	}
@@ -5596,6 +5660,266 @@ section#mt4mac5thsect.mt4mac5thsect {
 	}
 	@media screen and (min-width: $csseco_bp_992) {
 		margin-bottom: 1.5rem;
+	}
+}
+
+// AS - Roma
+#asRoma.asRoma {
+	section#title.title {}
+	section#banner.banner {
+		background-image: url(../imgs/asRoma/banner.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-bottom: 30px;
+		> .container {
+			@media screen and (max-width: 575px) {
+				background-image: url(../imgs/asRoma/banner_overlay_middle.png);
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+		.overlay {
+			color: #FFF;
+			padding: 20px 0;
+			position: relative;
+			text-align: center;
+			z-index: 2;
+			&::after {
+				@media screen and (min-width: $csseco_bp_576) {
+					background-image: url(../imgs/asRoma/banner_overlay_full.png);
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					content: '';
+					height: 100%;
+					left: -160px;
+					position: absolute;
+					top: 0;
+					width: calc(100% + 340px);
+					z-index: -1;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					left: -140px;
+					opacity: .88;
+					width: calc(100% + 280px);
+				}
+			}
+			img.roma_logo {
+				margin-bottom: 1.3rem;
+				max-width: 60px;
+				@media screen and (min-width: $csseco_bp_992) {
+					max-width: 80px;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					max-width: 100px;
+				}
+				@media screen and (min-width: 1400px) {
+					bottom: 40px;
+					max-width: none;
+					position: absolute;
+					right: -40px;
+					width: 120px;
+				}
+			}
+			h3 {
+				font-size: 24px;
+				font-weight: 300;
+				margin-bottom: 1.3rem;
+				span {
+					font-weight: bold;
+				}
+				@media screen and (min-width: $csseco_bp_576) {
+					font-size: 26px;
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					font-size: 28px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					font-size: 30px;
+				}
+			}
+			p {
+				font-size: 16px;
+				font-weight: 300;
+				margin-bottom: 1.3rem;
+				br {
+					display: none;
+					@media screen and (min-width: 500px) {
+						display: block;
+					}
+				}
+				@media screen and (min-width: $csseco_bp_576) {
+					font-size: 18px;
+				}
+				@media screen and (min-width: $csseco_bp_768) {
+					font-size: 20px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					font-size: 22px;
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					font-size: 24px;
+				}
+			}
+			@media screen and (min-width: 1400px) {
+				padding: 50px 0;
+			}
+		}
+		@media screen and (min-width: $csseco_bp_992) {
+			margin-bottom: 3rem;
+		}
+	}
+	section#cfdInstr.cfdInstr {
+		h5 {
+			border-bottom: 1px solid #980a2b;
+			position: relative;
+			span {
+				background-color: #980a2b;
+				color: #FFF;
+				display: inline-block;
+				line-height: 1;
+				margin: 0;
+				padding: 10px 10px 10px 0;	
+				@media screen and (min-width: $csseco_bp_768) {
+					padding: 14px 14px 14px 0;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					padding: 17px 130px 17px 0;
+				}
+			}
+			&::before,
+			&::after {
+				bottom: -1px;
+				content: '';
+				position: absolute;
+			}
+			&::before {
+				background: #980a2b;
+				height: calc(100% + 1px);
+				left: -10000px;
+				width: 10000px;
+			}
+			&::after {
+				background-image: url(../imgs/asRoma/man.png);
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				height: 100%;
+				right: 0;
+				width: 50px;
+				@media screen and (min-width: $csseco_bp_768) {
+					  bottom: -2px;
+					  height: calc(100% + 25px);
+					  width: 85px;
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					bottom: -2px;
+					height: calc(100% + 25px);
+					right: -26px;
+					width: 95px;
+				}
+			}
+		}
+		.leftPlaptop {
+			p {
+				color: #980a2b;
+				br {
+					display: none;
+					@media screen and (min-width: $csseco_bp_1200) {
+						display: block;
+					}
+				}
+			}
+			.laptopW {
+				position: relative;
+				text-align: center;
+				&::before,
+				&::after {}
+				&::before {
+					background: #152855;
+					content: '';
+					height: 136px;
+					position: absolute;
+					left: -9790px;
+					width: 10000px;
+					top: 60px;
+					z-index: 2;
+					@media screen and (min-width: $csseco_bp_768) {
+						top: 50px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+				  		left: -9910px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						height: 148px;
+				  		top: 86px;
+					}
+				}
+				&::after {
+					background-image: url(../imgs/asRoma/shape.png);
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: contain;
+					content: '';
+					height: 210px;
+					left: -70px;
+					position: absolute;
+					top: 60px;
+					width: 450px;
+					z-index: 3;
+					@media screen and (min-width: $csseco_bp_768) {
+						left: 40px;
+						top: 50px;
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+				  		left: -190px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						height: 280px;
+						left: -150px;
+						top: 60px;
+						width: 490px;
+					}
+				}
+				
+				img.laptop {
+					max-width: 270px;
+					position: relative;
+					z-index: 5;
+					@media screen and (min-width: $csseco_bp_1200) {
+						max-width: 340px;
+					}
+				}
+			}
+		}
+	}
+	section#why.why {
+		background-color: #162856;
+		color: #FFF;
+		padding: 25px 0 15px;
+		position: relative;
+	//	visibility: visible; // for animation (animate.css)
+		.revealer {
+			height: 50px;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 10px;
+			width: 100%;
+			@media screen and (min-width: $csseco_bp_992) {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		h3 { color: #FFF; }
+		.dtable {
+			height: 80px;
+		}
+		@media screen and (min-width: $csseco_bp_992) {
+	//		visibility: hidden; // for animation (animate.css)
+		}
 	}
 }
 

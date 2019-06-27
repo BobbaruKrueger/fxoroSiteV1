@@ -16,11 +16,8 @@
 		$poza 	= 'forex.png';
 		$c1		= '
 			<p>
-				FOREX market is 10 times larger than any stock market. With its over £4 trillion of daily trades it presents endless opportunities for individual traders. 
+				With <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> you trade the most popular currency pairs like EUR / USD, GBP / USD and EUR / GBP and with the trading tools at your disposal, protect your profits and limit any losses.
 			</p>
-			<p>
-				<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> oﬀers an array of tradable currency pairs ranging from major and more popular pairs, to exotic currencies that are far less common. 
-			</p>	
 			<div class="text-center">
 				<p class="font-weight-bold" style="color:#162856;">Trade the most popular <strong>FOREX</strong> pairs now!!</p>
 				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
@@ -34,54 +31,38 @@
 		$c2		= '
 			<section>
 				<h5>
-					Advantages of FOREX trading
+					Choose between 50 pairs of currencies
 				</h5>
-				<ul>
-					<li>You get access to over 60 currency pairs 24 hours a day, 5 days a week.</li>
-					<li>Maximize your portfolio’s potential by taking advantage of all market directions whether the market is going up or down.</li>
-					<li>Access the ﬁnancial market with minimum capital and ﬂexible leverage capabilities.</li>
-					<li>Deep liquidity, stable prices and low spreads.</li>
-					<li>Margin trading, where you can trade assets that exceed your account’s capital.</li>
-					<li>No fees or commissions.</li>
-				</ul>
+				<p>
+					<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> offers a range of tradable currency pairs ranging from major and most popular pairs to exotic currencies that are much less common.
+				</p>
 				<p class="font-weight-bold" style="color:#162856;">
-					Trade the most popular FOREX pairs like EUR/USD, GBP/USD and EUR/GBP.  Use our advanced trading tools to protect your proﬁts and limit losses.
+					Trade the most popular FOREX pairs now!
 				</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
+						Further information
 					</a>
 				</div>
 			</section>
 			<section>
 				<h5>
-					Discover our FOREX tools
+					Trade safe as never before
 				</h5>
 				<p>
-					<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> provides a number of educative tools in order to allow traders to access the market and take the right investing decisions in the best conditions.
+					Stop Limit, Guaranteed Stop to limit losses and block profits, are just some example of the tools you’ll receive in support in order protect your profits.
 				</p>
-				<p class="font-weight-bold" style="color:#162856;">
-					Discover <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> tools and start to trade on FOREX at your best
-				</p>
-				<div class="text-center text-lg-left">
-					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
-					</a>
-				</div>
 			</section>
 			<section>
 				<h5>
-					Trade with the best platforms
+					All the upgrades you need 
 				</h5>
 				<p>
-					As a leading regulated FOREX broker, <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> oﬀers you full access to the FX Markets via the traders’ favorite platform, MetaTrader4 which can be accessed either downloaded, via the web or mobile.
-				</p>
-				<p class="font-weight-bold" style="color:#162856;">
-					Register in order to download your MT4 and start to trade 
+					Receive  the esclusive Autochartist signal service,  real-time forex quotes, and a lot more  you’ll start  to trade with a 360 vision of the markets
 				</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
+						Ask for your tools
 					</a>
 				</div>
 			</section>
@@ -172,7 +153,7 @@
 				</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
+						Find out more
 					</a>
 				</div>
 			</section>
@@ -257,7 +238,7 @@
 				</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
+						Find out more
 					</a>
 				</div>
 			</section>
@@ -349,7 +330,7 @@
 				</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
+						Find out more
 					</a>
 				</div>
 			</section>
@@ -443,7 +424,7 @@
 				</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
+						Find out more
 					</a>
 				</div>
 				
@@ -494,14 +475,10 @@
 ?>
 		<main id="prodsect1" class="col-12 site-main prodsect1" role="main">
 			<div class="row">
-				<div class="col-12">
+				<div class="col-12 col-lg-6">
 					<header class="entry-header">
 						<?php the_title('<h1 class="entry-title mb-md-3 mb-xl-4"><span>','</span></h1>' ); ?>
 					</header><!--/.entry-header-->
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 col-lg-6">
 					<?php echo $c1; ?>
 				</div>
 				<div class="col-12 col-lg-6 text-center">

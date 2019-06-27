@@ -285,20 +285,19 @@ jQuery(document).ready(function($){
 	}
 	
 	// mobile on instruments section - frontpage
-	var mobileFP = false;
-	if ( mobileFP == false ) {
+	var phonefp = false;
+	if ( phonefp == false ) {
 		
-		if($('.mphone').visible()) {
-			$('.mphone').css('visibility', 'visible');
+		if($('.training ul').visible()) {
+			$('.training ul').css('visibility', 'visible');
 			animateCSS('.training ul', 'bounceInUp');
-			mobileFP = true;
+			phonefp = true;
 		}
 		$(window).scroll(function() {
-			if($('.mphone').visible() && mobileFP == false ) {
-				mobileFP = true;
-				$('.mphone').css('visibility', 'visible');
-				animateCSS('.mphone', 'bounceInUp');
-				
+			if($('.training ul').visible() && phonefp == false ) {
+				$('.training ul').css('visibility', 'visible');
+				phonefp = true;
+				animateCSS('.training ul', 'bounceInUp');
 			}
 		});
 	}
@@ -519,6 +518,27 @@ jQuery(document).ready(function($){
 	$(window).scroll(function() {
 		if($('.logoAnim3').visible()) {
 			$('.logoAnim3').addClass('animated fadeInRight').css('visibility', 'visible');
+		}
+	});
+	
+	// The partnership between FXORO and AS-ROMA
+	var locBannerASR = $('#asRoma #banner > .container');
+	if($(locBannerASR).visible()) {
+		$(locBannerASR).addClass('animated fadeInRight').css('visibility', 'visible');
+	}
+	$(window).scroll(function() {
+		if($(locBannerASR).visible()) {
+			$(locBannerASR).addClass('animated fadeInRight').css('visibility', 'visible');
+		}
+	});
+	
+	var locLaptopASR = $('.laptopW img');
+	if($(locLaptopASR).visible()) {
+		$(locLaptopASR).addClass('animated fadeInLeft').css('visibility', 'visible');
+	}
+	$(window).scroll(function() {
+		if($(locLaptopASR).visible()) {
+			$(locLaptopASR).addClass('animated fadeInLeft').css('visibility', 'visible');
 		}
 	});
 	

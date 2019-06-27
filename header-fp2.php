@@ -169,7 +169,7 @@
 			</div>
 			<div class="container fp">
 				<div class="row">
-					<div class="col-12 col-lg-6 text-center">
+					<div class="col-12 col-lg-6 text-center text-lg-left">
 						<div class="dtable">
 							<div class="dtable-cell">
 								<h1>
@@ -178,7 +178,7 @@
 								</h1>
 								<p>
 									Join a professional and modern 
-									<span>community of ambitious traders.</span>
+									<span>community of ambitious traders</span>
 								</p>
 								<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">
 									<span>
@@ -188,11 +188,14 @@
 										Start your investment journey now!
 									</span>
 								</a>
+								<p>Your capital is at risk.</p>
+<!--
 								<div class="row">
 									<div class="col-12 text-center capRsk">
 										Your capital is at risk.
 									</div>
 								</div>
+-->
 							</div>
 						</div>
 					</div>

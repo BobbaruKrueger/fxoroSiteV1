@@ -18,10 +18,10 @@
 						<?php the_title('<h1 class="entry-title"><span>','</span></h1>' ); ?>
 					</header><!--/.entry-header-->
 					<p class="text-center">
-						<strong>We offer various partnership schemes to suit your individual preferences</strong>. When you are joinging our community, you are becoming part of an <strong>integrated long-term experience</strong>. We are tryling to make your stay with us as pleasant as possible and to accomodate your needs and wishes the best way we can. That is why we put at your disposal many alternatives to choose from regarding the way our collaboration will work. 
+						More and more people, once they have discovered the advantages of trading <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>, they feel to recommending and promoting it to other people or friends. That’s why we sat for you different alternatives of partnership with us. 
 					</p>
 					<p class="text-center">
-						Explore your posibilities and embrace our custom-made <strong>partnership packages</strong>!
+						Explore your posibilities and embrace our custom-made partnership packages!
 					</p>
 				</div>
 			</div>
@@ -38,14 +38,11 @@
 				<div class="col-12 col-md-8 col-lg-6 col-xl-5">
 					<h5>Benefits and features</h5>
 					<p>
-						it’s time we get down t business and explore the opportunities you have when you enter the <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> community. 
-					</p>
-					<p>
-						We have tailored for you two atractive offers to suit your needs and your appetite for development. 
-					</p>
-					<p>
-						We invite you to become our trusting partner and get down to business by becoming our <strong>affiliate</strong>. If you are not interested in this, but you want to explore the in depth of the trading arena, <strong>bring a friend</strong> or a family member and receive the benefits of being an active, reliable member of our team!
-					</p>
+						<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> has tailored two offers to suit your partnership needs:
+					<ul class="mb-md-0">
+						<li>We invite you to become our trusting partner and get down to business by becoming our affiliate</li>
+						<li>If you are not interested in this, but you want to explore the in depth of the trading arena, bring a friend or a family member and receive the benefits of being an active, reliable member of our team! </li>
+					</ul>
 				</div>
 				<div class="col-12 col-md-4 col-lg-6 col-xl-7 pwu_bg_banner">
 					<div class="dtable">

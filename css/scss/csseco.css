@@ -375,7 +375,7 @@ a {
     min-width: 100px; }
 
 a.cssecoBtn + p {
-  font-size: 9px; }
+  font-size: 12px; }
 
 /*--------------------------------------------------------------
 # Site Wrapper
@@ -757,7 +757,7 @@ div#site-wrapper {
     font-weight: bold;
     margin: 10px auto 0;
     max-width: 210px;
-    padding: 10px 20px;
+    padding: 2px 10px;
     text-align: center;
     text-decoration: none;
     -webkit-transition: color 320ms ease;
@@ -773,7 +773,8 @@ div#site-wrapper {
       div#site-wrapper form button[type=submit] {
         font-size: 16px;
         margin: 10px auto 0;
-        max-width: 280px; } }
+        max-width: 280px;
+        padding: 10px 20px; } }
   @media screen and (min-width: 576px) {
     div#site-wrapper form {
       border-radius: 5px; } }
@@ -817,7 +818,7 @@ div#site-wrapper {
     max-height: 35px; }
     @media screen and (min-width: 992px) {
       div#site-wrapper img.logo {
-        max-height: 40px; } }
+        max-height: 50px; } }
   @media screen and (min-width: 992px) {
     div#site-wrapper img.header_logo {
       margin-left: 20px; } }
@@ -847,7 +848,7 @@ div#site-wrapper {
       div#site-wrapper header#header .topHeaderD .h_i_W {
         color: #fff;
         float: right;
-        padding-top: 5px; }
+        padding-top: 8px; }
         div#site-wrapper header#header .topHeaderD .h_i_W > div {
           border-left: 1px solid #FFF;
           float: left;
@@ -933,7 +934,6 @@ div#site-wrapper {
           line-height: 1.1;
           padding: 15px 0;
           position: relative;
-          text-align: center;
           text-transform: uppercase; }
           div#site-wrapper header#header.fp_header .fp h1::before, div#site-wrapper header#header.fp_header .fp h1::after {
             background-color: rgba(0, 0, 0, 0.6);
@@ -1034,8 +1034,6 @@ div#site-wrapper {
             @media screen and (min-width: 992px) {
               div#site-wrapper header#header.fp_header .fp .ub .flag-wrapper + div span {
                 font-size: 10px; } }
-        div#site-wrapper header#header.fp_header .fp .capRsk {
-          font-size: 9px; }
         @media screen and (min-width: 992px) {
           div#site-wrapper header#header.fp_header .fp {
             margin-top: 30px; } }
@@ -1305,14 +1303,14 @@ div#site-wrapper {
   div#site-wrapper article.csseco-format-aside footer.entry-footer {
     /* ../base/_globals.scss */ }
   div#site-wrapper.csseco-front-page #primary h3 {
-    font-family: 'Didact Gothic', sans-serif; }
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 300; }
   div#site-wrapper.csseco-front-page #primary section#section1fp.subVid {
     padding-top: 30px;
     padding-bottom: 20px; }
     div#site-wrapper.csseco-front-page #primary section#section1fp.subVid h3 {
       color: #162856;
       font-size: 16px;
-      font-weight: bold;
       margin: 0 0 30px;
       padding: 0 0 5px;
       position: relative;
@@ -1459,7 +1457,6 @@ div#site-wrapper {
       top: 0; }
     div#site-wrapper.csseco-front-page #primary section#section2fp.part .top h3 {
       font-size: 16px;
-      font-weight: bold;
       margin: 0 0 30px;
       padding: 0 0 5px;
       position: relative;
@@ -1889,7 +1886,6 @@ div#site-wrapper {
       margin: 0; }
     div#site-wrapper.csseco-front-page #primary section#section4fp.intr h3 {
       font-size: 16px;
-      font-weight: bold;
       margin: 0 0 30px;
       padding: 0 0 5px;
       position: relative;
@@ -2024,7 +2020,6 @@ div#site-wrapper {
     margin: 0; }
   div#site-wrapper.csseco-front-page #primary section#section5fp.training h3 {
     font-size: 16px;
-    font-weight: bold;
     margin: 0 0 30px;
     padding: 0 0 5px;
     position: relative;
@@ -2111,7 +2106,6 @@ div#site-wrapper {
     padding: 30px 0 0 0; }
     div#site-wrapper.csseco-front-page #primary section#section6fp.tech h3 {
       font-size: 16px;
-      font-weight: bold;
       margin: 0 0 30px;
       padding: 0 0 5px;
       position: relative;
@@ -2200,7 +2194,6 @@ div#site-wrapper {
       margin: 0; }
     div#site-wrapper.csseco-front-page #primary section#section7fp.autoch h3 {
       font-size: 16px;
-      font-weight: bold;
       margin: 0 0 30px;
       padding: 0 0 5px;
       position: relative;
@@ -2580,7 +2573,6 @@ div#site-wrapper {
     padding: 30px 0 20px; }
     div#site-wrapper.csseco-front-page #primary section#section9fp.join h3.ttl {
       font-size: 16px;
-      font-weight: bold;
       margin: 0 0 30px;
       padding: 0 0 5px;
       position: relative;
@@ -2670,7 +2662,9 @@ div#site-wrapper {
       div#site-wrapper.csseco-front-page2 header#header .fp h1 {
         color: #FFF;
         font-family: 'Didact Gothic', sans-serif;
-        font-weight: bold;
+        font-size: 35px;
+        font-weight: 300;
+        text-align: center;
         text-transform: none; }
         div#site-wrapper.csseco-front-page2 header#header .fp h1 span {
           color: #ffb401; }
@@ -2679,11 +2673,13 @@ div#site-wrapper {
               display: block; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page2 header#header .fp h1 {
-            color: #1B2854; } }
+            color: #1B2854;
+            margin-top: 30px;
+            text-align: left; } }
       div#site-wrapper.csseco-front-page2 header#header .fp h1 + p {
         color: #1B2854;
         font-family: 'Didact Gothic', sans-serif;
-        font-weight: bold; }
+        font-weight: 300; }
         @media screen and (min-width: 375px) {
           div#site-wrapper.csseco-front-page2 header#header .fp h1 + p span {
             display: block; } }
@@ -2692,14 +2688,28 @@ div#site-wrapper {
             font-size: 18px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page2 header#header .fp h1 + p {
-            margin-bottom: 3rem;
-            margin-top: 3rem; } }
+            font-size: 25px;
+            margin-bottom: 1.5rem;
+            margin-top: 1.5rem; } }
         @media screen and (min-width: 1200px) {
           div#site-wrapper.csseco-front-page2 header#header .fp h1 + p {
             font-size: 24px;
-            line-height: 1.1; } }
+            line-height: 1.1;
+            margin-bottom: 3rem;
+            margin-top: 3rem; } }
       div#site-wrapper.csseco-front-page2 header#header .fp .cssecoBtn {
-        margin-top: 0; }
+        margin: 0; }
+        div#site-wrapper.csseco-front-page2 header#header .fp .cssecoBtn + p {
+          margin: 0 auto;
+          max-width: 210px;
+          text-align: center; }
+          @media screen and (min-width: 992px) {
+            div#site-wrapper.csseco-front-page2 header#header .fp .cssecoBtn + p {
+              margin: 0; } }
+      @media screen and (min-width: 992px) {
+        div#site-wrapper.csseco-front-page2 header#header .fp .cssecoBtn,
+        div#site-wrapper.csseco-front-page2 header#header .fp .cssecoBtn + p {
+          margin: 0 0 0 80px; } }
       div#site-wrapper.csseco-front-page2 header#header .fp .hfp2ImgWrapper {
         position: relative; }
         div#site-wrapper.csseco-front-page2 header#header .fp .hfp2ImgWrapper img.screenIcons {
@@ -2732,9 +2742,8 @@ body.page #primary {
   padding: 15px 0 30px; }
   body.page #primary header.entry-header h1.entry-title {
     color: #1B2854;
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 300;
     margin-bottom: 15px; }
     body.page #primary header.entry-header h1.entry-title span {
       position: relative; }
@@ -2750,11 +2759,11 @@ body.page #primary {
       body.page #primary header.entry-header h1.entry-title {
         margin-bottom: 30px; } }
   body.page #primary h1, body.page #primary h2, body.page #primary h3, body.page #primary h4, body.page #primary h5, body.page #primary h6 {
-    font-family: 'Didact Gothic', sans-serif;
-    font-weight: bold; }
+    font-weight: 300; }
   body.page #primary h4, body.page #primary h5, body.page #primary h6 {
     color: #1B2854; }
   body.page #primary h5 {
+    font-size: 23px;
     margin: 0 0 1.5rem 0; }
   body.page #primary .hstripProds {
     background-color: #1B2854;
@@ -3021,10 +3030,10 @@ section#frndrefTrdngfngr img.ffs3 {
   width: 100%; }
   @media screen and (min-width: 768px) {
     section#frndrefTrdngfngr img.ffs3 {
-      margin: 87px auto 0; } }
+      margin: 89px auto 0; } }
   @media screen and (min-width: 992px) {
     section#frndrefTrdngfngr img.ffs3 {
-      margin: 55px auto 0; } }
+      margin: 58px auto 0; } }
 
 section#discover {
   padding: 1.5rem 0; }
@@ -3072,6 +3081,33 @@ section#subAbout_page.subAbout_page header.entry-header h1.entry-title {
   font-size: 1.25rem; }
   section#subAbout_page.subAbout_page header.entry-header h1.entry-title span::after {
     display: none; }
+section#subAbout_page.subAbout_page ul {
+  padding: 0;
+  list-style: none; }
+  section#subAbout_page.subAbout_page ul li {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 45px;
+    position: relative; }
+    section#subAbout_page.subAbout_page ul li::before {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+      height: 36px;
+      left: 2px;
+      position: absolute;
+      top: 4px;
+      width: 36px; }
+    section#subAbout_page.subAbout_page ul li.csseco_negative::before {
+      background-image: url(../imgs/aboutus/bullets/icon1.png); }
+    section#subAbout_page.subAbout_page ul li.csseco_risk::before {
+      background-image: url(../imgs/aboutus/bullets/icon2.png); }
+    section#subAbout_page.subAbout_page ul li.csseco_investor::before {
+      background-image: url(../imgs/aboutus/bullets/icon3.png); }
+    section#subAbout_page.subAbout_page ul li.csseco_margin::before {
+      background-image: url(../imgs/aboutus/bullets/icon4.png); }
+    section#subAbout_page.subAbout_page ul li.csseco_bank::before {
+      background-image: url(../imgs/aboutus/bullets/icon5.png); }
 
 .trading_condition_table .switcher ul {
   border: 1px solid #000;
@@ -4753,6 +4789,226 @@ section#mt4mac5thsect.mt4mac5thsect {
   @media screen and (min-width: 992px) {
     section#mt4mac5thsect.mt4mac5thsect {
       margin-bottom: 1.5rem; } }
+
+#asRoma.asRoma section#banner.banner {
+  background-image: url(../imgs/asRoma/banner.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px; }
+  @media screen and (max-width: 575px) {
+    #asRoma.asRoma section#banner.banner > .container {
+      background-image: url(../imgs/asRoma/banner_overlay_middle.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
+  #asRoma.asRoma section#banner.banner .overlay {
+    color: #FFF;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+    z-index: 2; }
+    @media screen and (min-width: 576px) {
+      #asRoma.asRoma section#banner.banner .overlay::after {
+        background-image: url(../imgs/asRoma/banner_overlay_full.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        height: 100%;
+        left: -160px;
+        position: absolute;
+        top: 0;
+        width: calc(100% + 340px);
+        z-index: -1; } }
+    @media screen and (min-width: 992px) {
+      #asRoma.asRoma section#banner.banner .overlay::after {
+        left: -140px;
+        opacity: .88;
+        width: calc(100% + 280px); } }
+    #asRoma.asRoma section#banner.banner .overlay img.roma_logo {
+      margin-bottom: 1.3rem;
+      max-width: 60px; }
+      @media screen and (min-width: 992px) {
+        #asRoma.asRoma section#banner.banner .overlay img.roma_logo {
+          max-width: 80px; } }
+      @media screen and (min-width: 1200px) {
+        #asRoma.asRoma section#banner.banner .overlay img.roma_logo {
+          max-width: 100px; } }
+      @media screen and (min-width: 1400px) {
+        #asRoma.asRoma section#banner.banner .overlay img.roma_logo {
+          bottom: 40px;
+          max-width: none;
+          position: absolute;
+          right: -40px;
+          width: 120px; } }
+    #asRoma.asRoma section#banner.banner .overlay h3 {
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 1.3rem; }
+      #asRoma.asRoma section#banner.banner .overlay h3 span {
+        font-weight: bold; }
+      @media screen and (min-width: 576px) {
+        #asRoma.asRoma section#banner.banner .overlay h3 {
+          font-size: 26px; } }
+      @media screen and (min-width: 768px) {
+        #asRoma.asRoma section#banner.banner .overlay h3 {
+          font-size: 28px; } }
+      @media screen and (min-width: 992px) {
+        #asRoma.asRoma section#banner.banner .overlay h3 {
+          font-size: 30px; } }
+    #asRoma.asRoma section#banner.banner .overlay p {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 1.3rem; }
+      #asRoma.asRoma section#banner.banner .overlay p br {
+        display: none; }
+        @media screen and (min-width: 500px) {
+          #asRoma.asRoma section#banner.banner .overlay p br {
+            display: block; } }
+      @media screen and (min-width: 576px) {
+        #asRoma.asRoma section#banner.banner .overlay p {
+          font-size: 18px; } }
+      @media screen and (min-width: 768px) {
+        #asRoma.asRoma section#banner.banner .overlay p {
+          font-size: 20px; } }
+      @media screen and (min-width: 992px) {
+        #asRoma.asRoma section#banner.banner .overlay p {
+          font-size: 22px; } }
+      @media screen and (min-width: 1200px) {
+        #asRoma.asRoma section#banner.banner .overlay p {
+          font-size: 24px; } }
+    @media screen and (min-width: 1400px) {
+      #asRoma.asRoma section#banner.banner .overlay {
+        padding: 50px 0; } }
+  @media screen and (min-width: 992px) {
+    #asRoma.asRoma section#banner.banner {
+      margin-bottom: 3rem; } }
+#asRoma.asRoma section#cfdInstr.cfdInstr h5 {
+  border-bottom: 1px solid #980a2b;
+  position: relative; }
+  #asRoma.asRoma section#cfdInstr.cfdInstr h5 span {
+    background-color: #980a2b;
+    color: #FFF;
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
+    padding: 10px 10px 10px 0; }
+    @media screen and (min-width: 768px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr h5 span {
+        padding: 14px 14px 14px 0; } }
+    @media screen and (min-width: 992px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr h5 span {
+        padding: 17px 130px 17px 0; } }
+  #asRoma.asRoma section#cfdInstr.cfdInstr h5::before, #asRoma.asRoma section#cfdInstr.cfdInstr h5::after {
+    bottom: -1px;
+    content: '';
+    position: absolute; }
+  #asRoma.asRoma section#cfdInstr.cfdInstr h5::before {
+    background: #980a2b;
+    height: calc(100% + 1px);
+    left: -10000px;
+    width: 10000px; }
+  #asRoma.asRoma section#cfdInstr.cfdInstr h5::after {
+    background-image: url(../imgs/asRoma/man.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    right: 0;
+    width: 50px; }
+    @media screen and (min-width: 768px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr h5::after {
+        bottom: -2px;
+        height: calc(100% + 25px);
+        width: 85px; } }
+    @media screen and (min-width: 992px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr h5::after {
+        bottom: -2px;
+        height: calc(100% + 25px);
+        right: -26px;
+        width: 95px; } }
+#asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop p {
+  color: #980a2b; }
+  #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop p br {
+    display: none; }
+    @media screen and (min-width: 1200px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop p br {
+        display: block; } }
+#asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW {
+  position: relative;
+  text-align: center; }
+  #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW::before {
+    background: #152855;
+    content: '';
+    height: 136px;
+    position: absolute;
+    left: -9790px;
+    width: 10000px;
+    top: 60px;
+    z-index: 2; }
+    @media screen and (min-width: 768px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW::before {
+        top: 50px; } }
+    @media screen and (min-width: 992px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW::before {
+        left: -9910px; } }
+    @media screen and (min-width: 1200px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW::before {
+        height: 148px;
+        top: 86px; } }
+  #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW::after {
+    background-image: url(../imgs/asRoma/shape.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    height: 210px;
+    left: -70px;
+    position: absolute;
+    top: 60px;
+    width: 450px;
+    z-index: 3; }
+    @media screen and (min-width: 768px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW::after {
+        left: 40px;
+        top: 50px; } }
+    @media screen and (min-width: 992px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW::after {
+        left: -190px; } }
+    @media screen and (min-width: 1200px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW::after {
+        height: 280px;
+        left: -150px;
+        top: 60px;
+        width: 490px; } }
+  #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW img.laptop {
+    max-width: 270px;
+    position: relative;
+    z-index: 5; }
+    @media screen and (min-width: 1200px) {
+      #asRoma.asRoma section#cfdInstr.cfdInstr .leftPlaptop .laptopW img.laptop {
+        max-width: 340px; } }
+#asRoma.asRoma section#why.why {
+  background-color: #162856;
+  color: #FFF;
+  padding: 25px 0 15px;
+  position: relative; }
+  #asRoma.asRoma section#why.why .revealer {
+    height: 50px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 100%; }
+    @media screen and (min-width: 992px) {
+      #asRoma.asRoma section#why.why .revealer {
+        top: 50%;
+        transform: translateY(-50%); } }
+  #asRoma.asRoma section#why.why h3 {
+    color: #FFF; }
+  #asRoma.asRoma section#why.why .dtable {
+    height: 80px; }
 
 .symbolpage .buyprice-p.cssecoBtn,
 .symbolpage .sellprice-p.cssecoBtn {
