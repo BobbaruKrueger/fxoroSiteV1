@@ -19,7 +19,7 @@
 				With <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> you trade the most popular currency with confidence and the benefit from tight spreads with fast execution.
 			</p>
 			<div class="text-center">
-				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn csseco_btnBig">				
 					Start trading now
 				</a>
 				<p class="text-center mb-3 mb-lg-0">
@@ -35,29 +35,21 @@
 				<p>
 					<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> offers a range of tradable currency pairs ranging from major and most popular pairs to exotic currencies that are much less common.
 				</p>
-				<div class="text-center text-lg-left">
-					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						View list of currencies
-					</a>
-				</div>
 			</section>
 			<section>
 				<h5>
-					Trade safe as never before
+					Trade safely as never before
 				</h5>
 				<p>
 					Stop loss, instant margin protection and balance negative protection at your disposal in order to protect your profits.
 				</p>
-				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-					Discover more
-				</a>
 			</section>
 			<section>
 				<h5>
 					All the upgrades you need 
 				</h5>
 				<p>
-					Receive the esclusive Autochartist signal service, real-time forex quotes, and a lot more and start  to trade with a 360 vision of the markets
+					Receive the exclusive Autochartist signal service, real-time forex quotes, and a lot more and start  to trade with a 360 vision of the markets
 				</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
@@ -113,7 +105,7 @@
 				Traditionally Shares are of the most exciting investment opportunities for traders around the world, offering a wide variety of sectors, industries and countries to choose from. 
 			</p>	
 			<div class="text-center">
-				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn csseco_btnBig">				
 					Start trading now
 				</a>
 				<p class="text-center mb-3 mb-lg-0">
@@ -131,11 +123,6 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Trade the most popular FOREX pairs like EUR/USD, GBP/USD and EUR/GBP.  Use our advanced trading tools to protect your proﬁts and limit losses.
 				</p>
-				<div class="text-center text-lg-left">
-					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
-					</a>
-				</div>
 			</section>
 			<section>
 				<h5>
@@ -203,7 +190,7 @@
 		$c1		= '
 			<p>Gold, Oil and Silver and a lot more are all available on FXORO trading platform. Trade CFDs on Futures from all around the world and explore different trading opportunities</p>
 			<div class="text-center">
-				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn csseco_btnBig">				
 					Start trading now
 				</a>
 				<p class="text-center mb-3 mb-lg-0">
@@ -217,22 +204,12 @@
 					Discover new indices
 				</h5>
 				<p>You can Trade a variety of popular commodity CFDs with interesting leverages. You’ll find a huge choice of indices available for investing with ETFs in a broad basket of commodities.</p>
-				<div class="text-center text-lg-left">
-					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Discover our list of commodities
-					</a>
-				</div>
 			</section>
 			<section>
 				<h5>
 					Stay ready for the markets
 				</h5>
 				<p>Get the right training to face the market of commodities with the support of our effective webinars and video-tutorials.</p>
-				<div class="text-center text-lg-left">
-					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Subscribe now
-					</a>
-				</div>
 			</section>
 			<section>
 				<h5>
@@ -291,7 +268,7 @@
 		$c1		= '
 			<p><span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> offers you a wide range of index CFDs to trade, you can easily diversify your portfolio and find potentially profitable trading opportunities in the markets.</p>
 			<div class="text-center">
-				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn csseco_btnBig">				
 					Start your Trading now!!
 				</a>
 				<p class="text-center mb-3 mb-lg-0">
@@ -313,11 +290,6 @@
 				<p>
 					24/24 You receive updated from the markets with real-time streaming quotes on all Indices, alerts, directly on your desktop or mobile.
 				</p>
-				<div class="text-center text-lg-left">
-					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Discover More!
-					</a>
-				</div>
 			</section>
 			<section>
 				<h5>
@@ -387,7 +359,7 @@
 			<p>Cryptocurrencies are a form of money of the future. They have the potential to transform the entire global ﬁnancial system. More and more, companies, shops and people are using them increasing in the same time prices. Its volatility makes it an excellent alternative in any ﬁnancial trading portfolio.</p>
 			<div class="text-center">
 				<p class="font-weight-bold" style="color:#162856;">Trade the most popular <strong>cryptocurrencies</strong> now!!</p>
-				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn csseco_btnBig">				
 					Start trading now
 				</a>
 				<p class="text-center mb-3 mb-lg-0">
@@ -404,11 +376,6 @@
 				<p class="font-weight-bold" style="color:#162856;">
 					Trade the most popular cryptocurrencies now!!
 				</p>
-				<div class="text-center text-lg-left">
-					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
-					</a>
-				</div>
 			</section>
 			<section>
 				<h5>

@@ -26,21 +26,24 @@ $results = $wpdb->get_results("SELECT * FROM tickers3");
 				</div>
 			</div>
 			<div class="row bottom">
-				<ul class="nav col-12 col-md-3 align-middle" id="myTab" role="tablist">
-					<li class="nav-item">
-						<a class="active" id="forex-tab" data-toggle="tab" href="#forex" role="tab" aria-controls="forex" aria-selected="true">FOREX</a>
-					</li>
-					<li class="nav-item">
-						<a class="" id="shares-tab" data-toggle="tab" href="#shares" role="tab" aria-controls="shares" aria-selected="false">Shares</a>
-					</li>
-					<li class="nav-item">
-						<a class="" id="commodities-tab" data-toggle="tab" href="#commodities" role="tab" aria-controls="commodities" aria-selected="false">Commodities</a>
-					</li>
-					<li class="nav-item">
-						<a class="" id="indices-tab" data-toggle="tab" href="#indices" role="tab" aria-controls="indices" aria-selected="false">Indices</a>
-					</li>
-				</ul>
-				<div class="tab-content col-12 col-md-9" id="">
+				<div class="col-12 align-middle">
+					<ul class="nav col-12 align-middle" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="active" id="forex-tab" data-toggle="tab" href="#forex" role="tab" aria-controls="forex" aria-selected="true">FOREX</a>
+						</li>
+						<li class="nav-item">
+							<a class="" id="shares-tab" data-toggle="tab" href="#shares" role="tab" aria-controls="shares" aria-selected="false">Shares</a>
+						</li>
+						<li class="nav-item">
+							<a class="" id="commodities-tab" data-toggle="tab" href="#commodities" role="tab" aria-controls="commodities" aria-selected="false">Commodities</a>
+						</li>
+						<li class="nav-item">
+							<a class="" id="indices-tab" data-toggle="tab" href="#indices" role="tab" aria-controls="indices" aria-selected="false">Indices</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="tab-content col-12" id="">
 					<div class="tab-pane fade show active" id="forex" role="tabpanel" aria-labelledby="forex-tab">
 						<!-- <img  id="loading" src="wp-content/themes/CSSecoStarterThemeV2-master/imgs/tickers/loading.GIF" style="width: 100px"; alt="Loading..."> -->
 						

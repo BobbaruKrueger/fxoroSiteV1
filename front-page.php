@@ -6,6 +6,7 @@
 ?>
 <?php get_header( 'fp2' ); ?>
 
+	<?php get_template_part( 'includes/front/template-parts/fp/fp', 'firstvid' ); ?>
 	<?php get_template_part( 'includes/front/template-parts/fp/fp', 'subvid' ); ?>
 	<?php get_template_part( 'includes/front/template-parts/fp/fp', 'tickers' ); ?>
 	<?php get_template_part( 'includes/front/template-parts/fp/fp', 'map' ); ?>

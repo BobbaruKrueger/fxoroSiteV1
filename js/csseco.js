@@ -77,83 +77,18 @@ jQuery(document).ready(function($){
 
 		});
 
-	} else { // hover
-		
-//		var mouseCaret = $('.menu_caret');
-//		var mouseCaretParent = mouseCaret.parent();
-//		
-//		mouseCaretParent.hover(function(){ // Hover in
-//			
-////			console.log('hover in');
-//			
-//			$(this).addClass('menu_open');
-//			$(this).children('.sub-menu').slideDown(400, 'linear');
-//			
-//		}, function() { // Hover Out
-//			
-////			console.log('hover out');
-//			
-//			$(this).removeClass('menu_open');
-//			$(this).find('.sub-menu').slideUp(400, 'linear').find('.sub-menu').slideUp(400, 'linear');
-//			$(this).find('.menu-item-has-children').removeClass('menu_open');
-//			
-//		});
-		
 	}
 	$('.subsection_ttl > a').on('click', function(e){
 		e.preventDefault();
 	});
-		
-//		var func = function() {
-//			console.log('functie func')
-//            mouseCaretParent.addClass('menu_open');
-//			mouseCaretParent.children('.sub-menu').slideDown(400, 'linear');
-//        };
-//
-//        mouseCaretParent.hover(function(){
-//			console.log('hover functie func');
-//            func();
-//        });
-//		
-//		var func2 = function(){
-//			
-//			console.log('mouseout');
-//            mouseCaretParent.unbind('mouseenter mouseleave');
-//            mouseCaretParent.removeClass('menu_open');
-//			mouseCaretParent.find('.sub-menu').slideUp(400, 'linear').find('.sub-menu').slideUp(400, 'linear');
-//			mouseCaretParent.find('.menu-item-has-children').removeClass('menu_open');
-//            function myFunction() {
-//                mouseCaretParent.hover(function(){
-//                    func();
-//                });
-//            }
-//            setTimeout(myFunction, 400);
-//		}
-//		
-//		mouseCaretParent.mouseout(function(){
-//			func2();
-//        });
-//		
-//	}
 	
-	
-//	var func = function() {
-//		$('h1').addClass('red');
-//		$('h1').unbind('mouseenter mouseleave');
-//		function myFunction() {
-//			$('h1').removeClass('red')
-//			$('h1').hover(function(){
-//				func();
-//			});
-//		}
-//		setTimeout(myFunction, 400)
-//	}
-//
-//	$('h1').hover(function(){
-//		func();
-//	});
-	
-	
+	// ==================
+	// Fixed Menu
+	// ==================
+	$("header#header.site_header").before($("header#header.site_header").clone().addClass("animateIt"));
+    $(window).on("scroll", function () {
+        $("header#header.site_header.animateIt").toggleClass("down", ($(window).scrollTop() > 170));
+    });
 	
 	// ==================
 	// Owl Carousel
@@ -169,7 +104,8 @@ jQuery(document).ready(function($){
 		responsive:{
 			0:{ items:1 },
 			576:{ items:2 },
-			992:{ items:3 }
+			768:{ items:3 },
+			992:{ items:4 }
 		}
 	});
 	
