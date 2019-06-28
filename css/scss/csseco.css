@@ -848,10 +848,12 @@ div#site-wrapper {
       div#site-wrapper header#header .topHeaderD .h_i_W {
         color: #fff;
         float: right;
+        height: 100%;
         padding-top: 8px; }
         div#site-wrapper header#header .topHeaderD .h_i_W > div {
           border-left: 1px solid #FFF;
           float: left;
+          height: 100%;
           margin: 0;
           min-height: 34px;
           padding: 0 30px;
@@ -865,7 +867,6 @@ div#site-wrapper {
             div#site-wrapper header#header .topHeaderD .h_i_W > div.langW i, div#site-wrapper header#header .topHeaderD .h_i_W > div.langW svg {
               margin-left: 7px; }
           div#site-wrapper header#header .topHeaderD .h_i_W > div.phoneW {
-            padding-top: 1px;
             font-size: 16px; }
             div#site-wrapper header#header .topHeaderD .h_i_W > div.phoneW i, div#site-wrapper header#header .topHeaderD .h_i_W > div.phoneW svg {
               bottom: -2px;
@@ -889,8 +890,8 @@ div#site-wrapper {
               color: #FFF; }
       @media screen and (min-width: 992px) {
         div#site-wrapper header#header .topHeaderD {
-          padding-bottom: 17px;
-          padding-top: 17px; } }
+          padding-bottom: 10px;
+          padding-top: 10px; } }
     div#site-wrapper header#header .hstrip {
       background-color: #1B2854;
       color: #FFF;
@@ -3347,6 +3348,8 @@ form#cssecoContactForm {
 .prodCntntWrapper .cssecoBtnW {
   text-align: center; }
 
+#prodsect1.prodsect1 header.entry-header h1.entry-title.csseco_mr {
+  margin-right: -20px; }
 #prodsect1.prodsect1 img.imgMain {
   margin: 0 auto;
   max-width: 200px; }
@@ -4821,11 +4824,13 @@ section#mt4mac5thsect.mt4mac5thsect {
         top: 0;
         width: calc(100% + 340px);
         z-index: -1; } }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
       #asRoma.asRoma section#banner.banner .overlay::after {
-        left: -140px;
+        background-size: 100% 100%;
+        left: 50%;
         opacity: .88;
-        width: calc(100% + 280px); } }
+        transform: translateX(-50%);
+        width: 940px; } }
     #asRoma.asRoma section#banner.banner .overlay img.roma_logo {
       margin-bottom: 1.3rem;
       max-width: 60px; }
@@ -4837,10 +4842,12 @@ section#mt4mac5thsect.mt4mac5thsect {
           max-width: 100px; } }
       @media screen and (min-width: 1400px) {
         #asRoma.asRoma section#banner.banner .overlay img.roma_logo {
-          bottom: 40px;
+          bottom: auto;
           max-width: none;
           position: absolute;
-          right: -40px;
+          right: 120px;
+          top: 50%;
+          transform: translateY(-50%);
           width: 120px; } }
     #asRoma.asRoma section#banner.banner .overlay h3 {
       font-size: 24px;

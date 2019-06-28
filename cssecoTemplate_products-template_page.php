@@ -16,10 +16,9 @@
 		$poza 	= 'forex.png';
 		$c1		= '
 			<p>
-				With <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> you trade the most popular currency pairs like EUR / USD, GBP / USD and EUR / GBP and with the trading tools at your disposal, protect your profits and limit any losses.
+				With <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> you trade the most popular currency with confidence and the benefit from tight spreads with fast execution.
 			</p>
 			<div class="text-center">
-				<p class="font-weight-bold" style="color:#162856;">Trade the most popular <strong>FOREX</strong> pairs now!!</p>
 				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 					Start trading now
 				</a>
@@ -36,12 +35,9 @@
 				<p>
 					<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> offers a range of tradable currency pairs ranging from major and most popular pairs to exotic currencies that are much less common.
 				</p>
-				<p class="font-weight-bold" style="color:#162856;">
-					Trade the most popular FOREX pairs now!
-				</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Further information
+						View list of currencies
 					</a>
 				</div>
 			</section>
@@ -50,15 +46,18 @@
 					Trade safe as never before
 				</h5>
 				<p>
-					Stop Limit, Guaranteed Stop to limit losses and block profits, are just some example of the tools you’ll receive in support in order protect your profits.
+					Stop loss, instant margin protection and balance negative protection at your disposal in order to protect your profits.
 				</p>
+				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+					Discover more
+				</a>
 			</section>
 			<section>
 				<h5>
 					All the upgrades you need 
 				</h5>
 				<p>
-					Receive  the esclusive Autochartist signal service,  real-time forex quotes, and a lot more  you’ll start  to trade with a 360 vision of the markets
+					Receive the esclusive Autochartist signal service, real-time forex quotes, and a lot more and start  to trade with a 360 vision of the markets
 				</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
@@ -202,9 +201,8 @@
 	} elseif ( $slug == 'commodities' ) {
 		$poza 	= 'commodities.jpg';
 		$c1		= '
-			<p>Commodities are the raw materials that are being used to create a livable world such as energy (oil), metals (gold, silver) as well as agricultural products (corn).  These are the three classes of Commodities and they are the essential building blocks of the global economy. They generally meet the following criteria of having to be tradable, deliverable and be liquid</p>
+			<p>Gold, Oil and Silver and a lot more are all available on FXORO trading platform. Trade CFDs on Futures from all around the world and explore different trading opportunities</p>
 			<div class="text-center">
-				<p class="font-weight-bold" style="color:#162856;">Trade on <strong>commodities</strong> pairs now!!</p>
 				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 					Start trading now
 				</a>
@@ -216,29 +214,34 @@
 		$c2		= '
 			<section>
 				<h5>
-					Advantages of commodities trading
+					Discover new indices
 				</h5>
-				<p>Moreover, investing in raw materials can be very useful for diversifying your own portfolio. in fact, the historically negative correlation between raw materials and equities is evident. In that, when the latter go wrong, investors tend to "take refuge" in the raw materials. Said in Anglo-Saxon language commodities. When equities ﬂy, investors tend to abandon commodities as they are considered more stable.</p>
-				<p class="font-weight-bold" style="color:#162856;">
-					Start trading on commodities with the support of our tools.
-				</p>
+				<p>You can Trade a variety of popular commodity CFDs with interesting leverages. You’ll find a huge choice of indices available for investing with ETFs in a broad basket of commodities.</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
+						Discover our list of commodities
 					</a>
 				</div>
 			</section>
 			<section>
 				<h5>
-					How to invest on commodities
+					Stay ready for the markets
 				</h5>
-				<p>You can invest in raw materials through the purchase of future or future contracts. The commodity indices are replicate a basket of raw materials. There are several indices available for investing with ETFs in a broad basket of commodities. Then there are signs on individual raw materials or selected segments that derive from the indexes mentioned.</p>
-				<p class="font-weight-bold" style="color:#162856;">
-					Discover our tools and start to trade  on commodities at your best.
-				</p>
+				<p>Get the right training to face the market of commodities with the support of our effective webinars and video-tutorials.</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Find out more
+						Subscribe now
+					</a>
+				</div>
+			</section>
+			<section>
+				<h5>
+					Trade on the go
+				</h5>
+				<p>Trade on commodities wherever you are with updated from markets with real-time streaming quotes via alerts, directly on your mobile.</p>
+				<div class="text-center text-lg-left">
+					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
+						Read more
 					</a>
 				</div>
 			</section>
@@ -286,11 +289,10 @@
 	} elseif ( $slug == 'indices' ) {
 		$poza 	= 'indices.png';
 		$c1		= '
-			<p>Equity index futures are based on the indices of common stocks, and are providing eﬀective hedging instruments for hedging equity to the investors. Equity indices are also one of the most popular investment products among retail investors. Equity index futures are one of the eﬀective tools in avoiding the risk of stock market ﬂuctuations and price volatility. In order to view the list of indices you can trade with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>, please click here.</p>
+			<p><span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> offers you a wide range of index CFDs to trade, you can easily diversify your portfolio and find potentially profitable trading opportunities in the markets.</p>
 			<div class="text-center">
-				<p class="font-weight-bold" style="color:#162856;">Trade the most popular <strong>incides</strong> pairs now!!</p>
 				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-					Start trading now
+					Start your Trading now!!
 				</a>
 				<p class="text-center mb-3 mb-lg-0">
 					Your capital is at risk.
@@ -300,37 +302,31 @@
 		$c2		= '
 			<section>
 				<h5>
-					Advantages of indices trading
+					Trade Indices at your best
 				</h5>
-				<p class="m-0">Working with stock indexes involves a series of very important advantages that certainly reﬂect the real reasons why they are widely used in investments. Among the main advantages:</p>
-				<ul>
-					<li>Possibility of trading indices throughout the day and sometimes H24</li>
-					<li>Greater liquidity than individual securities</li>
-					<li>Possibility to open positions on entire lists with single transactions</li>
-					<li>Possibility of trading downwards or upwards, gaining both when the stock indices rise and when they fall</li>
-				</ul>
-				<p class="font-weight-bold" style="color:#162856;">
-					Click here to discover the main european global indices.
+				<p>With <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> you have direct access to competitive spreads and generous leverage, along with the best execution you can imagine</p>
+			</section>
+			<section>
+				<h5>
+					Keep up with the markets.
+				</h5>
+				<p>
+					24/24 You receive updated from the markets with real-time streaming quotes on all Indices, alerts, directly on your desktop or mobile.
 				</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Start trading now
+						Discover More!
 					</a>
 				</div>
 			</section>
 			<section>
 				<h5>
-					Discover our indices tools
+					Maximize your execution
 				</h5>
-				<p>
-					<span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> provides a number of educative tools in order to allow traders to access the market and take the right investing decisions in the best conditions.
-				</p>
-				<p class="font-weight-bold" style="color:#162856;">
-					Discover tools and start to trade on FOREX at your best.
-				</p>
+				<p>Throughout the day and sometimes H24. Combine shares and open positions on entire lists with single transactions. </p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Find out more
+						Start trading Indices!
 					</a>
 				</div>
 			</section>
@@ -477,7 +473,7 @@
 			<div class="row">
 				<div class="col-12 col-lg-6">
 					<header class="entry-header">
-						<?php the_title('<h1 class="entry-title mb-md-3 mb-xl-4"><span>','</span></h1>' ); ?>
+						<?php the_title('<h1 class="entry-title mb-md-3 mb-xl-4 csseco_mr"><span>','</span></h1>' ); ?>
 					</header><!--/.entry-header-->
 					<?php echo $c1; ?>
 				</div>

@@ -285,22 +285,22 @@ jQuery(document).ready(function($){
 	}
 	
 	// mobile on instruments section - frontpage
-	var phonefp = false;
-	if ( phonefp == false ) {
-		
-		if($('.training ul').visible()) {
-			$('.training ul').css('visibility', 'visible');
-			animateCSS('.training ul', 'bounceInUp');
-			phonefp = true;
-		}
-		$(window).scroll(function() {
-			if($('.training ul').visible() && phonefp == false ) {
-				$('.training ul').css('visibility', 'visible');
-				phonefp = true;
-				animateCSS('.training ul', 'bounceInUp');
-			}
-		});
-	}
+//	var phonefp = false;
+//	if ( phonefp == false ) {
+//		
+//		if($('.training ul').visible()) {
+//			$('.training ul').css('visibility', 'visible');
+//			animateCSS('.training ul', 'bounceInUp');
+//			phonefp = true;
+//		}
+//		$(window).scroll(function() {
+//			if($('.training ul').visible() && phonefp == false ) {
+//				$('.training ul').css('visibility', 'visible');
+//				phonefp = true;
+//				animateCSS('.training ul', 'bounceInUp');
+//			}
+//		});
+//	}
 	
 	// list on trainging section - frontpage
 	var listTrFP = false;

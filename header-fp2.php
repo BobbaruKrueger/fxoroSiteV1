@@ -133,23 +133,39 @@
 						</a>
 						<div class="h_i_W clearfix">
 							<div class="langW">
-								<span class="flag-icon flag-icon-gb"></span>
-								ENG
-								<i class="fas fa-caret-down"></i>
+								<div class="dtable">
+									<div class="dtable-cell">
+										<span class="flag-icon flag-icon-gb"></span>
+										ENG
+										<i class="fas fa-caret-down"></i>
+									</div>
+								</div>
 							</div>
 							<div class="phoneW">
-								<i class="fas fa-phone-volume"></i>
-								+357.25.20.5555 
+								<div class="dtable">
+									<div class="dtable-cell">
+										<i class="fas fa-phone-volume"></i>
+										+357.25.20.5555 
+									</div>
+								</div>
 							</div>
 							<div class="openaccW">
-								<a href="http://qa.fxoro.com/register/" class="cssecoBtn animationbtn">				
-									Open an account
-								</a>
+								<div class="dtable">
+									<div class="dtable-cell">
+										<a href="http://qa.fxoro.com/register/" class="cssecoBtn animationbtn">				
+											Open an account
+										</a>
+									</div>
+								</div>
 							</div>
 							<div class="loginW">
-								<a href="http://qa.fxoro.com/login/" class="cssecoBtn animationbtn">				
-									Login
-								</a>
+								<div class="dtable">
+									<div class="dtable-cell">
+										<a href="http://qa.fxoro.com/login/" class="cssecoBtn animationbtn">				
+											Login
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -189,13 +205,6 @@
 									</span>
 								</a>
 								<p>Your capital is at risk.</p>
-<!--
-								<div class="row">
-									<div class="col-12 text-center capRsk">
-										Your capital is at risk.
-									</div>
-								</div>
--->
 							</div>
 						</div>
 					</div>

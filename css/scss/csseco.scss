@@ -824,10 +824,12 @@ div#site-wrapper {
 			.h_i_W {
 				color: #fff;
 				float: right;
+				height: 100%;
 				padding-top: 8px;
 				> div {
 					border-left: 1px solid #FFF;
 					float: left;
+					height: 100%;
 					margin: 0;
 					min-height: 34px;
 					padding: 0 30px;
@@ -845,7 +847,7 @@ div#site-wrapper {
 						}
 					}
 					&.phoneW {
-						padding-top: 1px;
+//						padding-top: 1px;
 						font-size: 16px;
 						i, svg {
 							bottom: -2px;
@@ -877,8 +879,8 @@ div#site-wrapper {
 				}
 			}
 			@media screen and (min-width: $csseco_bp_992) {
-				padding-bottom: 17px;
-				padding-top: 17px;
+				padding-bottom: 10px;
+				padding-top: 10px;
 			}
 		}
 		.hstrip {
@@ -3780,6 +3782,13 @@ form#cssecoContactForm {
 	}
 }
 #prodsect1.prodsect1 {
+	header.entry-header {
+		h1.entry-title {
+			&.csseco_mr {
+				margin-right: -20px;
+			}
+		}
+	}
 	img.imgMain {
 		margin: 0 auto;
 		max-width: 200px;
@@ -5700,10 +5709,12 @@ section#mt4mac5thsect.mt4mac5thsect {
 					width: calc(100% + 340px);
 					z-index: -1;
 				}
-				@media screen and (min-width: $csseco_bp_992) {
-					left: -140px;
+				@media screen and (min-width: $csseco_bp_768) {
+  					background-size: 100% 100%;
+					left: 50%;
 					opacity: .88;
-					width: calc(100% + 280px);
+					transform: translateX(-50%);
+					width: 940px;
 				}
 			}
 			img.roma_logo {
@@ -5716,10 +5727,12 @@ section#mt4mac5thsect.mt4mac5thsect {
 					max-width: 100px;
 				}
 				@media screen and (min-width: 1400px) {
-					bottom: 40px;
+					bottom: auto;
 					max-width: none;
 					position: absolute;
-					right: -40px;
+					right: 120px;
+					top: 50%;
+					transform: translateY(-50%);
 					width: 120px;
 				}
 			}
