@@ -858,15 +858,23 @@ div#site-wrapper {
       height: 100%;
       padding-top: 8px; }
       div#site-wrapper header#header .topHeaderD .h_i_W > div {
-        border-left: 1px solid #FFF;
         float: left;
         height: 100%;
         margin: 0;
         min-height: 34px;
         padding: 0 30px;
+        position: relative;
         text-align: center; }
-        div#site-wrapper header#header .topHeaderD .h_i_W > div:first-child {
-          border: medium none; }
+        div#site-wrapper header#header .topHeaderD .h_i_W > div:not(:last-child)::after {
+          background: #FFF;
+          content: '';
+          left: auto;
+          height: 60%;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          width: 1px; }
         div#site-wrapper header#header .topHeaderD .h_i_W > div:last-child {
           padding-right: 0; }
         div#site-wrapper header#header .topHeaderD .h_i_W > div.langW {
@@ -942,7 +950,7 @@ div#site-wrapper {
     padding: 0;
     position: fixed;
     right: 0;
-    top: -122px;
+    top: -150px;
     transition: 0.4s top cubic-bezier(0.3, 0.73, 0.3, 0.74);
     z-index: 999; }
     div#site-wrapper header#header.animateIt.down {
@@ -2993,7 +3001,7 @@ section#frndrefTrdngfngr img.ffs3 {
       margin: 89px auto 0; } }
   @media screen and (min-width: 992px) {
     section#frndrefTrdngfngr img.ffs3 {
-      margin: 58px auto 0; } }
+      margin: 69px auto 0; } }
 
 section#discover {
   padding: 1.5rem 0; }
@@ -3265,37 +3273,57 @@ section#affth {
     .wwaContact .contacticon {
       max-height: 100px; } }
 
-form#cssecoContactForm {
+form#cssecoContactForm,
+form#professional-questionnaire {
   border-radius: 0 !important;
   padding: 20px 0 0 0; }
   form#cssecoContactForm input[type=text].error,
   form#cssecoContactForm input[type=email].error,
   form#cssecoContactForm input[type=tel].error,
   form#cssecoContactForm select.error,
-  form#cssecoContactForm textarea.error {
+  form#cssecoContactForm textarea.error,
+  form#professional-questionnaire input[type=text].error,
+  form#professional-questionnaire input[type=email].error,
+  form#professional-questionnaire input[type=tel].error,
+  form#professional-questionnaire select.error,
+  form#professional-questionnaire textarea.error {
     border-color: #ff9a9a !important; }
   form#cssecoContactForm input[type=text].valid,
   form#cssecoContactForm input[type=email].valid,
   form#cssecoContactForm input[type=tel].valid,
   form#cssecoContactForm select.valid,
-  form#cssecoContactForm textarea.valid {
+  form#cssecoContactForm textarea.valid,
+  form#professional-questionnaire input[type=text].valid,
+  form#professional-questionnaire input[type=email].valid,
+  form#professional-questionnaire input[type=tel].valid,
+  form#professional-questionnaire select.valid,
+  form#professional-questionnaire textarea.valid {
     border-color: #63b963 !important; }
-  form#cssecoContactForm .form-group {
+  form#cssecoContactForm .form-group,
+  form#professional-questionnaire .form-group {
     position: relative; }
-    form#cssecoContactForm .form-group i, form#cssecoContactForm .form-group svg {
+    form#cssecoContactForm .form-group i, form#cssecoContactForm .form-group svg,
+    form#professional-questionnaire .form-group i,
+    form#professional-questionnaire .form-group svg {
       display: none;
       position: absolute;
       right: 10px;
       top: 12px; }
-      form#cssecoContactForm .form-group i.isValid, form#cssecoContactForm .form-group svg.isValid {
+      form#cssecoContactForm .form-group i.isValid, form#cssecoContactForm .form-group svg.isValid,
+      form#professional-questionnaire .form-group i.isValid,
+      form#professional-questionnaire .form-group svg.isValid {
         color: #63b963; }
-      form#cssecoContactForm .form-group i.isError, form#cssecoContactForm .form-group svg.isError {
+      form#cssecoContactForm .form-group i.isError, form#cssecoContactForm .form-group svg.isError,
+      form#professional-questionnaire .form-group i.isError,
+      form#professional-questionnaire .form-group svg.isError {
         color: #ff9a9a; }
-    form#cssecoContactForm .form-group div.error {
+    form#cssecoContactForm .form-group div.error,
+    form#professional-questionnaire .form-group div.error {
       font-size: 85%;
       margin-bottom: -12px;
       padding: 2px 2px 2px 5px; }
-  form#cssecoContactForm .cssecoBtnW {
+  form#cssecoContactForm .cssecoBtnW,
+  form#professional-questionnaire .cssecoBtnW {
     text-align: right; }
 
 .cform .cssecoBtnW {
@@ -5231,3 +5259,9 @@ section#mt4mac5thsect.mt4mac5thsect {
     color: #30AB2F !important; }
   .tabletickers .table-bordered tbody .buy-btn a::after {
     background: #30AB2F !important; }
+
+form#professional-questionnaire label {
+  display: block !important; }
+form#professional-questionnaire #registration-form label:not(.error),
+form#professional-questionnaire #login-form label:not(.error) {
+  display: none !important; }

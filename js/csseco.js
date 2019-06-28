@@ -201,7 +201,7 @@ jQuery(document).ready(function($){
 		
 		if($('.screens').visible()) {
 			$('.screens').css('visibility', 'visible');
-			animateCSS('.screens', 'flipInX', function(){
+			animateCSS('.screens', 'flipInY', function(){
 				$('.screenIcons').css('visibility', 'visible');
 				animateCSS('.screenIcons', 'flipInX');
 			});
@@ -211,7 +211,7 @@ jQuery(document).ready(function($){
 			if($('.screens').visible() && fppct == false ) {
 				fppct = true;
 				$('.screens').css('visibility', 'visible');
-				animateCSS('.screens', 'flipInX', function(){
+				animateCSS('.screens', 'flipInY', function(){
 					$('.screenIcons').css('visibility', 'visible');
 					animateCSS('.screenIcons', 'flipInX');
 				});

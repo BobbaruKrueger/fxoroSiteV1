@@ -848,15 +848,29 @@ div#site-wrapper {
 				height: 100%;
 				padding-top: 8px;
 				> div {
-					border-left: 1px solid #FFF;
+//					border-left: 1px solid #FFF;
 					float: left;
 					height: 100%;
 					margin: 0;
 					min-height: 34px;
 					padding: 0 30px;
+					position: relative;
 					text-align: center;
+					&:not(:last-child) {
+						&::after {
+							background: #FFF;
+							content: '';
+							left: auto;
+							height: 60%;
+							position: absolute;
+							top: 50%;
+							transform: translateY(-50%);
+							right: 0;
+							width: 1px;
+						}
+					}
 					&:first-child {
-						border: medium none;
+//						border: medium none;
 					}
 					&:last-child {
 						padding-right: 0;
@@ -967,7 +981,7 @@ div#site-wrapper {
 			padding: 0;
 			position: fixed;
 			right: 0;
-			top: -122px;
+			top: -150px;
 			transition: 0.4s top cubic-bezier(.3, .73, .3, .74);
 			z-index: 999;
 			&.down {
@@ -3313,7 +3327,7 @@ section#frndrefTrdngfngr {
 			  margin: 89px auto 0;
 		}
 		@media screen and (min-width: $csseco_bp_992) {
-			  margin: 58px auto 0;
+			  margin: 69px auto 0;
 		}
 	}
  }
@@ -3708,7 +3722,8 @@ section#affth {
 		}
 	}
 }
-form#cssecoContactForm {
+form#cssecoContactForm,
+form#professional-questionnaire {
 //	border-top: 1px solid #1B2854;
 	border-radius: 0!important;
 	padding: 20px 0 0 0;
@@ -6336,4 +6351,15 @@ section#mt4mac5thsect.mt4mac5thsect {
             }
         }
     }
+}
+form#professional-questionnaire {
+	label {
+		display: block!important;
+	}
+	#registration-form,
+	#login-form {
+		label:not(.error) {
+			display: none !important;
+		}
+	}
 }
