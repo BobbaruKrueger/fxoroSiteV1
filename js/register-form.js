@@ -1,8 +1,7 @@
-
-$(document).ready(()=>{
-	// // get google recaptcha 
+$(document).ready(function(){
+    // // get google recaptcha 
 	// grecaptcha.ready(function() {
-	// 	grecaptcha.execute('6Le4j6oUAAAAAN7GKHwFX7AGMJ0QMI0Tjo7f2PrT', {action: 'contactform'}).then(function(token) {
+	// 	grecaptcha.execute('6Le4j6oUAAAAAN7GKHwFX7AGMJ0QMI0Tjo7f2PrT', {action: 'register_form'}).then(function(token) {
 	// 	//    console.log(token);
 	// 	   document.getElementById('g-recaptcha-response').value = token;
 	// 	});
@@ -125,7 +124,7 @@ $(document).ready(()=>{
 	},"Please enter a valid Phone Number.");
 		
 
-	$('#cssecoContactForm').validate({
+	$('#register_form').validate({
 		// activate validation on key up
 		onkeyup: function(element) {
 			if( $(element).valid() ){
@@ -164,11 +163,6 @@ $(document).ready(()=>{
 				digits: true,
 				minlength: 6,
 				isValidPhoneNumber: true
-			},
-			refmessage:{
-				required: true,
-				minlength:5,
-				maxlength:255
 			}
 		}
 	});
@@ -176,12 +170,12 @@ $(document).ready(()=>{
 
 		e.preventDefault();		
 		
-		if ( $('#cssecoContactForm').valid() ){
+		if ( $('#register_form').valid() ){
 			
 			// // var recaptchaResult = false;
 			// var recaptcha = $('#g-recaptcha-response').val();
 			// // verify recapcha server side
-			// var url = 'http://thewallstreetfan.com/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/templates/verify_recaptcha.php';
+			// var url = 'http://thewallstreetfan.com/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/templates/verify_recaptcha.php'; 
 			// $.ajax({
 			// 	url: url,
 			// 	data: {token: recaptcha},
@@ -196,56 +190,70 @@ $(document).ready(()=>{
 				url:url,
 				data:{_token: token },
 				method: "POST"
-
+	
 			}).done(function(response){
-				
-				response = $.trim(response);
+                 
+                response = $.trim(response);
+                
 				if (response == 'success') {
-					let url = 'http://thewallstreetfan.com/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/templates/process_contact_form.php';
+                    console.log(response);
+
 					let fname = $('#fname').val();
 					let lname = $('#lname').val();
 					let email = $('#email').val();
 					let phonePrefix = $('#phoneprefix').val();
 					let phoneNumber = $('#phonenumber').val();
-					let message = $('#refmessage').val();
 	
 					fname = $.trim(fname); 
 					lname = $.trim(lname);
 					email = $.trim(email);
 					phoneNumber = phonePrefix + $.trim(phoneNumber);
-					message = $.trim(message);
+                    clientData = {
+                        EMail: email,
+                        FirstName: fname,
+                        LastName: lname,
+                        Language: "en",
+                        Country: currentcountryname,
+                        PhoneCountryCode:phonePrefix,
+                        PhoneNumber: phoneNumber,
+                        CampaignName: "",
+                        Advertiser: "",
+                        Referrer: "",
+                        CustomField: "",
+                        AcceptTermsAndConditions: true,
+                        ApproveReceiveCommercial: true,
+                        IPAddress:currentip,
+                        IPCountry:ipcountry
+                    };
 	
 					var successMessage =   '<div class="success-message-container">'+
-												'<p class="success-message"> Your reuest has been sent. We will get back to you for further actions. You will be redirected to the user page.... </p>'+
+												'<p class="success-message">  You will be redirected to the next step in the user registration process... </p>'+
 											'</div>';
-					$('#cssecoContactForm').html(successMessage);
+					$('#register_form').append(successMessage);
 					
-					// $.ajax({
-					// 	url: url,
-					// 	data:{ fname: fname, lname: lname, email: email, phoneNumber: phoneNumber, message: message },
-					// 	method: "POST"
-	
-					// }).done((response)=>{
-						
-					// 	console.log('result is: '+response);
-					// }).fail((err)=>{
-					// 	console.log(err);
-						
-					// });
+					
+                    // redirect url
+                    var url = "http://qa.fxoro.com/register/";
+                    // redirect to the next step on qa.fxoro.com
+                    setInterval(function(){
+                        $.redirect(url, clientData);
+                    }, 2000);
 				}else
 				{
+                    console.log(response);
+                    
 					var failMessage =   '<div class="fail-message-container">'+
-												'<p class="fail-message"> An error ocurred. Please refresh the page and try again.</p>'+
-											'</div>';
-					$('#cssecoContactForm').html(failMessage);
+                                            '<p class="fail-message"> An error ocurred. Please refresh the page and try again.</p>'+
+                                        '</div>';
+					$('#register_form').append(failMessage);
 					
 				}
 				
 			}).fail(function(response){
 					var failMessage =   '<div class="fail-message-container">'+
-												'<p class="fail-message">  An error ocurred. Please refresh the page and try again.</p>'+
-											'</div>';
-					$('#cssecoContactForm').html(failMessage);
+                                            '<p class="fail-message">  An error ocurred. Please refresh the page and try again.</p>'+
+                                        '</div>';
+                    $('#register_form').append(failMessage);
 				
 				
 			});
@@ -253,6 +261,4 @@ $(document).ready(()=>{
 		} 
 		
 	});
-
-	
 });

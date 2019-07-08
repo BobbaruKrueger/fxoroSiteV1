@@ -3,8 +3,9 @@
   * @package fxoroVone
   * header.php
   */
-$logoPctH = esc_attr( get_option( 'logo' ) );
-?>
+  $logoPctH = esc_attr( get_option( 'logo' ) );
+  ?>
+  <?php session_start();?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

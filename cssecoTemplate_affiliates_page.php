@@ -5,6 +5,17 @@
   * cssecoTemplate_affiliates_page.php
   */
 ?>
+<?php 
+// start the session
+session_start();
+// generate the token
+$_token= base64_encode( openssl_random_pseudo_bytes(16) ); 
+
+// add the token to the session
+$_SESSION['_token'] = $_token;
+
+
+?>
 <?php get_header(); ?>
 
 		<main id="main" class="site-main col-12 col-xl-12" role="main">

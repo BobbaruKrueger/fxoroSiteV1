@@ -45,7 +45,16 @@ function csseco_load_scripts() {
 		wp_enqueue_script( 'particles-js', get_template_directory_uri() . '/vendor/particles/particles.min.js', array('jquery'), '2.0.0', true );
 		// Particles.js json
 		wp_enqueue_script( 'particles-json', get_template_directory_uri() . '/vendor/particles/particles.json', array('jquery'), '2.0.0', true );
-		
+		// validate js
+		wp_enqueue_script( 'validate', 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js', array('jquery'), true );
+		// google phone library
+		wp_enqueue_script( 'libphone-number', 'https://cdn.jsdelivr.net/npm/libphonenumber-js@1.7.19/bundle/libphonenumber-max.js', array('jquery'), true );
+		// register form
+		wp_enqueue_script( 'register-form', get_template_directory_uri().'/js/register-form.js', array('jquery') , true );
+		// // google recaptcha
+		// wp_enqueue_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js?render=6Le4j6oUAAAAAN7GKHwFX7AGMJ0QMI0Tjo7f2PrT', array(), true );
+		// jquery redirect
+		wp_enqueue_script( 'jquery-redirect', get_template_directory_uri().'/js/jquery.redirect.js', array('jquery') , true );
 	}
 	
 	// Visible.js
@@ -60,18 +69,57 @@ function csseco_load_scripts() {
 	// FontAwesome scripts
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/js/all.js', array('jquery'), '5.8.1', true );
 	
+	// contact us page AND affiliates page
 	if ( is_page(135) || is_page(130) ){
 		// Validate js scripts
 		wp_enqueue_script( 'validate', 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js', array('jquery'), true );
 		wp_enqueue_script( 'libphone-number', 'https://cdn.jsdelivr.net/npm/libphonenumber-js@1.7.19/bundle/libphonenumber-max.js', array('jquery'), true );
 		wp_enqueue_script( 'contact-form', get_template_directory_uri().'/js/contact-form.js', array('jquery') , true );
+		wp_enqueue_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js?render=6Le4j6oUAAAAAN7GKHwFX7AGMJ0QMI0Tjo7f2PrT', array(), true );
 	}
+	// MT4 page or MT4 for MAC or partner-with-us
+	if ( is_page(236) || is_page( 680) || is_page(629)){
+		// validate js
+		wp_enqueue_script( 'validate', 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js', array('jquery'), true );
+		// google phone library
+		wp_enqueue_script( 'libphone-number', 'https://cdn.jsdelivr.net/npm/libphonenumber-js@1.7.19/bundle/libphonenumber-max.js', array('jquery'), true );
+		// register form
+		wp_enqueue_script( 'register-form', get_template_directory_uri().'/js/register-form.js', array('jquery') , true );
+		// google recaptcha
+		// wp_enqueue_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js?render=6Le4j6oUAAAAAN7GKHwFX7AGMJ0QMI0Tjo7f2PrT', array(), true );
+
+		// jquery redirect
+		wp_enqueue_script( 'jquery-redirect', get_template_directory_uri().'/js/jquery.redirect.js', array('jquery') , true );
+
+	}
+
+
+	// new-regulation-mifid-ii-and-its-impact-on-retail-clients/ Criteria form js
 	if (  is_page(756) ){
 		// Validate js scripts
+		
 		wp_enqueue_script( 'validate', 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js', array('jquery'), true );
-		wp_enqueue_script( 'libphone-number', 'https://cdn.jsdelivr.net/npm/libphonenumber-js@1.7.19/bundle/libphonenumber-max.js', array('jquery'), true );
-		wp_enqueue_script( 'contact-form', get_template_directory_uri().'/js/criteria-form.js', array('jquery') , true );
+		wp_enqueue_script( 'criteria', get_template_directory_uri().'/js/criteria-form.js', array('jquery') , true );
+		// wp_enqueue_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js?render=6Le4j6oUAAAAAN7GKHwFX7AGMJ0QMI0Tjo7f2PrT', array(), true );
 	}
+	// become a professional
+	if (  is_page(770) ){
+		// Validate js scripts
+		wp_enqueue_script( 'libphone-number', 'https://cdn.jsdelivr.net/npm/libphonenumber-js@1.7.19/bundle/libphonenumber-max.js', array('jquery'), true );
+		wp_enqueue_script( 'validate', 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js', array('jquery'), true );
+		// wp_enqueue_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js?render=6Le4j6oUAAAAAN7GKHwFX7AGMJ0QMI0Tjo7f2PrT', array(), true );
+		wp_enqueue_script( 'become-prof', get_template_directory_uri().'/js/become-proffessional.js', array('jquery') , true );
+		wp_enqueue_script( 'jquery-redirect', get_template_directory_uri().'/js/jquery.redirect.js', array('jquery') , true );
+	}
+	if (  is_page(126) ){
+		// Validate js scripts
+		wp_enqueue_script( 'libphone-number', 'https://cdn.jsdelivr.net/npm/libphonenumber-js@1.7.19/bundle/libphonenumber-max.js', array('jquery'), true );
+		wp_enqueue_script( 'validate', 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js', array('jquery'), true );
+		wp_enqueue_script( 'referral', get_template_directory_uri().'/js/referral.js', array('jquery') , true );
+		// wp_enqueue_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js?render=6Le4j6oUAAAAAN7GKHwFX7AGMJ0QMI0Tjo7f2PrT', array(), true );
+		// wp_enqueue_script( 'jquery-redirect', get_template_directory_uri().'/js/jquery.redirect.js', array('jquery') , true );
+	}
+
 	
 	// Main scripts
 	wp_enqueue_script( 'csseco_scripts', get_template_directory_uri().'/js/csseco.js', array('jquery'), '1.0.0', true );

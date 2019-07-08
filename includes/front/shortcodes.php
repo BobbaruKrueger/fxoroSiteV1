@@ -82,14 +82,31 @@ function csseco_btndiscf( $atts, $content = null ) {
 	);
 	$name = ( $atts['name'] == '' ? $content : $atts['name'] );
 	return '
-		<div style="max-width: 210px; text-align: center; display: inline-block;">
-			<a class="cssecoBtn animationbtn" href="#">' . $atts['name'] . '</a>
-			<p class="m-0">Your capital is at risk</p>
-		</div>
+	<div style="max-width: 210px; text-align: center; display: inline-block;">
+	<a class="cssecoBtn animationbtn" href="#">' . $atts['name'] . '</a>
+	<p class="m-0">Your capital is at risk</p>
+	</div>
 	';
 	// return HTML
-//	ob_start(); // Turn on the output buffering; ob = output buffering
-//	include 'templates/contact_form.php'; // this will be "saved" in ob_start
-//	return ob_get_clean(); // return the ob
+	//	ob_start(); // Turn on the output buffering; ob = output buffering
+	//	include 'templates/contact_form.php'; // this will be "saved" in ob_start
+	//	return ob_get_clean(); // return the ob
 }
 add_shortcode( 'csseco_btndisc', 'csseco_btndiscf' );
+
+// ===============================================================================
+// Create an account Form shortcode
+function create_an_account_form( $atts, $content = null ) {
+	// [create_an_account_form]
+	// get the attributes
+	$atts = shortcode_atts(
+		array(),
+		$atts,
+		'create_an_account_form'
+	);
+	// return HTML
+	ob_start(); // Turn on the output buffering; ob = output buffering
+	include 'templates/register_form.php'; // this will be "saved" in ob_start
+	return ob_get_clean(); // return the ob
+}
+add_shortcode( 'create_an_account_form', 'create_an_account_form' );

@@ -24,7 +24,7 @@
 				<p>
 					Refer your friends to <span style="font-weight: bold; color:#1B2854;">FX<span style="color: #fbb000;">ORO</span></span> and be rewarded for each one that becomes a trader. By entering your details and those of your friends, we will send them an invitation to join us. There is no limit to the amount of friends you can refer.
 				</p>
-				<div class="text-center">
+				<div class="text-center pt-xl-4">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 						Start trading now
 					</a>
@@ -69,7 +69,7 @@
 <section id="frndrefTrdngfngr">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-md-7 pb-4 pt-4 pb-lg-5 ">
+			<div class="col-12 col-md-7 pb-4 pt-4 pb-md-0">
 				<h5>Trading at your fingertips</h5>
 				<p>Use our versatile trading platform to always stay connected to the trading arena. Download the app for your phone and for your destkop!</p>
 				<div class="downlfrom">

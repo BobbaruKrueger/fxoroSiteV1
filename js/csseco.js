@@ -202,8 +202,11 @@ jQuery(document).ready(function($){
 		if($('.screens').visible()) {
 			$('.screens').css('visibility', 'visible');
 			animateCSS('.screens', 'flipInY', function(){
-				$('.screenIcons').css('visibility', 'visible');
-				animateCSS('.screenIcons', 'flipInX');
+				$('.phone').css('visibility', 'visible');
+				animateCSS('.phone', 'bounceInRight', function(){
+					$('.screenIcons').css('visibility', 'visible');
+					animateCSS('.screenIcons', 'flipInX');
+				});
 			});
 			fppct = true;
 		}
@@ -212,10 +215,12 @@ jQuery(document).ready(function($){
 				fppct = true;
 				$('.screens').css('visibility', 'visible');
 				animateCSS('.screens', 'flipInY', function(){
-					$('.screenIcons').css('visibility', 'visible');
-					animateCSS('.screenIcons', 'flipInX');
+					$('.phone').css('visibility', 'visible');
+					animateCSS('.phone', 'bounceInRight', function(){
+						$('.screenIcons').css('visibility', 'visible');
+						animateCSS('.screenIcons', 'flipInX');
+					});
 				});
-				
 			}
 		});
 	}

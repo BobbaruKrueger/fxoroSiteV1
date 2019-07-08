@@ -7,6 +7,17 @@
  * Partner With Us template
  */
 ?>
+<?php 
+// start the session
+// session_start();
+// generate the token
+// $_token= base64_encode( openssl_random_pseudo_bytes(16) ); 
+
+// // add the token to the session
+// $_SESSION['_token'] = $_token;
+
+
+?>
 <?php get_header(); ?>
 		</div><!-- /.row -->
 	</div><!-- /.container-->
@@ -166,7 +177,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 cssecoFormWrapper">
-					<form action="" class="create_account">
+					<!-- <form action="" class="create_account">
 						<div class="row">
 							<div class="col-12">
 								<h3>Create Your Account</h3>
@@ -228,7 +239,8 @@
 								<button type="submit" class="cssecoBtn animationbtn">Start trading</button>
 							</div>
 						</div>
-					</form>
+					</form> -->
+					<?php echo do_shortcode( '[create_an_account_form]'); ?>
 				</div>
 			</div>
 		</div>

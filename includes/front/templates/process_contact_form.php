@@ -59,30 +59,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'Company' => 'MCA'
 
     );
-    $payload = json_encode($data);
-    echo $payload;
-    die();
+    // $payload = json_encode($data);
+    // echo $payload;
+    // die();
  
     // url to post
     $url = "https://services.fxoro.com/api/customer/contactus";
+    // $url = "https://thewallstreetfan.com/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/templates/test.php";
     // initialize curl
     $ch = curl_init();
     // set options
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
     curl_setopt( $ch, CURLOPT_URL, $url);
     curl_setopt( $ch, CURLOPT_POST, true);
     curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLINFO_HEADER_OUT, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Content-Type: application/json',
-        'Content-Length: ' . strlen($payload))
-    );
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    // curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    //     'Content-Type: application/json',
+    //     'Content-Length: ' . strlen($payload))
+    // );
     // Submit the POST request
     $result = curl_exec($ch);
 
     // Close cURL session handle
+    if ($result){
+        echo 'done';
+    }else {
+        if($errno = curl_errno($ch)) {
+            $error_message = curl_strerror($errno);
+            echo "cURL error ({$errno}):\n {$error_message}";
+        }
+    }
     curl_close($ch);
-    echo $result;
 }
 
 ?>

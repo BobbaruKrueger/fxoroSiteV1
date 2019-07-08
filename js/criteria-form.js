@@ -6,6 +6,11 @@ $(document).ready( () =>{
     // disable submit buttom
     $('.submit-button').prop('disabled', true); 
 
+    // uncheck  checkboxes
+    $( "#ctqTV" ).prop( "checked", false );
+    $( "#ctqP" ).prop( "checked", false );
+    $( "#ctqE" ).prop( "checked", false );
+
     // validate the form
     $("#criteriaToQualifyForm").validate({
         onclick: function(element, event){

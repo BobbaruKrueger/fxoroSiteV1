@@ -1,9 +1,9 @@
 <?php
 /**
  * @package CSSecoThemes
- * includes/front/templates/contact_form.php
+ * includes/front/templates/register_form.php
  *
- * Contact Form Template
+ * Register Form Template
  */
 ?>
 <?php 
@@ -21,12 +21,15 @@ if (!isset($_SESSION['_token'])) {
 
 ?>
 
-<form id="cssecoContactForm">
-	<div class="row">
-		<input type="hidden" name="_token" value="<?php echo $_SESSION['_token'];?>" >
-	</div>
+<form id="register_form" class="create_account">
+    <div class="row">
+        <div class="col-12">
+            <h3>Create Your Account</h3>
+        </div>
+    </div>
+	<div class="row"><input type="hidden" name="_token" value="<?php echo $_SESSION['_token'];?>" ></div>
 	<div class="row"> 
-		<div class="col-12 col-md-4 pr-md-1">
+		<div class="col-12 col-md-6 pr-md-1">
 			<div class="form-group">
 				<label for="fname">First Name</label>
 				<input type="text" id="fname" name="fname" class="form-control"  placeholder="First Name"/>
@@ -35,7 +38,7 @@ if (!isset($_SESSION['_token'])) {
 				<i class="fas fa-times isError"></i>
 			</div>
 		</div>
-		<div class="col-12 col-md-4 pl-md-1 pr-md-1">
+		<div class="col-12 col-md-6 pl-md-1">
 			<div class="form-group">
 				<label for="lname">Last Name</label>
 				<input type="text" id="lname" name="lname" class="form-control" placeholder="Last Name" />
@@ -43,7 +46,9 @@ if (!isset($_SESSION['_token'])) {
 				<i class="fas fa-times isError"></i>
 			</div>
 		</div>
-		<div class="col-12 col-md-4 pl-md-1">
+    </div>
+    <div class="row">
+		<div class="col-12 col-md-12 ">
 			<div class="form-group">
 				<label for="email">Email</label>
 				<input type="email" id="email" name="email" class="form-control" placeholder="Your Email" />
@@ -53,7 +58,7 @@ if (!isset($_SESSION['_token'])) {
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-12 col-md-6 pr-md-1">
+		<div class="col-12 col-md-12 ">
 			<div class="form-group">
 				<label for="country">Country</label>
 				<select name="country" id="country" class="location_city_input form-control jcf-hidden">
@@ -781,7 +786,9 @@ if (!isset($_SESSION['_token'])) {
 	
 			</div>
 		</div>
-		<div class="col-12 col-md-6 pl-md-1">
+    </div>
+    <div class="row">
+		<div class="col-12 col-md-12">
 			<div class="form-group">
 				<label for="phonenumber">Phone</label>
 				<div class="phoneFP clearfix">
@@ -793,17 +800,14 @@ if (!isset($_SESSION['_token'])) {
 			</div>
 		</div>
 	</div>
+    <div class="row">
+        <div class="col-12">
+            <small class="form-text text-muted">By creating an account you agree to our Privacy policy, and to receive email marketing materials, you can opt-out at any time.</small>
+        </div>
+    </div>
 	<div class="row">
-		<div class="col-12 col-md-12">
-			<div class="form-group">
-				<label for="refmessage">Message</label>
-				<textarea class="form-control" id="refmessage" name="refmessage" rows="3" placeholder="Enter your message here..."></textarea>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-12">
-			<div class="form-group cssecoBtnW">
+		<div class="col-12 text-center">
+			<div class="form-group ">
 				<button type="submit" class="cssecoBtn animationbtn" id="submit">Submit</button>
 			</div>
 		</div>

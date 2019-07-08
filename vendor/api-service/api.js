@@ -1,6 +1,6 @@
 $(document).ready( () => {
     
-    let url = 'http://localhost/fx_oro/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/process.php';
+    let url = 'http://thewallstreetfan.com/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/process.php';
 
    
 
@@ -16,15 +16,21 @@ $(document).ready( () => {
 //        }
 //   });
 //
-   setInterval(()=>{
-    $.ajax({
-        url: url,
-        dataType: 'json'
-        })
-        .done( ( response ) => {
-             updateData(response);
-        });
-   }, 1000)
+
+
+
+
+
+
+//    setInterval(()=>{
+//     $.ajax({
+//         url: url,
+//         dataType: 'json'
+//         })
+//         .done( ( response ) => {
+//              updateData(response);
+//         });
+//    }, 1000)
    
 
 

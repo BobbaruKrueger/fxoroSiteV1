@@ -53,7 +53,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 			<a class="nav-link <?php echo ( $page_slug == 'commodities' ) ? 'active': '';?>" id="commodities-tab" data-toggle="tab" href="#commodities" role="tab" aria-controls="commodities" aria-selected="false">Commodities</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link <?php echo ( $page_slug == 'cryptocurrency' ) ? 'active': '';?>" id="crypto-tab" data-toggle="tab" href="#crypto" role="tab" aria-controls="crypto" aria-selected="false">Cryptocurencies</a>
+			<a class="nav-link <?php echo ( $page_slug == 'cryptocurrency' ) ? 'active': '';?>" id="crypto-tab" data-toggle="tab" href="#crypto" role="tab" aria-controls="crypto" aria-selected="false">Crypto</a>
 		</li>
 	</ul>
 	<div class="tab-content" id="">
@@ -69,7 +69,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 				<tbody>
 
 				<?php 
-					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 ORDER BY RAND() LIMIT 8");
+					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 ORDER BY RAND() LIMIT 5");
 					foreach ($results as $result) {
 						$changepercentage = round( ( ( $result->sell - $result->closed ) / $result->sell) * 100, 2);
 						$changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changepercentage ; 
@@ -124,7 +124,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 				<tbody>
 					
 					<?php 
-					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 WHERE category='FOREX' LIMIT 8");
+					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 WHERE category='FOREX' LIMIT 5");
 					foreach ($results as $result) {
 						$changepercentage = round( ( ( $result->sell - $result->closed ) / $result->sell) * 100, 2);
 						$changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changepercentage ; 
@@ -180,7 +180,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 				</thead>
 				<tbody>
 				<?php 
-					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 WHERE category='Shares' LIMIT 8");
+					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 WHERE category='Shares' LIMIT 5");
 					foreach ($results as $result) {
 						$changepercentage = round( ( ( $result->sell - $result->closed ) / $result->sell) * 100, 2);
 						$changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changepercentage ; 
@@ -234,7 +234,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 				</thead>
 				<tbody>
 				<?php 
-					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 WHERE category='Indices' LIMIT 8");
+					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 WHERE category='Indices' LIMIT 5");
 					foreach ($results as $result) {
 						$changepercentage = round( ( ( $result->sell - $result->closed ) / $result->sell) * 100, 2);
 						$changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changepercentage ; 
@@ -288,7 +288,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 				</thead>
 				<tbody>
 				<?php 
-					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 WHERE category='Commodities' LIMIT 8");
+					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 WHERE category='Commodities' LIMIT 5");
 					foreach ($results as $result) {
 						$changepercentage = round( ( ( $result->sell - $result->closed ) / $result->sell) * 100, 2);
 						$changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changepercentage ; 
@@ -342,7 +342,7 @@ $results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category 
 				</thead>
 				<tbody>
 				<?php 
-					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 WHERE category='Cryptocurrency' LIMIT 8");
+					$results = $wpdb->get_results("SELECT symbol, name, sell, buy, closed, category  FROM tickers3 WHERE category='Cryptocurrency' LIMIT 5");
 					foreach ($results as $result) {
 						$changepercentage = round( ( ( $result->sell - $result->closed ) / $result->sell) * 100, 2);
 						$changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changepercentage ; 

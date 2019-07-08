@@ -18,7 +18,7 @@
 			<p>
 				With <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> you trade the most popular currency with confidence and the benefit from tight spreads with fast execution.
 			</p>
-			<div class="text-center">
+			<div class="text-center pt-lg-3 pt-xl-4">
 				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn csseco_btnBig">				
 					Start trading now
 				</a>
@@ -102,9 +102,9 @@
 		$poza 	= 'CFDs.png';
 		$c1		= '
 			<p>
-				Traditionally Shares are of the most exciting investment opportunities for traders around the world, offering a wide variety of sectors, industries and countries to choose from. 
+				Discover why Shares are one of the most exciting investment opportunities for traders all over the world. <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> offers you a wide variety of shares from  the most  well known Global companies around the world.
 			</p>	
-			<div class="text-center">
+			<div class="text-center pt-lg-3 pt-xl-4">
 				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn csseco_btnBig">				
 					Start trading now
 				</a>
@@ -116,30 +116,24 @@
 		$c2		= '
 			<section>
 				<h5>
-					Trading shares with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span>
+					Trade share at the best
 				</h5>
-				<p>With <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> CFD SHARE trading you can take advantage of falling or rising markets by opening Sell or Buy positions among global markets including the UK, USA, Europe and Asia with a variety of well-known stocks and share without having to physically purchase them.</p>
-				<p><span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> will offer you to choose between major corporations listed on the NYSE, NASDAQ and London Stock Trade, shares like Facebook, Apple and Alphabet  (link with list?)</p>
-				<p class="font-weight-bold" style="color:#162856;">
-					Trade the most popular FOREX pairs like EUR/USD, GBP/USD and EUR/GBP.  Use our advanced trading tools to protect your proﬁts and limit losses.
-				</p>
+				<p>Take advantage of CFD trading on Shares. The best for short time trading period, CFDS offer you the chance to trade in a simpler and a faster way.</p>
 			</section>
 			<section>
 				<h5>
-					Advantages of trading on shares with CDF.
+					Shares wherever you are
 				</h5>
-				<p>
-					It is rare that share gives results in a short time, generally it can take months before seeing the result of your investment. 
-				</p>
-				<p>
-					The CFD shares are instead designed for much shorter periods: they give you the chance to trade in a simpler and a faster way
-				</p>
-				<p class="font-weight-bold" style="color:#162856;">
-					Discover <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> tools and start to trade on FOREX at your best
-				</p>
-				<div class="text-center text-lg-left">
+				<p>Trade even the smallest markets moves in time with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> apps for mobile and iPad you can trade from everywhere!</p>
+			</section>
+			<section>
+				<h5>
+					Everything under your control
+				</h5>
+				<p>With tools like the stop and loss you’ll be able limiting your losses and lock them when you are in profit.</p>
+				<div class="text-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Find out more
+						Start sharing now!
 					</a>
 				</div>
 			</section>
@@ -188,8 +182,8 @@
 	} elseif ( $slug == 'commodities' ) {
 		$poza 	= 'commodities.jpg';
 		$c1		= '
-			<p>Gold, Oil and Silver and a lot more are all available on FXORO trading platform. Trade CFDs on Futures from all around the world and explore different trading opportunities</p>
-			<div class="text-center">
+			<p>Gold, Oil and Silver and a lot more are all available on <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> trading platform. Trade CFDs on Futures from all around the world and explore different trading opportunities</p>
+			<div class="text-center pt-lg-3">
 				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn csseco_btnBig">				
 					Start trading now
 				</a>
@@ -203,7 +197,7 @@
 				<h5>
 					Discover new indices
 				</h5>
-				<p>You can Trade a variety of popular commodity CFDs with interesting leverages. You’ll find a huge choice of indices available for investing with ETFs in a broad basket of commodities.</p>
+				<p>You can trade a variety of popular commodity CFDs with interesting leverages. You’ll find a huge choice of indices available for investing with ETFs in a broad basket of commodities.</p>
 			</section>
 			<section>
 				<h5>
@@ -267,7 +261,7 @@
 		$poza 	= 'indices.png';
 		$c1		= '
 			<p><span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> offers you a wide range of index CFDs to trade, you can easily diversify your portfolio and find potentially profitable trading opportunities in the markets.</p>
-			<div class="text-center">
+			<div class="text-center pt-lg-3 pt-xl-4">
 				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn csseco_btnBig">				
 					Start your Trading now!!
 				</a>
@@ -279,13 +273,13 @@
 		$c2		= '
 			<section>
 				<h5>
-					Trade Indices at your best
+					Trade indices at your best
 				</h5>
 				<p>With <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> you have direct access to competitive spreads and generous leverage, along with the best execution you can imagine</p>
 			</section>
 			<section>
 				<h5>
-					Keep up with the markets.
+					Keep up with the markets
 				</h5>
 				<p>
 					24/24 You receive updated from the markets with real-time streaming quotes on all Indices, alerts, directly on your desktop or mobile.
@@ -295,7 +289,7 @@
 				<h5>
 					Maximize your execution
 				</h5>
-				<p>Throughout the day and sometimes H24. Combine shares and open positions on entire lists with single transactions. </p>
+				<p>Throughout the day and 7 days a week. Combine shares and open positions on entire lists with single transactions. </p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
 						Start trading Indices!
@@ -356,9 +350,8 @@
 	} elseif ( $slug == 'cryptocurrency' ) {
 		$poza 	= 'cryptocurrency.png';
 		$c1		= '
-			<p>Cryptocurrencies are a form of money of the future. They have the potential to transform the entire global ﬁnancial system. More and more, companies, shops and people are using them increasing in the same time prices. Its volatility makes it an excellent alternative in any ﬁnancial trading portfolio.</p>
-			<div class="text-center">
-				<p class="font-weight-bold" style="color:#162856;">Trade the most popular <strong>cryptocurrencies</strong> now!!</p>
+			<p>Enter in the world of Bitcoin <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> and start to trade on the most popular cryptocurrency of the future.</p>
+			<div class="text-center pt-lg-3 pt-xl-4">
 				<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn csseco_btnBig">				
 					Start trading now
 				</a>
@@ -370,27 +363,30 @@
 		$c2		= '
 			<section>
 				<h5>
-					What are cryptocurrencies?
+					Trade Bitcoin with the advantages of CFDs
 				</h5>
-				<p>A cryptocurrency is a digital currency that is transferred from one subject to another in virtual transactions. Cryptocurrencies exist only in the form of data and not as physical objects. In other words, you can\'t hold a Bitcoin or put Ethereum in a safe. Owning Bitcoin means signing a collective agreement registered on every computer in the Bitcoin network in which the ownership of Bitcoin is attested and, more importantly, the legitimate creation by a miner.</p>
-				<p class="font-weight-bold" style="color:#162856;">
-					Trade the most popular cryptocurrencies now!!
-				</p>
+				<p>Trading with CFDS allows speculate on Bitcoin whether the price goes up, or the price goes down, you don\'t run risks related to the possession of a cryptocurrency.</p>
 			</section>
 			<section>
 				<h5>
-					What trading crypto with <span style="font-weight: bold; color:#1B2854;">FX<span style="color: #fbb000;">ORO</span></span>?
+					Learn how to invest in Bitcoin
 				</h5>
-				<p>Due to the incredible popularity in recent years, cryptocurrencies have become a very interesting conventional asset. <span style="font-weight: bold; color:#1B2854;">FX<span style="color: #fbb000;">ORO</span></span> oﬀers to all his traders the opportunity to trade on a major digital currencies 24/7 with the support  of dedicated tools and personal coaches.</p>
-				<p class="font-weight-bold" style="color:#162856;">
-					Trade on cryptocurrencies with dedicate tools!!
-				</p>
+				<p>No one prepares you to face Bitcoin like <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> does. Professional signs, Webinars and meetings with the greatest experts in cryptocurrencies of the moment.</p>
+			</section>
+			<section>
+				<h5>
+					Safety with no compromise  
+				</h5>
+				<p>With 7 supervisory authorities in 7 different countries and segregated accounts, you can Trade on Bitcoin with extreme self confidence.</p>
 				<div class="text-center text-lg-left">
 					<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">				
-						Find out more
+						Start Bitcoin!
 					</a>
 				</div>
 				
+			</section>
+			<section>
+				<p>List of Cryptocurrencies – click <a href="#">here</a></p>
 			</section>
 		';
 		$faq	= '
@@ -447,7 +443,7 @@
 				<div class="col-12 col-lg-6 text-center">
 					<img src="<?php echo get_template_directory_uri(); ?>/imgs/products/prodtemplate2/<?php echo $poza; ?>" alt="<?php echo $poza; ?>" class="imgMain">
 					<p class="font-weight-bold mt-4" style="color: #162856;">
-						 MCA Intelifunds Ltd autorizzato e regolamentato  dalla Securities and Exchange Commission di Cipro.  
+						 <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> is a brand belonging to MCA Intelifunds Ltd, authorized and regulated by the  Cyprus Securities and Exchange Commission.
 					</p>
 				</div>
 			</div>

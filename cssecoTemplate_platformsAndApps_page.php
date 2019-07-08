@@ -206,69 +206,7 @@
 				</ul>
 			</div>
 			<div class="col-12 offset-md-1 col-md-5 offset-lg-2 col-lg-4">
-				<form action="" class="create_account">
-					<div class="row">
-						<div class="col-12">
-							<h3>Create Your Account</h3>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12 col-md-6 pr-md-1">
-							<div class="form-group">
-								<label for="firstName">First Name</label>
-								<input type="text" class="form-control" id="firstName" aria-describedby="firstName" placeholder="First Name">
-							</div>
-						</div>
-						<div class="col-12 col-md-6 pl-md-1">
-							<div class="form-group">
-								<label for="lastName">Last Name</label>
-								<input type="text" class="form-control" id="lastName" aria-describedby="lastName" placeholder="Last Name">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<div class="form-group">
-								<label for="email">Email address</label>
-								<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<div class="form-group">
-								<label for="country">Country</label>
-								<select class="form-control" id="country">
-									<option>Romania</option>
-									<option>Rusia</option>
-									<option>Italia</option>
-									<option>Belgia</option>
-									<option>Ungaria</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<div class="form-group">
-								<div class="phoneFP clearfix">
-									<input id="phoneprefix" class="form-control phoneprefixclass phone-prefix" type="text" name="phone-country-code" value="" readonly="">
-									<input id="phonenumber" class="form-control phonenumberclass phone-number" name="phone" type="tel" placeholder="Telefono">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<small class="form-text text-muted">By creating an account you agree to our Privacy policy, and to receive email marketing materials, you can opt-out at any time.</small>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12 text-center">
-							<button type="submit" class="cssecoBtn animationbtn">Start trading</button>
-						</div>
-					</div>
-				</form>
+				<?php echo do_shortcode( '[create_an_account_form]'); ?>
 			</div>
 		</div>
 	</div>

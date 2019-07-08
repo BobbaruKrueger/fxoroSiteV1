@@ -4,6 +4,7 @@
   * header-fp.php
   */
 ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

@@ -58,7 +58,7 @@ $(document).ready( ()=> {
         
     });
     
-    setInterval(updateSymbol, 1000, qSymbol, qInstrument);
+    // setInterval(updateSymbol, 1000, qSymbol, qInstrument);
 
 
 
@@ -66,7 +66,7 @@ $(document).ready( ()=> {
 
     function controlGraph(symbol, interval){
         $.ajax({
-            url : 'http://localhost/fx_oro/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/update-chart.php',
+            url : 'http://thewallstreetfan.com/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/update-chart.php',
             data: { symbol: qSymbol, interval: interval}
             
         })
@@ -78,7 +78,7 @@ $(document).ready( ()=> {
 
     function updateSymbol(symbol, instrument){
   
-        let url = 'http://localhost/fx_oro/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/api-symbol-process.php';
+        let url = 'http://thewallstreetfan.com/wp-content/themes/CSSecoStarterThemeV2-master/includes/front/template-parts/fp/process/api-symbol-process.php';
 
         $.ajax({
             url: url,

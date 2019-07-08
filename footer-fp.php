@@ -129,10 +129,6 @@
 						</p>
 					</div>
 				</div>
-				<div class="chatBtnW">
-					<button type="button" class="btn chat animated infinite pulse d-none d-sm-block">Chat with us now</button>
-					<button type="button" class="btn chat animated infinite pulse d-block d-sm-none">Chat</button>
-				</div>
 			</div>
 		</footer>
 	</div><!-- /#site-wrapper -->

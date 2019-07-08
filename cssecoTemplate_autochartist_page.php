@@ -44,7 +44,7 @@
 								Autochartist is one of the most powerful market-scanning tool for identifying and informing about  market opportunities. It continuously scans markets and automatically recognises trade set-ups based on support and resistance levels. Once an opportunity has been identified, you are informed. 
 							</p>
 							<h5>A free tool just for <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> traders</h5>
-							<p>
+							<p class="mb-0">
 								Open an account today for access, or trial a limited version on our free demo account. Autochartist now brings the world’s first market scanner directly to the MT4 platform, saving valuable time by allowing traders to watch all symbols and all time periods from a single chart.
 							</p>
 						</div>

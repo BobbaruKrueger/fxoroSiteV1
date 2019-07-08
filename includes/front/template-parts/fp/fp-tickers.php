@@ -29,7 +29,10 @@ $results = $wpdb->get_results("SELECT * FROM tickers3");
 				<div class="col-12 align-middle">
 					<ul class="nav col-12 align-middle" id="myTab" role="tablist">
 						<li class="nav-item">
-							<a class="active" id="forex-tab" data-toggle="tab" href="#forex" role="tab" aria-controls="forex" aria-selected="true">FOREX</a>
+							<a class="active" id="mostPopular-tab" data-toggle="tab" href="#mostPopular" role="tab" aria-controls="mostPopular" aria-selected="true">Most Popular</a>
+						</li>
+						<li class="nav-item">
+							<a class="" id="forex-tab" data-toggle="tab" href="#forex" role="tab" aria-controls="forex" aria-selected="true">FOREX</a>
 						</li>
 						<li class="nav-item">
 							<a class="" id="shares-tab" data-toggle="tab" href="#shares" role="tab" aria-controls="shares" aria-selected="false">Shares</a>
@@ -40,11 +43,19 @@ $results = $wpdb->get_results("SELECT * FROM tickers3");
 						<li class="nav-item">
 							<a class="" id="indices-tab" data-toggle="tab" href="#indices" role="tab" aria-controls="indices" aria-selected="false">Indices</a>
 						</li>
+						<li class="nav-item">
+							<a class="" id="risesFallers-tab" data-toggle="tab" href="#risesFallers" role="tab" aria-controls="risesFallers" aria-selected="false">Rises and Fallers</a>
+						</li>
 					</ul>
 				</div>
 				
 				<div class="tab-content col-12" id="">
-					<div class="tab-pane fade show active" id="forex" role="tabpanel" aria-labelledby="forex-tab">
+					<div class="tab-pane fade show active" id="mostPopular" role="tabpanel" aria-labelledby="mostPopular-tab">
+						Most Popular
+					</div>
+					
+					
+					<div class="tab-pane fade " id="forex" role="tabpanel" aria-labelledby="forex-tab">
 						<!-- <img  id="loading" src="wp-content/themes/CSSecoStarterThemeV2-master/imgs/tickers/loading.GIF" style="width: 100px"; alt="Loading..."> -->
 						
 						<div class="owl-carousel owl-theme forex">
@@ -729,6 +740,9 @@ $results = $wpdb->get_results("SELECT * FROM tickers3");
 						} ?><!-- // end foreach -->
 							
 						</div>
+					</div>
+					<div class="tab-pane fade" id="risesFallers" role="tabpanel" aria-labelledby="risesFallers-tab">
+						Rises and Fallers
 					</div>
 				</div>
 			</div>
