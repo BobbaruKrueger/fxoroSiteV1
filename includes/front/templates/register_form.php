@@ -824,13 +824,4 @@ if (!isset($_SESSION['_token'])) {
     background:#eee;
 } */
 
-.success-message-container{
-	background: #62b962;
-    padding: 15px 5px;
-    color: #fff0f0;
-}
-.success-message{
-	padding: 15px 0px 0px 0px;
-	text-align: center;
-}
 </style>

@@ -33,7 +33,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-white">
-					<h5 class="text-white">What makes <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> unique?</h5>
+					<h5 class="text-white">What makes <span>FX<span style="color: #fbb000;">ORO</span></span> unique?</h5>
 					<ol>
 						<li>We offer you a range of products in the FX and CFD markets while using leading technology and skilled experienced staff to provide you the ultimate trading experience.</li>
 						<li>We are  committed to providing the highest standard of account security and supreme customer service.</li>

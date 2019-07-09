@@ -8,19 +8,26 @@
 <?php get_header( 'fp2' ); ?>
 
 	<section id="firtsvid_1" class="firtsvid_1">
+		<div class="bgVidFP1 d-none d-lg-block">
+			<video autoplay muted loop>
+				<source src="<?php echo get_template_directory_uri(); ?>/videos/video.webm" type="video/webm">
+			</video>
+		</div>
+		<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/oare/pardaf2/shape.png" alt="Icons" class="shapeF1 d-none d-lg-block">
+		<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/oare/pardaf2/icon.png" alt="Icons" class="iconsF1 d-none d-lg-block" style="visibility: hidden;">
 		<div class="container fp"> 
 			<div class="row">
 				<div class="col-12 col-lg-6 text-center text-lg-left">
 					<div class="dtable">
 						<div class="dtable-cell">
 							<h1>
-								When the broker becomes
-								<span>your best business partner</span>
+								Choose <span style="color: #1B2854; display: inline; font-weight: bold;">FX<span style="color: #ffa402; display: inline;">ORO</span></span> and Enjoy
+								<span>The Best Trading Experience</span>
 							</h1>
 
 							<p>
-								Join a professional and modern
-								<span>community of ambitious traders</span>
+								Join a professional community of ambitious traders.
+								<span>Trade CFDs, Indices, Commodities and Cryptocurrencies.</span>
 							</p>
 							<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">
 								<span>
@@ -38,10 +45,12 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-lg-6 d-none d-lg-block text-center">
+<!--				<div class="col-12 col-lg-6 d-none d-lg-block text-center">-->
+				<div class="col-12 col-lg-6 d-none">
 					<div class="hfp2ImgWrapper">
-						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/fp2/screen.png" alt="Screens" class="screens" style="visibility: hidden;">
-						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/fp2/screenIcons.png" alt="Screens Icons" class="screenIcons" style="visibility: hidden;">
+						<video autoplay muted loop class="bgVidFP1" style="/*visibility: hidden;*/">
+							<source src="<?php echo get_template_directory_uri(); ?>/videos/video.webm" type="video/webm">
+						</video>
 					</div>
 				</div>
 			</div>

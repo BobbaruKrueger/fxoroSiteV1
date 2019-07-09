@@ -1327,6 +1327,43 @@ div#site-wrapper {
 			section#firtsvid_1.firtsvid_1 {
 				border-bottom: 1px solid rgba(0, 0, 0, .5);
 				padding-bottom: 20px;
+				position: relative;
+				.bgVidFP1,
+				.shapeF1 {
+					height: 100%;
+					left: 50%;
+					position: absolute;
+					top: 0;
+				}
+				.bgVidFP1 {
+					left: calc(50% + 30px);
+					&::after {
+						/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+						background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+						background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+						background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+						content: '';
+						height: 100%;
+						position: absolute;
+						right: 0;
+						top: 0;
+						width: 500px;
+					}
+					video {
+						height: 100%;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						left: calc(50% + 33px);
+					}
+				}
+				.shapeF1 {}
+				.iconsF1 {
+					bottom: 5px;
+					left: calc(50% + 25px);
+					position: absolute;
+					z-index: 10;
+				}
 				.fp {
 					margin-top: 0;
 					h1 {
@@ -1371,10 +1408,13 @@ div#site-wrapper {
 						@media screen and (min-width: $csseco_bp_992) {
 							background: transparent;
 							color: #1B2854;
-							font-size: 2.375rem;
+							font-size: 2rem;
 							margin-top: 30px;
 							padding: 0;
 							text-align: left;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							font-size: 2.375rem;
 						}
 					}
 					h1 + p {
@@ -1385,17 +1425,22 @@ div#site-wrapper {
 							@media screen and (min-width: 375px) {
 								display: block;
 							}
+							@media screen and (min-width: $csseco_bp_992) {
+								display: inline;
+							}
+							@media screen and (min-width: $csseco_bp_1200) {
+								display: block;
+							}
 						}
 						@media screen and (min-width: $csseco_bp_768) {
 							font-size: 18px;
 						}
 						@media screen and (min-width: $csseco_bp_992) {
-							font-size: 25px;
+							font-size: 22px;
 							margin-bottom: 1.5rem;
 							margin-top: 1.5rem;
 						}
 						@media screen and (min-width: $csseco_bp_1200) {
-							font-size: 24px;
 							line-height: 1.1;
 							margin-bottom: 3rem;
 							margin-top: 3rem;
@@ -1520,10 +1565,13 @@ div#site-wrapper {
 						@media screen and (min-width: $csseco_bp_992) {
 							background: transparent;
 							color: #1B2854;
-							font-size: 2.375rem;
+							font-size: 2rem;
 							margin-top: 30px;
 							padding: 0;
 							text-align: left;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							font-size: 2.375rem;
 						}
 					}
 					h1 + p {
@@ -1534,17 +1582,22 @@ div#site-wrapper {
 							@media screen and (min-width: 375px) {
 								display: block;
 							}
+							@media screen and (min-width: $csseco_bp_992) {
+								display: inline;
+							}
+							@media screen and (min-width: $csseco_bp_1200) {
+								display: block;
+							}
 						}
 						@media screen and (min-width: $csseco_bp_768) {
 							font-size: 18px;
 						}
 						@media screen and (min-width: $csseco_bp_992) {
-							font-size: 25px;
+							font-size: 22px;
 							margin-bottom: 1.5rem;
 							margin-top: 1.5rem;
 						}
 						@media screen and (min-width: $csseco_bp_1200) {
-							font-size: 24px;
 							line-height: 1.1;
 							margin-bottom: 3rem;
 							margin-top: 3rem;
@@ -1598,16 +1651,27 @@ div#site-wrapper {
 					}
 					.hfp2ImgWrapper {
 						position: relative;
-						img.screens {}
-						img.screenIcons {
-							bottom: -10px;
-							left: -60px;
+						img.phoneF2 {}
+						img.iconsF2 {
+							bottom: 30px;
+							left: 10px;
 							position: absolute;
-							width: 130px;	
+							width: 180px;
 							@media screen and (min-width: $csseco_bp_1200) {
-								bottom: -30px;
-								left: -50px;
-								width: 170px;
+								bottom: 50px;
+								left: 40px;
+							}
+						}
+						.bgVid {
+							left: 136px;
+							position: absolute;
+							top: 115px;
+							width: 209px;
+							z-index: 10;
+							@media screen and (min-width: $csseco_bp_1200) {
+								left: 174px;
+								top: 130px;
+								width: 226px;
 							}
 						}
 					}
@@ -2095,7 +2159,7 @@ div#site-wrapper {
 							font-size: 22px;
 							margin-bottom: 35px;
 //							padding-top: 80px;
-							width: 765px;
+							width: 775px;
 						}
 					}
 					.tab-content {

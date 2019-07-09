@@ -225,6 +225,52 @@ jQuery(document).ready(function($){
 		});
 	}
 	
+	var fppct2 = false;
+	if ( fppct2 == false ) {
+		
+		if($('.phoneF2').visible()) {
+			$('.phoneF2').css('visibility', 'visible');
+			animateCSS('.phoneF2', 'flipInY', function(){
+				$('.iconsF2').css('visibility', 'visible');
+				animateCSS('.iconsF2', 'bounceInRight', function(){
+					$('.bgVid').css('visibility', 'visible');
+					animateCSS('.bgVid', 'fadeIn');
+				});
+			});
+			fppct2 = true;
+		}
+		$(window).scroll(function() {
+			if($('.phoneF2').visible() && fppct2 == false ) {
+				fppct2 = true;
+				$('.phoneF2').css('visibility', 'visible');
+				animateCSS('.phoneF2', 'flipInY', function(){
+					$('.iconsF2').css('visibility', 'visible');
+					animateCSS('.iconsF2', 'bounceInRight', function(){
+						$('.bgVid').css('visibility', 'visible');
+						animateCSS('.bgVid', 'fadeIn');
+					});
+				});
+			}
+		});
+	}
+	
+	var fppct3 = false;
+	if ( fppct3 == false ) {
+		
+		if($('.iconsF1').visible()) {
+			$('.iconsF1').css('visibility', 'visible');
+			animateCSS('.iconsF1', 'bounceInRight');
+			fppct3 = true;
+		}
+		$(window).scroll(function() {
+			if($('.iconsF1').visible() && fppct3 == false ) {
+				fppct3 = true;
+				$('.iconsF1').css('visibility', 'visible');
+				animateCSS('.iconsF1', 'bounceInRight');
+			}
+		});
+	}
+	
 	// mobile on instruments section - frontpage
 //	var phonefp = false;
 //	if ( phonefp == false ) {

@@ -12,7 +12,7 @@
 // session_start();
 
 $_SESSION['criteria_form_token'] = base64_encode(openssl_random_pseudo_bytes(64));
-var_dump($_SESSION);
+
 ?>
 <div class="criteriaToQualifyFormWrapper">
 	<h5>Criteria to qualify</h5>

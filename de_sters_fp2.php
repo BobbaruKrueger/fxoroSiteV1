@@ -14,13 +14,13 @@
 					<div class="dtable">
 						<div class="dtable-cell">
 							<h1>
-								When the broker becomes
-								<span>your best business partner</span>
+								Trade With Confidence and Enjoy
+								<span>A Modern Trading Platform</span>
 							</h1>
 
 							<p>
-								Join a professional and modern
-								<span>community of ambitious traders</span>
+								Join a professional community of ambitious traders.
+								<span>Trade CFDs, Indices, Commodities and Cryptocurrencies.</span>
 							</p>
 							<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">
 								<span>
@@ -40,8 +40,11 @@
 				</div>
 				<div class="col-12 col-lg-6 d-none d-lg-block text-center">
 					<div class="hfp2ImgWrapper">
-						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/fp2/screen.png" alt="Screens" class="screens" style="visibility: hidden;">
-						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/fp2/screenIcons.png" alt="Screens Icons" class="screenIcons" style="visibility: hidden;">
+						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/oare/pardaf/phone.png" alt="Phone" class="phoneF2" style="visibility: hidden;">
+						<img src="<?php echo get_template_directory_uri(); ?>/imgs/fp/oare/pardaf/icons.png" alt="Icons" class="iconsF2" style="visibility: hidden;">
+						<video autoplay muted loop class="bgVid" style="visibility: hidden;">
+							<source src="<?php echo get_template_directory_uri(); ?>/videos/video.webm" type="video/webm">
+						</video>
 					</div>
 				</div>
 			</div>
