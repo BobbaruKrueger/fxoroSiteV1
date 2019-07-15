@@ -9,7 +9,7 @@
 			<div class="row">
 				<div class="col-12">
 					<h3>
-						All the trading training you need 
+						All the training you need
 					</h3>
 				</div>
 			</div>
@@ -17,12 +17,12 @@
 				<div class="col-12 col-md-6"></div>
 				<div class="col-12 col-md-6">
 					<p>
-						In trading, the training is everything. Whether you are beginner professional, <span>FX<span>ORO</span></span> supports you with a personalized, 360 degrees training.
+						Whether you are beginner or professional, <span>FX<span>ORO</span></span> will always supports you with a personalized 360 degrees training.
 					</p>
 					<ul style="visibility: hidden;">
-						<li>Webinars with big names in the industry </li>
-						<li>Always updated ebooks </li>
-						<li>YouTube channel with daily analysis </li>
+						<li>Webinars with professionals from the industry</li>
+						<li>Costantly updated e-books</li>
+						<li>YouTube channel with daily briefing</li>
 						<li>1-on-1 trading sessions</li>
 					</ul>
 					<div class="text-center d-md-inline-block">

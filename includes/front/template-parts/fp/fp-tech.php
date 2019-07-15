@@ -9,14 +9,14 @@
 			<div class="row">
 				<div class="col-12">
 					<h3>
-						The latest technology to support<br> your trading activity
+						All the tools you need
 					</h3>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12 col-md-7 col-lg-6">
 					<p>
-						The trading activity evolves each day and, with it, so does the technology that allows us to confrunt the markets. That is why, those who trade with <span>FX<span>ORO</span></span> can always count on updated, latest generation instruments:
+						The world of trading evolves every day. That is why you can always count on updated, latest generation instruments:
 					</p>
 					<div class="row lpb">
 						<div class="col-12 col-sm-6">

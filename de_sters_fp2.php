@@ -14,8 +14,8 @@
 					<div class="dtable">
 						<div class="dtable-cell">
 							<h1>
-								Trade With Confidence and Enjoy
-								<span>A Modern Trading Platform</span>
+								Trade With Confidence And 
+								<span>Enjoy A Top Trading Platform</span>
 							</h1>
 
 							<p>

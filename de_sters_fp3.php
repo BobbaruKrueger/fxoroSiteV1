@@ -15,12 +15,12 @@
 						<div class="dtable-cell">
 							<h1>
 								Be Part Of The Winining Team
-								<span>Start Trading With FXORO Today</span>
+								<span>Start Trading With <span style="color: #1B2854; display: inline;">FX<span style="color: #ffa402; display: inline;">ORO</span></span> Today</span>
 							</h1>
 
 							<p>
-								Join a professional community of ambitious 
-								<span>traders. Trade CFDs, Indices, Commodities and Cryptocurrencies.</span>
+								Join a professional community of ambitious traders.
+								<span> Trade CFDs, Indices, Commodities and Cryptocurrencies.</span>
 							</p>
 							<a href="http://qa.fxoro.com/private-area/fund/deposit/" class="cssecoBtn animationbtn">
 								<span>

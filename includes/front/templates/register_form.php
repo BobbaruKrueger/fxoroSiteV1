@@ -813,15 +813,3 @@ if (!isset($_SESSION['_token'])) {
 		</div>
 	</div>
 </form>
-
-<style>
-/* div#site-wrapper form label {
-    display: block;
-}
-.trading-volume-questions, .portfolio-questions, .experience-role-questions, .experience-qualification-questions{
-    margin-left: 15px;
-    padding:5px;
-    background:#eee;
-} */
-
-</style>

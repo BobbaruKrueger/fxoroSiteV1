@@ -27,8 +27,7 @@
 			<div class="row">
 				<div class="col-12">
 					<p class="text-left text-md-center">
-						Enjoy all the best features of the original MetaTrader 4 platform, customised for your Mac operating system.<br class="d-none d-lg-block">
-						To start trading on the Forex market with our MT4 software today you will need an <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> trading account. This can be a 30-Day Demo or a Live account – both are FREE to open with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> and you can be trading in minutes.
+						Enjoy all the best features of MetaTrader 4  for your Mac OS  operating system. Start trading on the Forex market with our MT4 for Mac is really easy. <br class="d-none d-xl-block">The only thing you’ll need is opening an <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> account or asking for 30-Day Demo. <br class="d-none d-xl-block">Both are FREE to open with <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> and you can be in the trading within few minutes.
 					</p>
 					<div class="text-center">
 						<a href="#" class="cssecoBtn animationbtn">				

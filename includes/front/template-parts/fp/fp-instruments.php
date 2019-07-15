@@ -9,7 +9,7 @@
 			<div class="row">
 				<div class="col-12">
 					<h3>
-						Our instruments for the daily<br> financial analysis
+						Trade with head start
 					</h3>
 				</div>
 			</div>

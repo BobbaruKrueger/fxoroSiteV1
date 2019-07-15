@@ -21,7 +21,7 @@
 					<div class="dtable">
 						<div class="dtable-cell">
 							<h1>
-								Choose <span style="color: #1B2854; display: inline; font-weight: bold;">FX<span style="color: #ffa402; display: inline;">ORO</span></span> and Enjoy
+								Choose <span style="color: #1B2854; display: inline;">FX<span style="color: #ffa402; display: inline;">ORO</span></span> and Enjoy
 								<span>The Best Trading Experience</span>
 							</h1>
 

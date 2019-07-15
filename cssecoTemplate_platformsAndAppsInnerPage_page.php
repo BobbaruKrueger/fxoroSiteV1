@@ -21,11 +21,6 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12">
-				<h5>Main features</h5>
-			</div>
-		</div>
-		<div class="row">
 			<div class="col-12 col-xl-6">
 				<p><strong style="color: #1B2854;">User experience</strong>: Extremely user friendly interface, enabling new and experienced traders to trade the markets with ease and comfort.</p>
 				<p><strong style="color: #1B2854;">Charts</strong>: In addition to the MT4's advanced and user friendly trading features, the platform also offers advanced charting capabilities. This of course enables traders to trade and analyze the technical aspects of the market simultaneously. Traders can also trade directly from the charts if they wish to.</p>

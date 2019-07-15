@@ -201,11 +201,14 @@ a {
 .csseco_gray {
   background-color: rgba(0, 0, 0, 0.05); }
 
+.imgBorder {
+  border: 1px solid #cecece !important; }
+
 @keyframes maphover {
   0% {
     fill: rgba(255, 180, 1, 0.5); }
   50% {
-    fill: #ffb401; }
+    fill: rgba(255, 180, 1, 0.75); }
   100% {
     fill: rgba(255, 180, 1, 0.5); } }
 /*--------------------------------------------------------------
@@ -224,6 +227,47 @@ a {
 
 .vid_container .lsn_tit {
   border-bottom-color: #1B2854 !important; }
+
+.mte-economic-calendar-0 paper-toolbar.mte-economic-calendar,
+.paper-tabs-0 #tabsContent.paper-tabs {
+  background: #ffb401 !important; }
+
+.paper-tab-0 .tab-content.paper-tab,
+.iron-icon-0 {
+  color: #1b2854 !important; }
+
+.mte-calendar-event-0 .row-ecalendar.mte-calendar-event {
+  background: #FFF !important;
+  color: #000 !important; }
+
+.mte-calendar-event-0:nth-child(odd) .row-ecalendar.mte-calendar-event {
+  background: rgba(0, 0, 0, 0.05) !important; }
+
+.mte-calendar-event-0 iron-icon.importance-icon.mte-calendar-event {
+  color: #1b2854 !important; }
+
+.mte-calendar-event-0 .col-detail-head.mte-calendar-event {
+  color: #000 !important; }
+
+.mte-calendar-event-0 .hoverclass.mte-calendar-event:hover {
+  background: #656566 !important; }
+
+.mte-daily-briefings-0 paper-toolbar.mte-daily-briefings {
+  background: #ffb401 !important;
+  color: blue !important; }
+
+.mte-daily-briefings-0 .disclaimertitle.mte-daily-briefings {
+  color: #000 !important; }
+
+.mte-daily-briefings-0 .row-briefings.mte-daily-briefings {
+  background: #FFF !important;
+  color: black !important; }
+
+.mte-daily-briefings-0 .row-briefings.mte-daily-briefings:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.05) !important; }
+
+.mte-daily-briefings-0 .row-briefings.mte-daily-briefings:hover {
+  background: #656566 !important; }
 
 .mte-root p {
   margin: 0; }
@@ -248,12 +292,35 @@ a {
   padding: 15px; }
   .zaCardWrapper .zaCard {
     border-radius: 10px;
-    -webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
     transition: all 350ms linear; }
     .zaCardWrapper .zaCard:hover {
-      transform: scale(1.1, 1.1); }
+      -webkit-box-shadow: 0px -3px 15px 0px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0px -3px 15px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px -3px 15px 0px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02, 1.02); }
+    .zaCardWrapper .zaCard .lock {
+      background: rgba(128, 137, 160, 0.85);
+      border-radius: 10px;
+      bottom: 0;
+      cursor: pointer;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 99; }
+      .zaCardWrapper .zaCard .lock .icW {
+        border: 2px solid #FFF;
+        border-radius: 50%;
+        height: 100px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px; }
+        .zaCardWrapper .zaCard .lock .icW i, .zaCardWrapper .zaCard .lock .icW svg {
+          color: #FFF;
+          font-size: 50px; }
     .zaCardWrapper .zaCard .zaCardHeader {
       background-color: #fcb408;
       border-radius: 10px 10px 0 0;
@@ -270,7 +337,7 @@ a {
         color: #1B2854;
         font-family: 'Didact Gothic', sans-serif;
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1;
         margin: 0; }
       .zaCardWrapper .zaCard .zaCardHeader .zaCardTitle span {
         color: rgba(0, 0, 0, 0.54);
@@ -285,6 +352,9 @@ a {
       background-size: cover;
       min-height: 150px; }
     .zaCardWrapper .zaCard .zaCardContent {
+      border-color: rgba(0, 0, 0, 0.2);
+      border-style: solid;
+      border-width: 0 1px;
       text-align: center;
       padding: 10px; }
       .zaCardWrapper .zaCard .zaCardContent p:last-child {
@@ -304,10 +374,10 @@ a {
     height: 210px; } }
 @media screen and (min-width: 768px) {
   .courseInDepth .zaCardContent {
-    height: 160px; } }
+    height: 190px; } }
 @media screen and (min-width: 1200px) {
   .courseInDepth .zaCardContent {
-    height: 140px; } }
+    height: 160px; } }
 
 @media screen and (min-width: 576px) {
   .ebook .zaCardContent {
@@ -317,17 +387,22 @@ a {
     height: 140px; } }
 @media screen and (min-width: 1200px) {
   .ebook .zaCardContent {
-    height: 115px; } }
+    height: 145px; } }
 
 #mte_center .info-bar,
 #mte_center .article {
   display: none !important; }
 
-.mte-news-list-0 .mte-news-list {
-  background-color: #1B2854 !important; }
-
 .lsn-btn .title {
-  background-color: #ffb401 !important; }
+  background-color: #ffb401 !important;
+  color: #1b2854 !important; }
+
+.mte-news-list-0 .primary.mte-news-list {
+  color: #1b2854 !important; }
+
+.mte-news-list-0 .postedat.mte-news-list,
+.mte-news-list-0 .secondary.mte-news-list {
+  color: #000 !important; }
 
 .video-tabs {
   background: #1B2854 !important; }
@@ -652,9 +727,9 @@ div#site-wrapper {
               padding: 1px 10px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper #cssecoMenu ul.menu li.subsection_ttl {
-            margin-left: -5px;
+            margin-left: 0;
             text-indent: 5px;
-            width: calc(100% + 10px); } }
+            width: 100%; } }
     div#site-wrapper #cssecoMenu ul.menu ul {
       list-style: none;
       margin: 15px 0;
@@ -1250,7 +1325,6 @@ div#site-wrapper {
     /* ../base/_globals.scss */ }
   div#site-wrapper.csseco-front-page #primary h3 {
     font-size: 2.25rem;
-    font-family: 'Didact Gothic', sans-serif;
     font-weight: 300; }
   div#site-wrapper.csseco-front-page #primary section#firtsvid.firtsvid {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
@@ -1377,6 +1451,7 @@ div#site-wrapper {
         padding: 0; } }
   div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    margin-top: -15px;
     padding-bottom: 20px;
     position: relative; }
     div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .bgVidFP1,
@@ -1400,7 +1475,7 @@ div#site-wrapper {
         content: '';
         height: 100%;
         position: absolute;
-        right: 0;
+        right: -2px;
         top: 0;
         width: 500px; }
       div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .bgVidFP1 video {
@@ -1418,10 +1493,9 @@ div#site-wrapper {
       div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .fp h1 {
         background-color: rgba(0, 0, 0, 0.6);
         color: #FFF;
-        font-family: 'Didact Gothic', sans-serif;
         font-size: 25px;
         font-weight: 300;
-        line-height: 1.1;
+        line-height: 1.3;
         padding: 15px 0;
         position: relative;
         text-align: center;
@@ -1459,11 +1533,11 @@ div#site-wrapper {
             text-align: left; } }
         @media screen and (min-width: 1200px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .fp h1 {
-            font-size: 2.375rem; } }
+            font-size: 36px; } }
       div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .fp h1 + p {
         color: #1B2854;
-        font-family: 'Didact Gothic', sans-serif;
-        font-weight: 300; }
+        font-weight: 300;
+        line-height: 1; }
         @media screen and (min-width: 375px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .fp h1 + p span {
             display: block; } }
@@ -1478,19 +1552,19 @@ div#site-wrapper {
             font-size: 18px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .fp h1 + p {
-            font-size: 22px;
+            font-size: 20px;
             margin-bottom: 1.5rem;
             margin-top: 1.5rem; } }
         @media screen and (min-width: 1200px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .fp h1 + p {
-            line-height: 1.1;
+            line-height: 1.5;
             margin-bottom: 3rem;
             margin-top: 3rem; } }
       div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .fp .cssecoBtn {
-        border: 1px solid #ffb401; }
+        border: 1px solid #ffb401;
+        font-weight: 400; }
         div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .fp .cssecoBtn span {
           display: block;
-          font-size: 16px;
           line-height: normal; }
           div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .fp .cssecoBtn span + span {
             display: none;
@@ -1513,7 +1587,7 @@ div#site-wrapper {
             font-size: 10px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_1.firtsvid_1 .fp .cssecoBtn {
-            font-size: 16px;
+            font-size: 20px;
             margin: 50px auto 20px;
             max-width: 280px; } }
       @media screen and (min-width: 992px) {
@@ -1549,10 +1623,9 @@ div#site-wrapper {
       div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp h1 {
         background-color: rgba(0, 0, 0, 0.6);
         color: #FFF;
-        font-family: 'Didact Gothic', sans-serif;
         font-size: 25px;
         font-weight: 300;
-        line-height: 1.1;
+        line-height: 1.3;
         padding: 15px 0;
         position: relative;
         text-align: center;
@@ -1584,17 +1657,17 @@ div#site-wrapper {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp h1 {
             background: transparent;
             color: #1B2854;
-            font-size: 2rem;
+            font-size: 30px;
             margin-top: 30px;
             padding: 0;
             text-align: left; } }
         @media screen and (min-width: 1200px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp h1 {
-            font-size: 2.375rem; } }
+            font-size: 36px; } }
       div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp h1 + p {
         color: #1B2854;
-        font-family: 'Didact Gothic', sans-serif;
-        font-weight: 300; }
+        font-weight: 300;
+        line-height: 1; }
         @media screen and (min-width: 375px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp h1 + p span {
             display: block; } }
@@ -1609,19 +1682,19 @@ div#site-wrapper {
             font-size: 18px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp h1 + p {
-            font-size: 22px;
+            font-size: 20px;
             margin-bottom: 1.5rem;
             margin-top: 1.5rem; } }
         @media screen and (min-width: 1200px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp h1 + p {
-            line-height: 1.1;
+            line-height: 1.5;
             margin-bottom: 3rem;
             margin-top: 3rem; } }
       div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp .cssecoBtn {
-        border: 1px solid #ffb401; }
+        border: 1px solid #ffb401;
+        font-weight: 400; }
         div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp .cssecoBtn span {
           display: block;
-          font-size: 16px;
           line-height: normal; }
           div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp .cssecoBtn span + span {
             display: none;
@@ -1644,7 +1717,7 @@ div#site-wrapper {
             font-size: 10px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp .cssecoBtn {
-            font-size: 16px;
+            font-size: 20px;
             margin: 50px auto 20px;
             max-width: 280px; } }
       @media screen and (min-width: 992px) {
@@ -1655,24 +1728,24 @@ div#site-wrapper {
         position: relative; }
         div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp .hfp2ImgWrapper img.iconsF2 {
           bottom: 30px;
-          left: 10px;
+          left: 40px;
           position: absolute;
-          width: 180px; }
+          width: 130px; }
           @media screen and (min-width: 1200px) {
             div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp .hfp2ImgWrapper img.iconsF2 {
-              bottom: 50px;
-              left: 40px; } }
+              bottom: 30px;
+              left: 80px; } }
         div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp .hfp2ImgWrapper .bgVid {
-          left: 136px;
+          left: 112px;
           position: absolute;
-          top: 115px;
-          width: 209px;
+          top: 110px;
+          width: 226px;
           z-index: 10; }
           @media screen and (min-width: 1200px) {
             div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp .hfp2ImgWrapper .bgVid {
-              left: 174px;
-              top: 130px;
-              width: 226px; } }
+              left: 156px;
+              top: 105px;
+              width: 228px; } }
       @media screen and (min-width: 992px) {
         div#site-wrapper.csseco-front-page #primary section#firtsvid_2.firtsvid_2 .fp {
           margin-bottom: 30px; } }
@@ -1690,10 +1763,9 @@ div#site-wrapper {
       div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp h1 {
         background-color: rgba(0, 0, 0, 0.6);
         color: #FFF;
-        font-family: 'Didact Gothic', sans-serif;
         font-size: 25px;
         font-weight: 300;
-        line-height: 1.1;
+        line-height: 1.3;
         padding: 15px 0;
         position: relative;
         text-align: center;
@@ -1725,41 +1797,44 @@ div#site-wrapper {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp h1 {
             background: transparent;
             color: #1B2854;
-            font-size: 2rem;
+            font-size: 30px;
             margin-top: 30px;
             padding: 0;
             text-align: left; } }
         @media screen and (min-width: 1200px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp h1 {
-            font-size: 2.375rem; } }
+            font-size: 36px; } }
       div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp h1 + p {
         color: #1B2854;
-        font-family: 'Didact Gothic', sans-serif;
-        font-weight: 300; }
+        font-weight: 300;
+        line-height: 1; }
         @media screen and (min-width: 375px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp h1 + p span {
             display: block; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp h1 + p span {
             display: inline; } }
+        @media screen and (min-width: 1200px) {
+          div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp h1 + p span {
+            display: block; } }
         @media screen and (min-width: 768px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp h1 + p {
             font-size: 18px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp h1 + p {
-            font-size: 22px;
+            font-size: 20px;
             margin-bottom: 1.5rem;
             margin-top: 1.5rem; } }
         @media screen and (min-width: 1200px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp h1 + p {
-            line-height: 1.1;
+            line-height: 1.5;
             margin-bottom: 3rem;
             margin-top: 3rem; } }
       div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp .cssecoBtn {
-        border: 1px solid #ffb401; }
+        border: 1px solid #ffb401;
+        font-weight: 400; }
         div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp .cssecoBtn span {
           display: block;
-          font-size: 16px;
           line-height: normal; }
           div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp .cssecoBtn span + span {
             display: none;
@@ -1782,7 +1857,7 @@ div#site-wrapper {
             font-size: 10px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#firtsvid_3.firtsvid_3 .fp .cssecoBtn {
-            font-size: 16px;
+            font-size: 20px;
             margin: 50px auto 20px;
             max-width: 280px; } }
       @media screen and (min-width: 992px) {
@@ -1851,7 +1926,7 @@ div#site-wrapper {
           margin: 0 0 60px; } }
       @media screen and (min-width: 1200px) {
         div#site-wrapper.csseco-front-page #primary section#section1fp.subVid h3 {
-          font-size: 30px;
+          font-size: 32px;
           margin: 0 0 70px; } }
     div#site-wrapper.csseco-front-page #primary section#section1fp.subVid .clogoW {
       margin: 0 0 10px;
@@ -2006,7 +2081,7 @@ div#site-wrapper {
           margin: 0 0 60px; } }
       @media screen and (min-width: 1200px) {
         div#site-wrapper.csseco-front-page #primary section#section2fp.part .top h3 {
-          font-size: 30px;
+          font-size: 32px;
           margin: 0 0 70px; } }
     div#site-wrapper.csseco-front-page #primary section#section2fp.part .top p {
       font-size: 14px;
@@ -2271,10 +2346,10 @@ div#site-wrapper {
           width: 32px; }
           @media screen and (min-width: 992px) {
             div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .pin::before {
-              height: 47px;
-              left: -10px;
-              top: -45px;
-              width: 37px; } }
+              height: 60px;
+              left: -20px;
+              top: -58px;
+              width: 50px; } }
         @media screen and (min-width: 768px) {
           div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .pin {
             float: left;
@@ -2336,7 +2411,7 @@ div#site-wrapper {
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .pin.ro::before {
             left: auto;
-            right: -10px; } }
+            right: -20px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .pin.ro {
             right: 350px;
@@ -2360,7 +2435,7 @@ div#site-wrapper {
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .pin.it::before {
             left: auto;
-            right: -10px; } }
+            right: -20px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .pin.it {
             right: 420px;
@@ -2374,7 +2449,7 @@ div#site-wrapper {
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .pin.cy::before {
             left: auto;
-            right: -10px; } }
+            right: -20px; } }
         @media screen and (min-width: 992px) {
           div#site-wrapper.csseco-front-page #primary section#section3fp.map .imgMapWrapper .pin.cy {
             right: 180px;
@@ -2451,7 +2526,7 @@ div#site-wrapper {
           margin: 0 0 60px; } }
       @media screen and (min-width: 1200px) {
         div#site-wrapper.csseco-front-page #primary section#section4fp.intr h3 {
-          font-size: 30px;
+          font-size: 32px;
           margin: 0 0 70px; } }
     div#site-wrapper.csseco-front-page #primary section#section4fp.intr p {
       font-weight: 300; }
@@ -2585,7 +2660,7 @@ div#site-wrapper {
         margin: 0 0 60px; } }
     @media screen and (min-width: 1200px) {
       div#site-wrapper.csseco-front-page #primary section#section5fp.training h3 {
-        font-size: 30px;
+        font-size: 32px;
         margin: 0 0 70px; } }
   div#site-wrapper.csseco-front-page #primary section#section5fp.training p {
     font-weight: 300; }
@@ -2671,7 +2746,7 @@ div#site-wrapper {
           margin: 0 0 60px; } }
       @media screen and (min-width: 1200px) {
         div#site-wrapper.csseco-front-page #primary section#section6fp.tech h3 {
-          font-size: 30px;
+          font-size: 32px;
           margin: 0 0 70px; } }
     div#site-wrapper.csseco-front-page #primary section#section6fp.tech p {
       font-weight: 300; }
@@ -2759,7 +2834,7 @@ div#site-wrapper {
           margin: 0 0 60px; } }
       @media screen and (min-width: 1200px) {
         div#site-wrapper.csseco-front-page #primary section#section7fp.autoch h3 {
-          font-size: 30px;
+          font-size: 32px;
           margin: 0 0 70px; } }
     div#site-wrapper.csseco-front-page #primary section#section7fp.autoch p {
       font-weight: 300; }
@@ -3140,7 +3215,7 @@ div#site-wrapper {
           margin: 0 0 60px; } }
       @media screen and (min-width: 1200px) {
         div#site-wrapper.csseco-front-page #primary section#section9fp.join h3.ttl {
-          font-size: 30px;
+          font-size: 32px;
           margin: 0 0 70px; } }
     div#site-wrapper.csseco-front-page #primary section#section9fp.join p {
       font-weight: 300; }
@@ -3200,7 +3275,6 @@ div#site-wrapper {
         font-size: 22px;
         padding: 60px 0 50px 0; } }
   div#site-wrapper.csseco-front-page2 header#header {
-    background-image: url(../imgs/fp/fp2/header_bg.png);
     background-position: center left;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -5557,6 +5631,79 @@ section#mt4mac5thsect.mt4mac5thsect {
     color: #FFF; }
   #asRoma.asRoma section#why.why .dtable {
     height: 80px; }
+
+section#basic_course.basic_course ul.nav li {
+  text-align: center;
+  width: 50%; }
+  section#basic_course.basic_course ul.nav li a {
+    background: transparent;
+    border: 1px solid #162856;
+    border-radius: 10px;
+    color: #162856;
+    margin: 0 1px 1px 0;
+    padding: .2rem 0;
+    text-align: center; }
+    section#basic_course.basic_course ul.nav li a:hover {
+      background: rgba(27, 40, 84, 0.8);
+      color: #FFFFFF; }
+    section#basic_course.basic_course ul.nav li a.active {
+      background: #162856;
+      color: #fff; }
+    @media screen and (min-width: 576px) {
+      section#basic_course.basic_course ul.nav li a {
+        padding: .2rem .3rem; } }
+    @media screen and (min-width: 768px) {
+      section#basic_course.basic_course ul.nav li a {
+        padding: .3rem; } }
+    @media screen and (min-width: 992px) {
+      section#basic_course.basic_course ul.nav li a {
+        padding: .4rem .5rem; } }
+  @media screen and (min-width: 576px) {
+    section#basic_course.basic_course ul.nav li {
+      width: auto; }
+      section#basic_course.basic_course ul.nav li:not(:last-child) {
+        margin-right: 10px; } }
+@media screen and (min-width: 768px) {
+  section#basic_course.basic_course .zaCardWrapper .zaCardContent {
+    height: 170px; } }
+
+#bsmodalFX.modal_video .close {
+  opacity: 0.7;
+  color: #fff;
+  text-shadow: none; }
+#bsmodalFX.modal_video .close:not(:disabled):not(.disabled):hover {
+  opacity: .9;
+  color: #fff; }
+#bsmodalFX.modal_video .modal-header {
+  border-bottom: 0px solid #dee2e6;
+  width: 930px;
+  margin: 0 auto;
+  padding: 2rem 1rem 0rem 1rem; }
+#bsmodalFX.modal_video .modal-body {
+  padding: 0; }
+#bsmodalFX.modal_video .modal.show .modal-dialog {
+  max-width: 90% !important;
+  height: 87vh; }
+#bsmodalFX.modal_video .modal-content {
+  background-color: rgba(0, 0, 0, 0);
+  border: none; }
+@media (min-width: 576px) {
+  #bsmodalFX.modal_video .modal-dialog {
+    background: rgba(0, 0, 0, 0);
+    max-width: 100% !important;
+    width: 100vw !important;
+    margin: 1.75rem auto; } }
+
+#bsmodalFXL2 .modal-body img.modal_logo {
+  margin-bottom: 1rem;
+  max-height: 80px; }
+#bsmodalFXL2 .modal-body h6 {
+  font-size: 1.2rem;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  margin-bottom: 1rem; }
+#bsmodalFXL2 .modal-body p {
+  margin-bottom: 1rem; }
 
 .symbolpage .buyprice-p.cssecoBtn,
 .symbolpage .sellprice-p.cssecoBtn {
