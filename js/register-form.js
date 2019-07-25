@@ -225,11 +225,11 @@ $(document).ready(function(){
                         IPAddress:currentip,
                         IPCountry:ipcountry
                     };
-	
+	 
 					var successMessage =   '<div class="success-message-container">'+
 												'<p class="success-message">  You will be redirected to the next step in the user registration process... </p>'+
 											'</div>';
-					$('#register_form').append(successMessage);
+					$('#register_form').html(successMessage);
 					
 					
                     // redirect url
@@ -245,7 +245,7 @@ $(document).ready(function(){
 					var failMessage =   '<div class="fail-message-container">'+
                                             '<p class="fail-message"> An error ocurred. Please refresh the page and try again.</p>'+
                                         '</div>';
-					$('#register_form').append(failMessage);
+					$('#register_form').html(failMessage);
 					
 				}
 				
@@ -253,7 +253,7 @@ $(document).ready(function(){
 					var failMessage =   '<div class="fail-message-container">'+
                                             '<p class="fail-message">  An error ocurred. Please refresh the page and try again.</p>'+
                                         '</div>';
-                    $('#register_form').append(failMessage);
+                    $('#register_form').html(failMessage);
 				
 				
 			});

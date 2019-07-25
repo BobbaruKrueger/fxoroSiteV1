@@ -31,7 +31,7 @@ $results = $wpdb->get_results("SELECT * FROM tickers3");
 							<a class="active" id="mostPopular-tab" data-toggle="tab" href="#mostPopular" role="tab" aria-controls="mostPopular" aria-selected="true">Most Popular</a>
 						</li>
 						<li class="nav-item">
-							<a class="" id="forex-tab" data-toggle="tab" href="#forex" role="tab" aria-controls="forex" aria-selected="true">FOREX</a>
+							<a class="" id="forex-tab" data-toggle="tab" href="#forex" role="tab" aria-controls="forex" aria-selected="true">Forex</a>
 						</li>
 						<li class="nav-item">
 							<a class="" id="shares-tab" data-toggle="tab" href="#shares" role="tab" aria-controls="shares" aria-selected="false">Shares</a>

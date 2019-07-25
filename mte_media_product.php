@@ -11,7 +11,7 @@
 <?php
 
 $product = $_GET['product'];
-$lsn = $_GET['lsn'];
+// $lsn = $_GET['lsn'];
 
 
 ?>
@@ -35,7 +35,7 @@ var mte_demo=2; /* Locked mode */
 var autoPlay =true;
 var single   = '<?php echo $product;?>';
 <?php
-if ($lsn) echo 'var lsn='.$lsn.';';
+// if ($lsn) echo 'var lsn='.$lsn.';';
 ?>
 
 

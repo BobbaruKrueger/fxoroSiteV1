@@ -66,4 +66,7 @@
 	<?php get_template_part( 'includes/front/template-parts/fp/fp', 'fxvid' ); ?>
 	<?php get_template_part( 'includes/front/template-parts/fp/fp', 'join' ); ?>
 
+<script src="<?php echo get_template_directory_uri(); ?>/vendor/particles/particles.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/vendor/particles/particles.json"></script>
+
 <?php get_footer( 'fp' ); ?>

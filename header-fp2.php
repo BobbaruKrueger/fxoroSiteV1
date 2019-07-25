@@ -4,6 +4,7 @@
   * header-fp2.php
   */
 ?>
+<?php session_start() ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

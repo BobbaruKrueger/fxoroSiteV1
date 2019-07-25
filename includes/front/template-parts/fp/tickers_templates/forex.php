@@ -2,9 +2,9 @@
     <a href="instrument?instrument=<?php echo 'Forex';?>&symbol=<?php echo $result->symbol;?>">
         <div class="col-10 offset-1 col-sm-12 offset-sm-0 itemInner">
             <div class="row">
-                <div class="col-12 cssecoFlagsW">
-                    <img  src="wp-content/themes/CSSecoStarterThemeV2-master/imgs/tickers/<?php echo substr($result->symbol,0,3) ?>.png" alt="Forex <?php echo substr($result->symbol, 0,3);?> Flag" width="30px">
-                    <img  src="wp-content/themes/CSSecoStarterThemeV2-master/imgs/tickers/<?php echo substr($result->symbol, -3) ?>.png" alt="Forex <?php echo substr($result->symbol, -3) ?>  Flag" width="30px">
+                <div class="col-12 cssecoFlagsW overlay-flag-container">
+                    <img  src="<?php echo get_template_directory_uri(); ?>/imgs/tickers/<?php echo substr($result->symbol,0,3) ?>.png" class="imgBorder" alt="Forex <?php echo substr($result->symbol, 0,3);?> Flag" width="30px">
+                    <img  src="<?php echo get_template_directory_uri(); ?>/imgs/tickers/<?php echo substr($result->symbol, -3) ?>.png" class="imgBorder" alt="Forex <?php echo substr($result->symbol, -3) ?>  Flag" width="30px">
                 </div>
             </div>
             <div class="row">

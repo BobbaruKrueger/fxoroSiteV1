@@ -379,7 +379,7 @@ $(document).ready(()=>{
 											'<p class="success-message"> Your reuest has been sent. We will get back to you for further actions. You will be redirected to the user page.... </p>'+
 											
 										'</div>';
-				$('#cssecoReferralForm').append(successMessage);
+				$('#cssecoReferralForm').html(successMessage);
 
 				// $.ajax({
 				// 	url: url,

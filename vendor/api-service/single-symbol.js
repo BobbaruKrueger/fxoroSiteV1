@@ -13,8 +13,8 @@ $(document).ready( ()=> {
         
         // $(event.currentTarget).css('background-color', '#0077b5').siblings().css('background-color', '#1B2854');
         // $(event.currentTarget).addClass('active').siblings().removeClass('active');
-        $('.option').removeClass('active');
-        $(event.currentTarget).addClass('active');
+        $('.option > .cssecoBtn').removeClass('active');
+        $(event.currentTarget).find('>.cssecoBtn').addClass('active');
         
         let interval = $(event.currentTarget).find('.interval').text();
         switch (interval) {
@@ -47,7 +47,7 @@ $(document).ready( ()=> {
                 break;
         }
         let data = JSON.parse(intervals[row]);
-        console.log(data);
+//        console.log(data);
         
         
         // //controlGraph( qSymbol, interval);

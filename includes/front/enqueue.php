@@ -102,6 +102,11 @@ function csseco_load_scripts() {
 		wp_enqueue_script( 'criteria', get_template_directory_uri().'/js/criteria-form.js', array('jquery') , true );
 		// wp_enqueue_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js?render=6Le4j6oUAAAAAN7GKHwFX7AGMJ0QMI0Tjo7f2PrT', array(), true );
 	}
+	// basic-course page
+	if (  is_page(262) ){
+		wp_enqueue_script( 'basic-course', get_template_directory_uri().'/js/basic-course-mte.js', array('jquery') , true );
+		// wp_enqueue_script( 'recaptcha', 'https://www.google.com/recaptcha/api.js?render=6Le4j6oUAAAAAN7GKHwFX7AGMJ0QMI0Tjo7f2PrT', array(), true );
+	}
 	// become a professional
 	if (  is_page(770) ){
 		// Validate js scripts

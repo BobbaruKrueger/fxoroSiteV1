@@ -86,9 +86,9 @@ a {
 }
 
 @keyframes maphover {
-  0% {fill:rgba(255, 180, 1, .5);}
-  50% {fill:rgba(255, 180, 1, .75);}
-  100% {fill:rgba(255, 180, 1, .5);}
+  0% {fill:rgba(255, 180, 1, .0);}
+  50% {fill:rgba(255, 180, 1, .50);}
+  100% {fill:rgba(255, 180, 1, .0);}
 }
 
 /*--------------------------------------------------------------
@@ -135,6 +135,7 @@ a {
 }
 .mte-calendar-event-0 .hoverclass.mte-calendar-event:hover {
 	background: rgb(101, 101, 102)!important;
+	color: #FFF!important;
 }
 
 // mte signals tabel""
@@ -154,6 +155,7 @@ a {
 }
 .mte-daily-briefings-0 .row-briefings.mte-daily-briefings:hover {
 	background: rgb(101, 101, 102)!important;
+	color: #FFF!important;
 }
 
 // mte new stuff
@@ -1256,6 +1258,44 @@ div#site-wrapper {
 	&.csseco-front-page {
 		// FP Primary a.k.a. content-area
 		#primary {
+			// de sters
+			.fp6 {
+				.firtsvid_4 {
+					position: relative;
+					video.bgVid {
+						display: none!important;
+					}
+					#particles-js {
+						bottom: 0;
+						height: 100%;
+						left: 0;
+						position: absolute; 
+						right: 0;
+						top: 0;
+						width: 100%;
+					}
+					.wbg,
+					.wbg::before,
+					.wbg::after {
+						background: rgba(255, 255, 255, .7)!important;
+					}
+				}
+				#section2fp.part {
+					background: transparent;
+					color: #000;
+					.bottom ul.nav li a {
+						color: #000;
+					}
+					.bottom .tab-content .owl-carousel .owl-stage .item .itemInner {
+//						border: 1px solid #1b2854;
+						border: 1px solid rgba(0, 0, 0, .32);
+					}
+					#particles-js {
+						display: none!important;
+					}
+				}
+			}
+			// END de sters
 			h3 {
 				font-size: 2.25rem;
 //				font-family: 'Didact Gothic', sans-serif;
@@ -1943,6 +1983,407 @@ div#site-wrapper {
 					padding: 0 0 30px;
 				}
 			}
+			section#firtsvid_4.firtsvid_4 {
+				border-bottom: 1px solid rgba(0, 0, 0, .5);
+				overflow: hidden;
+				padding-bottom: 20px;
+				position: relative;
+				video.bgVid {
+					display: none;
+					bottom: 0;
+					left: 0;
+					position: absolute;
+					right: 0;
+//					top: 0;
+//					height: 100%;
+					width: 100%;
+					@media screen and (min-width: $csseco_bp_992) {
+						display: block;
+//						bottom: -270px;
+					}
+					@media screen and (min-width: $csseco_bp_1200) {
+						bottom: 0;
+					}
+					@media screen and (min-width: 1800px) {
+						bottom: -350px;
+					}
+				}
+				.fp {
+					margin-top: 0;
+					.wbg {
+						h1 {
+	//						background-color: rgba(0, 0, 0, .6);
+							color: #1b2854;
+	//						font-family: 'Didact Gothic', sans-serif; 
+							font-size: 25px;
+							font-weight: 300;
+							line-height: 1.3;
+							padding: 15px 0;
+							position: relative;
+							text-align: center;
+							text-transform: none;
+	//						&::before,
+	//						&::after {
+	//							background-color: rgba(0, 0, 0, .6);
+	//							bottom: 0;
+	//							content: '';
+	//							height: 100%;
+	//							position: absolute;
+	//							top: 0;
+	//							width: 10000px;
+	//							@media screen and (min-width: $csseco_bp_992) {
+	//								display: none;
+	//							}
+	//						}
+	//						&::before {
+	//							left: -10000px;
+	//						}
+	//						&::after {
+	//							right: -10000px;
+	//						}
+							span {
+								color: #ffb401;
+								@media screen and (min-width: 375px) {
+									display: block;
+								}
+							}
+							@media screen and (min-width: $csseco_bp_768) {
+								font-size: 28px;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+								background: transparent;
+								color: #1B2854;
+								font-size: 30px;
+								margin-top: 0;
+								padding: 0;
+	//							text-align: left;
+							}
+							@media screen and (min-width: $csseco_bp_1200) {
+								font-size: 36px;
+							}
+						}
+						h1 + p {
+							color: #1B2854;
+	//						font-family: 'Didact Gothic', sans-serif;
+							font-weight: 300;
+							line-height: 1.3;
+							span {
+								@media screen and (min-width: 375px) {
+									display: block;
+								}
+								@media screen and (min-width: $csseco_bp_992) {
+	//								display: inline;
+									display: block;
+								}
+								@media screen and (min-width: $csseco_bp_1200) {
+	//								display: block;
+								}
+							}
+							@media screen and (min-width: $csseco_bp_768) {
+								font-size: 18px;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+								font-size: 20px;
+//								margin-bottom: 1.5rem;
+								margin-bottom: 0;
+								margin-top: 1.5rem;
+							}
+							@media screen and (min-width: $csseco_bp_1200) {
+								line-height: 1.5;
+//								margin-bottom: 3rem;
+								margin-top: 3rem;
+							}
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							background: rgba(255, 255, 255, 1);
+							margin-top: 30px;
+							padding: 15px 0;
+							position: relative;
+							&::before,
+							&::after {
+								background-color: rgba(255, 255, 255, 1);
+								bottom: 0;
+								content: '';
+								height: 100%;
+								position: absolute;
+								top: 0;
+								width: 10000px;
+								@media screen and (min-width: $csseco_bp_992) {
+//									display: none;
+								}
+							}
+							&::before {
+								left: -10000px;
+							}
+							&::after {
+								right: -10000px;
+							}
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							margin-top: 80px;
+						}
+					}
+					.cssecoBtn {
+						border: 1px solid #ffb401;
+						font-weight: 400;
+						span {
+							display: block;
+							line-height: normal;
+							& + span {
+								display: none;
+								font-size: 10px;
+								@media screen and (min-width: $csseco_bp_992) {
+									display: block;
+								}
+							}
+						}	
+						& + p {
+//							font-size: 9px;
+							margin: 0 auto;
+//							max-width: 210px;
+							text-align: center;
+							@media screen and (min-width: $csseco_bp_992) {
+								margin: 0;
+							}
+							@media screen and (min-width: $csseco_bp_1200) {
+								margin-bottom: 50px;
+							}
+						}
+						& + div.row {
+							@media screen and (max-width: 991.98px) {
+								display: none;
+							}
+							& + div.row {
+								@media screen and (max-width: 991.98px) {
+									font-size: 10px;
+	//								display: none;
+								}	
+							}
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							font-size: 20px;
+							margin: 50px auto 0;
+							max-width: 280px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							padding: 20px;
+						}
+					}
+					.cssecoBtn,
+					.cssecoBtn + p {
+						@media screen and (min-width: $csseco_bp_992) {
+//							margin: 0 0 0 80px;
+						}
+					}
+					.ub {
+						.flag-wrapper {
+							display: inline-block;
+							height: 100%;
+							.flag {
+								background-size: cover;
+								background-position: center center;
+								border-radius: 50%;
+								height: 30px;
+								width: 30px;
+								@media screen and (min-width: $csseco_bp_576) {
+									height: 35px;
+									width: 35px;
+								}
+								@media screen and (min-width: $csseco_bp_768) {
+									height: 37px;
+									width: 37px;
+								}
+								@media screen and (min-width: $csseco_bp_992) {
+									height: 43px;
+									width: 43px;
+								}
+								@media screen and (min-width: $csseco_bp_1200) {
+									height: 45px;
+									width: 45px;
+								}
+							}
+						}
+						.flag-wrapper + div {
+							display: inline-block;
+							height: 100%;
+							span {
+								font-size: 8px;
+								display: block;
+								@media screen and (min-width: $csseco_bp_576) {
+									font-size: 8px;
+								}
+								@media screen and (min-width: $csseco_bp_768) {
+									font-size: 9px;
+								}
+								@media screen and (min-width: $csseco_bp_992) {
+									font-size: 10px;
+								}
+								@media screen and (min-width: $csseco_bp_1200) {
+									font-size: 12px;
+								}
+							}
+						}
+					}
+					@media screen and (min-width: $csseco_bp_992) {
+						margin-bottom: 30px;
+					}
+					@media screen and (min-width: 1400px) {
+						margin-bottom: 60px;
+					}
+				}
+				@media screen and (min-width: $csseco_bp_992) {
+					padding: 0;
+					margin-top: -15px;
+				}
+			}
+			section#firtsvid_4.firtsvid_4.firtsvid_4_v2 {
+				.fp {
+					.cssecoBtn+p,
+					.ub .flag-wrapper+div span {
+						font-size: 14px;
+					}
+					.wbg {
+						h1 {
+							@media screen and (min-width: $csseco_bp_1200) {
+								font-size: 42px;
+							}
+						}
+						h1 + p {
+							@media screen and (min-width: $csseco_bp_1200) {
+								font-size: 24px;
+							}
+						}
+						@media screen and (min-width: $csseco_bp_992) {
+							background: rgba(255, 255, 255, 1);
+							margin-top: 30px;
+							padding: 15px 0;
+							position: relative;
+							&::before,
+							&::after {
+								bottom: 0;
+								content: '';
+								height: 100%;
+								position: absolute;
+								top: 0;
+								width: 50px;
+								@media screen and (min-width: $csseco_bp_992) {
+//									display: none;
+								}
+								@media screen and (min-width: 1400px) {
+									width: 100px;
+								}
+							}
+							&::before {
+//								/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+35,ffffff+60,ffffff+100&0+0,0.5+35,1+60,1+100 */
+//								background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 35%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+//								background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 35%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+//								background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 35%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+								
+								/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+								
+								
+								left: -50px;
+								@media screen and (min-width: 1400px) {
+									left: -100px;
+								}
+							}
+							&::after {
+//								/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+40,ffffff+60,ffffff+100&1+0,1+40,0.5+60,0+100 */
+//								background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,0.5) 60%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+//								background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 40%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+//								background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 40%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+								
+								/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+
+								
+								
+								right: -50px;
+								@media screen and (min-width: 1400px) {
+									right: -100px;
+								}
+							}
+						}
+					}
+				}
+			}
+			section#firtsvid_4.firtsvid_4.firtsvid_4_v6 {
+				border-top: 1px solid rgba(0,0,0,0.5);
+				position: relative;
+				&::before {
+					background: #FFF;
+					bottom: 0;
+					content: '';
+					height: 100%;
+					left: 0;
+					opacity: .6;
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 100%;
+					z-index: 4;
+				}
+				#particles-js {
+					z-index: 3;
+				}
+				.fp {
+					position: relative;
+					z-index: 10;
+					.wbg {
+						background: transparent!important;
+						&::after,
+						&::before {
+							display: none;
+						}
+						h1 {
+							@media screen and (min-width: $csseco_bp_1200) {
+								font-size: 45px;
+							}
+						}
+						h1 + p {
+							@media screen and (min-width: $csseco_bp_992) {
+								font-size: 24px;
+							}
+							@media screen and (min-width: $csseco_bp_1200) {
+								margin-top: 1rem;
+							}
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							margin-top: 60px;
+						}
+					}	
+					.cssecoBtn {
+						@media screen and (min-width: $csseco_bp_992) {
+							font-size: 24px;
+						}
+						@media screen and (min-width: $csseco_bp_1200) {
+							margin: 20px auto 0;
+						}
+					}
+					.cssecoBtn + p {
+						@media screen and (min-width: $csseco_bp_1200) {
+							margin-bottom: 30px;
+						}
+					}
+				}
+				.ub {
+					.flag-wrapper+div {
+						span {
+							font-size: 16px;
+						}	
+					}
+				}
+			}
 			
 			section#section1fp.subVid {
 				padding: 30px 0 20px;
@@ -2127,6 +2568,7 @@ div#site-wrapper {
 					position: absolute; 
 					right: 0;
 					top: 0;
+//					z-index: 3;
 				}
 				.top {
 					h3 {
@@ -2277,7 +2719,23 @@ div#site-wrapper {
 										padding: 15px;
 										.cssecoFlagsW {
 											text-align: center;
-											img {}
+											img {
+												border-radius: 5px;
+											}
+											&.overlay-flag-container {
+//												min-height: 23px;
+//												position: relative;
+												img {
+													position: relative;
+												}
+												img:first-child {
+													top: -4px;
+												}
+												img:last-child {
+													bottom: -4px;
+													left: -15px;
+												}
+											}
 										}
 										.currencyW {
 											font-size: 22px;
@@ -2298,16 +2756,22 @@ div#site-wrapper {
 											text-align: center;
 											font-size: 18px;
 											h3 {
-												color: #30AB2F;
+												color: rgb(1, 148, 209);
 												font-size: 20px;
+											}
+											.value {
+												color: #3eb12f;
 											}
 										}
 										.buyprice {
 											text-align: center;
 											font-size: 18px;
 											h3 {
-												color: #BE0011;
+												color: rgb(1, 148, 209);
 												font-size: 20px;
+											}
+											.value {
+												color: #f7011a;
 											}
 										}	
 									}
@@ -2474,6 +2938,7 @@ div#site-wrapper {
 					.pin {
 						animation-duration: 1200ms; 
 						background: #FFF;
+						border-radius: 5px;
 						margin: 0 0 15px 0;
 						padding: 0 0 0 45px;
 						position: relative;
@@ -2482,6 +2947,7 @@ div#site-wrapper {
 						span {
 							display: block;
 							a {
+								color: #000;
 								text-decoration: none;
 								transition: all 250ms ease-in;
 								@media screen and (min-width: $csseco_bp_992) {
@@ -2495,7 +2961,7 @@ div#site-wrapper {
 						}
 						&:hover {
 							@media screen and (min-width: $csseco_bp_992) {
-								border: 1px solid #ffb401;
+//								border: 1px solid #ffb401;
 								a {
 									font-size: 14px;
 								}
@@ -2512,10 +2978,10 @@ div#site-wrapper {
 							position: absolute;
 							width: 32px;
 							@media screen and (min-width: $csseco_bp_992) {
-								height: 60px;
+								height: 65px;
 								left: -20px;
-								top: -58px;
-								width: 50px;
+								top: -62px;
+								width: 55px;
 							}
 						}
 						@media screen and (min-width: $csseco_bp_768) {
@@ -2525,7 +2991,7 @@ div#site-wrapper {
 						}
 						@media screen and (min-width: $csseco_bp_992) {
 							background: #FFF;
-							border: 1px solid #000;
+							border: 1px solid rgba(255, 180, 1, .9);
 							height: auto;
 							margin: 0;
 							max-width: none;
@@ -3233,6 +3699,10 @@ div#site-wrapper {
 								left: 14%;
 								top: -22%;
 								width: 50%;
+							}
+							@media screen and (min-width: $csseco_bp_992) {
+								left: 12%;
+								top: -18%;
 							}
 						}
 						&.screen3 {
@@ -6375,13 +6845,25 @@ section#mt4mac5thsect.mt4mac5thsect {
 		background-repeat: no-repeat;
 		background-size: cover;
 		margin-bottom: 30px;
-		> .container {
-			@media screen and (max-width: 575px) {
-				background-image: url(../imgs/asRoma/banner_overlay_middle.png);
-				background-position: center center;
-				background-repeat: no-repeat;
-				background-size: cover;
+		position: relative;
+		&::after {
+			background-color: rgba(0, 0, 0, .5);
+			bottom: 0;
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 100%;
+			z-index: 0;
+			@media screen and (min-width: $csseco_bp_992) {
+				display: none;
 			}
+		}
+		> .container {
+			position: relative;
+			z-index: 1;
 		}
 		.overlay {
 			color: #FFF;
@@ -6389,45 +6871,47 @@ section#mt4mac5thsect.mt4mac5thsect {
 			position: relative;
 			text-align: center;
 			z-index: 2;
-			&::after {
-				@media screen and (min-width: $csseco_bp_576) {
-					background-image: url(../imgs/asRoma/banner_overlay_full.png);
-					background-position: center center;
-					background-repeat: no-repeat;
-					background-size: cover;
-					content: '';
-					height: 100%;
-					left: -160px;
-					position: absolute;
-					top: 0;
-					width: calc(100% + 340px);
-					z-index: -1;
-				}
-				@media screen and (min-width: $csseco_bp_768) {
-  					background-size: 100% 100%;
-					left: 50%;
-					opacity: .88;
-					transform: translateX(-50%);
-					width: 940px;
-				}
-			}
+//			&::after {
+//				@media screen and (min-width: $csseco_bp_576) {
+//					background-image: url(../imgs/asRoma/banner_overlay_full.png);
+//					background-position: center center;
+//					background-repeat: no-repeat;
+//					background-size: cover;
+//					content: '';
+//					height: 100%;
+//					left: -160px;
+//					position: absolute;
+//					top: 0;
+//					width: calc(100% + 340px);
+//					z-index: -1;
+//				}
+//				@media screen and (min-width: $csseco_bp_768) {
+//  					background-size: 100% 100%;
+//					left: 50%;
+//					opacity: .88;
+//					transform: translateX(-50%);
+//					width: 940px;
+//				}
+//			}
 			img.roma_logo {
 				margin-bottom: 1.3rem;
 				max-width: 60px;
 				@media screen and (min-width: $csseco_bp_992) {
-					max-width: 80px;
-				}
-				@media screen and (min-width: $csseco_bp_1200) {
-					max-width: 100px;
-				}
-				@media screen and (min-width: 1400px) {
 					bottom: auto;
+					margin: 0;
 					max-width: none;
 					position: absolute;
-					right: 120px;
+					right: 0;
 					top: 50%;
 					transform: translateY(-50%);
 					width: 120px;
+					
+				}
+				@media screen and (min-width: $csseco_bp_1200) {
+					width: 150px;
+				}
+				@media screen and (min-width: 1400px) {
+					width: 180px;
 				}
 			}
 			h3 {
@@ -6470,6 +6954,9 @@ section#mt4mac5thsect.mt4mac5thsect {
 					font-size: 24px;
 				}
 			}
+			@media screen and (min-width: $csseco_bp_992) {
+				min-height: 320px;
+			}
 			@media screen and (min-width: 1400px) {
 				padding: 50px 0;
 			}
@@ -6478,7 +6965,54 @@ section#mt4mac5thsect.mt4mac5thsect {
 			margin-bottom: 3rem;
 		}
 	}
+	section#dttl.dttl {
+		margin-bottom: 30px;
+		h3 {
+			font-size: 24px;
+			font-weight: 300;
+			margin-bottom: 1.3rem;
+			span {
+//				font-weight: bold;
+			}
+			@media screen and (min-width: $csseco_bp_576) {
+				font-size: 26px;
+			}
+			@media screen and (min-width: $csseco_bp_768) {
+				font-size: 28px;
+			}
+			@media screen and (min-width: $csseco_bp_992) {
+				font-size: 30px;
+			}
+		}
+		p {
+			font-size: 16px;
+			font-weight: 300;
+			margin-bottom: 1.3rem;
+			br {
+				display: none;
+				@media screen and (min-width: 500px) {
+					display: block;
+				}
+			}
+			@media screen and (min-width: $csseco_bp_576) {
+				font-size: 18px;
+			}
+			@media screen and (min-width: $csseco_bp_768) {
+				font-size: 20px;
+			}
+			@media screen and (min-width: $csseco_bp_992) {
+				font-size: 22px;
+			}
+			@media screen and (min-width: $csseco_bp_1200) {
+				font-size: 24px;
+			}
+		}
+		@media screen and (min-width: $csseco_bp_992) {
+			margin-bottom: 3rem;
+		}
+	}
 	section#cfdInstr.cfdInstr {
+		margin-bottom: 30px;
 		h5 {
 			border-bottom: 1px solid #980a2b;
 			position: relative;
@@ -6628,7 +7162,10 @@ section#mt4mac5thsect.mt4mac5thsect {
 	//		visibility: hidden; // for animation (animate.css)
 		}
 	}
-}
+	@media screen and (min-width: $csseco_bp_992) {
+		margin-top: -15px;
+	}
+} 
 
 // Basic course
 section#basic_course.basic_course {
@@ -6681,6 +7218,8 @@ section#basic_course.basic_course {
 		}
 	}
 }
+#bsmodalFXPT.modal_video,
+#bsmodalFXTW.modal_video,
 #bsmodalFX.modal_video {
 	.close {
 	   opacity: 0.7;
@@ -6975,11 +7514,20 @@ section#basic_course.basic_course {
 		.graph{
 			.graph-controller{
 //				background: #1B2854;
-				margin-top: 3rem;
+				margin-top: 23px;
 				color: #fff;
 				font-size: 14px;
 				font-weight: normal;
 				text-align: center;
+				.cssecoCol {
+					@media screen and (min-width: $csseco_bp_1200) {
+						-ms-flex-preferred-size: 0;
+						flex-basis: 0;
+						-ms-flex-positive: 1;
+						flex-grow: 1;
+						max-width: 100%;
+					}
+				}
 				.instrument-animationbtn{
 					background-color: #fff;
 					//border: 1px solid transparent;
@@ -6990,7 +7538,7 @@ section#basic_course.basic_course {
 					display: inline-block;
 					font-size: 14px;
 					font-weight: 400;
-					margin: -25px 20px 1px 0px;
+//					margin: -0 20px 1px 0px;
 					// min-width: 210px;
 					overflow: hidden;
 					padding: 5px;
@@ -7000,6 +7548,7 @@ section#basic_course.basic_course {
 					z-index: 1;
 					-webkit-transition: color .32s ease;
 					transition: color .32s ease;
+					width: 100%;
 					&.active{
 						&::after{
 							background: #0077b5;

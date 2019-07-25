@@ -234,6 +234,8 @@ $(document).ready(()=>{
 					// });
 				}else
 				{
+					console.log(response);
+					
 					var failMessage =   '<div class="fail-message-container">'+
 												'<p class="fail-message"> An error ocurred. Please refresh the page and try again.</p>'+
 											'</div>';
@@ -242,6 +244,8 @@ $(document).ready(()=>{
 				}
 				
 			}).fail(function(response){
+				console.log(response);
+				
 					var failMessage =   '<div class="fail-message-container">'+
 												'<p class="fail-message">  An error ocurred. Please refresh the page and try again.</p>'+
 											'</div>';

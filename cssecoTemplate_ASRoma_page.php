@@ -11,7 +11,7 @@
 		</div><!-- /.row -->
 	</div><!-- /.container-->
 	<div id="asRoma" class="asRoma">
-		<section id="title" class="title">
+		<section id="title" class="title d-lg-none">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -28,16 +28,30 @@
 					<div class="col-12">
 						<div class="overlay">
 							<img src="<?php echo get_template_directory_uri(); ?>/imgs/asRoma/asroma_logo.png" alt="Logo AS Roma" class="roma_logo">
-							<h3><span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> - Main Sponsor of <span style="color: #fbb000;">AS ROMA</span></h3>
-							<p>Your reliable broker and your favorite team</p>
-							<p>Trade Shares, Indices, Commodities, Forex and<br> Options through our CFD service </p>
-							<a href="#" class="cssecoBtn animationbtn">	
-								Discover more
-							</a>
+							<div class="d-lg-none">
+								<h3><span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> - Main Sponsor of <span style="color: #fbb000;">AS ROMA</span></h3>
+								<p>Your reliable broker and your favorite team</p>
+								<a href="#" class="cssecoBtn animationbtn">	
+									Discover more
+								</a>
+							</div>
 						</div>
 					</div>
 				</div><!-- /.row -->
 			</div><!-- /.container-->
+		</section>
+		<section id="dttl" class="dttl d-none d-lg-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h3><span>FX<span style="color: #fbb000;">ORO</span></span> - Main Sponsor of <span style="color: #fbb000;">AS ROMA</span></h3>
+						<p>Your reliable broker and your favorite team</p>
+						<a href="#" class="cssecoBtn animationbtn">	
+							Discover more
+						</a>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section id="cfdInstr" class="cfdInstr">
 			<div class="container">
@@ -61,6 +75,7 @@
 						<p>
 							We are proud to be associated with one of the best, most remarkable teams in the world of football. <span style="font-weight: bold;">FX<span style="color: #fbb000;">ORO</span></span> same as <strong>AS ROMA</strong> share the same values: determination, hard work and strong belief that if you want to, you can change the world. We are very confident that our partnership will spport the progress of both of us and we look forward and enthusiastically to our journey. 
 						</p>
+						<hr>
 						<p>
 							"We first became involved with Atlético in 2015 and it has been a fantastic experience becoming a supporter of one of the world’s greatest football clubs and of course getting to know the great city of Madrid. We are proud to be aligned with such a famous football club which strives for success, with talented players, a strong heritage and a long track record of being a winner."<br>
 							<strong>Rino,</strong> <span class="text-muted">Chief Executive Officer of FXORO</span>.

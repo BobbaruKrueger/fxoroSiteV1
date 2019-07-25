@@ -3,7 +3,7 @@
         <div class="col-10 offset-1 col-sm-12 offset-sm-0 itemInner">
             <div class="row">
                 <div class="col-12 cssecoFlagsW">
-                <img  src="wp-content/themes/CSSecoStarterThemeV2-master/imgs/tickers/<?php echo  str_replace( ' ',  '', $result->name ); ?>.png" alt="Commodities <?php echo $result->name;?> Flag" width="30px">
+                <img  src="<?php echo get_template_directory_uri(); ?>/imgs/tickers/<?php echo  str_replace( ' ',  '', $result->name ); ?>.png" alt="Commodities <?php echo $result->name;?> Flag" width="30px">
                 </div>
             </div>
             <div class="row">

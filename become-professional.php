@@ -7,15 +7,20 @@
  * Become professional questionaire template
  */
 ?>
+<?php get_header();?>
 
 <?php  
 // start the session
-session_start();
+// session_start(); 
 // generate the token
 $_token= base64_encode( openssl_random_pseudo_bytes(16) ); 
 
 // add the token to the session
-$_SESSION['_token'] = $_token;
+if (!isset($_SESSION['_token'])) {
+	$_SESSION['_token'] = $_token;
+	# code...
+}
+
 
 
 // check if the page has been accessed after the criteria form has been submitted and not visited directly
@@ -43,7 +48,6 @@ if( $_POST){
 		if ( $session_token === $form_token ) {
 			?>
 			<!-- add here the paage content -->
-			<?php get_header();?>
 			<?php
 			// initialize the variables
 			$experience = $trading_volume = $portfolio= false;
@@ -75,7 +79,7 @@ if( $_POST){
 			<!-- create the form -->
 			<form action="" id="professional-questionnaire">
 				<h2>Professional Questionnaire</h2>
-				<div class="row"><input type="hidden" name="_token" value="<?php echo $_token;?>" ></div>
+				<div class="row"><input type="hidden" name="_token" value="<?php echo $_SESSION['_token'];?>" ></div>
 				<ul class="errors col-12">
 					
 				</ul>

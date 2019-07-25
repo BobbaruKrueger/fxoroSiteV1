@@ -75,45 +75,29 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
                 <div class="col-12">
 
                     <div class="row">
-                        <div class="col-6 col-sm-3 option cssecoCol">
-							<div class="cssecoBtn instrument-animationbtn">
-								<div class="interval ">1M</div> 
-							</div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">1M</div> 
                         </div>
-                        <div class="col-6 col-sm-3 option cssecoCol">
-							<div class="cssecoBtn instrument-animationbtn">
-								<div class="interval ">5M</div> 
-							</div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">5M</div> 
                         </div>
-                        <div class="col-6 col-sm-3 option cssecoCol">
-							<div class="cssecoBtn instrument-animationbtn">
-								<div class="interval ">15M</div> 
-							</div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">15M</div> 
                         </div>
-                        <div class="col-6 col-sm-3 option cssecoCol">
-							<div class="cssecoBtn instrument-animationbtn">
-								<div class="interval ">30M</div> 
-							</div>	
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">30M</div> 
                         </div>
-                        <div class="col-6 col-sm-3 option cssecoCol">
-							<div class="cssecoBtn instrument-animationbtn">
-								<div class="interval ">1H</div> 
-							</div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">1H</div> 
                         </div>
-                        <div class="col-6 col-sm-3 option cssecoCol">
-							<div class="cssecoBtn instrument-animationbtn">
-								<div class="interval ">4H</div> 
-							</div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">4H</div> 
                         </div>
-                        <div class="col-6 col-sm-3 option cssecoCol">
-							<div class="cssecoBtn instrument-animationbtn active">
-								<div class="interval " >1D</div> 
-							</div>
+                        <div class="col option cssecoBtn instrument-animationbtn active" >
+                            <div class="interval " >1D</div> 
                         </div>
-                        <div class="col-6 col-sm-3 option cssecoCol">
-							<div class="cssecoBtn instrument-animationbtn">
-								<div class="interval ">1W</div> 
-							</div>
+                        <div class="col option cssecoBtn instrument-animationbtn">
+                            <div class="interval ">1W</div> 
                         </div>
                     </div>
                 </div>
@@ -280,7 +264,6 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
     Chart.defaults.LineWithLine = Chart.defaults.line;
     Chart.controllers.LineWithLine = Chart.controllers.line.extend({
         draw: function (ease) {
-           
             
             
             Chart.controllers.line.prototype.draw.call(this, ease);
@@ -296,10 +279,7 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
             let dataset = chart.config.data.datasets[0];
                
 
-//           console.log(' scale: '+this.chart.scales['y-axis-0'].width);
-//           console.log(this.chart);
-//           console.log(' label: '+this.chart.boxes[3].longestLabelWidth);
-           
+           // console.log(this.chart.scales['y-axis-0'].width);
             
             
             let lastValueX = dataset._meta[0].data[dataset.data.length-1]._model.x;
@@ -327,47 +307,24 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
 
             /// draw current value container
             // create the shape
-            // ctx.beginPath();
-            // ctx.moveTo(this.chart.chartArea.right , lastValueY );
-            // ctx.lineTo(this.chart.chartArea.right + 15, lastValueY + 15);
-            // ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, lastValueY + 15);
-            // ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, lastValueY -15);
-            // ctx.lineTo(this.chart.chartArea.right + 15, lastValueY -15);
-           
-            // ctx.closePath();
-            // ctx.strokeStyle = 'rgba(0, 0, 0, 0)';
-            // ctx.stroke();
-            // ctx.fillStyle = '#ffb401';
-            // ctx.fill();
-
             ctx.beginPath();
             ctx.moveTo(this.chart.chartArea.right , lastValueY );
-            ctx.lineTo(this.chart.chartArea.right+ 13, lastValueY + 13.5);
-            // draw bottom left radius
-            ctx.quadraticCurveTo(this.chart.chartArea.right+ 14.5, lastValueY + 15, this.chart.chartArea.right+ 16, lastValueY + 15);
-            ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width -5, lastValueY + 15);
-            // draw bottom right radius
-            ctx.quadraticCurveTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, lastValueY + 15, this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, lastValueY + 10);
-            ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, lastValueY - 10);
-            // draw top right radius
-            ctx.quadraticCurveTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, lastValueY - 15, this.chart.chartArea.right + this.chart.scales['y-axis-0'].width -5, lastValueY - 15);
-            ctx.lineTo(this.chart.chartArea.right + 16, lastValueY - 15);
-            // draw top left radius
-            ctx.quadraticCurveTo(this.chart.chartArea.right+ 14, lastValueY - 15, this.chart.chartArea.right+ 13, lastValueY - 13.5);
+            ctx.lineTo(this.chart.chartArea.right + 15, lastValueY + 15);
+            ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, lastValueY + 15);
+            ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, lastValueY -15);
+            ctx.lineTo(this.chart.chartArea.right + 15, lastValueY -15);
+           
             ctx.closePath();
             ctx.strokeStyle = 'rgba(0, 0, 0, 0)';
             ctx.stroke();
-            ctx.fillStyle = '#0077b5';
+            ctx.fillStyle = '#ffb401';
             ctx.fill();
-
        
             // write current Value
             ctx.font = '12px';
-            ctx.fillStyle = '#fff';
+            ctx.fillStyle = '#162856';
             ctx.textAlign = 'center';
-            var textWidth = ctx.measureText(lastValue);
-            ctx.fillText(lastValue, (this.chart.scales['y-axis-0'].right -( textWidth.width ) /2 ) -7, lastValueY + 5);
-            
+            ctx.fillText(lastValue, this.chart.chartArea.right +12+ (this.chart.scales['y-axis-0'].width / 2), lastValueY+5, 45);
             ctx.closePath();
             if ( x > this.chart.chartArea.left && x < this.chart.chartArea.right && y > this.chart.chartArea.top && y < this.chart.chartArea.bottom ){                      
                 ctx.save();
@@ -413,50 +370,39 @@ $changepercentage = ( $changepercentage > 0 ) ? '+'.$changepercentage : $changep
                     // create the shape for label right (xAxis)
                     ctx.beginPath();
                     ctx.moveTo(this.chart.chartArea.right , y );
-                    ctx.lineTo(this.chart.chartArea.right+ 13, y + 13.5);
-                    // draw bottom left radius
-                    ctx.quadraticCurveTo(this.chart.chartArea.right+ 14.5, y + 15, this.chart.chartArea.right+ 16, y + 15);
-                    ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width -5, y + 15);
-                    // draw bottom right radius
-                    ctx.quadraticCurveTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, y + 15, this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, y + 10);
-                    ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, y - 10);
-                    // draw top right radius
-                    ctx.quadraticCurveTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, y - 15, this.chart.chartArea.right + this.chart.scales['y-axis-0'].width -5, y - 15);
-                    ctx.lineTo(this.chart.chartArea.right + 16, y - 15);
-                    // draw top left radius
-                    ctx.quadraticCurveTo(this.chart.chartArea.right+ 14, y - 15, this.chart.chartArea.right+ 13, y - 13.5);
+                    ctx.lineTo(this.chart.chartArea.right+ 15, y + 15);
+                    ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, y + 15);
+                    ctx.lineTo(this.chart.chartArea.right + this.chart.scales['y-axis-0'].width, y - 15);
+                    ctx.lineTo(this.chart.chartArea.right + 15, y - 15);
                     ctx.closePath();
                     ctx.stroke();
                     ctx.fillStyle = '#1B2854';
                     ctx.fill();
 
                     //add data to the xAxis Label
-                    let activePointValue = dataset.data[activePoint._index].toFixed(2);
+                    let activePointValue = dataset.data[activePoint._index].toFixed(3);
                     ctx.beginPath();    
                     ctx.textAlign = 'center';
                     ctx.fillStyle = '#fff';
-                    // ctx.fillText(activePointValue, this.chart.chartArea.right + (this.chart.boxes[3].longestLabelWidth *2 - this.chart.boxes[3].longestLabelWidth /2)  , y+5, 45);
-                    var textWidth = ctx.measureText(activePointValue);
-                    ctx.fillText(activePointValue, (this.chart.scales['y-axis-0'].right -( textWidth.width ) / 2 ) -7, y + 5);
-
+                    ctx.fillText(activePointValue, this.chart.chartArea.right +8+ (this.chart.scales['y-axis-0'].width/2) , y+5, 45);
 
                     // create the shape for label douw (YAxis)  ROUNDED
-                    ctx.moveTo(x, canvas.scrollHeight-25);
-                    ctx.lineTo(x+40, canvas.scrollHeight-25);
-                    ctx.quadraticCurveTo(x+45, canvas.scrollHeight-25, x+45, canvas.scrollHeight-20);
-                    ctx.lineTo(x+45, canvas.scrollHeight-5);
-                    ctx.quadraticCurveTo(x+45, canvas.scrollHeight,x+40, canvas.scrollHeight);
-                    ctx.lineTo(x-40, canvas.scrollHeight);
-                    ctx.quadraticCurveTo(x-45, canvas.scrollHeight, x-45,canvas.scrollHeight-5);
-                    ctx.lineTo(x-45, canvas.scrollHeight-20);
-                    ctx.quadraticCurveTo(x-45, canvas.scrollHeight-25, x-40, canvas.scrollHeight-25);
+                    // ctx.moveTo(x, canvas.scrollHeight-25);
+                    // ctx.lineTo(x+60, canvas.scrollHeight-25);
+                    // ctx.quadraticCurveTo(x+65, canvas.scrollHeight-25, x+65, canvas.scrollHeight-20);
+                    // ctx.lineTo(x+65, canvas.scrollHeight-5);
+                    // ctx.quadraticCurveTo(x+65, canvas.scrollHeight,x+60, canvas.scrollHeight);
+                    // ctx.lineTo(x-60, canvas.scrollHeight);
+                    // ctx.quadraticCurveTo(x-65, canvas.scrollHeight, x-65,canvas.scrollHeight-5);
+                    // ctx.lineTo(x-65, canvas.scrollHeight-20);
+                    // ctx.quadraticCurveTo(x-65, canvas.scrollHeight-25, x-60, canvas.scrollHeight-25);
 
 
 
 
 
                     ctx.fillStyle = '#1B2854';
-                    // ctx.fillRect( x-60, canvas.scrollHeight-25, 120, 20);
+                    ctx.fillRect( x-60, canvas.scrollHeight-25, 120, 20);
                     ctx.fill();
 
                     //add data to the xAxis Label
@@ -602,11 +548,11 @@ if ($data->name == "EUR/USD") :?>
     <style>
         canvas{
     
-			background: url('<?php echo get_template_directory_uri(); ?>/imgs/currencies18.png');
-			background-repeat: no-repeat;
-			background-position-x: 44%;
-			background-position-y: 2%;
-			background-size: 55%;
+        background: url('<?php echo get_template_directory_uri(); ?>/imgs/currencies18.png');
+        background-repeat: no-repeat;
+        background-position-x: 44%;
+        background-position-y: 2%;
+        background-size: 55%;
         
         }
     </style>

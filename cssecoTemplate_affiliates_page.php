@@ -6,13 +6,13 @@
   */
 ?>
 <?php 
-// start the session
-session_start();
-// generate the token
-$_token= base64_encode( openssl_random_pseudo_bytes(16) ); 
+// // start the session
+// session_start();
+// // generate the token
+// $_token= base64_encode( openssl_random_pseudo_bytes(16) ); 
 
-// add the token to the session
-$_SESSION['_token'] = $_token;
+// // add the token to the session
+// $_SESSION['_token'] = $_token;
 
 
 ?>
